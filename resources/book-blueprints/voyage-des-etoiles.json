@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "title_template": "{child_name} et le voyage des etoiles",
+  "negative_prompt_default": "blurry, distorted face, extra fingers, extra limbs, duplicate character, wrong eyes, bad anatomy, low detail, text, watermark",
+  "style_rules": [
+    "children's book illustration",
+    "same child character across pages",
+    "same visual style across all pages",
+    "coherent palette",
+    "soft celestial atmosphere"
+  ],
+  "pages": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "title_template": "{child_name} et le voyage des etoiles",
+      "text_template": null,
+      "default_image_path": "/uploads/books/voyage-des-etoiles/cover-default.svg",
+      "prompt_template": "children's book cover of {child_name} aboard a glowing star boat crossing a dreamy night sky",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "title_template": null,
+      "text_template": "Pour {child_name}, afin que tu n'oublies jamais que les etoiles aiment les grands reveurs.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "title_template": null,
+      "text_template": "{child_name} monte dans un bateau de lumiere et quitte doucement le toit de la maison.",
+      "default_image_path": "/uploads/books/voyage-des-etoiles/page-1-default.svg",
+      "prompt_template": "storybook illustration of {child_name} boarding a glowing star boat at night, poetic sky",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_2",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Une constellation amie montre a {child_name} le chemin des plus belles promesses.",
+      "default_image_path": "/uploads/books/voyage-des-etoiles/page-2-default.svg",
+      "prompt_template": "storybook illustration of {child_name} guided by a friendly constellation through a celestial path",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_3",
+      "type": "story",
+      "title_template": null,
+      "text_template": "{child_name} depose un voeu dans la grande nebuleuse bleue qui scintille au loin.",
+      "default_image_path": "/uploads/books/voyage-des-etoiles/page-3-default.svg",
+      "prompt_template": "storybook illustration of {child_name} making a wish in a luminous blue nebula, wonder and calm",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_4",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Quand vient l'aube, {child_name} rentre avec un coeur rempli de ciel et d'espoir.",
+      "default_image_path": "/uploads/books/voyage-des-etoiles/page-4-default.svg",
+      "prompt_template": "storybook illustration of {child_name} returning home at dawn with a peaceful celestial glow",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "title_template": "Le souvenir de {child_name}",
+      "text_template": "{child_name} sait maintenant qu'un grand reve commence souvent par une petite lumiere.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "title_template": null,
+      "text_template": null,
+      "default_image_path": "/uploads/books/voyage-des-etoiles/back-cover-default.svg",
+      "prompt_template": "storybook back cover illustration of a starry peaceful sky with glowing clouds and moonlit softness",
+      "negative_prompt": null,
+      "personalizable": false,
+      "aspect_ratio": "3:4"
+    }
+  ]
+}

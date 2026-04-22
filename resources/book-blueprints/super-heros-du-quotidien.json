@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "title_template": "{child_name}, super-heros du quotidien",
+  "negative_prompt_default": "blurry, distorted face, extra fingers, extra limbs, duplicate character, wrong eyes, bad anatomy, low detail, text, watermark",
+  "style_rules": [
+    "children's book illustration",
+    "same child character across pages",
+    "same visual style across all pages",
+    "coherent palette",
+    "confidence and optimistic energy"
+  ],
+  "pages": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "title_template": "{child_name}, super-heros du quotidien",
+      "text_template": null,
+      "default_image_path": "/uploads/books/super-heros-du-quotidien/cover-default.svg",
+      "prompt_template": "children's book cover of {child_name} as a kind everyday superhero in a bright city of imagination",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "title_template": null,
+      "text_template": "Pour {child_name}, parce que les plus grands heros commencent par de petites victoires.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "title_template": null,
+      "text_template": "{child_name} enfile sa cape invisible et decide d'aider la journee a bien commencer.",
+      "default_image_path": "/uploads/books/super-heros-du-quotidien/page-1-default.svg",
+      "prompt_template": "storybook illustration of {child_name} wearing a subtle superhero cape in a warm morning scene",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_2",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Avec un sourire courageux, {child_name} transforme un petit obstacle en grande victoire.",
+      "default_image_path": "/uploads/books/super-heros-du-quotidien/page-2-default.svg",
+      "prompt_template": "storybook illustration of {child_name} solving a small challenge with confidence and warmth",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_3",
+      "type": "story",
+      "title_template": null,
+      "text_template": "{child_name} comprend que la vraie force se voit dans les gestes simples et les mots gentils.",
+      "default_image_path": "/uploads/books/super-heros-du-quotidien/page-3-default.svg",
+      "prompt_template": "storybook illustration of {child_name} showing kindness and bravery in everyday hero moments",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_4",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Le soir venu, {child_name} sait qu'il peut recommencer demain, encore plus fier et plus doux.",
+      "default_image_path": "/uploads/books/super-heros-du-quotidien/page-4-default.svg",
+      "prompt_template": "storybook illustration of {child_name} ending the day with pride, warmth and gentle superhero energy",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "title_template": "Le souvenir de {child_name}",
+      "text_template": "{child_name} decouvre qu'un super-heros est d'abord un coeur genereux.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "title_template": null,
+      "text_template": null,
+      "default_image_path": "/uploads/books/super-heros-du-quotidien/back-cover-default.svg",
+      "prompt_template": "storybook back cover illustration of a calm heroic city sunset with joyful family-friendly mood",
+      "negative_prompt": null,
+      "personalizable": false,
+      "aspect_ratio": "3:4"
+    }
+  ]
+}

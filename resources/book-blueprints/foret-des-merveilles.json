@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "title_template": "{child_name} dans la foret des merveilles",
+  "negative_prompt_default": "blurry, distorted face, extra fingers, extra limbs, duplicate character, wrong eyes, bad anatomy, low detail, text, watermark",
+  "style_rules": [
+    "children's book illustration",
+    "same child character across pages",
+    "same visual style across all pages",
+    "coherent palette",
+    "gentle nature mood"
+  ],
+  "pages": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "title_template": "{child_name} dans la foret des merveilles",
+      "text_template": null,
+      "default_image_path": "/uploads/books/foret-des-merveilles/cover-default.svg",
+      "prompt_template": "children's book cover of {child_name} meeting kind forest animals in a wonder woodland",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "title_template": null,
+      "text_template": "Pour {child_name}, afin que chaque promenade devienne un tresor de douceur.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "title_template": null,
+      "text_template": "{child_name} entre dans la foret et entend le chant joyeux des oiseaux du matin.",
+      "default_image_path": "/uploads/books/foret-des-merveilles/page-1-default.svg",
+      "prompt_template": "storybook illustration of {child_name} walking into a gentle forest at morning with birds and soft light",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_2",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Un lapin curieux et un faon elegant montrent a {child_name} un chemin secret sous les fougeres.",
+      "default_image_path": "/uploads/books/foret-des-merveilles/page-2-default.svg",
+      "prompt_template": "storybook illustration of {child_name} guided by a rabbit and a fawn through a secret fern path",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_3",
+      "type": "story",
+      "title_template": null,
+      "text_template": "{child_name} trouve une source brillante ou chaque reflet raconte une petite merveille.",
+      "default_image_path": "/uploads/books/foret-des-merveilles/page-3-default.svg",
+      "prompt_template": "storybook illustration of {child_name} discovering a sparkling forest spring with magical reflections",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_4",
+      "type": "story",
+      "title_template": null,
+      "text_template": "En repartant, {child_name} emporte avec lui la douceur de tous ses nouveaux amis.",
+      "default_image_path": "/uploads/books/foret-des-merveilles/page-4-default.svg",
+      "prompt_template": "storybook illustration of {child_name} saying goodbye to woodland friends in a gentle golden forest",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "title_template": "Le souvenir de {child_name}",
+      "text_template": "{child_name} garde en lui une foret de douceur, de calme et d'amis fideles.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "title_template": null,
+      "text_template": null,
+      "default_image_path": "/uploads/books/foret-des-merveilles/back-cover-default.svg",
+      "prompt_template": "storybook back cover illustration of a peaceful enchanted woodland with animals resting",
+      "negative_prompt": null,
+      "personalizable": false,
+      "aspect_ratio": "3:4"
+    }
+  ]
+}

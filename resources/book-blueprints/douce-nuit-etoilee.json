@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "title_template": "{child_name} et la douce nuit etoilee",
+  "negative_prompt_default": "blurry, distorted face, extra fingers, extra limbs, duplicate character, wrong eyes, bad anatomy, low detail, text, watermark",
+  "style_rules": [
+    "children's book illustration",
+    "same child character across pages",
+    "same visual style across all pages",
+    "coherent palette",
+    "bedtime softness and reassurance"
+  ],
+  "pages": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "title_template": "{child_name} et la douce nuit etoilee",
+      "text_template": null,
+      "default_image_path": "/uploads/books/douce-nuit-etoilee/cover-default.svg",
+      "prompt_template": "children's book cover of {child_name} under a gentle starry sky with soft bedtime light",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "title_template": null,
+      "text_template": "Pour {child_name}, afin que chaque nuit soit douce, calme et rassurante.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Quand la nuit arrive, {child_name} regarde le ciel et y trouve une lumiere amie.",
+      "default_image_path": "/uploads/books/douce-nuit-etoilee/page-1-default.svg",
+      "prompt_template": "storybook illustration of {child_name} looking at a calm starry sky at bedtime, soft reassuring mood",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_2",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Une petite etoile descend doucement et raconte a {child_name} les plus beaux reves du monde.",
+      "default_image_path": "/uploads/books/douce-nuit-etoilee/page-2-default.svg",
+      "prompt_template": "storybook illustration of {child_name} meeting a gentle star companion in a dreamy bedroom night scene",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_3",
+      "type": "story",
+      "title_template": null,
+      "text_template": "{child_name} respire lentement et sent son coeur devenir aussi paisible qu'un ciel sans nuages.",
+      "default_image_path": "/uploads/books/douce-nuit-etoilee/page-3-default.svg",
+      "prompt_template": "storybook illustration of {child_name} breathing calmly with peaceful nighttime glow and soft stars",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_4",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Avant de fermer les yeux, {child_name} sait que la nuit veille sur lui avec tendresse.",
+      "default_image_path": "/uploads/books/douce-nuit-etoilee/page-4-default.svg",
+      "prompt_template": "storybook illustration of {child_name} falling asleep peacefully in a star-filled bedtime atmosphere",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "title_template": "Le souvenir de {child_name}",
+      "text_template": "{child_name} garde au fond du coeur une nuit douce, brillante et pleine de serenite.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "title_template": null,
+      "text_template": null,
+      "default_image_path": "/uploads/books/douce-nuit-etoilee/back-cover-default.svg",
+      "prompt_template": "storybook back cover illustration of a soft moonlit sky and peaceful bedtime stars",
+      "negative_prompt": null,
+      "personalizable": false,
+      "aspect_ratio": "3:4"
+    }
+  ]
+}

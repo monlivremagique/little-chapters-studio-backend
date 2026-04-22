@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "title_template": "{child_name} et l'aventure enchantee",
+  "negative_prompt_default": "blurry, distorted face, extra fingers, extra limbs, duplicate character, wrong eyes, bad anatomy, low detail, text, watermark",
+  "style_rules": [
+    "children's book illustration",
+    "same child character across pages",
+    "same visual style across all pages",
+    "coherent palette",
+    "warm premium storybook mood"
+  ],
+  "pages": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "title_template": "{child_name} et l'aventure enchantee",
+      "text_template": null,
+      "default_image_path": "/uploads/books/aventure-enchantee/cover-default.svg",
+      "prompt_template": "children's book cover showing {child_name} entering a magical forest with glowing lanterns and friendly creatures",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "title_template": null,
+      "text_template": "Pour {child_name}, que cette aventure te rappelle combien tu es courageux.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "title_template": null,
+      "text_template": "{child_name} ouvre la porte du grand bois et entend les arbres lui souhaiter la bienvenue.",
+      "default_image_path": "/uploads/books/aventure-enchantee/page-1-default.svg",
+      "prompt_template": "storybook illustration of {child_name} stepping into a magical forest path, golden fireflies, gentle wonder",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_2",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Un renard lumineux guide {child_name} jusqu'a une clairiere remplie de pierres etoilees.",
+      "default_image_path": "/uploads/books/aventure-enchantee/page-2-default.svg",
+      "prompt_template": "storybook illustration of {child_name} following a glowing fox in a forest clearing of star stones",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_3",
+      "type": "story",
+      "title_template": null,
+      "text_template": "{child_name} decouvre que la clef de la foret apparait quand on ose avancer avec confiance.",
+      "default_image_path": "/uploads/books/aventure-enchantee/page-3-default.svg",
+      "prompt_template": "storybook illustration of {child_name} discovering a glowing key in a magical forest, brave and centered",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "page_4",
+      "type": "story",
+      "title_template": null,
+      "text_template": "Grace a son coeur vaillant, {child_name} rend a la foret sa lumiere et son calme.",
+      "default_image_path": "/uploads/books/aventure-enchantee/page-4-default.svg",
+      "prompt_template": "storybook illustration of {child_name} restoring light to an enchanted forest, warm magical ending",
+      "negative_prompt": null,
+      "personalizable": true,
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "title_template": "Le souvenir de {child_name}",
+      "text_template": "{child_name} repart avec un secret precieux : le courage grandit a chaque pas.",
+      "default_image_path": null,
+      "prompt_template": null,
+      "negative_prompt": null,
+      "personalizable": true
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "title_template": null,
+      "text_template": null,
+      "default_image_path": "/uploads/books/aventure-enchantee/back-cover-default.svg",
+      "prompt_template": "storybook back cover illustration of a peaceful magical forest under twilight, premium elegant composition",
+      "negative_prompt": null,
+      "personalizable": false,
+      "aspect_ratio": "3:4"
+    }
+  ]
+}
