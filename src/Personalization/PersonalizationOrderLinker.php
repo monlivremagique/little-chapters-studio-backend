@@ -57,7 +57,22 @@ final class PersonalizationOrderLinker
             $existingSessionLink->setOrderItemId($orderItem['order_item_id']);
         }
 
+        $existingSessionLink->snapshotOrderItem($orderItem);
         $session->attachToCart($normalizedCartToken, $normalizedCartItemId);
+    }
+
+    public function detachSession(PersonalizationSession $session): void
+    {
+        /** @var PersonalizationOrderItemLink|null $link */
+        $link = $this->entityManager->getRepository(PersonalizationOrderItemLink::class)->findOneBy([
+            'session' => $session,
+        ]);
+
+        if ($link instanceof PersonalizationOrderItemLink) {
+            $this->entityManager->remove($link);
+        }
+
+        $session->detachFromCart();
     }
 
     public function detachSessionFromCartItem(string $cartTokenValue, string $cartItemId): ?PersonalizationSession
@@ -130,13 +145,33 @@ final class PersonalizationOrderLinker
         );
     }
 
-    /** @return array{order_item_id:int, order_id:int}|null */
+    /**
+     * @return array{
+     *     order_item_id:int,
+     *     order_id:int,
+     *     order_token_value:string,
+     *     variant_code:string,
+     *     product_name:string|null,
+     *     unit_price:int,
+     *     quantity:int,
+     *     currency_code:string
+     * }|null
+     */
     private function findOrderItemByCartToken(string $cartTokenValue, int $orderItemId): ?array
     {
         $sql = <<<'SQL'
-SELECT oi.id AS order_item_id, o.id AS order_id
+SELECT
+    oi.id AS order_item_id,
+    o.id AS order_id,
+    o.token_value AS order_token_value,
+    pv.code AS variant_code,
+    oi.product_name,
+    oi.unit_price,
+    oi.quantity,
+    o.currency_code
 FROM sylius_order_item oi
 INNER JOIN sylius_order o ON o.id = oi.order_id
+INNER JOIN sylius_product_variant pv ON pv.id = oi.variant_id
 WHERE o.token_value = :tokenValue
   AND oi.id = :orderItemId
 LIMIT 1
@@ -154,6 +189,12 @@ SQL;
         return [
             'order_item_id' => (int) $row['order_item_id'],
             'order_id' => (int) $row['order_id'],
+            'order_token_value' => (string) $row['order_token_value'],
+            'variant_code' => (string) $row['variant_code'],
+            'product_name' => null !== $row['product_name'] ? (string) $row['product_name'] : null,
+            'unit_price' => (int) $row['unit_price'],
+            'quantity' => (int) $row['quantity'],
+            'currency_code' => (string) $row['currency_code'],
         ];
     }
 

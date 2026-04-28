@@ -4,6 +4,15 @@ services:
         depends_on:
             postgres:
                 condition: service_healthy
+        command: >
+            sh -lc "mkdir -p /srv/sylius/public/media/cache /srv/sylius/var/cache /srv/sylius/var/log /srv/sylius/var/storage/personalizations/photos
+            && chown www-data:www-data /srv/sylius/public/media /srv/sylius/public/media/cache /srv/sylius/var /srv/sylius/var/cache /srv/sylius/var/log /srv/sylius/var/storage /srv/sylius/var/storage/personalizations /srv/sylius/var/storage/personalizations/photos
+            && php-fpm"
+        healthcheck:
+            test: ["CMD-SHELL", "pgrep -f 'php-fpm: master process' >/dev/null 2>&1 || exit 1"]
+            timeout: 3s
+            interval: 5s
+            retries: 10
         environment:
             APP_ENV: ${APP_ENV:-dev}
             APP_SECRET: ${APP_SECRET:-phase1-local-secret}
@@ -53,12 +62,13 @@ services:
             assets:
                 condition: service_completed_successfully
             php:
-                condition: service_started
+                condition: service_healthy
         ports:
             - "8001:80"
         volumes:
             - ./public:/srv/sylius/public:ro
             - public-media:/srv/sylius/public/media:ro,nocopy
+            - ./docker/nginx/default.conf.template:/etc/nginx/templates/default.conf.template:ro
 
     mailhog:
         image: mailhog/mailhog:latest

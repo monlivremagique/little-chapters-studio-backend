@@ -155,13 +155,30 @@ final class FrontCatalogProvider
     private function buildBookCard(array $row, array $attributes, array $metadata): array
     {
         $badge = (string) ($attributes['book_badge'] ?? '');
+        $bookBlueprint = $this->decodeBookBlueprint($attributes['book_blueprint_json'] ?? null);
+        $coverImage = '';
+
+        if (is_array($bookBlueprint) && is_array($bookBlueprint['pages'] ?? null)) {
+            foreach ($bookBlueprint['pages'] as $page) {
+                if (!is_array($page) || (string) ($page['id'] ?? '') !== 'cover') {
+                    continue;
+                }
+
+                $coverImage = $this->resolveBlueprintImageUrl($page['default_image_path'] ?? null);
+                break;
+            }
+        }
+
+        if ('' === $coverImage) {
+            $coverImage = $this->absoluteMediaUrl($row['image_path']);
+        }
 
         return [
             'id' => $metadata['id'],
             'slug' => $row['slug'],
             'title' => $row['title'],
             'subtitle' => (string) ($attributes['book_subtitle'] ?? $row['short_description'] ?? ''),
-            'coverImage' => $this->absoluteMediaUrl($row['image_path']),
+            'coverImage' => $coverImage,
             'price' => $this->minorToFloat($row['price']),
             'originalPrice' => $this->minorToFloat($row['original_price']),
             'rating' => $metadata['rating'],
@@ -477,10 +494,13 @@ SQL;
 
                 $pages[] = [
                     'id' => (string) ($page['id'] ?? sprintf('page-%d', $pageNumber)),
+                    'type' => (string) ($page['type'] ?? 'story'),
                     'pageNumber' => $pageNumber,
                     'imageUrl' => $this->resolveBlueprintImageUrl($page['default_image_path'] ?? null) ?: $imageUrl,
                     'isPersonalized' => (bool) ($page['personalizable'] ?? false),
                     'label' => $this->resolveBlueprintPageLabel($page),
+                    'title' => (string) ($page['title_template'] ?? ''),
+                    'text' => (string) ($page['text_template'] ?? ''),
                 ];
 
                 ++$pageNumber;
@@ -496,10 +516,13 @@ SQL;
         foreach ($this->metadata->previewTemplates() as $template) {
             $pages[] = [
                 'id' => $template['id'],
+                'type' => 'story',
                 'pageNumber' => $template['pageNumber'],
                 'imageUrl' => $imageUrl,
                 'isPersonalized' => $template['isPersonalized'],
                 'label' => $template['label'],
+                'title' => null,
+                'text' => null,
             ];
         }
 

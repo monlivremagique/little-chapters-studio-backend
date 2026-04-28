@@ -1,3 +1,2 @@
-when@dev:
-    sylius_api:
-        enabled: true
+sylius_api:
+    enabled: true

@@ -7,4 +7,5 @@ namespace App\Entity\Personalization;
 enum UploadedPhotoStatus: string
 {
     case Uploaded = 'uploaded';
+    case Deleted = 'deleted';
 }

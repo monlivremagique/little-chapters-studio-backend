@@ -114,9 +114,9 @@ sylius_fixtures:
                 payment_method:
                     options:
                         custom:
-                            bank_transfer_be:
-                                code: 'bank_transfer_be'
-                                name: 'Virement bancaire'
+                            stripe_checkout_be:
+                                code: 'stripe_checkout_be'
+                                name: 'Carte / Bancontact (Stripe)'
                                 channels:
                                     - 'LITTLE_CHAPTERS_BE_FR'
                                 enabled: true

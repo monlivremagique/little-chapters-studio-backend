@@ -1,5 +1,10 @@
-imports:
-    - { resource: "../vendor/sylius/sylius/src/Sylius/Behat/Resources/config/services.xml" }
+services:
+    App\Tests\Double\Stripe\FakeStripeCheckoutClient:
+        public: true
 
-sylius_api:
-    enabled: true
+    App\Stripe\StripeCheckoutClientInterface: '@App\Tests\Double\Stripe\FakeStripeCheckoutClient'
+
+    App\Tests\Double\Gelato\FakeGelatoClient:
+        public: true
+
+    App\Gelato\GelatoClientInterface: '@App\Tests\Double\Gelato\FakeGelatoClient'

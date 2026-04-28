@@ -40,3 +40,6 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+    App\Stripe\StripeCheckoutClientInterface: '@App\Stripe\StripeCheckoutClient'
+    App\Gelato\GelatoClientInterface: '@App\Gelato\GelatoClient'

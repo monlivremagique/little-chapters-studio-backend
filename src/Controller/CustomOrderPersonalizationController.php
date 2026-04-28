@@ -6,8 +6,11 @@ namespace App\Controller;
 
 use App\Entity\Personalization\PersonalizationSession;
 use App\Personalization\PersonalizationOrderLinker;
+use App\Personalization\PersonalizationPhotoManager;
+use App\Personalization\PersonalizationSessionOwnershipGuard;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
@@ -15,8 +18,10 @@ final class CustomOrderPersonalizationController
 {
     public function __construct(
         private readonly PersonalizationOrderLinker $personalizationOrderLinker,
+        private readonly PersonalizationPhotoManager $personalizationPhotoManager,
         #[Autowire('%env(DEFAULT_URI)%')]
         private readonly string $defaultUri,
+        private readonly PersonalizationSessionOwnershipGuard $personalizationSessionOwnershipGuard,
     ) {
     }
 
@@ -26,9 +31,10 @@ final class CustomOrderPersonalizationController
         methods: ['GET'],
         defaults: ['_profiler_collect' => false],
     )]
-    public function readLinkedSessions(string $orderNumber): JsonResponse
+    public function readLinkedSessions(string $orderNumber, Request $request): JsonResponse
     {
         $sessions = $this->personalizationOrderLinker->synchronizeSessionsWithOrderNumber($orderNumber);
+        $this->personalizationSessionOwnershipGuard->assertCanAccessSessions($sessions, $request);
 
         return new JsonResponse(array_map(
             fn (PersonalizationSession $session): array => $this->normalizeSession($session),
@@ -42,9 +48,10 @@ final class CustomOrderPersonalizationController
         methods: ['GET'],
         defaults: ['_profiler_collect' => false],
     )]
-    public function readLinkedSession(string $orderNumber): JsonResponse
+    public function readLinkedSession(string $orderNumber, Request $request): JsonResponse
     {
         $sessions = $this->personalizationOrderLinker->synchronizeSessionsWithOrderNumber($orderNumber);
+        $this->personalizationSessionOwnershipGuard->assertCanAccessSessions($sessions, $request);
         $session = $sessions[0] ?? null;
 
         if (null === $session) {
@@ -62,9 +69,10 @@ final class CustomOrderPersonalizationController
         return [
             'id' => $session->getId(),
             'bookId' => $session->getBookId(),
+            'ownerToken' => $session->getGuestOwnerToken(),
             'step' => $session->getStep(),
             'childName' => $session->getChildName() ?? '',
-            'childPhoto' => null !== $latestPhoto ? $this->absoluteUrl($latestPhoto->getPublicPath()) : null,
+            'childPhoto' => null !== $latestPhoto ? $this->personalizationPhotoManager->createAbsoluteAccessUrl($latestPhoto) : null,
             'dedication' => $session->getDedication(),
             'extraFields' => (object) $session->getExtraFields(),
             'createdAt' => $session->getCreatedAt()->format(DATE_ATOM),

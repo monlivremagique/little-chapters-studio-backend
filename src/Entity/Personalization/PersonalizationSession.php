@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Entity\Personalization;
 
+use App\Personalization\PersonalizationSessionTransitionMatrix;
+use App\Entity\Customer\Customer;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -19,6 +21,13 @@ class PersonalizationSession
 
     #[ORM\Column(name: 'book_id', length: 64)]
     private string $bookId;
+
+    #[ORM\Column(name: 'guest_owner_token', length: 128)]
+    private string $guestOwnerToken;
+
+    #[ORM\ManyToOne(targetEntity: Customer::class)]
+    #[ORM\JoinColumn(name: 'owner_customer_id', referencedColumnName: 'id', nullable: true, onDelete: 'SET NULL')]
+    private ?Customer $ownerCustomer = null;
 
     #[ORM\Column(length: 32, enumType: PersonalizationSessionStatus::class)]
     private PersonalizationSessionStatus $status;
@@ -62,10 +71,12 @@ class PersonalizationSession
     #[ORM\OrderBy(['createdAt' => 'DESC'])]
     private Collection $photos;
 
-    public function __construct(string $bookId)
+    public function __construct(string $bookId, ?string $guestOwnerToken = null)
     {
         $this->id = Uuid::v7()->toRfc4122();
         $this->bookId = $bookId;
+        $normalizedGuestOwnerToken = trim((string) $guestOwnerToken);
+        $this->guestOwnerToken = $normalizedGuestOwnerToken !== '' ? $normalizedGuestOwnerToken : strtolower(Uuid::v7()->toBase32());
         $this->status = PersonalizationSessionStatus::Draft;
         $this->createdAt = new \DateTimeImmutable();
         $this->updatedAt = $this->createdAt;
@@ -80,6 +91,43 @@ class PersonalizationSession
     public function getBookId(): string
     {
         return $this->bookId;
+    }
+
+    public function getGuestOwnerToken(): string
+    {
+        return $this->guestOwnerToken;
+    }
+
+    public function getOwnerCustomer(): ?Customer
+    {
+        return $this->ownerCustomer;
+    }
+
+    public function hasOwnerCustomer(): bool
+    {
+        return null !== $this->ownerCustomer;
+    }
+
+    public function matchesGuestOwnerToken(?string $guestOwnerToken): bool
+    {
+        $providedToken = trim((string) $guestOwnerToken);
+
+        return '' !== $providedToken && hash_equals($this->guestOwnerToken, $providedToken);
+    }
+
+    public function isOwnedByCustomer(Customer $customer): bool
+    {
+        return null !== $this->ownerCustomer && $this->ownerCustomer->getId() === $customer->getId();
+    }
+
+    public function assignOwnerCustomer(Customer $customer): void
+    {
+        if ($this->isOwnedByCustomer($customer)) {
+            return;
+        }
+
+        $this->ownerCustomer = $customer;
+        $this->touch();
     }
 
     public function getStatus(): PersonalizationSessionStatus
@@ -162,15 +210,33 @@ class PersonalizationSession
         }
 
         $this->photos->add($photo);
-        $this->status = PersonalizationSessionStatus::PhotoUploaded;
+        $this->transitionTo(PersonalizationSessionStatus::PhotoUploaded);
         $this->touch();
     }
 
     public function getLatestPhoto(): ?UploadedPhoto
     {
-        $latestPhoto = $this->photos->first();
+        foreach ($this->photos as $photo) {
+            if (!$photo->isDeleted()) {
+                return $photo;
+            }
+        }
 
-        return $latestPhoto instanceof UploadedPhoto ? $latestPhoto : null;
+        return null;
+    }
+
+    public function syncAfterPhotoDeletion(): void
+    {
+        if (null !== $this->getLatestPhoto()) {
+            $this->touch();
+
+            return;
+        }
+
+        $this->transitionTo($this->hasPersonalizedContent()
+            ? PersonalizationSessionStatus::ContentCompleted
+            : PersonalizationSessionStatus::Draft);
+        $this->touch();
     }
 
     /** @param array<string, mixed> $extraFields */
@@ -184,7 +250,18 @@ class PersonalizationSession
         $this->dedication = null !== $dedication ? trim($dedication) : null;
         $this->extraFields = $extraFields;
         $this->step = max(0, $step);
-        $this->status = PersonalizationSessionStatus::ContentCompleted;
+        $this->transitionTo(PersonalizationSessionStatus::ContentCompleted);
+        $this->approvedAt = null;
+        $this->cartTokenValue = null;
+        $this->cartItemId = null;
+        $this->syliusOrderId = null;
+        $this->syliusOrderNumber = null;
+        $this->touch();
+    }
+
+    public function invalidateApprovalAndCommerce(PersonalizationSessionStatus $status): void
+    {
+        $this->transitionTo($status);
         $this->approvedAt = null;
         $this->cartTokenValue = null;
         $this->cartItemId = null;
@@ -196,14 +273,14 @@ class PersonalizationSession
     public function markGenerationRequested(int $step = 4): void
     {
         $this->step = max($this->step, $step);
-        $this->status = PersonalizationSessionStatus::GenerationRequested;
+        $this->transitionTo(PersonalizationSessionStatus::GenerationRequested);
         $this->touch();
     }
 
     public function markGenerating(int $step = 4): void
     {
         $this->step = max($this->step, $step);
-        $this->status = PersonalizationSessionStatus::Generating;
+        $this->transitionTo(PersonalizationSessionStatus::Generating);
         $this->touch();
     }
 
@@ -214,7 +291,7 @@ class PersonalizationSession
         }
 
         $this->step = max($this->step, $step);
-        $this->status = PersonalizationSessionStatus::PreviewPartialReady;
+        $this->transitionTo(PersonalizationSessionStatus::PreviewPartialReady);
         $this->touch();
     }
 
@@ -225,14 +302,14 @@ class PersonalizationSession
         }
 
         $this->step = max($this->step, $step);
-        $this->status = PersonalizationSessionStatus::PreviewReady;
+        $this->transitionTo(PersonalizationSessionStatus::PreviewReady);
         $this->touch();
     }
 
     public function approve(int $step = 6): void
     {
         $this->step = max($this->step, $step);
-        $this->status = PersonalizationSessionStatus::Approved;
+        $this->transitionTo(PersonalizationSessionStatus::Approved);
         $this->approvedAt = new \DateTimeImmutable();
         $this->touch();
     }
@@ -241,7 +318,7 @@ class PersonalizationSession
     {
         $this->cartTokenValue = trim($cartTokenValue);
         $this->cartItemId = trim($cartItemId);
-        $this->status = PersonalizationSessionStatus::CartAttached;
+        $this->transitionTo(PersonalizationSessionStatus::CartAttached);
         $this->touch();
     }
 
@@ -251,7 +328,7 @@ class PersonalizationSession
         $this->cartItemId = null;
         $this->syliusOrderId = null;
         $this->syliusOrderNumber = null;
-        $this->status = PersonalizationSessionStatus::Approved;
+        $this->transitionTo(PersonalizationSessionStatus::Approved);
         $this->touch();
     }
 
@@ -259,7 +336,55 @@ class PersonalizationSession
     {
         $this->syliusOrderId = $syliusOrderId;
         $this->syliusOrderNumber = trim($syliusOrderNumber);
-        $this->status = PersonalizationSessionStatus::CheckoutCompleted;
+        $this->transitionTo(PersonalizationSessionStatus::CheckoutCompleted);
+        $this->touch();
+    }
+
+    public function markPdfRendering(): void
+    {
+        $this->transitionTo(PersonalizationSessionStatus::PdfRendering);
+        $this->touch();
+    }
+
+    public function markPrintReady(): void
+    {
+        $this->transitionTo(PersonalizationSessionStatus::PrintReady);
+        $this->touch();
+    }
+
+    public function markSubmittedToGelato(): void
+    {
+        $this->transitionTo(PersonalizationSessionStatus::SubmittedToGelato);
+        $this->touch();
+    }
+
+    public function markInProduction(): void
+    {
+        $this->transitionTo(PersonalizationSessionStatus::InProduction);
+        $this->touch();
+    }
+
+    public function markShipped(): void
+    {
+        $this->transitionTo(PersonalizationSessionStatus::Shipped);
+        $this->touch();
+    }
+
+    public function markDelivered(): void
+    {
+        $this->transitionTo(PersonalizationSessionStatus::Delivered);
+        $this->touch();
+    }
+
+    public function markFailed(): void
+    {
+        $this->transitionTo(PersonalizationSessionStatus::Failed);
+        $this->touch();
+    }
+
+    public function markCancelled(): void
+    {
+        $this->transitionTo(PersonalizationSessionStatus::Cancelled);
         $this->touch();
     }
 
@@ -271,5 +396,18 @@ class PersonalizationSession
     private function touch(): void
     {
         $this->updatedAt = new \DateTimeImmutable();
+    }
+
+    private function transitionTo(PersonalizationSessionStatus $status): void
+    {
+        PersonalizationSessionTransitionMatrix::assertCanTransition($this->status, $status);
+        $this->status = $status;
+    }
+
+    private function hasPersonalizedContent(): bool
+    {
+        return '' !== trim((string) $this->childName)
+            || '' !== trim((string) $this->dedication)
+            || [] !== $this->extraFields;
     }
 }

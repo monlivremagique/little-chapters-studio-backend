@@ -16,4 +16,12 @@ enum PersonalizationSessionStatus: string
     case Approved = 'approved';
     case CartAttached = 'cart_attached';
     case CheckoutCompleted = 'checkout_completed';
+    case PdfRendering = 'pdf_rendering';
+    case PrintReady = 'print_ready';
+    case SubmittedToGelato = 'submitted_to_gelato';
+    case InProduction = 'in_production';
+    case Shipped = 'shipped';
+    case Delivered = 'delivered';
+    case Failed = 'failed';
+    case Cancelled = 'cancelled';
 }

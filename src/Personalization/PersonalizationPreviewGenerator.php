@@ -18,6 +18,9 @@ use Symfony\Component\Uid\Uuid;
 
 final class PersonalizationPreviewGenerator
 {
+    private const PROVIDER_PAGE_TIMEOUT_SECONDS = 120;
+    private const PROVIDER_PAGE_MAX_ATTEMPTS = 2;
+
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly FrontCatalogProvider $frontCatalogProvider,
@@ -133,6 +136,10 @@ final class PersonalizationPreviewGenerator
         $state['providerStatus'] = $providerStatus;
 
         if (in_array($providerStatus, ['starting', 'processing'], true)) {
+            if ($this->hasCurrentProviderPageTimedOut($state)) {
+                return $this->retryOrFailTimedOutPage($job, $session, $book, $generationPlan, $state, $prediction);
+            }
+
             $job->recordProviderState($providerStatus, [
                 'state' => $state,
                 'prediction' => $prediction,
@@ -238,6 +245,100 @@ final class PersonalizationPreviewGenerator
             'provider_status' => $providerStatus,
             'error' => $errorMessage,
         ]);
+
+        return $job;
+    }
+
+    /**
+     * @param array<string, mixed> $state
+     */
+    private function hasCurrentProviderPageTimedOut(array $state): bool
+    {
+        $currentPageId = (string) ($state['currentPageId'] ?? '');
+
+        if ('' === $currentPageId || !is_array($state['pageRuns'][$currentPageId] ?? null)) {
+            return false;
+        }
+
+        $requestedAt = trim((string) ($state['pageRuns'][$currentPageId]['requestedAt'] ?? ''));
+
+        if ('' === $requestedAt) {
+            return false;
+        }
+
+        try {
+            $requestedAtDate = new \DateTimeImmutable($requestedAt);
+        } catch (\Throwable) {
+            return false;
+        }
+
+        return (new \DateTimeImmutable())->getTimestamp() - $requestedAtDate->getTimestamp() >= self::PROVIDER_PAGE_TIMEOUT_SECONDS;
+    }
+
+    /**
+     * @param array<string, mixed> $book
+     * @param list<array<string, mixed>> $generationPlan
+     * @param array<string, mixed> $state
+     * @param array<string, mixed> $prediction
+     */
+    private function retryOrFailTimedOutPage(
+        PersonalizationGenerationJob $job,
+        PersonalizationSession $session,
+        array $book,
+        array $generationPlan,
+        array $state,
+        array $prediction,
+    ): PersonalizationGenerationJob {
+        $currentPage = $generationPlan[$state['currentPageIndex']] ?? null;
+
+        if (null === $currentPage) {
+            throw new \RuntimeException('The timed out generation page could not be resolved.');
+        }
+
+        $pageId = (string) $currentPage['id'];
+        $attemptsByPage = is_array($state['providerAttemptsByPage'] ?? null) ? $state['providerAttemptsByPage'] : [];
+        $currentAttempts = max(1, (int) ($attemptsByPage[$pageId] ?? 1));
+        $timeoutMessage = sprintf('Replicate page generation timed out after %d seconds.', self::PROVIDER_PAGE_TIMEOUT_SECONDS);
+
+        $state['pageRuns'][$pageId] = array_merge(
+            is_array($state['pageRuns'][$pageId] ?? null) ? $state['pageRuns'][$pageId] : [],
+            [
+                'status' => 'timeout',
+                'providerStatus' => (string) ($state['providerStatus'] ?? 'timeout'),
+                'timedOutAt' => (new \DateTimeImmutable())->format(DATE_ATOM),
+                'timeoutSeconds' => self::PROVIDER_PAGE_TIMEOUT_SECONDS,
+                'providerAttempt' => $currentAttempts,
+            ],
+        );
+
+        if ($currentAttempts >= self::PROVIDER_PAGE_MAX_ATTEMPTS) {
+            $job->fail($timeoutMessage, 'timeout', [
+                'state' => $state,
+                'prediction' => $prediction,
+            ]);
+            $this->syncSessionProgress($session, $job, $generationPlan, $state);
+            $this->entityManager->flush();
+
+            $this->logger->warning('Replicate generation page retry limit reached.', [
+                'session_id' => $session->getId(),
+                'generation_job_id' => $job->getId(),
+                'page_id' => $pageId,
+                'page_number' => $currentPage['pageNumber'] ?? null,
+                'provider_attempts' => $currentAttempts,
+            ]);
+
+            return $job;
+        }
+
+        $this->logger->warning('Replicate generation page timed out; retrying page.', [
+            'session_id' => $session->getId(),
+            'generation_job_id' => $job->getId(),
+            'page_id' => $pageId,
+            'page_number' => $currentPage['pageNumber'] ?? null,
+            'provider_attempts' => $currentAttempts,
+        ]);
+
+        $this->startPredictionForCurrentPage($job, $session, $book, $generationPlan, $state);
 
         return $job;
     }
@@ -394,6 +495,9 @@ final class PersonalizationPreviewGenerator
         $state['currentPageNumber'] = $currentPage['pageNumber'];
         $state['providerJobId'] = $providerJobId;
         $state['providerStatus'] = $providerStatus;
+        $attemptsByPage = is_array($state['providerAttemptsByPage'] ?? null) ? $state['providerAttemptsByPage'] : [];
+        $attemptsByPage[$currentPage['id']] = ((int) ($attemptsByPage[$currentPage['id']] ?? 0)) + 1;
+        $state['providerAttemptsByPage'] = $attemptsByPage;
         $state['pageRuns'][$currentPage['id']] = [
             'pageId' => $currentPage['id'],
             'pageNumber' => $currentPage['pageNumber'],
@@ -401,6 +505,7 @@ final class PersonalizationPreviewGenerator
             'providerJobId' => $providerJobId,
             'providerStatus' => $providerStatus,
             'requestedAt' => (new \DateTimeImmutable())->format(DATE_ATOM),
+            'providerAttempt' => $attemptsByPage[$currentPage['id']],
             'input' => $input,
         ];
 
@@ -505,7 +610,13 @@ final class PersonalizationPreviewGenerator
             throw new \RuntimeException('A child photo is required before generation.');
         }
 
-        $filePath = $this->resolvePublicFilePath($photo->getPublicPath());
+        $storagePath = $photo->getStoragePath();
+
+        if (null === $storagePath || '' === trim($storagePath)) {
+            throw new \RuntimeException('The uploaded child photo is missing its private storage path.');
+        }
+
+        $filePath = $this->projectDir . '/' . ltrim($storagePath, '/');
         $contents = @file_get_contents($filePath);
 
         if (false === $contents) {
