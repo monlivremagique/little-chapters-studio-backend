@@ -191,6 +191,7 @@ Variables obligatoires pour soumission Gelato réelle :
 - `GELATO_PRODUCT_UID`
 - `GELATO_SHIPMENT_METHOD_UID`
 - `GELATO_WEBHOOK_SECRET`
+- `GELATO_PUBLIC_BASE_URL` optionnel si vous voulez figer une URL publique différente de `DEFAULT_URI`
 
 Sans `GELATO_API_KEY`, la génération PDF reste testable localement mais la soumission fulfillment échoue proprement avec un statut exploitable.
 
@@ -214,6 +215,12 @@ Gelato exige une URL webhook publique HTTPS. En local, exposer le backend avec u
 
 ```text
 https://<tunnel-public-https>/api/custom/fulfillment/gelato/webhook?secret=<GELATO_WEBHOOK_SECRET>
+```
+
+Commande de validation réelle Gelato :
+
+```bash
+docker compose exec -T php php bin/console app:gelato:submit-validation-order https://<tunnel-public-https>
 ```
 
 ## 10. Arrêt propre

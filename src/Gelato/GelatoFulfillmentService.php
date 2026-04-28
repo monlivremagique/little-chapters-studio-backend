@@ -22,12 +22,14 @@ final class GelatoFulfillmentService
         private readonly ?string $productUid,
         #[Autowire('%env(default::GELATO_SHIPMENT_METHOD_UID)%')]
         private readonly ?string $shipmentMethodUid,
+        #[Autowire('%env(default::GELATO_PUBLIC_BASE_URL)%')]
+        private readonly ?string $gelatoPublicBaseUrl,
         #[Autowire('%env(DEFAULT_URI)%')]
         private readonly string $defaultUri,
     ) {
     }
 
-    public function submit(PersonalizationSession $session, PdfArtifact $pdfArtifact): FulfillmentOrder
+    public function submit(PersonalizationSession $session, PdfArtifact $pdfArtifact, ?string $publicBaseUrl = null): FulfillmentOrder
     {
         /** @var FulfillmentOrder|null $existing */
         $existing = $this->entityManager->getRepository(FulfillmentOrder::class)->findOneBy(['session' => $session]);
@@ -40,7 +42,7 @@ final class GelatoFulfillmentService
             throw new \RuntimeException('Cannot submit fulfillment without a Sylius order number.');
         }
 
-        $payload = $this->buildPayload($session, $pdfArtifact);
+        $payload = $this->buildPayload($session, $pdfArtifact, $publicBaseUrl);
         $fulfillmentOrder = new FulfillmentOrder($session, $pdfArtifact, $session->getSyliusOrderNumber(), $payload);
         $this->entityManager->persist($fulfillmentOrder);
         $this->operationalEventRecorder->record('gelato.submission_started', 'info', $session->getId(), $session->getSyliusOrderNumber());
@@ -117,12 +119,25 @@ final class GelatoFulfillmentService
     }
 
     /** @return array<string, mixed> */
-    private function buildPayload(PersonalizationSession $session, PdfArtifact $pdfArtifact): array
+    private function buildPayload(PersonalizationSession $session, PdfArtifact $pdfArtifact, ?string $publicBaseUrl = null): array
     {
         $productUid = trim((string) $this->productUid);
 
         if ('' === $productUid) {
             $productUid = 'book_pf_210x210_hardcover_placeholder';
+        }
+
+        $resolvedPublicBaseUrl = trim((string) ($publicBaseUrl ?? $this->gelatoPublicBaseUrl ?? $this->defaultUri));
+
+        if ('' === $resolvedPublicBaseUrl) {
+            throw new \RuntimeException('A public base URL is required to expose the PDF artifact to Gelato.');
+        }
+
+        $snapshotPayload = $pdfArtifact->getPreviewVersion()->getSnapshotPayload();
+        $pageCount = count(is_array($snapshotPayload['pages'] ?? null) ? $snapshotPayload['pages'] : []);
+
+        if ($pageCount <= 0) {
+            throw new \RuntimeException('The approved preview version does not expose any page for Gelato fulfillment.');
         }
 
         return [
@@ -135,8 +150,9 @@ final class GelatoFulfillmentService
                 'productUid' => $productUid,
                 'files' => [[
                     'type' => 'default',
-                    'url' => rtrim($this->defaultUri, '/').$pdfArtifact->getPublicPath(),
+                    'url' => rtrim($resolvedPublicBaseUrl, '/').$pdfArtifact->getPublicPath(),
                 ]],
+                'pageCount' => $pageCount,
                 'quantity' => 1,
             ]],
             'shipmentMethodUid' => trim((string) $this->shipmentMethodUid) !== '' ? trim((string) $this->shipmentMethodUid) : 'standard',

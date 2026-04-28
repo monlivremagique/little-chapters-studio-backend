@@ -98,7 +98,7 @@ final class PersonalizationPdfRenderer
             $image = '' !== $imageUrl ? sprintf('<img src="%s" alt="">', $imageUrl) : '';
 
             $content = match ($pageType) {
-                'cover' => sprintf('<div class="cover-title">%s</div>%s', '' !== $title ? $title : $label, $image),
+                'cover' => sprintf('<div class="cover-page"><h2 class="cover-title">%s</h2>%s</div>', '' !== $title ? $title : $label, $image),
                 'dedication', 'summary' => sprintf('<div class="text-page"><h2>%s</h2><p>%s</p></div>', $label, $text),
                 'backCover' => sprintf('<div class="image-page">%s</div>', $image),
                 default => sprintf('<div class="story-page"><h2>%s</h2>%s<p>%s</p></div>', '' !== $title ? $title : $label, $image, $text),
@@ -114,15 +114,17 @@ final class PersonalizationPdfRenderer
 <meta charset="utf-8">
 <style>
 @page { margin: 0; size: 210mm 210mm; }
-body { margin: 0; font-family: DejaVu Sans, sans-serif; color: #232323; }
-.page { page-break-after: always; width: 210mm; height: 210mm; box-sizing: border-box; padding: 16mm; text-align: center; }
-.page h2 { margin: 0 0 10mm; font-size: 22pt; }
-.page p { font-size: 14pt; line-height: 1.45; }
-.page img { max-width: 172mm; max-height: 140mm; display: block; margin: 0 auto 8mm; object-fit: contain; }
-.cover-title { margin-top: 12mm; font-size: 26pt; font-weight: bold; }
-.text-page { display: flex; flex-direction: column; justify-content: center; height: 100%; }
-.image-page { display: flex; justify-content: center; align-items: center; height: 100%; }
-.story-page { display: block; }
+html, body { margin: 0; padding: 0; width: 210mm; height: 210mm; font-family: DejaVu Sans, sans-serif; color: #232323; }
+.page { page-break-after: always; width: 210mm; height: 210mm; box-sizing: border-box; padding: 12mm; text-align: center; overflow: hidden; }
+.page h2, .page p { margin: 0; }
+.page h2 { font-size: 18pt; line-height: 1.2; }
+.page p { font-size: 11pt; line-height: 1.35; }
+.page img { max-width: 178mm; max-height: 128mm; display: block; margin: 0 auto; object-fit: contain; }
+.cover-page, .text-page, .image-page, .story-page { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.cover-page, .story-page { gap: 6mm; }
+.text-page { gap: 5mm; padding: 0 8mm; }
+.image-page { padding: 0; }
+.cover-title { font-size: 22pt; font-weight: bold; }
 </style>
 </head>
 <body>

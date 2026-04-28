@@ -38,7 +38,40 @@ final class GelatoClient implements GelatoClientInterface
         $data = $response->toArray(false);
 
         if ($response->getStatusCode() >= 400) {
-            throw new \RuntimeException(sprintf('Gelato order creation failed with HTTP %d.', $response->getStatusCode()));
+            throw new \RuntimeException(sprintf(
+                'Gelato order creation failed with HTTP %d: %s',
+                $response->getStatusCode(),
+                json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+            ));
+        }
+
+        return is_array($data) ? $data : [];
+    }
+
+    /** @return array<string, mixed> */
+    public function getOrder(string $providerOrderId): array
+    {
+        $apiKey = trim((string) $this->apiKey);
+
+        if ('' === $apiKey) {
+            throw new \RuntimeException('Gelato is not configured locally. Set GELATO_API_KEY before reading fulfillment orders.');
+        }
+
+        $response = $this->httpClient->request('GET', rtrim($this->apiBaseUri ?: 'https://order.gelatoapis.com', '/').'/v4/orders/'.rawurlencode(trim($providerOrderId)), [
+            'headers' => [
+                'Accept' => 'application/json',
+                'X-API-KEY' => $apiKey,
+            ],
+        ]);
+
+        $data = $response->toArray(false);
+
+        if ($response->getStatusCode() >= 400) {
+            throw new \RuntimeException(sprintf(
+                'Gelato order fetch failed with HTTP %d: %s',
+                $response->getStatusCode(),
+                json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+            ));
         }
 
         return is_array($data) ? $data : [];

@@ -10,6 +10,7 @@ use App\Entity\Personalization\PdfArtifact;
 use App\Gelato\GelatoFulfillmentService;
 use App\Personalization\PersonalizationOrderLinker;
 use App\Personalization\PersonalizationSessionOwnershipGuard;
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -101,8 +102,12 @@ final class FulfillmentController
 
         $this->entityManager->persist(new FulfillmentWebhookEvent($eventKey, 'gelato', $payload));
 
-        $fulfillment = $this->gelatoFulfillmentService->applyWebhook($payload);
-        $this->entityManager->flush();
+        try {
+            $fulfillment = $this->gelatoFulfillmentService->applyWebhook($payload);
+            $this->entityManager->flush();
+        } catch (UniqueConstraintViolationException) {
+            return new JsonResponse(['message' => 'Webhook already processed.']);
+        }
 
         if (!$fulfillment instanceof FulfillmentOrder) {
             return new JsonResponse(['message' => 'Fulfillment order not found.'], Response::HTTP_NOT_FOUND);

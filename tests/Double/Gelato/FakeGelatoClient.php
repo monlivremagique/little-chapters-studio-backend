@@ -22,6 +22,14 @@ final class FakeGelatoClient implements GelatoClientInterface
         ];
     }
 
+    public function getOrder(string $providerOrderId): array
+    {
+        return [
+            'id' => $providerOrderId,
+            'status' => 'submitted',
+        ];
+    }
+
     /** @return list<array<string, mixed>> */
     public function getCreatedOrders(): array
     {
