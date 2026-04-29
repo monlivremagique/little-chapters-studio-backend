@@ -10,7 +10,7 @@ use App\Entity\Personalization\PersonalizationPreviewArtifact;
 use App\Entity\Personalization\PersonalizationSession;
 use App\FrontCatalog\FrontCatalogMetadata;
 use App\FrontCatalog\FrontCatalogProvider;
-use App\Integration\Replicate\ReplicatePredictionClient;
+use App\Integration\Replicate\ReplicatePredictionClientInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
@@ -25,7 +25,7 @@ final class PersonalizationPreviewGenerator
         private readonly EntityManagerInterface $entityManager,
         private readonly FrontCatalogProvider $frontCatalogProvider,
         private readonly FrontCatalogMetadata $frontCatalogMetadata,
-        private readonly ReplicatePredictionClient $replicatePredictionClient,
+        private readonly ReplicatePredictionClientInterface $replicatePredictionClient,
         private readonly LoggerInterface $logger,
         #[Autowire('%kernel.project_dir%')]
         private readonly string $projectDir,
@@ -62,9 +62,8 @@ final class PersonalizationPreviewGenerator
         if (
             null !== $latestJob
             && in_array($latestJob->getStatus(), [PersonalizationGenerationJobStatus::Processing, PersonalizationGenerationJobStatus::Queued], true)
-            && null !== $latestJob->getProviderJobId()
         ) {
-            return $this->synchronize($latestJob);
+            return $latestJob;
         }
 
         $attemptNumber = null !== $latestJob ? $latestJob->getAttemptNumber() + 1 : 1;
@@ -92,26 +91,59 @@ final class PersonalizationPreviewGenerator
         $session->markGenerationRequested();
         $this->entityManager->flush();
 
-        try {
-            $state = $this->initialState($generationPlan);
-            $this->startPredictionForCurrentPage($job, $session, $book, $generationPlan, $state);
-        } catch (\Throwable $exception) {
-            $job->fail($exception->getMessage(), 'request_failed', [
-                'state' => $this->initialState($generationPlan),
-            ]);
-            $session->saveContent($session->getChildName(), $session->getDedication(), $session->getExtraFields(), max($session->getStep(), 3));
-            $this->entityManager->flush();
+        return $job;
+    }
 
-            $this->logger->error('Replicate generation request failed.', [
-                'session_id' => $session->getId(),
-                'generation_job_id' => $job->getId(),
-                'error' => $exception->getMessage(),
-            ]);
+    public function processJob(PersonalizationGenerationJob $job): PersonalizationGenerationJob
+    {
+        return match ($job->getStatus()) {
+            PersonalizationGenerationJobStatus::Queued => $this->processQueuedJob($job),
+            PersonalizationGenerationJobStatus::Processing => $this->synchronize($job),
+            default => $job,
+        };
+    }
 
-            throw $exception;
+    public function retryFailedJob(PersonalizationGenerationJob $job): PersonalizationGenerationJob
+    {
+        if ($job->getStatus() !== PersonalizationGenerationJobStatus::Failed) {
+            return $job;
         }
 
-        return $job;
+        if ($job->getAttemptNumber() >= $this->getMaxRetries()) {
+            throw new \RuntimeException(sprintf('Preview generation reached the retry limit (%d).', $this->getMaxRetries()));
+        }
+
+        return $this->trigger($job->getSession(), false);
+    }
+
+    public function processPendingJobs(int $limit = 10): int
+    {
+        $jobs = $this->entityManager->createQueryBuilder()
+            ->select('job')
+            ->from(PersonalizationGenerationJob::class, 'job')
+            ->where('job.status IN (:statuses)')
+            ->setParameter('statuses', [
+                PersonalizationGenerationJobStatus::Queued,
+                PersonalizationGenerationJobStatus::Processing,
+            ])
+            ->orderBy('job.requestedAt', 'ASC')
+            ->addOrderBy('job.id', 'ASC')
+            ->setMaxResults(max(1, $limit))
+            ->getQuery()
+            ->getResult();
+
+        $processed = 0;
+
+        foreach ($jobs as $job) {
+            if (!$job instanceof PersonalizationGenerationJob) {
+                continue;
+            }
+
+            $this->processJob($job);
+            ++$processed;
+        }
+
+        return $processed;
     }
 
     public function synchronize(PersonalizationGenerationJob $job): PersonalizationGenerationJob
@@ -347,15 +379,47 @@ final class PersonalizationPreviewGenerator
     {
         $latestJob = $this->findLatestGenerationJob($session);
 
-        if (null === $latestJob) {
-            return null;
-        }
-
-        if (in_array($latestJob->getStatus(), [PersonalizationGenerationJobStatus::Processing, PersonalizationGenerationJobStatus::Queued], true)) {
-            return $this->synchronize($latestJob);
-        }
-
         return $latestJob;
+    }
+
+    private function processQueuedJob(PersonalizationGenerationJob $job): PersonalizationGenerationJob
+    {
+        if (null !== $job->getProviderJobId()) {
+            return $this->synchronize($job);
+        }
+
+        $session = $job->getSession();
+        $book = $this->getBookBySession($session);
+        $generationPlan = $this->resolveGenerationPlan($job, $session, $book);
+
+        if ([] === $generationPlan) {
+            $job->fail('The selected book blueprint does not expose any illustrated page to generate.', 'request_failed', [
+                'state' => $this->initialState($generationPlan),
+            ]);
+            $this->syncSessionProgress($session, $job, $generationPlan, $this->initialState($generationPlan));
+            $this->entityManager->flush();
+
+            return $job;
+        }
+
+        try {
+            $state = $this->initialState($generationPlan);
+            $this->startPredictionForCurrentPage($job, $session, $book, $generationPlan, $state);
+        } catch (\Throwable $exception) {
+            $job->fail($exception->getMessage(), 'request_failed', [
+                'state' => $this->initialState($generationPlan),
+            ]);
+            $session->saveContent($session->getChildName(), $session->getDedication(), $session->getExtraFields(), max($session->getStep(), 3));
+            $this->entityManager->flush();
+
+            $this->logger->error('Replicate generation request failed.', [
+                'session_id' => $session->getId(),
+                'generation_job_id' => $job->getId(),
+                'error' => $exception->getMessage(),
+            ]);
+        }
+
+        return $job;
     }
 
     private function assertPreviewGenerationReady(PersonalizationSession $session): void

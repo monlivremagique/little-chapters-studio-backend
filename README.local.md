@@ -71,6 +71,8 @@ docker compose exec php php bin/console about
 docker compose exec php php bin/console doctrine:migrations:status
 docker compose exec php php bin/console app:sync-book-blueprints --no-interaction
 docker compose exec php php bin/console app:cleanup-personalization-photos --deleted-grace-days=7
+docker compose exec php php bin/console app:personalization:process-generation-jobs --limit=10
+docker compose exec php php bin/console app:personalization:process-generation-jobs --loop --limit=10 --sleep-seconds=2 --max-runtime=60
 ```
 
 Front :
@@ -173,6 +175,24 @@ docker compose exec php php bin/console app:cleanup-personalization-photos --del
 - le front renvoie ce token via `X-Personalization-Owner-Token`
 - après connexion client, une session invitée peut être réclamée par le client si le bearer token et le `ownerToken` correspondent
 - les routes `/api/custom/orders/{orderNumber}/sessions` appliquent la même règle d’appartenance
+
+## 8bis. Worker génération Replicate
+
+- `POST /api/personalization/sessions/{id}/generation-requests` crée un job backend `queued`
+- la requête front ne doit plus porter l’appel provider complet
+- le traitement durable se fait via:
+
+```bash
+cd /home/labid/little-chapters-studio-backend
+docker compose exec php php bin/console app:personalization:process-generation-jobs --loop --limit=10 --sleep-seconds=2 --max-runtime=60
+```
+
+- support minimal génération:
+
+```bash
+curl -H "X-Support-Token: local-support-token" "http://localhost:8001/api/custom/support/personalization/generation-jobs?failedOnly=1"
+curl -X POST -H "X-Support-Token: local-support-token" "http://localhost:8001/api/custom/support/personalization/generation-jobs/<jobId>/retry"
+```
 
 ## 9. PDF, Gelato et support opérationnel
 

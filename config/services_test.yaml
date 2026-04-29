@@ -1,4 +1,9 @@
 services:
+    App\Tests\Double\Replicate\FakeReplicatePredictionClient:
+        public: true
+
+    App\Integration\Replicate\ReplicatePredictionClientInterface: '@App\Tests\Double\Replicate\FakeReplicatePredictionClient'
+
     App\Tests\Double\Stripe\FakeStripeCheckoutClient:
         public: true
 

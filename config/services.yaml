@@ -41,5 +41,6 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
+    App\Integration\Replicate\ReplicatePredictionClientInterface: '@App\Integration\Replicate\ReplicatePredictionClient'
     App\Stripe\StripeCheckoutClientInterface: '@App\Stripe\StripeCheckoutClient'
     App\Gelato\GelatoClientInterface: '@App\Gelato\GelatoClient'

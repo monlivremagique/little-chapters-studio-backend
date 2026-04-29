@@ -33,12 +33,14 @@ final class PersonalizationSessionTransitionMatrix
             ],
             PersonalizationSessionStatus::GenerationRequested => [
                 PersonalizationSessionStatus::Generating,
+                PersonalizationSessionStatus::ContentCompleted,
                 PersonalizationSessionStatus::GenerationRequested,
                 PersonalizationSessionStatus::Failed,
                 PersonalizationSessionStatus::Cancelled,
             ],
             PersonalizationSessionStatus::Generating => [
                 PersonalizationSessionStatus::Generating,
+                PersonalizationSessionStatus::ContentCompleted,
                 PersonalizationSessionStatus::PreviewPartialReady,
                 PersonalizationSessionStatus::PreviewReady,
                 PersonalizationSessionStatus::Failed,

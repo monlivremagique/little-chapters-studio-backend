@@ -10,7 +10,7 @@ use Symfony\Component\HttpClient\Exception\TransportException;
 use Symfony\Component\HttpClient\ScopingHttpClient;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-final class ReplicatePredictionClient
+final class ReplicatePredictionClient implements ReplicatePredictionClientInterface
 {
     private HttpClientInterface $httpClient;
     private ?string $resolvedModelVersion = null;
