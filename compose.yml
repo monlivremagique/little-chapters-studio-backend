@@ -26,6 +26,7 @@ services:
             SYLIUS_MESSENGER_TRANSPORT_PAYMENT_REQUEST_DSN: ${SYLIUS_MESSENGER_TRANSPORT_PAYMENT_REQUEST_DSN:-sync://}
             SYLIUS_MESSENGER_TRANSPORT_PAYMENT_REQUEST_FAILED_DSN: ${SYLIUS_MESSENGER_TRANSPORT_PAYMENT_REQUEST_FAILED_DSN:-sync://}
             PHP_DATE_TIMEZONE: ${PHP_DATE_TIMEZONE:-Europe/Brussels}
+            PERSONALIZATION_GENERATION_PAGE_LIMIT: ${PERSONALIZATION_GENERATION_PAGE_LIMIT:-4}
         volumes:
             - .:/srv/sylius:rw,cached
             - ./public:/srv/sylius/public:rw,delegated
@@ -36,6 +37,33 @@ services:
         working_dir: /srv/sylius
         command: >
             sh -lc "test -x node_modules/.bin/encore || npm install --no-audit --no-fund; npm run build"
+        volumes:
+            - .:/srv/sylius:rw,cached
+            - ./public:/srv/sylius/public:rw,delegated
+
+    generation-worker:
+        image: little-chapters-backend-php:phase1
+        depends_on:
+            postgres:
+                condition: service_healthy
+            php:
+                condition: service_healthy
+        command: >
+            sh -lc "php bin/console app:personalization:process-generation-jobs --loop --limit=10 --sleep-seconds=2 --max-runtime=31536000"
+        environment:
+            APP_ENV: ${APP_ENV:-dev}
+            APP_SECRET: ${APP_SECRET:-phase1-local-secret}
+            DATABASE_URL: pgsql://sylius:sylius@postgres:5432/little_chapters_sylius?serverVersion=16&charset=utf8
+            MAILER_DSN: ${MAILER_DSN:-smtp://mailhog:1025}
+            MESSENGER_TRANSPORT_DSN: ${MESSENGER_TRANSPORT_DSN:-doctrine://default}
+            SYLIUS_MESSENGER_TRANSPORT_MAIN_DSN: ${SYLIUS_MESSENGER_TRANSPORT_MAIN_DSN:-doctrine://default}
+            SYLIUS_MESSENGER_TRANSPORT_MAIN_FAILED_DSN: ${SYLIUS_MESSENGER_TRANSPORT_MAIN_FAILED_DSN:-doctrine://default?queue_name=main_failed}
+            SYLIUS_MESSENGER_TRANSPORT_CATALOG_PROMOTION_REMOVAL_DSN: ${SYLIUS_MESSENGER_TRANSPORT_CATALOG_PROMOTION_REMOVAL_DSN:-doctrine://default?queue_name=catalog_promotion_removal}
+            SYLIUS_MESSENGER_TRANSPORT_CATALOG_PROMOTION_REMOVAL_FAILED_DSN: ${SYLIUS_MESSENGER_TRANSPORT_CATALOG_PROMOTION_REMOVAL_FAILED_DSN:-doctrine://default?queue_name=catalog_promotion_removal_failed}
+            SYLIUS_MESSENGER_TRANSPORT_PAYMENT_REQUEST_DSN: ${SYLIUS_MESSENGER_TRANSPORT_PAYMENT_REQUEST_DSN:-sync://}
+            SYLIUS_MESSENGER_TRANSPORT_PAYMENT_REQUEST_FAILED_DSN: ${SYLIUS_MESSENGER_TRANSPORT_PAYMENT_REQUEST_FAILED_DSN:-sync://}
+            PHP_DATE_TIMEZONE: ${PHP_DATE_TIMEZONE:-Europe/Brussels}
+            PERSONALIZATION_GENERATION_PAGE_LIMIT: ${PERSONALIZATION_GENERATION_PAGE_LIMIT:-4}
         volumes:
             - .:/srv/sylius:rw,cached
             - ./public:/srv/sylius/public:rw,delegated
@@ -81,6 +109,8 @@ services:
             dockerfile: Dockerfile
         depends_on:
             nginx:
+                condition: service_started
+            generation-worker:
                 condition: service_started
         environment:
             VITE_API_BASE_URL: /api

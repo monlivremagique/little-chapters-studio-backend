@@ -9,6 +9,7 @@ use App\Entity\Payment\StripeCheckoutSession;
 use App\Entity\Payment\StripeWebhookEvent;
 use App\Personalization\PersonalizationOrderLinker;
 use App\Production\PostPaymentProductionOrchestrator;
+use App\Support\CriticalAlertDispatcher;
 use App\Support\OperationalEventRecorder;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
@@ -25,6 +26,7 @@ final class StripeCheckoutSynchronizer
         private readonly PersonalizationOrderLinker $personalizationOrderLinker,
         private readonly PostPaymentProductionOrchestrator $postPaymentProductionOrchestrator,
         private readonly OperationalEventRecorder $operationalEventRecorder,
+        private readonly CriticalAlertDispatcher $criticalAlertDispatcher,
     ) {
     }
 
@@ -37,6 +39,10 @@ final class StripeCheckoutSynchronizer
 
         if (!$checkoutSession instanceof StripeCheckoutSession) {
             return null;
+        }
+
+        if (in_array($checkoutSession->getStatus(), ['failed', 'expired'], true)) {
+            return $checkoutSession;
         }
 
         $payload = $this->stripeCheckoutClient->retrieveCheckoutSession($providerSessionId);
@@ -110,6 +116,20 @@ final class StripeCheckoutSynchronizer
         return $checkoutSession;
     }
 
+    public function forceFailureForSupport(StripeCheckoutSession $checkoutSession, string $reason = 'Support forced failure.'): void
+    {
+        $checkoutSession->markFailed($reason, $checkoutSession->getPaymentStatus(), $checkoutSession->getProviderPaymentIntentId());
+        $this->markPaymentFailed($checkoutSession, 'support-forced', 'support.forced_failure');
+        $this->entityManager->flush();
+    }
+
+    public function forceExpiryForSupport(StripeCheckoutSession $checkoutSession): void
+    {
+        $checkoutSession->markExpired($checkoutSession->getPaymentStatus(), $checkoutSession->getProviderPaymentIntentId());
+        $this->markPaymentFailed($checkoutSession, 'support-expired', 'support.forced_expiry');
+        $this->entityManager->flush();
+    }
+
     /**
      * @param array<string, mixed> $providerPayload
      */
@@ -180,6 +200,7 @@ final class StripeCheckoutSynchronizer
 
         $sessions = $this->personalizationOrderLinker->synchronizeSessionsWithOrderToken($checkoutSession->getSyliusOrderTokenValue());
         $this->operationalEventRecorder->record('stripe.payment_completed', 'info', null, $checkoutSession->getSyliusOrderNumber(), [
+            'payment_id' => (string) $payment->getId(),
             'stripe_checkout_session_id' => $checkoutSession->getProviderSessionId(),
             'stripe_payment_intent_id' => $checkoutSession->getProviderPaymentIntentId(),
             'provider_event_id' => $providerEventId,
@@ -213,11 +234,23 @@ final class StripeCheckoutSynchronizer
         ];
         $payment->setDetails($details);
         $this->operationalEventRecorder->record('stripe.payment_failed', 'warning', null, $checkoutSession->getSyliusOrderNumber(), [
+            'payment_id' => (string) $payment->getId(),
             'stripe_checkout_session_id' => $checkoutSession->getProviderSessionId(),
             'stripe_payment_intent_id' => $checkoutSession->getProviderPaymentIntentId(),
             'provider_event_id' => $providerEventId,
             'provider_event_type' => $providerEventType,
             'error_message' => $checkoutSession->getErrorMessage(),
+        ]);
+        $this->criticalAlertDispatcher->dispatch('stripe.payment_failed', [
+            'session_id' => null,
+            'order_number' => $checkoutSession->getSyliusOrderNumber(),
+            'payment_id' => (string) $payment->getId(),
+            'provider_order_id' => null,
+            'message' => $checkoutSession->getErrorMessage(),
+            'stripe_checkout_session_id' => $checkoutSession->getProviderSessionId(),
+            'stripe_payment_intent_id' => $checkoutSession->getProviderPaymentIntentId(),
+            'provider_event_id' => $providerEventId,
+            'provider_event_type' => $providerEventType,
         ]);
     }
 }

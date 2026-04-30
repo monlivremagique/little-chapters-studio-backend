@@ -104,6 +104,9 @@ Backend `.env.local` :
 - `GELATO_WEBHOOK_SECRET`
 - `SUPPORT_OPERATIONS_TOKEN`
 - `FRONTEND_BASE_URL=http://localhost:8080`
+- `ALERT_EMAIL_TO` optionnel
+- `ALERT_EMAIL_FROM` optionnel
+- `ALERT_WEBHOOK_URL` optionnel
 
 Front Docker :
 
@@ -220,6 +223,8 @@ Endpoints utiles :
 ```bash
 curl http://localhost:8001/api/custom/orders/{orderNumber}/fulfillment
 curl -H "X-Support-Token: local-support-token" http://localhost:8001/api/custom/support/orders/{orderNumber}/events
+curl -H "X-Support-Token: local-support-token" http://localhost:8001/api/custom/support/orders/{orderNumber}/trace
+curl -H "X-Support-Token: local-support-token" "http://localhost:8001/api/custom/support/personalization/generation-jobs?failedOnly=1"
 ```
 
 Webhook Gelato local :

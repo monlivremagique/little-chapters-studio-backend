@@ -7,6 +7,7 @@ namespace App\Pdf;
 use App\Entity\Personalization\PdfArtifact;
 use App\Entity\Personalization\PersonalizationSession;
 use App\Entity\Personalization\PreviewVersion;
+use App\Support\CriticalAlertDispatcher;
 use App\Support\OperationalEventRecorder;
 use Doctrine\ORM\EntityManagerInterface;
 use Dompdf\Dompdf;
@@ -19,6 +20,7 @@ final class PersonalizationPdfRenderer
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly OperationalEventRecorder $operationalEventRecorder,
+        private readonly CriticalAlertDispatcher $criticalAlertDispatcher,
         #[Autowire('%kernel.project_dir%')]
         private readonly string $projectDir,
     ) {
@@ -72,11 +74,23 @@ final class PersonalizationPdfRenderer
         $session->markPrintReady();
         $this->entityManager->persist($artifact);
         $this->operationalEventRecorder->record('pdf.print_ready', 'info', $session->getId(), $session->getSyliusOrderNumber(), [
+            'pdf_artifact_id' => (string) ($artifact->getId() ?? 'pending'),
             'pdf_path' => $artifact->getPublicPath(),
             'pdf_hash' => $artifact->getFileHash(),
         ]);
 
         return $artifact;
+    }
+
+    public function dispatchFailureAlert(PersonalizationSession $session, \Throwable $exception): void
+    {
+        $this->criticalAlertDispatcher->dispatch('pdf.render_failed', [
+            'session_id' => $session->getId(),
+            'order_number' => $session->getSyliusOrderNumber(),
+            'payment_id' => null,
+            'provider_order_id' => null,
+            'message' => $exception->getMessage(),
+        ]);
     }
 
     private function buildHtml(PreviewVersion $previewVersion): string

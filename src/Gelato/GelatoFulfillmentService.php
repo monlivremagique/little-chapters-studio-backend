@@ -7,6 +7,7 @@ namespace App\Gelato;
 use App\Entity\Fulfillment\FulfillmentOrder;
 use App\Entity\Personalization\PdfArtifact;
 use App\Entity\Personalization\PersonalizationSession;
+use App\Support\CriticalAlertDispatcher;
 use App\Support\OperationalEventRecorder;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
@@ -18,6 +19,7 @@ final class GelatoFulfillmentService
         private readonly GelatoClientInterface $gelatoClient,
         private readonly GelatoShippingAddressResolver $shippingAddressResolver,
         private readonly OperationalEventRecorder $operationalEventRecorder,
+        private readonly CriticalAlertDispatcher $criticalAlertDispatcher,
         #[Autowire('%env(default::GELATO_PRODUCT_UID)%')]
         private readonly ?string $productUid,
         #[Autowire('%env(default::GELATO_SHIPMENT_METHOD_UID)%')]
@@ -54,11 +56,22 @@ final class GelatoFulfillmentService
             $session->markSubmittedToGelato();
             $this->operationalEventRecorder->record('gelato.submitted', 'info', $session->getId(), $session->getSyliusOrderNumber(), [
                 'provider_order_id' => $providerOrderId,
+                'pdf_artifact_id' => (string) ($pdfArtifact->getId() ?? ''),
             ]);
         } catch (\Throwable $exception) {
             $fulfillmentOrder->markFailed($exception->getMessage());
             $this->operationalEventRecorder->record('gelato.submission_failed', 'error', $session->getId(), $session->getSyliusOrderNumber(), [
                 'error' => $exception->getMessage(),
+                'provider_order_id' => $fulfillmentOrder->getProviderOrderId(),
+                'pdf_artifact_id' => (string) ($pdfArtifact->getId() ?? ''),
+            ]);
+            $this->criticalAlertDispatcher->dispatch('gelato.submission_failed', [
+                'session_id' => $session->getId(),
+                'order_number' => $session->getSyliusOrderNumber(),
+                'payment_id' => null,
+                'provider_order_id' => $fulfillmentOrder->getProviderOrderId(),
+                'message' => $exception->getMessage(),
+                'pdf_artifact_id' => (string) ($pdfArtifact->getId() ?? ''),
             ]);
         }
 
@@ -113,6 +126,7 @@ final class GelatoFulfillmentService
         $this->operationalEventRecorder->record('gelato.webhook', 'info', $session->getId(), $fulfillmentOrder->getOrderNumber(), [
             'status' => $status,
             'provider_order_id' => $fulfillmentOrder->getProviderOrderId(),
+            'tracking_number' => $fulfillmentOrder->getTrackingNumber(),
         ]);
 
         return $fulfillmentOrder;

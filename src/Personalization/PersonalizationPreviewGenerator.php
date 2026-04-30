@@ -31,6 +31,8 @@ final class PersonalizationPreviewGenerator
         private readonly string $projectDir,
         #[Autowire('%env(int:REPLICATE_MAX_RETRIES)%')]
         private readonly int $maxRetries,
+        #[Autowire('%env(default::PERSONALIZATION_GENERATION_PAGE_LIMIT)%')]
+        private readonly ?string $generationPageLimit,
     ) {
     }
 
@@ -144,6 +146,27 @@ final class PersonalizationPreviewGenerator
         }
 
         return $processed;
+    }
+
+    public function forceLatestJobFailure(PersonalizationSession $session, string $message): ?PersonalizationGenerationJob
+    {
+        $job = $this->findLatestGenerationJob($session);
+
+        if (!$job instanceof PersonalizationGenerationJob) {
+            return null;
+        }
+
+        $book = $this->getBookBySession($session);
+        $generationPlan = $this->resolveGenerationPlan($job, $session, $book);
+        $state = $this->resolveGenerationState($job, $generationPlan);
+        $job->fail(trim($message) !== '' ? trim($message) : 'Forced provider failure.', 'support_failed', [
+            'state' => $state,
+            'prediction' => ['status' => 'failed', 'error' => $message],
+        ]);
+        $this->syncSessionProgress($session, $job, $generationPlan, $state);
+        $this->entityManager->flush();
+
+        return $job;
     }
 
     public function synchronize(PersonalizationGenerationJob $job): PersonalizationGenerationJob
@@ -489,6 +512,12 @@ final class PersonalizationPreviewGenerator
                 'compiledText' => $compiledText !== '' ? $compiledText : null,
                 'isPersonalized' => (bool) ($page['personalizable'] ?? true),
             ];
+        }
+
+        $pageLimit = max(0, (int) trim((string) $this->generationPageLimit));
+
+        if ($pageLimit > 0) {
+            return array_slice($plan, 0, $pageLimit);
         }
 
         return $plan;

@@ -4,10 +4,17 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Entity\Fulfillment\FulfillmentOrder;
+use App\Entity\Payment\Payment;
+use App\Entity\Payment\StripeCheckoutSession;
+use App\Entity\Personalization\PdfArtifact;
 use App\Entity\Personalization\PersonalizationGenerationJob;
 use App\Entity\Personalization\PersonalizationGenerationJobStatus;
+use App\Entity\Personalization\PersonalizationSession;
 use App\Entity\Support\OperationalEvent;
+use App\Personalization\PersonalizationOrderLinker;
 use App\Personalization\PersonalizationPreviewGenerator;
+use App\Stripe\StripeCheckoutSynchronizer;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -20,6 +27,8 @@ final class SupportOperationsController
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly PersonalizationPreviewGenerator $personalizationPreviewGenerator,
+        private readonly PersonalizationOrderLinker $personalizationOrderLinker,
+        private readonly StripeCheckoutSynchronizer $stripeCheckoutSynchronizer,
         #[Autowire('%env(default::SUPPORT_OPERATIONS_TOKEN)%')]
         private readonly ?string $supportToken,
     ) {
@@ -53,6 +62,111 @@ final class SupportOperationsController
             ],
             $events,
         ));
+    }
+
+    #[Route(
+        '/api/custom/support/orders/{orderNumber}/trace',
+        name: 'app_custom_support_order_trace_read',
+        methods: ['GET'],
+        defaults: ['_profiler_collect' => false],
+    )]
+    public function readOrderTrace(string $orderNumber, Request $request): JsonResponse
+    {
+        if (!$this->isSupportTokenValid($request)) {
+            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+        }
+
+        $sessions = $this->personalizationOrderLinker->findSessionsByOrderNumber($orderNumber);
+        $sessionIds = array_map(static fn (PersonalizationSession $session): string => $session->getId(), $sessions);
+        $events = $this->entityManager->getRepository(OperationalEvent::class)->findBy([
+            'orderNumber' => $orderNumber,
+        ], ['id' => 'ASC']);
+        $stripeCheckoutSessions = $this->entityManager->getRepository(StripeCheckoutSession::class)->findBy([
+            'syliusOrderNumber' => $orderNumber,
+        ], ['id' => 'ASC']);
+        $payments = [];
+
+        foreach ($stripeCheckoutSessions as $stripeCheckoutSession) {
+            /** @var Payment|null $payment */
+            $payment = $this->entityManager->getRepository(Payment::class)->find($stripeCheckoutSession->getSyliusPaymentId());
+
+            if ($payment instanceof Payment) {
+                $payments[$payment->getId()] = $payment;
+            }
+        }
+
+        $generationJobs = [];
+        $pdfArtifacts = [];
+        $fulfillments = [];
+
+        foreach ($sessions as $session) {
+            $generationJobs[$session->getId()] = $this->entityManager->getRepository(PersonalizationGenerationJob::class)->findBy([
+                'session' => $session,
+            ], ['id' => 'ASC']);
+            $pdfArtifacts[$session->getId()] = $this->entityManager->getRepository(PdfArtifact::class)->findBy([
+                'session' => $session,
+            ], ['id' => 'ASC']);
+            $fulfillments[$session->getId()] = $this->entityManager->getRepository(FulfillmentOrder::class)->findBy([
+                'session' => $session,
+            ], ['id' => 'ASC']);
+        }
+
+        return new JsonResponse([
+            'orderNumber' => $orderNumber,
+            'sessionIds' => $sessionIds,
+            'stripeCheckoutSessions' => array_map(static fn (StripeCheckoutSession $checkoutSession): array => [
+                'providerSessionId' => $checkoutSession->getProviderSessionId(),
+                'providerPaymentIntentId' => $checkoutSession->getProviderPaymentIntentId(),
+                'paymentId' => $checkoutSession->getSyliusPaymentId(),
+                'status' => $checkoutSession->getStatus(),
+                'paymentStatus' => $checkoutSession->getPaymentStatus(),
+                'errorMessage' => $checkoutSession->getErrorMessage(),
+            ], $stripeCheckoutSessions),
+            'payments' => array_map(static fn (Payment $payment): array => [
+                'id' => $payment->getId(),
+                'state' => $payment->getState(),
+                'amount' => $payment->getAmount(),
+                'details' => $payment->getDetails(),
+            ], array_values($payments)),
+            'sessions' => array_map(static fn (PersonalizationSession $session): array => [
+                'id' => $session->getId(),
+                'status' => $session->getStatus()->value,
+                'bookId' => $session->getBookId(),
+                'childName' => $session->getChildName(),
+                'cartItemId' => $session->getCartItemId(),
+                'syliusOrderId' => $session->getSyliusOrderId(),
+            ], $sessions),
+            'generationJobs' => array_map(static fn (array $jobs): array => array_map(static fn (PersonalizationGenerationJob $job): array => [
+                'id' => $job->getId(),
+                'status' => $job->getStatus()->value,
+                'providerJobId' => $job->getProviderJobId(),
+                'providerStatus' => $job->getProviderStatus(),
+                'attemptNumber' => $job->getAttemptNumber(),
+                'errorMessage' => $job->getErrorMessage(),
+            ], $jobs), $generationJobs),
+            'pdfArtifacts' => array_map(static fn (array $artifacts): array => array_map(static fn (PdfArtifact $artifact): array => [
+                'id' => $artifact->getId(),
+                'status' => $artifact->getStatus(),
+                'publicPath' => $artifact->getPublicPath(),
+                'fileHash' => $artifact->getFileHash(),
+            ], $artifacts), $pdfArtifacts),
+            'fulfillments' => array_map(static fn (array $items): array => array_map(static fn (FulfillmentOrder $fulfillment): array => [
+                'id' => $fulfillment->getId(),
+                'status' => $fulfillment->getStatus(),
+                'providerOrderId' => $fulfillment->getProviderOrderId(),
+                'trackingUrl' => $fulfillment->getTrackingUrl(),
+                'trackingNumber' => $fulfillment->getTrackingNumber(),
+                'errorMessage' => $fulfillment->getErrorMessage(),
+            ], $items), $fulfillments),
+            'events' => array_map(static fn (OperationalEvent $event): array => [
+                'type' => $event->getType(),
+                'level' => $event->getLevel(),
+                'sessionId' => $event->getSessionId(),
+                'orderNumber' => $event->getOrderNumber(),
+                'context' => $event->getContext(),
+                'createdAt' => $event->getCreatedAt()->format(DATE_ATOM),
+            ], $events),
+        ]);
     }
 
     #[Route(
@@ -132,6 +246,102 @@ final class SupportOperationsController
             'status' => $retriedJob->getStatus()->value,
             'attemptNumber' => $retriedJob->getAttemptNumber(),
             'sessionId' => $retriedJob->getSession()->getId(),
+        ]);
+    }
+
+    #[Route(
+        '/api/custom/support/personalization/sessions/{sessionId}/generation-fail',
+        name: 'app_custom_support_generation_job_force_fail',
+        methods: ['POST'],
+        defaults: ['_profiler_collect' => false],
+    )]
+    public function forceGenerationFailure(string $sessionId, Request $request): JsonResponse
+    {
+        if (!$this->isSupportTokenValid($request)) {
+            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+        }
+
+        /** @var PersonalizationSession|null $session */
+        $session = $this->entityManager->getRepository(PersonalizationSession::class)->find($sessionId);
+
+        if (!$session instanceof PersonalizationSession) {
+            return new JsonResponse(['message' => 'Personalization session not found.'], Response::HTTP_NOT_FOUND);
+        }
+
+        $message = trim((string) (($request->toArray()['message'] ?? 'Forced provider failure.') ?: 'Forced provider failure.'));
+        $job = $this->personalizationPreviewGenerator->forceLatestJobFailure($session, $message);
+
+        if (!$job instanceof PersonalizationGenerationJob) {
+            return new JsonResponse(['message' => 'Generation job not found.'], Response::HTTP_NOT_FOUND);
+        }
+
+        return new JsonResponse([
+            'jobId' => $job->getId(),
+            'status' => $job->getStatus()->value,
+            'errorMessage' => $job->getErrorMessage(),
+            'sessionId' => $session->getId(),
+        ]);
+    }
+
+    #[Route(
+        '/api/custom/support/stripe/checkout-sessions/{providerSessionId}/force-failed',
+        name: 'app_custom_support_stripe_checkout_force_failed',
+        methods: ['POST'],
+        defaults: ['_profiler_collect' => false],
+    )]
+    public function forceStripeCheckoutFailure(string $providerSessionId, Request $request): JsonResponse
+    {
+        if (!$this->isSupportTokenValid($request)) {
+            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+        }
+
+        /** @var StripeCheckoutSession|null $checkoutSession */
+        $checkoutSession = $this->entityManager->getRepository(StripeCheckoutSession::class)->findOneBy([
+            'providerSessionId' => $providerSessionId,
+        ]);
+
+        if (!$checkoutSession instanceof StripeCheckoutSession) {
+            return new JsonResponse(['message' => 'Stripe checkout session not found.'], Response::HTTP_NOT_FOUND);
+        }
+
+        $this->stripeCheckoutSynchronizer->forceFailureForSupport($checkoutSession, 'Support forced failure.');
+
+        return new JsonResponse([
+            'sessionId' => $checkoutSession->getProviderSessionId(),
+            'status' => $checkoutSession->getStatus(),
+            'paymentStatus' => $checkoutSession->getPaymentStatus(),
+            'errorMessage' => $checkoutSession->getErrorMessage(),
+        ]);
+    }
+
+    #[Route(
+        '/api/custom/support/stripe/checkout-sessions/by-order-token/{orderTokenValue}',
+        name: 'app_custom_support_stripe_checkout_by_order_token',
+        methods: ['GET'],
+        defaults: ['_profiler_collect' => false],
+    )]
+    public function readStripeCheckoutSessionByOrderToken(string $orderTokenValue, Request $request): JsonResponse
+    {
+        if (!$this->isSupportTokenValid($request)) {
+            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+        }
+
+        /** @var StripeCheckoutSession|null $checkoutSession */
+        $checkoutSession = $this->entityManager->getRepository(StripeCheckoutSession::class)->findOneBy([
+            'syliusOrderTokenValue' => $orderTokenValue,
+        ], ['id' => 'DESC']);
+
+        if (!$checkoutSession instanceof StripeCheckoutSession) {
+            return new JsonResponse(['message' => 'Stripe checkout session not found.'], Response::HTTP_NOT_FOUND);
+        }
+
+        return new JsonResponse([
+            'sessionId' => $checkoutSession->getProviderSessionId(),
+            'status' => $checkoutSession->getStatus(),
+            'paymentStatus' => $checkoutSession->getPaymentStatus(),
+            'orderNumber' => $checkoutSession->getSyliusOrderNumber(),
+            'orderTokenValue' => $checkoutSession->getSyliusOrderTokenValue(),
+            'errorMessage' => $checkoutSession->getErrorMessage(),
         ]);
     }
 
