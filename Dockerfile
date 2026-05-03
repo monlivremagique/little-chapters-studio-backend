@@ -1,6 +1,8 @@
 # Stage 1: Install PHP dependencies
 FROM composer:latest AS composer-stage
 WORKDIR /app
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+RUN install-php-extensions exif
 COPY composer.json composer.lock* ./
 RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist
 COPY . .
@@ -17,7 +19,7 @@ RUN yarn build:prod
 FROM dunglas/frankenphp:php8.3-bookworm
 WORKDIR /srv/sylius
 
-RUN install-php-extensions pdo_pgsql intl gd opcache
+RUN install-php-extensions pdo_pgsql intl gd opcache exif
 
 COPY --from=composer-stage /app /srv/sylius
 COPY --from=assets-stage /app/public/build /srv/sylius/public/build
@@ -27,4 +29,4 @@ RUN mkdir -p var/cache var/log public/media/cache var/storage/personalizations/p
 
 EXPOSE ${PORT:-8080}
 
-CMD ["frankenphp", "php-server", "--listen", "0.0.0.0:${PORT:-8080}", "--root", "/srv/sylius/public"]
+CMD frankenphp php-server --listen 0.0.0.0:${PORT:-8080} --root /srv/sylius/public
