@@ -39,5 +39,8 @@ echo "clear_env = no" >> /usr/local/etc/php-fpm.d/www.conf
 echo "[entrypoint] Warming up cache..."
 php bin/console cache:warmup --env=prod
 
+echo "[entrypoint] Injecting Railway PORT into Nginx config..."
+sed -i "s/\${PORT:-80}/${PORT:-80}/" /etc/nginx/http.d/default.conf
+
 echo "[entrypoint] Starting services (PHP-FPM + Nginx + worker)..."
 exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
