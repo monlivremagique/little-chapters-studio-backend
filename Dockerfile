@@ -2,7 +2,7 @@
 FROM composer:latest AS composer-stage
 WORKDIR /app
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-RUN install-php-extensions exif gd
+RUN install-php-extensions exif gd intl
 COPY composer.json composer.lock* ./
 RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist
 COPY . .
