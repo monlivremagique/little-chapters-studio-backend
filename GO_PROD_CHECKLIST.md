@@ -2,16 +2,22 @@
 
 Checklist à valider avant chaque déploiement en production.
 
+## Plateformes de déploiement
+
+| Composant | Plateforme | URL |
+|-----------|------------|-----|
+| Frontend  | Vercel     | https://www.monlivremagique.be |
+| Backend   | Railway    | à configurer — voir `scripts/railway-deploy.sh` |
+
 ---
 
 ## Infrastructure
 
-- [ ] PHP 8.3+ disponible sur le serveur / container
-- [ ] PostgreSQL 16 accessible depuis l'application
-- [ ] Nginx configuré et pointant sur `public/`
-- [ ] HTTPS activé (obligatoire pour les webhooks Gelato et Stripe)
-- [ ] Domaine production configuré (ex : `app.monlivremagique.be`)
-- [ ] Frontend buildé et servi depuis un CDN ou serveur statique (ou Vite en mode preview)
+- [x] Frontend déployé sur Vercel (https://www.monlivremagique.be)
+- [ ] Railway project créé + PostgreSQL service lié
+- [ ] `railway.toml` + `Dockerfile` pushés (déjà fait)
+- [ ] HTTPS Railway actif (automatique avec Railway)
+- [ ] Volumes Railway montés : `/srv/sylius/var/storage`, `/srv/sylius/public/media`, `/srv/sylius/config/jwt`
 
 ---
 
