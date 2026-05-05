@@ -1,19 +1,13 @@
 # ==========================================
-# Stage 1: Build — PHP deps + Node assets
+# Stage 1: Composer — PHP deps
 # ==========================================
-FROM ghcr.io/sylius/sylius-php:8.3-alpine AS build
+FROM composer:latest AS composer-stage
 
-USER root
-
-RUN apk add --no-cache \
-    postgresql-dev \
-    nodejs \
-    npm \
-    && docker-php-ext-install pgsql pdo_pgsql
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+RUN install-php-extensions exif
 
 WORKDIR /srv/sylius
 
-# PHP dependencies (cached layer — rebuilds only when composer files change)
 COPY composer.json composer.lock symfony.lock ./
 RUN composer install \
     --no-dev \
@@ -22,49 +16,36 @@ RUN composer install \
     --prefer-dist \
     --optimize-autoloader
 
-# Source code (vendor/ above is preserved — .dockerignore excludes it from COPY)
-COPY . .
-
-# Node deps + Webpack Encore production build
-# npm needs vendor/ present for local file: references in package.json
-RUN npm ci --no-audit --no-fund \
-    && npm run build:prod
-
-# Symfony bundle assets — hard copy (no symlinks for Docker reliability)
-RUN APP_ENV=prod php bin/console assets:install public --no-debug 2>&1 || echo "WARNING: assets:install had issues"
-
 # ==========================================
-# Stage 2: Runtime — PHP-FPM + Nginx + Supervisor
+# Stage 2: Yarn — Node assets
 # ==========================================
-FROM ghcr.io/sylius/sylius-php:8.3-alpine AS runtime
-
-USER root
-
-RUN apk add --no-cache \
-    postgresql-dev \
-    nginx \
-    supervisor \
-    && docker-php-ext-install pgsql pdo_pgsql
+FROM node:20-alpine AS yarn-stage
 
 WORKDIR /srv/sylius
 
-# Copy built application (without node_modules — not needed at runtime)
-COPY --from=build /srv/sylius/bin ./bin
-COPY --from=build /srv/sylius/config ./config
-COPY --from=build /srv/sylius/migrations ./migrations
-COPY --from=build /srv/sylius/public ./public
-COPY --from=build /srv/sylius/resources ./resources
-COPY --from=build /srv/sylius/scripts ./scripts
-COPY --from=build /srv/sylius/src ./src
-COPY --from=build /srv/sylius/templates ./templates
-COPY --from=build /srv/sylius/translations ./translations
-COPY --from=build /srv/sylius/vendor ./vendor
-COPY --from=build /srv/sylius/.env ./.env
-COPY --from=build /srv/sylius/composer.json ./
-COPY --from=build /srv/sylius/composer.lock ./
-COPY --from=build /srv/sylius/symfony.lock ./
+COPY package.json yarn.lock ./
+COPY --from=composer-stage /srv/sylius/vendor ./vendor
+RUN yarn install --frozen-lockfile
 
-# Persistent directories (overridden by Railway volumes for storage/media/jwt)
+COPY . .
+RUN yarn build:prod
+
+# ==========================================
+# Stage 3: Runtime — FrankenPHP
+# ==========================================
+FROM dunglas/frankenphp:latest-php8.3 AS runtime
+
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+RUN install-php-extensions pdo_pgsql intl gd opcache exif
+
+WORKDIR /srv/sylius
+
+# Copy built application
+COPY --from=composer-stage /srv/sylius/vendor ./vendor
+COPY --from=yarn-stage /srv/sylius/public ./public
+COPY . .
+
+# Persistent directories
 RUN mkdir -p \
     var/cache/prod \
     var/log \
@@ -78,16 +59,6 @@ RUN mkdir -p \
     config/jwt \
     && chown -R www-data:www-data var/ public/ config/jwt/
 
-# Nginx config (FastCGI to localhost:9000 — no DNS resolver needed in single container)
-COPY docker/nginx/nginx.railway.conf /etc/nginx/http.d/default.conf
+EXPOSE ${PORT:-8080}
 
-# Supervisor manages: PHP-FPM + Nginx + generation worker
-COPY docker/supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
-# Entrypoint: migrations, JWT keypair, blueprint sync, cache warmup → supervisord
-COPY docker/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-EXPOSE 80
-
-ENTRYPOINT ["/entrypoint.sh"]
+CMD frankenphp php-server --listen 0.0.0.0:${PORT:-8080} --root /srv/sylius/public
