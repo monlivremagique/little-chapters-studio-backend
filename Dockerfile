@@ -30,8 +30,8 @@ COPY . .
 RUN npm ci --no-audit --no-fund \
     && npm run build:prod
 
-# Symfony assets (creates symlinks in public/bundles/)
-RUN APP_ENV=prod php bin/console assets:install public --no-debug 2>/dev/null || true
+# Symfony bundle assets — hard copy (no symlinks for Docker reliability)
+RUN APP_ENV=prod php bin/console assets:install public --no-debug 2>&1 || echo "WARNING: assets:install had issues"
 
 # ==========================================
 # Stage 2: Runtime — PHP-FPM + Nginx + Supervisor

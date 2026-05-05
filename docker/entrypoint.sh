@@ -58,6 +58,22 @@ fi
 echo "[entrypoint] Syncing book blueprints..."
 php bin/console app:sync-book-blueprints --no-interaction --env=prod || echo "[entrypoint] Blueprint sync skipped"
 
+echo "[entrypoint] Updating Sylius channel hostname to match deployment URL..."
+php -r "
+require 'vendor/autoload.php';
+\$url = getenv('DATABASE_URL');
+preg_match('#://([^:]+):([^@]+)@([^:]+):(\d+)/([^?]+)#', \$url, \$m);
+\$pdo = new PDO('pgsql:host='.\$m[3].';port='.\$m[4].';dbname='.\$m[5], \$m[1], \$m[2]);
+\$defaultUri = getenv('DEFAULT_URI') ?: 'http://localhost';
+\$hostname = str_replace(['https://','http://'], '', \$defaultUri);
+\$stmt = \$pdo->prepare('UPDATE sylius_channel SET hostname = ? WHERE code = ?');
+\$stmt->execute([\$hostname, 'LITTLE_CHAPTERS_BE_FR']);
+echo '[channel] hostname set to: '.\$hostname.PHP_EOL;
+" || echo "[entrypoint] Channel hostname update skipped"
+
+echo "[entrypoint] Updating admin password..."
+php bin/console sylius:admin:change-password sylius@example.com "LCS-Admin-2026!" --env=prod || echo "[entrypoint] Admin password update skipped"
+
 echo "[entrypoint] Configuring PHP-FPM to inherit env vars (clear_env = no)..."
 # PHP-FPM by default clears env vars — without this, APP_ENV stays 'dev' from .env
 # and Symfony loads dev bundles (DebugBundle) that aren't installed with --no-dev
