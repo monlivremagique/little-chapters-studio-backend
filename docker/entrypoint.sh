@@ -71,9 +71,6 @@ preg_match('#://([^:]+):([^@]+)@([^:]+):(\d+)/([^?]+)#', \$url, \$m);
 echo '[channel] hostname set to: '.\$hostname.PHP_EOL;
 " || echo "[entrypoint] Channel hostname update skipped"
 
-echo "[entrypoint] Updating admin password..."
-php bin/console sylius:admin:change-password sylius@example.com "LCS-Admin-2026!" --env=prod || echo "[entrypoint] Admin password update skipped"
-
 echo "[entrypoint] Configuring PHP-FPM to inherit env vars (clear_env = no)..."
 # PHP-FPM by default clears env vars — without this, APP_ENV stays 'dev' from .env
 # and Symfony loads dev bundles (DebugBundle) that aren't installed with --no-dev
@@ -81,9 +78,6 @@ echo "clear_env = no" >> /usr/local/etc/php-fpm.d/www.conf
 
 echo "[entrypoint] Warming up cache..."
 php bin/console cache:warmup --env=prod
-
-echo "[entrypoint] Injecting Railway PORT into Nginx config..."
-sed -i "s/\${PORT:-80}/${PORT:-80}/" /etc/nginx/http.d/default.conf
 
 echo "[entrypoint] Starting services (PHP-FPM + Nginx + worker)..."
 exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
