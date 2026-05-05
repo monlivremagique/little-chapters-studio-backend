@@ -34,5 +34,8 @@ php bin/console app:sync-book-blueprints --no-interaction --env=prod || echo "[e
 echo "[entrypoint] Warming up cache..."
 php bin/console cache:warmup --env=prod
 
+echo "[entrypoint] Configuring Nginx to listen on PORT=${PORT:-80}..."
+sed -i "s/\${PORT:-80}/${PORT:-80}/g" /etc/nginx/http.d/default.conf
+
 echo "[entrypoint] Starting services (PHP-FPM + Nginx + worker)..."
 exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
