@@ -4,7 +4,7 @@
 FROM composer:latest AS composer-stage
 
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-RUN install-php-extensions exif
+RUN install-php-extensions gd intl exif
 
 WORKDIR /srv/sylius
 
