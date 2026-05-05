@@ -28,8 +28,8 @@ php bin/console doctrine:migrations:migrate --no-interaction --env=prod
 echo "[entrypoint] Generating JWT keypair (skips if already exists)..."
 php bin/console lexik:jwt:generate-keypair --skip-if-exists --no-interaction --env=prod
 
-echo "[entrypoint] Syncing book blueprints..."
-php bin/console app:sync-book-blueprints --no-interaction --env=prod
+echo "[entrypoint] Syncing book blueprints (skipped if catalog not yet seeded)..."
+php bin/console app:sync-book-blueprints --no-interaction --env=prod || echo "[entrypoint] Blueprint sync skipped — run after: sylius:fixtures:load little_chapters_phase2"
 
 echo "[entrypoint] Warming up cache..."
 php bin/console cache:warmup --env=prod
