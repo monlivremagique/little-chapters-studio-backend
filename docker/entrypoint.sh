@@ -31,11 +31,13 @@ php bin/console lexik:jwt:generate-keypair --skip-if-exists --no-interaction --e
 echo "[entrypoint] Syncing book blueprints (skipped if catalog not yet seeded)..."
 php bin/console app:sync-book-blueprints --no-interaction --env=prod || echo "[entrypoint] Blueprint sync skipped — run after: sylius:fixtures:load little_chapters_phase2"
 
+echo "[entrypoint] Configuring PHP-FPM to inherit env vars (clear_env = no)..."
+# PHP-FPM by default clears env vars — without this, APP_ENV stays 'dev' from .env
+# and Symfony loads dev bundles (DebugBundle) that aren't installed with --no-dev
+echo "clear_env = no" >> /usr/local/etc/php-fpm.d/www.conf
+
 echo "[entrypoint] Warming up cache..."
 php bin/console cache:warmup --env=prod
-
-echo "[entrypoint] Configuring Nginx to listen on PORT=${PORT:-80}..."
-sed -i "s/\${PORT:-80}/${PORT:-80}/g" /etc/nginx/http.d/default.conf
 
 echo "[entrypoint] Starting services (PHP-FPM + Nginx + worker)..."
 exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
