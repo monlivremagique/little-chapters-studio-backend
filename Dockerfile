@@ -1,32 +1,93 @@
-# Stage 1: Install PHP dependencies
-FROM composer:latest AS composer-stage
-WORKDIR /app
-COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-RUN install-php-extensions exif gd intl
-COPY composer.json composer.lock* ./
-RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist
-COPY . .
-RUN composer dump-autoload --optimize --no-dev
+# ==========================================
+# Stage 1: Build — PHP deps + Node assets
+# ==========================================
+FROM ghcr.io/sylius/sylius-php:8.3-alpine AS build
 
-# Stage 2: Build frontend assets
-FROM node:20-alpine AS assets-stage
-WORKDIR /app
-COPY --from=composer-stage /app /app
-RUN yarn install --frozen-lockfile
-RUN yarn build:prod
+USER root
 
-# Stage 3: Production runtime
-FROM dunglas/frankenphp:php8.3-bookworm
+RUN apk add --no-cache \
+    postgresql-dev \
+    nodejs \
+    npm \
+    && docker-php-ext-install pgsql pdo_pgsql
+
 WORKDIR /srv/sylius
 
-RUN install-php-extensions pdo_pgsql intl gd opcache exif
+# PHP dependencies (cached layer — rebuilds only when composer files change)
+COPY composer.json composer.lock symfony.lock ./
+RUN composer install \
+    --no-dev \
+    --no-scripts \
+    --no-interaction \
+    --prefer-dist \
+    --optimize-autoloader
 
-COPY --from=composer-stage /app /srv/sylius
-COPY --from=assets-stage /app/public/build /srv/sylius/public/build
+# Source code (vendor/ above is preserved — .dockerignore excludes it from COPY)
+COPY . .
 
-RUN mkdir -p var/cache var/log public/media/cache var/storage/personalizations/photos \
-    && chown -R www-data:www-data var public/media
+# Node deps + Webpack Encore production build
+# npm needs vendor/ present for local file: references in package.json
+RUN npm ci --no-audit --no-fund \
+    && npm run build:prod
 
-EXPOSE ${PORT:-8080}
+# Symfony assets (creates symlinks in public/bundles/)
+RUN APP_ENV=prod php bin/console assets:install public --no-debug 2>/dev/null || true
 
-CMD frankenphp php-server --listen 0.0.0.0:${PORT:-8080} --root /srv/sylius/public
+# ==========================================
+# Stage 2: Runtime — PHP-FPM + Nginx + Supervisor
+# ==========================================
+FROM ghcr.io/sylius/sylius-php:8.3-alpine AS runtime
+
+USER root
+
+RUN apk add --no-cache \
+    postgresql-dev \
+    nginx \
+    supervisor \
+    && docker-php-ext-install pgsql pdo_pgsql
+
+WORKDIR /srv/sylius
+
+# Copy built application (without node_modules — not needed at runtime)
+COPY --from=build /srv/sylius/bin ./bin
+COPY --from=build /srv/sylius/config ./config
+COPY --from=build /srv/sylius/migrations ./migrations
+COPY --from=build /srv/sylius/public ./public
+COPY --from=build /srv/sylius/resources ./resources
+COPY --from=build /srv/sylius/scripts ./scripts
+COPY --from=build /srv/sylius/src ./src
+COPY --from=build /srv/sylius/templates ./templates
+COPY --from=build /srv/sylius/translations ./translations
+COPY --from=build /srv/sylius/vendor ./vendor
+COPY --from=build /srv/sylius/.env ./.env
+COPY --from=build /srv/sylius/composer.json ./
+COPY --from=build /srv/sylius/composer.lock ./
+COPY --from=build /srv/sylius/symfony.lock ./
+
+# Persistent directories (overridden by Railway volumes for storage/media/jwt)
+RUN mkdir -p \
+    var/cache/prod \
+    var/log \
+    var/storage/personalizations/photos \
+    var/storage/personalizations/pdfs \
+    var/share \
+    public/media/cache \
+    public/uploads/books \
+    public/uploads/personalizations/pdfs \
+    public/uploads/personalizations/previews \
+    config/jwt \
+    && chown -R www-data:www-data var/ public/ config/jwt/
+
+# Nginx config (FastCGI to localhost:9000 — no DNS resolver needed in single container)
+COPY docker/nginx/nginx.railway.conf /etc/nginx/http.d/default.conf
+
+# Supervisor manages: PHP-FPM + Nginx + generation worker
+COPY docker/supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Entrypoint: migrations, JWT keypair, blueprint sync, cache warmup → supervisord
+COPY docker/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+EXPOSE 80
+
+ENTRYPOINT ["/entrypoint.sh"]
