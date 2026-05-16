@@ -127,6 +127,26 @@ services:
             - ../frontend:/app:rw,cached
             - frontend-node-modules:/app/node_modules
 
+    stripe-cli:
+        image: stripe/stripe-cli:latest
+        depends_on:
+            nginx:
+                condition: service_started
+        environment:
+            STRIPE_API_KEY: ${STRIPE_SECRET_KEY:-sk_test_placeholder}
+        command: >
+            listen --forward-to http://nginx/api/custom/payments/stripe/webhook
+                --log-level debug
+                --api-key ${STRIPE_SECRET_KEY:-sk_test_placeholder}
+        profiles:
+            - stripe
+        stdin_open: true
+        tty: true
+        # Usage:
+        #   echo "STRIPE_SECRET_KEY=sk_test_xxx" >> .env
+        #   docker compose --profile stripe up -d stripe-cli
+        #   stripe login (first time only - interactive)
+
 volumes:
     postgres-data:
     public-media:
