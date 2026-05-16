@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="1024" viewBox="0 0 768 1024" role="img" aria-label="The Gleam Between Leaves">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A3E2B" />
+      <stop offset="100%" stop-color="#F8F5EF" />
+    </linearGradient>
+  </defs>
+  <rect width="768" height="1024" fill="url(#bg)" />
+  <rect x="48" y="48" width="672" height="928" rx="40" ry="40" fill="#FFFDF9" opacity="0.95" />
+  <rect x="88" y="108" width="592" height="360" rx="28" ry="28" fill="#FFFFFF" opacity="0.85" />
+  <rect x="88" y="516" width="592" height="340" rx="28" ry="28" fill="#FFFFFF" opacity="0.92" />
+  <text x="112" y="170" fill="#7A3E2B" font-family="Georgia, serif" font-size="28" font-weight="700">Little Chapters</text>
+  <text x="112" y="228" fill="#111827" font-family="Georgia, serif" font-size="42" font-weight="700">The Gleam Between Leaves</text>
+  <text x="112" y="284" fill="#6B7280" font-family="Arial, sans-serif" font-size="22">STORY</text>
+  <text x="112" y="360" fill="#374151" font-family="Arial, sans-serif" font-size="24">Asset admin par defaut issu du blueprint</text>
+  <text x="112" y="416" fill="#6B7280" font-family="Arial, sans-serif" font-size="18">Enchanting watercolor scene, child following tabby cat through rain-dappled hydrangea passage with emerald-shimmering leaves, golden firefly illuminating rusty gate overgrown with wild roses, Belgian garden setting, magical forest lighting</text>
+  <text x="112" y="588" fill="#111827" font-family="Arial, sans-serif" font-size="24" font-weight="700">Texte template</text>
+  <text x="112" y="640" fill="#374151" font-family="Arial, sans-serif" font-size="24">Behind the rain-dappled hydrangea hedge, {child_name} finds a path never seen before. Leaves shimmer like emerald jewels. Miso leaps ahead, tail high. At the mysterious path&#039;s end, a golden firefly dances before a rusty gate where wild roses climb.</text>
+  <text x="112" y="906" fill="#6B7280" font-family="Arial, sans-serif" font-size="18">Produit Sylius pilote par book_blueprint_json</text>
+</svg>

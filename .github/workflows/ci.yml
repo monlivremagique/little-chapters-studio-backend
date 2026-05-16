@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    name: PHPUnit Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl, pdo_pgsql, sodium, gd, imagick
+          ini-values: error_reporting=E_ALL, display_errors=On
+          coverage: none
+
+      - name: Get composer cache directory
+        run: echo "COMPOSER_CACHE_DIR=$(composer config cache-dir)" >> "$GITHUB_ENV"
+
+      - name: Cache composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.COMPOSER_CACHE_DIR }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: |
+          composer install --no-interaction --no-progress --prefer-dist
+          cp .env .env.local 2>/dev/null || true
+
+      - name: Run PHPUnit (unit tests only, no DB required)
+        run: vendor/bin/phpunit --colors=always tests/Unit/
+
+  smoke:
+    name: Smoke Test
+    runs-on: ubuntu-latest
+    needs: [tests]
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Health check — API
+        run: |
+          curl -sSf --max-time 10 \
+            -H "User-Agent: CI-SmokeTest/1.0" \
+            https://backend.monlivremagique.be/api/books \
+            -o /dev/null && echo "PASS: API reachable"
+
+      - name: Health check — Health endpoint
+        run: |
+          curl -sSf --max-time 10 \
+            -H "User-Agent: CI-SmokeTest/1.0" \
+            https://backend.monlivremagique.be/api/health \
+            -o /dev/null && echo "PASS: Health OK"
+
+      - name: Health check — Async queues
+        run: |
+          curl -sSf --max-time 10 \
+            -H "User-Agent: CI-SmokeTest/1.0" \
+            https://backend.monlivremagique.be/api/health/async \
+            -o /dev/null && echo "PASS: Async health OK"

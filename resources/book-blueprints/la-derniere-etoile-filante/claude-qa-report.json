@@ -1,0 +1,18 @@
+{
+    "brief": "resources/book-briefs/la-derniere-etoile-filante.yaml",
+    "outputDir": "/srv/sylius/resources/book-blueprints/la-derniere-etoile-filante",
+    "model": "openai/gpt-4o-mini",
+    "dryRun": false,
+    "verdict": "NO_GO",
+    "scores": {
+        "editorial": 9,
+        "imageability": 9,
+        "heroConsistency": 9,
+        "localeCompleteness": 9,
+        "bedtimeSafety": 10,
+        "premiumBelgium": 9,
+        "translationNaturalness": 9
+    },
+    "blockingIssues": [],
+    "usedCorrectedMaster": false
+}

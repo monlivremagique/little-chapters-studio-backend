@@ -1,0 +1,4 @@
+app_admin_book_creation:
+    resource: ../../src/Controller/Admin/
+    type: attribute
+    prefix: /admin

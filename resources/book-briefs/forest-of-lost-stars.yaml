@@ -1,0 +1,47 @@
+slug: forest-of-lost-stars
+title: La foret des etoiles perdues
+theme:
+  - magic
+  - courage
+  - wonder
+age: 4-7
+story_subject: Un enfant aide des etoiles tombees a retrouver leur ciel.
+main_emotion: emerveillement doux
+learning_message: Meme les petits gestes peuvent illuminer le monde.
+languages:
+  - fr
+  - en
+  - nl
+visual_style: premium watercolor storybook
+story_page_count: 6
+constraints:
+  - bedtime safe
+  - no scary content
+  - Belgian premium quality
+  - coherent hero across pages
+  - no text inside generated images
+
+# Narrative enrichment — used by BookBriefPromptBuilder to contract arc and scene moments
+arc_type: discovery-and-return
+climax_page: page_4
+setting: a moonlit enchanted forest where fallen stars lie among the roots and moss
+cultural_context: Belgique premium — chaleur wallonne, imagerie de conte hivernale, cadeau soir de Noel
+parent_emotion_goal: Le parent veut que l'enfant s'endorme avec la conviction que ses petits actes comptent vraiment
+
+secondary_characters:
+  - un renard roux curieux
+  - une vieille chouette sage
+
+scenes:
+  - id: page_1
+    moment: L'enfant decouvre une etoile tombee, toute pale, nichee dans les racines d'un grand chene. Il s'accroupit, les yeux grands ouverts.
+  - id: page_2
+    moment: Le renard roux guide l'enfant plus profond dans la foret. D'autres etoiles brillotent entre les fougeres.
+  - id: page_3
+    moment: La chouette sage explique que les etoiles ont besoin d'etre chantees pour retrouver leur chemin. L'enfant ecoute, concentre.
+  - id: page_4
+    moment: L'enfant chante doucement. Les etoiles s'elevent une a une, dessinant une spirale lumineuse dans le ciel — le moment magique et chaleureux du recit.
+  - id: page_5
+    moment: Le ciel est maintenant constellee. L'enfant et ses amis s'allongent dans la clairiere et regardent les etoiles retrouvees scintiller.
+  - id: page_6
+    moment: L'enfant rentre chez lui, paisible. Par la fenetre de sa chambre, il voit les etoiles lui faire un clin d'oeil. Il s'endort le coeur plein.

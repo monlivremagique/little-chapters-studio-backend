@@ -1,0 +1,130 @@
+{% extends 'Admin/BookCreation/base.html.twig' %}
+{% form_theme form '@SyliusAdmin/shared/form_theme.html.twig' %}
+
+{% block title %}Créer un nouveau livre{% endblock %}
+
+{% block content %}
+<div class="page-header" data-sticky-header>
+    <div class="container-xl">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('sylius_admin_dashboard') }}">Tableau de bord</a></li>
+            <li class="breadcrumb-item"><a href="{{ path('app_admin_book_creation_index') }}">Création de livres</a></li>
+            <li class="breadcrumb-item active">Nouveau livre</li>
+        </ol>
+        <div class="row mt-3 row-gap-2">
+            <div class="col-12 col-md">
+                <div class="d-flex gap-3 align-items-center">
+                    <div>{{ ux_icon('tabler:file-plus', {'class': 'icon icon-md text-primary'}) }}</div>
+                    <div class="d-flex flex-column gap-2">
+                        <h1 class="page-title">Créer un nouveau livre</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <div class="container-xl">
+        {% set tabs = {
+            'identite': { 'label': 'Identité du livre', 'icon': 'tabler:book' },
+            'histoire': { 'label': 'Histoire', 'icon': 'tabler:edit' },
+            'visuel':   { 'label': 'Univers visuel', 'icon': 'tabler:palette' },
+            'personnages': { 'label': 'Personnages', 'icon': 'tabler:users' },
+            'scenes':   { 'label': 'Scènes', 'icon': 'tabler:list' },
+        } %}
+
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate', 'class': 'card'}}) }}
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" data-bs-toggle="tabs" role="tablist">
+                    {% for key, tab in tabs %}
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link {% if loop.first %}active{% endif %}" data-bs-target="#tab-{{ key }}"
+                                data-bs-toggle="tab" type="button" role="tab" aria-selected="{{ loop.first ? 'true' : 'false' }}">
+                            {{ ux_icon(tab.icon, {'class': 'icon icon-sm me-1'}) }}
+                            {{ tab.label }}
+                        </button>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="card-body">
+                {{ form_errors(form) }}
+                {{ form_widget(form._token) }}
+
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tab-identite" role="tabpanel">
+                        {{ form_row(form.slug) }}
+                        {{ form_row(form.title) }}
+                        <div class="row g-3">
+                            <div class="col-md-4">{{ form_row(form.age) }}</div>
+                            <div class="col-md-4">{{ form_row(form.story_page_count) }}</div>
+                            <div class="col-md-4">{{ form_row(form.climax_page) }}</div>
+                        </div>
+                        {{ form_row(form.theme) }}
+                        {{ form_row(form.languages) }}
+                    </div>
+
+                    <div class="tab-pane" id="tab-histoire" role="tabpanel">
+                        {{ form_row(form.story_subject) }}
+                        <div class="row g-3">
+                            <div class="col-md-6">{{ form_row(form.main_emotion) }}</div>
+                            <div class="col-md-6">{{ form_row(form.arc_type) }}</div>
+                        </div>
+                        {{ form_row(form.learning_message) }}
+                    </div>
+
+                    <div class="tab-pane" id="tab-visuel" role="tabpanel">
+                        {{ form_row(form.visual_style) }}
+                        {{ form_row(form.setting) }}
+                        {{ form_row(form.cultural_context) }}
+                    </div>
+
+                    <div class="tab-pane" id="tab-personnages" role="tabpanel">
+                        {{ form_row(form.parent_emotion_goal) }}
+                        {{ form_row(form.secondary_characters) }}
+                    </div>
+
+                    <div class="tab-pane" id="tab-scenes" role="tabpanel">
+                        <p class="text-muted mb-3">Décrivez ce qui se passe sur chaque page de l'histoire.</p>
+                        {% for i in 1..form.story_page_count.vars.data %}
+                            {% set fieldName = 'scene_' ~ i ~ '_moment' %}
+                            {% if form[fieldName] is defined %}
+                                {{ form_row(form[fieldName]) }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <a href="{{ path('app_admin_book_creation_index') }}" class="btn btn-outline-secondary">
+                    {{ ux_icon('tabler:arrow-left') }}
+                    Retour
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    {{ ux_icon('tabler:rocket') }}
+                    Créer et lancer le pipeline
+                </button>
+            </div>
+        {{ form_end(form, {'render_rest': false}) }}
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var titleField = document.querySelector('[id$="_title"]');
+    var slugField = document.querySelector('[id$="_slug"]');
+    if (titleField && slugField) {
+        titleField.addEventListener('input', function() {
+            if (!slugField.dataset.manual) {
+                slugField.value = this.value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+            }
+        });
+        slugField.addEventListener('input', function() { this.dataset.manual = this.value.length > 0 ? '1' : ''; });
+    }
+});
+</script>
+{% endblock %}

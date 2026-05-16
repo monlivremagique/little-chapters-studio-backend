@@ -1,0 +1,73 @@
+{
+  "schema": "book_blueprint_v2",
+  "schemaVersion": 2,
+  "metadata": {
+    "slug": "aventure-enchantee",
+    "supportedLocales": ["fr", "en"]
+  },
+  "locales": {
+    "fr": {
+      "book": {
+        "title_template": "{child_name} et l'aventure enchantee"
+      }
+    },
+    "en": {
+      "book": {
+        "title_template": "{child_name} and the Enchanted Adventure"
+      }
+    }
+  },
+  "visualBible": {
+    "style_rules": [
+      "children's book illustration"
+    ]
+  },
+  "heroBible": {
+    "identityRules": [
+      "same face across pages"
+    ]
+  },
+  "sceneDefinitions": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "pageNumber": 1,
+      "personalizable": true,
+      "assetKey": "cover-default"
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "pageNumber": 2,
+      "personalizable": true,
+      "assetKey": "dedication-default"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "pageNumber": 3,
+      "personalizable": true,
+      "assetKey": "summary-default"
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "pageNumber": 4,
+      "personalizable": false,
+      "assetKey": "back-cover-default"
+    }
+  ],
+  "imageGeneration": {
+    "provider": "replicate",
+    "negativePromptDefault": "blurry"
+  },
+  "assets": {
+    "basePublicPath": "/uploads/books/aventure-enchantee",
+    "defaults": {
+      "cover-default": "/uploads/books/aventure-enchantee/cover-default.svg",
+      "dedication-default": "/uploads/books/aventure-enchantee/dedication-default.svg",
+      "summary-default": "/uploads/books/aventure-enchantee/summary-default.svg",
+      "back-cover-default": "/uploads/books/aventure-enchantee/back-cover-default.svg"
+    }
+  }
+}

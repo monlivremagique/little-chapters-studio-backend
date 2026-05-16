@@ -1,0 +1,17 @@
+{
+    "brief": "resources/book-briefs/ville-ecole-3-5.yaml",
+    "outputDir": "resources/book-blueprints/ville-ecole",
+    "model": "anthropic/claude-4-sonnet",
+    "dryRun": false,
+    "verdict": "GO",
+    "scores": {
+        "editorial": 9.2,
+        "imageability": 9.1,
+        "heroConsistency": 9.3,
+        "localeCompleteness": 9.4,
+        "bedtimeSafety": 9.6,
+        "premiumBelgium": 9.5
+    },
+    "blockingIssues": [],
+    "usedCorrectedMaster": true
+}

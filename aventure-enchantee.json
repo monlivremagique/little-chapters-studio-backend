@@ -1,0 +1,173 @@
+{
+    "id": "b1",
+    "slug": "aventure-enchantee",
+    "title": "L'Aventure Enchantee",
+    "subtitle": "Quand votre enfant devient le heros d'une quete magique",
+    "coverImage": "http://localhost:8080/uploads/books/aventure-enchantee/cover-default.svg",
+    "price": 49.9,
+    "originalPrice": 54.9,
+    "rating": 0,
+    "reviewCount": 0,
+    "ageMin": 3,
+    "ageMax": 7,
+    "theme": "aventure",
+    "occasion": [
+        "cadeau",
+        "anniversaire"
+    ],
+    "badge": "Best-seller",
+    "isNew": true,
+    "isBestseller": false,
+    "availableLocales": [
+        "fr",
+        "nl",
+        "en"
+    ],
+    "description": "L'Aventure Enchantee emmene votre enfant dans un monde magique ou il devient le heros d'une quete extraordinaire.",
+    "longDescription": "Plongez votre enfant dans une aventure epique personnalisee. Chaque page fait de lui le coeur du recit et transforme la lecture du soir en souvenir marquant.",
+    "emotionalPromise": "Un cadeau qui fait briller les yeux de l'enfant des la couverture.",
+    "features": [
+        "28 pages illustrees",
+        "Couverture rigide premium",
+        "Personnalisation du visage",
+        "Dedicace personnalisee",
+        "Impression haute qualite"
+    ],
+    "pages": 28,
+    "format": "21 x 21 cm",
+    "coverType": "hardcover",
+    "bookBlueprint": {
+        "version": 1,
+        "title_template": "{child_name} et l'aventure enchantee",
+        "negative_prompt_default": "blurry, distorted face, extra fingers, extra limbs, duplicate character, wrong eyes, bad anatomy, low detail, text, watermark",
+        "style_rules": [
+            "children's book illustration",
+            "same child character across pages",
+            "same visual style across all pages",
+            "coherent palette",
+            "warm premium storybook mood"
+        ],
+        "pages": [
+            {
+                "id": "cover",
+                "type": "cover",
+                "title_template": "{child_name} et l'aventure enchantee",
+                "text_template": null,
+                "default_image_path": "/uploads/books/aventure-enchantee/cover-default.svg",
+                "prompt_template": "children's book cover showing {child_name} entering a magical forest with glowing lanterns and friendly creatures",
+                "negative_prompt": null,
+                "personalizable": true,
+                "aspect_ratio": "3:4"
+            },
+            {
+                "id": "dedication",
+                "type": "dedication",
+                "title_template": null,
+                "text_template": "Pour {child_name}, que cette aventure te rappelle combien tu es courageux.",
+                "default_image_path": "/uploads/books/aventure-enchantee/dedication-default.svg",
+                "prompt_template": null,
+                "negative_prompt": null,
+                "personalizable": true
+            },
+            {
+                "id": "page_1",
+                "type": "story",
+                "title_template": null,
+                "text_template": "{child_name} ouvre la porte du grand bois et entend les arbres lui souhaiter la bienvenue.",
+                "default_image_path": "/uploads/books/aventure-enchantee/page-1-default.svg",
+                "prompt_template": "storybook illustration of {child_name} stepping into a magical forest path, golden fireflies, gentle wonder",
+                "negative_prompt": null,
+                "personalizable": true,
+                "aspect_ratio": "3:4"
+            },
+            {
+                "id": "page_2",
+                "type": "story",
+                "title_template": null,
+                "text_template": "Un renard lumineux guide {child_name} jusqu'a une clairiere remplie de pierres etoilees.",
+                "default_image_path": "/uploads/books/aventure-enchantee/page-2-default.svg",
+                "prompt_template": "storybook illustration of {child_name} following a glowing fox in a forest clearing of star stones",
+                "negative_prompt": null,
+                "personalizable": true,
+                "aspect_ratio": "3:4"
+            },
+            {
+                "id": "page_3",
+                "type": "story",
+                "title_template": null,
+                "text_template": "{child_name} decouvre que la clef de la foret apparait quand on ose avancer avec confiance.",
+                "default_image_path": "/uploads/books/aventure-enchantee/page-3-default.svg",
+                "prompt_template": "storybook illustration of {child_name} discovering a glowing key in a magical forest, brave and centered",
+                "negative_prompt": null,
+                "personalizable": true,
+                "aspect_ratio": "3:4"
+            },
+            {
+                "id": "page_4",
+                "type": "story",
+                "title_template": null,
+                "text_template": "Grace a son coeur vaillant, {child_name} rend a la foret sa lumiere et son calme.",
+                "default_image_path": "/uploads/books/aventure-enchantee/page-4-default.svg",
+                "prompt_template": "storybook illustration of {child_name} restoring light to an enchanted forest, warm magical ending",
+                "negative_prompt": null,
+                "personalizable": true,
+                "aspect_ratio": "3:4"
+            },
+            {
+                "id": "summary",
+                "type": "summary",
+                "title_template": "Le souvenir de {child_name}",
+                "text_template": "{child_name} repart avec un secret precieux : le courage grandit a chaque pas.",
+                "default_image_path": "/uploads/books/aventure-enchantee/summary-default.svg",
+                "prompt_template": null,
+                "negative_prompt": null,
+                "personalizable": true
+            },
+            {
+                "id": "backCover",
+                "type": "backCover",
+                "title_template": null,
+                "text_template": null,
+                "default_image_path": "/uploads/books/aventure-enchantee/back-cover-default.svg",
+                "prompt_template": "storybook back cover illustration of a peaceful magical forest under twilight, premium elegant composition",
+                "negative_prompt": null,
+                "personalizable": false,
+                "aspect_ratio": "3:4"
+            }
+        ]
+    },
+    "relatedBooks": [
+        "b2",
+        "b4",
+        "b5"
+    ],
+    "reviews": [
+        {
+            "id": "r1",
+            "author": "Marie L.",
+            "rating": 5,
+            "date": "2024-12-15",
+            "text": "Mon fils etait tres emu de se voir dans l'histoire. Le livre est magnifique.",
+            "childAge": 4,
+            "verified": true
+        },
+        {
+            "id": "r4",
+            "author": "Camille B.",
+            "rating": 5,
+            "date": "2024-10-22",
+            "text": "Un cadeau unique et memorable. L'enfant se reconnait tout de suite.",
+            "childAge": 5,
+            "verified": true
+        },
+        {
+            "id": "r5",
+            "author": "Nicolas M.",
+            "rating": 5,
+            "date": "2024-10-05",
+            "text": "La qualite premium est au rendez-vous et mon fils adore etre le heros.",
+            "childAge": 7,
+            "verified": true
+        }
+    ]
+}

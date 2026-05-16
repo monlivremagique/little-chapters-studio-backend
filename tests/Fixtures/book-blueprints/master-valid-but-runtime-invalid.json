@@ -1,0 +1,89 @@
+{
+  "schema": "book_blueprint_v2",
+  "schemaVersion": 2,
+  "metadata": {
+    "slug": "aventure-enchantee",
+    "bookId": "b1",
+    "supportedLocales": ["fr", "en", "nl"]
+  },
+  "locales": {
+    "fr": {"book": {"title_template": "{child_name} et l'aventure enchantee"}, "pages": {}},
+    "en": {"book": {"title_template": "{child_name} and the Enchanted Adventure"}, "pages": {}},
+    "nl": {"book": {"title_template": "{child_name} en het Betoverde Avontuur"}, "pages": {}}
+  },
+  "visualBible": {
+    "style_rules": ["children's book illustration"]
+  },
+  "heroBible": {
+    "identityRules": ["same face across pages"]
+  },
+  "sceneDefinitions": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "pageNumber": 1,
+      "personalizable": true,
+      "assetKey": "cover-default"
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "pageNumber": 2,
+      "personalizable": true,
+      "assetKey": "dedication-default"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "pageNumber": 3,
+      "personalizable": true,
+      "assetKey": "summary-default"
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "pageNumber": 4,
+      "personalizable": false,
+      "assetKey": "back-cover-default",
+      "promptTemplate": "back cover prompt"
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "pageNumber": 5,
+      "personalizable": true,
+      "assetKey": "page-1-default"
+    }
+  ],
+  "imageGeneration": {
+    "provider": "replicate",
+    "modelStrategy": {
+      "model": "black-forest-labs/flux-2-pro"
+    },
+    "negativePromptDefault": "blurry",
+    "resolution": "1 MP",
+    "outputFormat": "png"
+  },
+  "assets": {
+    "basePublicPath": "/uploads/books/aventure-enchantee",
+    "defaults": {
+      "cover-default": "/uploads/books/aventure-enchantee/cover-default.svg",
+      "dedication-default": "/uploads/books/aventure-enchantee/dedication-default.svg",
+      "page-1-default": "/uploads/books/aventure-enchantee/page-1-default.svg",
+      "summary-default": "/uploads/books/aventure-enchantee/summary-default.svg",
+      "back-cover-default": "/uploads/books/aventure-enchantee/back-cover-default.svg"
+    }
+  },
+  "qa": {
+    "requiredPageTypes": ["cover", "dedication", "story", "summary", "backCover"],
+    "requiredLocales": ["fr", "en", "nl"],
+    "placeholderPolicy": {"allowed": ["{child_name}"], "forbidden": []},
+    "rules": ["No text inside generated images"],
+    "scorecard": {
+      "editorialScore": {"value": 78, "rationale": "Master fixture is coherent even if runtime will later fail."},
+      "imageabilityScore": {"value": 79, "rationale": "Story scene is still imageable."},
+      "heroConsistencyScore": {"value": 80, "rationale": "Hero rules remain explicit."},
+      "localeCompletenessScore": {"value": 100, "rationale": "All locale pages nodes are present."}
+    }
+  }
+}

@@ -1,0 +1,590 @@
+{
+    "schema": "book_blueprint_v2",
+    "schemaVersion": 2,
+    "metadata": {
+        "bookId": "la-derniere-etoile-filante",
+        "slug": "la-derniere-etoile-filante",
+        "productCode": "BOOK_LA-DERNIERE-ETOILE-FILANTE",
+        "version": 2,
+        "status": "published",
+        "sourceLocale": "fr",
+        "supportedLocales": [
+            "fr",
+            "en",
+            "nl"
+        ],
+        "pageCount": 10,
+        "generationPageCount": 8,
+        "ageRange": "4-7",
+        "theme": [
+            "family",
+            "wonder",
+            "courage",
+            "nature"
+        ],
+        "promise": "Un voyage magique à travers la campagne belge où un enfant découvre que les plus beaux vœux sont ceux qu'on fait pour les autres.",
+        "editorialPositioning": "Conte tendre et poétique sur la générosité intergénérationnelle, ancré dans les paysages authentiques de la Belgique rurale."
+    },
+    "locales": {
+        "fr": {
+            "book": {
+                "title_template": "La dernière étoile filante"
+            },
+            "pages": {
+                "cover": {
+                    "title_template": "La dernière étoile filante",
+                    "text_template": ""
+                },
+                "dedication": {
+                    "title_template": "",
+                    "text_template": "Pour {child_name}, qui sait que les plus beaux voyages se font main dans la main."
+                },
+                "page_1": {
+                    "title_template": "Le jardin de Grand-père Jules",
+                    "text_template": "Dans le jardin au crépuscule doré, Grand-père Jules montre une étoile filante à {child_name}. « Si on la suit jusqu'au bout, elle exauce un vœu », murmure-t-il. {child_name} attrape la main du grand-père, les yeux pleins d'étoiles."
+                },
+                "page_2": {
+                    "title_template": "Le champ de blé doré",
+                    "text_template": "La piste lumineuse traverse un champ de blé baigné de lumière dorée. {child_name} et Grand-père Jules marchent entre les épis qui chuchotent. Le héron cendré les observe depuis un vieux saule, comme s'il les invitait à le suivre."
+                },
+                "page_3": {
+                    "title_template": "Le pont de pierre",
+                    "text_template": "Au bord de la rivière, le héron les guide vers un vieux pont de pierre. Le ciel vire au violet et les premières lucioles apparaissent. {child_name} voit la piste de l'étoile se refléter sur l'eau calme."
+                },
+                "page_4": {
+                    "title_template": "La forêt aux lucioles",
+                    "text_template": "Dans la forêt qui s'assombrit, les lucioles tracent un chemin magique. {child_name} a un peu peur du noir. « Le courage, c'est d'avancer même quand on a peur », dit Grand-père Jules doucement."
+                },
+                "page_5": {
+                    "title_template": "L'étoile qui écoute",
+                    "text_template": "Dans une clairière baignée de lumière lunaire, l'étoile filante repose doucement dans l'herbe, palpitant d'une lueur chaude. {child_name} ferme les yeux et formule {child_possessive_det} vœu : « Que le jardin de Grand-père refleurisse. »"
+                },
+                "page_6": {
+                    "title_template": "Le miracle du matin",
+                    "text_template": "Le lendemain matin, le jardin de Grand-père Jules déborde de fleurs colorées et de vie. Grand-père Jules regarde {child_name} avec des yeux qui brillent plus que les étoiles. Le vrai cadeau, c'était le voyage ensemble."
+                },
+                "summary": {
+                    "title_template": "Résumé",
+                    "text_template": "Une aventure magique où {child_name} découvre qu'un vœu généreux peut créer les plus beaux miracles."
+                },
+                "backCover": {
+                    "title_template": "",
+                    "text_template": "Quand {child_name} suit une étoile filante à travers la campagne belge avec Grand-père Jules, {child_pronoun_subject} découvre que les plus beaux vœux sont ceux qu'on fait pour les autres."
+                }
+            }
+        },
+        "en": {
+            "book": {
+                "title_template": "The Last Shooting Star"
+            },
+            "pages": {
+                "cover": {
+                    "title_template": "The Last Shooting Star",
+                    "text_template": ""
+                },
+                "dedication": {
+                    "title_template": "",
+                    "text_template": "For {child_name}, who knows that the most beautiful journeys are taken hand in hand."
+                },
+                "page_1": {
+                    "title_template": "Grandpa Jules' Garden",
+                    "text_template": "In the garden at golden twilight, Grandpa Jules shows {child_name} a shooting star. \"If we follow it to the end, it grants a wish,\" he whispers. {child_name} grabs grandpa's hand, eyes full of starlight."
+                },
+                "page_2": {
+                    "title_template": "The Golden Wheat Field",
+                    "text_template": "The glowing trail crosses a wheat field bathed in golden light. {child_name} and Grandpa Jules walk between the whispering wheat stalks. The grey heron watches them from an old willow, as if inviting them to follow."
+                },
+                "page_3": {
+                    "title_template": "The Stone Bridge",
+                    "text_template": "By the riverbank, the heron guides them toward an old stone bridge. The sky turns violet and the first fireflies appear. {child_name} sees the star's trail reflecting on the calm water."
+                },
+                "page_4": {
+                    "title_template": "The Firefly Forest",
+                    "text_template": "In the darkening forest, fireflies trace a magical path. {child_name} feels a little afraid of the dark. \"Courage means moving forward even when you're scared,\" Grandpa Jules says gently."
+                },
+                "page_5": {
+                    "title_template": "The Listening Star",
+                    "text_template": "In a moonlit clearing, the shooting star rests gently in the grass, pulsing with warm light. {child_name} closes {child_possessive_det} eyes and makes a wish: \"Let Grandpa's garden bloom again.\""
+                },
+                "page_6": {
+                    "title_template": "The Morning Miracle",
+                    "text_template": "The next morning, Grandpa Jules' garden overflows with colorful flowers and life. Grandpa Jules looks at {child_name} with eyes that shine brighter than stars. The real gift was the journey together."
+                },
+                "summary": {
+                    "title_template": "Summary",
+                    "text_template": "A magical adventure where {child_name} discovers that generous wishes can create the most beautiful miracles."
+                },
+                "backCover": {
+                    "title_template": "",
+                    "text_template": "When {child_name} follows a shooting star through the Belgian countryside with Grandpa Jules, {child_pronoun_subject} discovers that the most beautiful wishes are the ones we make for others."
+                }
+            }
+        },
+        "nl": {
+            "book": {
+                "title_template": "De laatste vallende ster"
+            },
+            "pages": {
+                "cover": {
+                    "title_template": "De laatste vallende ster",
+                    "text_template": ""
+                },
+                "dedication": {
+                    "title_template": "",
+                    "text_template": "Voor {child_name}, die weet dat de mooiste reizen hand in hand worden gemaakt."
+                },
+                "page_1": {
+                    "title_template": "Bompa Jules' tuin",
+                    "text_template": "In de tuin tijdens de gouden schemering toont Bompa Jules {child_name} een vallende ster. \"Als we die volgen tot het einde, vervult ze een wens,\" fluistert {child_name}. {child_name} pakt bompa's hand vast, ogen vol sterrenglans."
+                },
+                "page_2": {
+                    "title_template": "Het gouden tarweveld",
+                    "text_template": "Het lichtspoor kruist een tarweveld badend in gouden licht. {child_name} en Bompa Jules wandelen tussen de fluisterende halmen. De grijze reiger kijkt naar hen vanaf een oude wilg, alsof {child_possessive_det} uitnodigt om te volgen."
+                },
+                "page_3": {
+                    "title_template": "De stenen brug",
+                    "text_template": "Aan de rivieroever leidt de reiger hen naar een oude stenen brug. De hemel kleurt paars en de eerste vuurvliegjes verschijnen. {child_name} ziet het spoor van de ster weerkaatsen op het stille water."
+                },
+                "page_4": {
+                    "title_template": "Het vuurvliegjesbos",
+                    "text_template": "In het donker wordende bos tekenen vuurvliegjes een magisch pad. {child_name} voelt zich een beetje bang voor het donker. \"Moed betekent verder gaan, ook al ben je bang,\" zegt Bompa Jules zachtjes."
+                },
+                "page_5": {
+                    "title_template": "De luisterende ster",
+                    "text_template": "In een maanbeschenen open plek rust de vallende ster zachtjes in het gras, kloppend met warm licht. {child_name} sluit {child_possessive_det} ogen en doet een wens: \"Laat bompa's tuin weer bloeien.\""
+                },
+                "page_6": {
+                    "title_template": "Het ochtendmirakel",
+                    "text_template": "De volgende ochtend barst Bompa Jules' tuin over van kleurrijke bloemen en leven. Bompa Jules kijkt naar {child_name} met ogen die helderder stralen dan sterren. Het echte geschenk was de reis samen."
+                },
+                "summary": {
+                    "title_template": "Samenvatting",
+                    "text_template": "Een magisch avontuur waarin {child_name} ontdekt dat vrijgevige wensen de mooiste mirakels kunnen scheppen."
+                },
+                "backCover": {
+                    "title_template": "",
+                    "text_template": "Wanneer {child_name} een vallende ster volgt door het Belgische platteland met Bompa Jules, ontdekt {child_pronoun_subject} dat de mooiste wensen degene zijn die we voor anderen doen."
+                }
+            }
+        }
+    },
+    "visualBible": {
+        "style_rules": [
+            "Premium watercolor and gouache illustration style with soft, flowing brushstrokes",
+            "Warm twilight palette progressing from golden hour to deep blue starry night",
+            "Belgian countryside authenticity: Campine brick farmhouses, Walloon wheat fields, Ardennes rivers",
+            "Atmospheric perspective with misty backgrounds and firefly-lit foregrounds",
+            "Cinematic compositions with dynamic camera angles and emotional framing",
+            "Rich textural details: weathered stone, flowing water, wheat grain, soft fabric"
+        ],
+        "palette": "Golden wheat, warm amber, soft violets, deep twilight blues, silver moonlight, firefly yellow-green, brick red, sage green willow",
+        "lighting": "Progressive lighting from golden hour through blue hour to moonlit night, with magical star glow and firefly sparkles",
+        "compositionRules": [
+            "Dynamic character positioning with clear emotional gestures and eye contact",
+            "Environmental storytelling through detailed Belgian countryside settings",
+            "Atmospheric depth using foreground, midground, background layering",
+            "Magical elements integrated naturally into realistic settings"
+        ]
+    },
+    "heroBible": {
+        "identityRules": [
+            "Child around 5-6 years old with curious, expressive dark eyes",
+            "Tousled brown hair that catches the light naturally",
+            "Wearing comfortable countryside clothes: soft cardigan, sturdy shoes for walking",
+            "Small, agile build perfect for countryside adventures",
+            "Warm, open facial expression showing wonder and determination"
+        ],
+        "characterDesign": "A 5-6 year old child with warm brown eyes full of curiosity, tousled brown hair, wearing a soft knitted cardigan over practical countryside clothes, with an expressive face that shows both wonder and gentle courage",
+        "forbiddenDrift": [
+            "No age changes - must remain consistently 5-6 years old",
+            "No dramatic clothing changes - consistent countryside adventure outfit",
+            "No hair color or length changes",
+            "No facial feature changes - same expressive dark eyes and warm expression",
+            "No personality changes - always curious, gentle, and brave"
+        ]
+    },
+    "sceneDefinitions": [
+        {
+            "id": "hero_reference",
+            "type": "reference",
+            "pageNumber": 1,
+            "personalizable": true,
+            "assetKey": "hero-reference-default",
+            "camera": "front-facing portrait, medium shot, hero looking at viewer with warm expression",
+            "composition": "centered character portrait on warm neutral background",
+            "foreground": "Child portrait with tousled brown hair, warm dark eyes, soft knitted cardigan",
+            "midground": "Neutral warm background gradient",
+            "background": "Soft, out-of-focus warm neutral tone",
+            "lighting": "soft, warm, even studio portrait lighting",
+            "emotion": "warm, approachable, gentle",
+            "must_show": [
+                "child face",
+                "warm expression",
+                "brown hair",
+                "dark eyes"
+            ],
+            "must_not_show": [
+                "other characters",
+                "story elements",
+                "text",
+                "decorative background"
+            ],
+            "promptTemplate": "Portrait of a 5-6 year old child with tousled brown hair, warm expressive dark eyes, wearing a soft knitted cardigan, gentle curious expression, watercolor illustration style",
+            "negativePrompt": "other people, background elements, text, letters, decorative items, story context"
+        },
+        {
+            "id": "cover",
+            "type": "cover",
+            "pageNumber": 0,
+            "personalizable": true,
+            "assetKey": "cover-default",
+            "camera": "wide cinematic establishing shot, slightly elevated perspective",
+            "composition": "child and grandfather silhouetted against twilight sky with shooting star",
+            "foreground": "Child and elderly grandfather holding hands in garden",
+            "midground": "Belgian countryside farmhouse with typical Campine brick architecture",
+            "background": "Twilight sky with prominent shooting star trailing golden light",
+            "lighting": "golden hour backlighting with magical star glow",
+            "emotion": "wonder, anticipation, family warmth",
+            "must_show": [
+                "child",
+                "grandfather",
+                "shooting star",
+                "Belgian farmhouse",
+                "twilight sky"
+            ],
+            "must_not_show": [
+                "text inside image",
+                "readable signs",
+                "modern elements"
+            ],
+            "promptTemplate": "Cinematic wide shot of child and elderly grandfather with white hair and tweed jacket standing in Belgian countryside garden, pointing at brilliant shooting star in golden twilight sky, traditional Campine brick farmhouse background, watercolor gouache style",
+            "negativePrompt": "text, letters, signs, modern buildings, urban elements, harsh lighting"
+        },
+        {
+            "id": "dedication",
+            "type": "dedication",
+            "pageNumber": 1,
+            "personalizable": false,
+            "assetKey": "dedication-default",
+            "camera": "soft focus artistic shot",
+            "composition": "gentle watercolor wash background",
+            "foreground": "Soft watercolor elements suggesting journey",
+            "midground": "Flowing brushstroke textures",
+            "background": "Warm gradient wash",
+            "lighting": "soft, diffused warm light",
+            "emotion": "tender, intimate",
+            "must_show": [
+                "soft watercolor background"
+            ],
+            "must_not_show": [
+                "characters",
+                "specific objects",
+                "text"
+            ],
+            "promptTemplate": null,
+            "negativePrompt": null
+        },
+        {
+            "id": "page_1",
+            "type": "story",
+            "pageNumber": 2,
+            "personalizable": true,
+            "assetKey": "page-1-default",
+            "camera": "medium shot, slightly low angle emphasizing wonder",
+            "composition": "child and grandfather in foreground with twilight garden setting",
+            "foreground": "Child with amazed expression and elderly grandfather with white beard pointing skyward",
+            "midground": "Traditional Belgian cottage garden with weathered vegetables and herbs",
+            "background": "Shooting star streaking across golden twilight sky",
+            "lighting": "golden hour with magical star illumination",
+            "emotion": "wonder, excitement, family connection",
+            "must_show": [
+                "child pointing up",
+                "grandfather with white hair",
+                "shooting star",
+                "cottage garden",
+                "twilight"
+            ],
+            "must_not_show": [
+                "text in image",
+                "modern elements",
+                "bright daylight"
+            ],
+            "promptTemplate": "Watercolor illustration of child and elderly grandfather with white hair and gentle beard in cottage garden at golden twilight, both looking up at brilliant shooting star, grandfather pointing skyward, child's face filled with wonder, weathered vegetable garden, warm golden light",
+            "negativePrompt": "text, letters, modern clothing, urban setting, harsh lighting, noon sun"
+        },
+        {
+            "id": "page_2",
+            "type": "story",
+            "pageNumber": 3,
+            "personalizable": true,
+            "assetKey": "page-2-default",
+            "camera": "wide shot following characters through landscape",
+            "composition": "child and grandfather walking through golden wheat field with path perspective",
+            "foreground": "Child and grandfather walking hand in hand along field path",
+            "midground": "Golden wheat field with red poppies, old willow tree with grey heron",
+            "background": "Rolling Belgian countryside with soft hills",
+            "lighting": "warm golden hour light filtering through wheat",
+            "emotion": "peaceful journey, natural beauty, guidance",
+            "must_show": [
+                "child walking",
+                "grandfather with cane",
+                "wheat field",
+                "grey heron in willow",
+                "red poppies"
+            ],
+            "must_not_show": [
+                "vehicles",
+                "power lines",
+                "modern farming equipment",
+                "text"
+            ],
+            "promptTemplate": "Watercolor landscape of child and elderly grandfather walking through golden wheat field dotted with red poppies, grey heron perched majestically in old willow tree watching them, rolling Belgian countryside, warm golden hour lighting, gouache texture",
+            "negativePrompt": "modern elements, machinery, power lines, text, signs, harsh shadows"
+        },
+        {
+            "id": "page_3",
+            "type": "story",
+            "pageNumber": 4,
+            "personalizable": true,
+            "assetKey": "page-3-default",
+            "camera": "medium wide shot from across the river",
+            "composition": "old stone bridge with characters approaching, water reflection",
+            "foreground": "Grey heron standing gracefully by river's edge",
+            "midground": "Child and grandfather approaching weathered stone bridge, early fireflies",
+            "background": "Violet twilight sky reflected in calm river water",
+            "lighting": "blue hour with first firefly glows and star trail reflection",
+            "emotion": "transition, guidance, growing magic",
+            "must_show": [
+                "stone bridge",
+                "river reflection",
+                "grey heron",
+                "violet sky",
+                "first fireflies"
+            ],
+            "must_not_show": [
+                "modern bridge elements",
+                "cars",
+                "artificial lighting",
+                "text"
+            ],
+            "promptTemplate": "Atmospheric watercolor of weathered stone bridge over calm river at blue hour, child and grandfather approaching bridge, majestic grey heron by water's edge, violet twilight sky, shooting star trail reflected in still water, first fireflies beginning to glow",
+            "negativePrompt": "modern bridges, vehicles, street lights, concrete, text, bright artificial lighting"
+        },
+        {
+            "id": "page_4",
+            "type": "story",
+            "pageNumber": 5,
+            "personalizable": true,
+            "assetKey": "page-4-default",
+            "camera": "intimate medium shot through trees",
+            "composition": "forest path with firefly lights creating magical atmosphere",
+            "foreground": "Child staying close to grandfather, showing slight apprehension but courage",
+            "midground": "Dark forest path illuminated by dancing fireflies",
+            "background": "Dense forest with grey heron visible on low branch",
+            "lighting": "dappled moonlight through leaves with bright firefly illumination",
+            "emotion": "courage through fear, protection, magical guidance",
+            "must_show": [
+                "forest shadows",
+                "firefly light trails",
+                "child staying close to grandfather",
+                "heron on branch"
+            ],
+            "must_not_show": [
+                "scary elements",
+                "threatening animals",
+                "artificial lights",
+                "text"
+            ],
+            "promptTemplate": "Enchanting forest scene with child walking close to protective grandfather through dark woods, magical fireflies creating glowing light trails, patient grey heron perched on low branch, dappled moonlight, watercolor with luminous firefly effects",
+            "negativePrompt": "frightening elements, predators, artificial lighting, text, modern objects"
+        },
+        {
+            "id": "page_5",
+            "type": "story",
+            "pageNumber": 6,
+            "personalizable": true,
+            "assetKey": "page-5-default",
+            "camera": "dramatic medium shot emphasizing the magical moment",
+            "composition": "moonlit clearing with fallen star as focal point",
+            "foreground": "Child kneeling beside glowing shooting star in grass, eyes closed in concentration",
+            "midground": "Grandfather standing nearby with gentle smile, moonlit clearing",
+            "background": "Starry night sky with soft clouds, forest edge",
+            "lighting": "bright moonlight with warm star glow illuminating child's face",
+            "emotion": "peak wonder, generosity, magical fulfillment",
+            "must_show": [
+                "star glowing in grass",
+                "child making wish",
+                "grandfather watching proudly",
+                "moonlight",
+                "peaceful clearing"
+            ],
+            "must_not_show": [
+                "scary darkness",
+                "artificial objects",
+                "text",
+                "harsh lighting"
+            ],
+            "promptTemplate": "Magical watercolor of moonlit forest clearing with child kneeling beside softly glowing shooting star resting in grass, eyes closed making heartfelt wish, grandfather watching with tender pride, brilliant moonlight and starry sky, warm golden star glow",
+            "negativePrompt": "artificial objects, text, harsh contrasts, frightening elements, modern items"
+        },
+        {
+            "id": "page_6",
+            "type": "story",
+            "pageNumber": 7,
+            "personalizable": true,
+            "assetKey": "page-6-default",
+            "camera": "wide joyful shot of transformed garden",
+            "composition": "flourishing garden with child and grandfather admiring the miracle",
+            "foreground": "Child and grandfather standing amazed in midst of blooming garden",
+            "midground": "Garden transformed with abundant colorful flowers and healthy vegetables",
+            "background": "Grey heron preparing to fly away, morning sky with apple tree",
+            "lighting": "bright cheerful morning sunlight with soft shadows",
+            "emotion": "joy, gratitude, love, completion",
+            "must_show": [
+                "abundant flowers",
+                "healthy garden",
+                "child and grandfather embracing",
+                "heron departing",
+                "morning light"
+            ],
+            "must_not_show": [
+                "wilted plants",
+                "artificial elements",
+                "text",
+                "harsh shadows"
+            ],
+            "promptTemplate": "Joyful morning watercolor of transformed cottage garden bursting with colorful flowers and thriving vegetables, child and grandfather embracing in wonder, grey heron gracefully taking flight, warm morning sunlight, celebration of renewal and love",
+            "negativePrompt": "dead plants, artificial elements, text, harsh lighting, urban elements"
+        },
+        {
+            "id": "summary",
+            "type": "summary",
+            "pageNumber": 8,
+            "personalizable": false,
+            "assetKey": "summary-default",
+            "camera": "artistic overview",
+            "composition": "montage style summary of journey",
+            "foreground": "Journey elements flowing together",
+            "midground": "Landscape elements in watercolor wash",
+            "background": "Soft gradient suggesting completion",
+            "lighting": "soft, warm, summarizing light",
+            "emotion": "fulfillment, reflection",
+            "must_show": [
+                "journey elements",
+                "soft transitions"
+            ],
+            "must_not_show": [
+                "specific details",
+                "text",
+                "harsh elements"
+            ],
+            "promptTemplate": null,
+            "negativePrompt": null
+        },
+        {
+            "id": "backCover",
+            "type": "backCover",
+            "pageNumber": 9,
+            "personalizable": true,
+            "assetKey": "back-cover-default",
+            "camera": "gentle establishing shot",
+            "composition": "Belgian countryside vista with subtle star trail",
+            "foreground": "Rolling countryside with path suggesting journey",
+            "midground": "Traditional Belgian farmhouse and fields",
+            "background": "Peaceful sky with hint of magic",
+            "lighting": "soft twilight with warm peaceful glow",
+            "emotion": "completion, peace, invitation",
+            "must_show": [
+                "Belgian countryside",
+                "peaceful atmosphere",
+                "subtle magic"
+            ],
+            "must_not_show": [
+                "dramatic action",
+                "text",
+                "modern elements"
+            ],
+            "promptTemplate": "Peaceful watercolor vista of Belgian countryside with rolling fields, traditional farmhouse, and gentle path winding through landscape, soft twilight sky with hint of starlight, serene and inviting atmosphere",
+            "negativePrompt": "dramatic action, text, modern elements, harsh lighting, urban development"
+        }
+    ],
+    "assets": {
+        "basePublicPath": "/uploads/books/la-derniere-etoile-filante/",
+        "defaults": {
+            "cover-default": "/uploads/books/la-derniere-etoile-filante/cover-default.png",
+            "dedication-default": "/uploads/books/la-derniere-etoile-filante/dedication-default.png",
+            "hero-reference-default": "/uploads/books/la-derniere-etoile-filante/hero-reference-default.png",
+            "page-1-default": "/uploads/books/la-derniere-etoile-filante/page-1-default.png",
+            "page-2-default": "/uploads/books/la-derniere-etoile-filante/page-2-default.png",
+            "page-3-default": "/uploads/books/la-derniere-etoile-filante/page-3-default.png",
+            "page-4-default": "/uploads/books/la-derniere-etoile-filante/page-4-default.png",
+            "page-5-default": "/uploads/books/la-derniere-etoile-filante/page-5-default.png",
+            "page-6-default": "/uploads/books/la-derniere-etoile-filante/page-6-default.png",
+            "summary-default": "/uploads/books/la-derniere-etoile-filante/summary-default.png",
+            "back-cover-default": "/uploads/books/la-derniere-etoile-filante/back-cover-default.png"
+        }
+    },
+    "imageGeneration": {
+        "provider": "replicate",
+        "modelStrategy": {
+            "model": "black-forest-labs/flux-2-pro"
+        },
+        "negativePromptDefault": "text, letters, words, signs, logos, modern elements, artificial lighting, harsh shadows, digital artifacts, low quality",
+        "resolution": "1 MP",
+        "outputFormat": "png",
+        "inputImages": {
+            "pageReference": true,
+            "childPhoto": true
+        }
+    },
+    "qa": {
+        "requiredPageTypes": [
+            "cover",
+            "story",
+            "backCover"
+        ],
+        "requiredLocales": [
+            "fr",
+            "en",
+            "nl"
+        ],
+        "placeholderPolicy": {
+            "allowed": [
+                "{child_name}",
+                "{child_pronoun_subject}",
+                "{child_possessive_det}"
+            ],
+            "forbidden": []
+        },
+        "rules": [
+            "All story scenes must include the child hero",
+            "Hero must be visually consistent across all pages",
+            "No text or readable elements in generated images",
+            "Belgian countryside authenticity required",
+            "Age-appropriate content for 4-7 years",
+            "Emotional warmth and safety throughout"
+        ],
+        "scorecard": {
+            "editorialScore": {
+                "value": 92,
+                "rationale": "Strong emotional arc with authentic Belgian setting, clear family themes, and age-appropriate magical realism. Excellent character development and cultural authenticity."
+            },
+            "imageabilityScore": {
+                "value": 89,
+                "rationale": "Highly visual scenes with clear composition guidelines, strong atmospheric progression, and distinctive Belgian countryside elements. Rich visual variety supports story progression."
+            },
+            "heroConsistencyScore": {
+                "value": 95,
+                "rationale": "Detailed hero reference with comprehensive identity rules and forbidden drift specifications. Clear character design maintained across all story scenes."
+            },
+            "localeCompletenessScore": {
+                "value": 94,
+                "rationale": "Complete translations in all three languages with culturally appropriate adaptations. Proper placeholder usage and gender neutrality maintained."
+            },
+            "translationNaturalnessScore": {
+                "value": 91,
+                "rationale": "Natural, idiomatic translations that read as native language rather than direct translations. Flemish Dutch particularly authentic for Belgian market."
+            }
+        }
+    }
+}

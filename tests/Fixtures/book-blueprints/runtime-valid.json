@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "title_template": "{child_name} et l'aventure enchantee",
+  "negative_prompt_default": "blurry",
+  "style_rules": [
+    "children's book illustration"
+  ],
+  "metadata": {
+    "locale": "fr"
+  },
+  "pages": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "default_image_path": "/uploads/books/aventure-enchantee/cover-default.svg",
+      "prompt_template": "children's book cover showing {child_name} entering a magical forest",
+      "personalizable": true
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "default_image_path": "/uploads/books/aventure-enchantee/dedication-default.svg",
+      "text_template": "Pour {child_name}",
+      "personalizable": true
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "default_image_path": "/uploads/books/aventure-enchantee/page-1-default.svg",
+      "prompt_template": "storybook illustration of {child_name} in a magical forest",
+      "personalizable": true
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "default_image_path": "/uploads/books/aventure-enchantee/summary-default.svg",
+      "personalizable": true
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "default_image_path": "/uploads/books/aventure-enchantee/back-cover-default.svg",
+      "prompt_template": "storybook back cover illustration of a peaceful magical forest",
+      "personalizable": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{% extends '@SyliusAdmin/shared/layout/base.html.twig' %}
+
+{% block body %}
+<aside class="navbar navbar-vertical navbar-expand-lg d-print-none" data-bs-theme="dark">
+    <div class="container-fluid">
+        {% hook 'sylius_admin.common.component.sidebar' with { _prefixes: [] } %}
+    </div>
+</aside>
+<header class="navbar d-print-none">
+    <div class="container-xl d-flex gap-2 flex-nowrap">
+        {% hook 'sylius_admin.common.component.navbar' with { _prefixes: [] } %}
+    </div>
+</header>
+<div class="page-wrapper">
+    {% block flashes %}
+        {% for type in ['success', 'error', 'info', 'warning'] %}
+            {% for flash in app.flashes(type) %}
+                <div class="container-xl">
+                    <div class="mt-3 alert alert-{{ type == 'error' ? 'danger' : type }} alert-dismissible" role="alert">
+                        <div class="alert-icon">{{ ux_icon('tabler:circle-check') }}</div>
+                        <div>
+                            <h4 class="alert-heading">{{ type|capitalize }}</h4>
+                            <div class="alert-description">{{ flash|trans }}</div>
+                        </div>
+                        <a class="btn-close" data-bs-dismiss="alert">{{ ux_icon('tabler:x') }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endblock %}
+    {% block content %}{% endblock %}
+</div>
+{% endblock %}

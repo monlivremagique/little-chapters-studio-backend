@@ -1,0 +1,49 @@
+slug: espace-robot
+title: L'astronaute et son robot
+theme:
+  - adventure
+  - science
+  - friendship
+age: 8-10
+story_subject: Un enfant-astronaute et son robot de compagnie partent reparer une balise spatiale perdue et decouvrent en chemin ce que signifie vraiment travailler ensemble.
+main_emotion: curiosite audacieuse et solidarite
+learning_message: Les grandes decouvertes arrivent quand on combine ce qu'on sait chacun.
+languages:
+  - fr
+  - en
+  - nl
+visual_style: premium sci-fi watercolor storybook with warm galaxy palette
+story_page_count: 6
+constraints:
+  - bedtime safe for 8-10
+  - intellectually stimulating
+  - Belgian premium quality
+  - coherent hero and robot design across pages
+  - no text inside generated images
+  - rich descriptive language, age-appropriate for 8-10
+
+arc_type: quest-with-revelation
+climax_page: page_5
+setting: une station spatiale en orbite basse, un vaisseau compact, et la surface d'un asteroide glace
+cultural_context: Belgique premium — curiosite scientifique a la Tintin, sens du detail et de l'ingenierie, humour doux
+parent_emotion_goal: Le parent veut que l'enfant s'endorme avec l'envie de resoudre les problemes par la cooperation et non seul
+
+secondary_characters:
+  - BLIX, robot compact en acier brille avec un ecran-face expressif
+  - une cosmonaute veterane croisee a la station
+
+scenes:
+  - id: page_1
+    moment: L'enfant regarde par le hublot de la station. Au loin, la balise clignotemalle. BLIX affiche une carte et un point d'interrogation sur son ecran-face.
+  - id: page_2
+    moment: Le vaisseau fonce vers l'asteroide. BLIX calcule la trajectoire pendant que l'enfant pilote, tous les deux concentres, en equipe parfaite.
+  - id: page_3
+    moment: Sur l'asteroide glace, la balise est enfouie sous un bloc de cristal. L'enfant essaie de la deplacer seul — impossible. BLIX observe et clignote.
+  - id: page_4
+    moment: >-
+      BLIX projette un plan holographique. L'enfant comprend qu'il faut faire levier ensemble.
+      Ils combinent leur force et le cristal roule doucement.
+  - id: page_5
+    moment: La balise s'allume en orange vif, envoie un signal vers la Terre. L'enfant et BLIX se high-fivent dans le vide de l'espace. Moment de joie pure.
+  - id: page_6
+    moment: De retour dans la station, la cosmonaute veterane leur offre un badge "Equipe de l'annee". L'enfant s'endort dans sa couchette en regardant le badge, BLIX veillant a cote.

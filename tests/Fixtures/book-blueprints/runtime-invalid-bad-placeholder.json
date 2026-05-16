@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "title_template": "{child_name} et {pet_name}",
+  "negative_prompt_default": "blurry",
+  "style_rules": [
+    "children's book illustration"
+  ],
+  "metadata": {
+    "locale": "fr"
+  },
+  "pages": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "default_image_path": "/uploads/books/aventure-enchantee/cover-default.svg",
+      "prompt_template": "children's book cover showing {pet_name}",
+      "personalizable": true
+    }
+  ]
+}

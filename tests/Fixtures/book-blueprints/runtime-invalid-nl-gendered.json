@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "title_template": "Het avontuur van {child_name}",
+  "negative_prompt_default": "blurry",
+  "style_rules": [
+    "children's book illustration"
+  ],
+  "metadata": {
+    "locale": "nl"
+  },
+  "pages": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "default_image_path": "/uploads/books/aventure-nl/cover-default.svg",
+      "prompt_template": "prentenboek omslag van {child_name} in een betoverd bos",
+      "personalizable": true
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "default_image_path": "/uploads/books/aventure-nl/dedication-default.svg",
+      "text_template": "Voor {child_name}",
+      "personalizable": true
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "default_image_path": "/uploads/books/aventure-nl/page-1-default.svg",
+      "text_template": "Hij liep door het bos en ontdekte een ster.",
+      "prompt_template": "prentenboek illustratie van {child_name} in een betoverd bos",
+      "personalizable": true
+    },
+    {
+      "id": "page_2",
+      "type": "story",
+      "default_image_path": "/uploads/books/aventure-nl/page-2-default.svg",
+      "text_template": "De sterren leken naar hem te knipogen.",
+      "prompt_template": "prentenboek illustratie van {child_name} kijkend naar de sterren",
+      "personalizable": true
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "default_image_path": "/uploads/books/aventure-nl/summary-default.svg",
+      "personalizable": true
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "default_image_path": "/uploads/books/aventure-nl/back-cover-default.svg",
+      "prompt_template": "prentenboek achterkant illustratie van een betoverd bos",
+      "personalizable": false
+    }
+  ]
+}

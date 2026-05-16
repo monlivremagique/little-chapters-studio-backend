@@ -1,0 +1,27 @@
+framework:
+    messenger:
+        failure_transport: failed
+
+        transports:
+            async:
+                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
+                retry_strategy:
+                    max_retries: 3
+                    # Exponential backoff: ~5 min, ~15 min, ~60 min
+                    delay: 300000
+                    multiplier: 3
+                    max_delay: 3600000
+
+            failed: 'doctrine://default?queue_name=failed'
+            sync: 'sync://'
+
+        routing:
+            App\Message\ProcessStripeWebhookMessage: async
+            App\Message\TriggerFulfillmentMessage: async
+
+when@test:
+    framework:
+        messenger:
+            transports:
+                async: 'sync://'
+                failed: 'in-memory://'

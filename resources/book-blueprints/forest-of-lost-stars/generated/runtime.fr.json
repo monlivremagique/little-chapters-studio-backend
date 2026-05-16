@@ -1,0 +1,269 @@
+{
+    "version": 2,
+    "title_template": "La Forêt des Étoiles Perdues avec {child_name}",
+    "negative_prompt_default": "text, words, letters, writing, captions, harsh lighting, photorealistic, digital art, scary imagery, dark threatening atmosphere",
+    "style_rules": [
+        "Premium watercolor technique with soft, flowing brushstrokes reminiscent of Belgian artistic tradition",
+        "Moonlit forest palette with deep blues, silver highlights, and warm golden star-glow",
+        "Dreamy, atmospheric rendering with gentle light diffusion",
+        "Rich textural details in tree bark, moss, and forest floor",
+        "Luminous star effects with subtle sparkle and warm radiance",
+        "Cozy, intimate scale appropriate for bedtime reading",
+        "Belgian winter evening ambiance with frosted windows and warm interior lighting"
+    ],
+    "metadata": {
+        "schema": "book_blueprint_v2",
+        "schemaVersion": 2,
+        "slug": "forest-of-lost-stars",
+        "bookId": "forest-of-lost-stars",
+        "locale": "fr"
+    },
+    "visualBible": {
+        "style_rules": [
+            "Premium watercolor technique with soft, flowing brushstrokes reminiscent of Belgian artistic tradition",
+            "Moonlit forest palette with deep blues, silver highlights, and warm golden star-glow",
+            "Dreamy, atmospheric rendering with gentle light diffusion",
+            "Rich textural details in tree bark, moss, and forest floor",
+            "Luminous star effects with subtle sparkle and warm radiance",
+            "Cozy, intimate scale appropriate for bedtime reading",
+            "Belgian winter evening ambiance with frosted windows and warm interior lighting"
+        ],
+        "palette": "Deep forest blues and teals, moonlight silver, warm amber star-glow, rich earth browns, soft sage greens, Belgian brick reds, warm golden interior light",
+        "lighting": "Gentle moonlight filtering through canopy, warm golden glow from stars, soft ambient forest light, cozy Belgian home lighting",
+        "compositionRules": [
+            "Child positioned prominently but naturally within scene",
+            "Stars as focal light sources drawing the eye",
+            "Organic, curved lines following natural forest forms",
+            "Intimate framing creating cozy, safe feeling",
+            "Balanced negative space to avoid visual clutter"
+        ]
+    },
+    "heroBible": {
+        "identityRules": [
+            "Child with large, expressive hazel-brown eyes showing natural wonder and gentle curiosity",
+            "Soft, wavy chestnut-brown hair reaching just past the ears, with natural tousled texture",
+            "Medium-fair complexion with rosy cheeks from outdoor adventure",
+            "Wearing a cozy forest-green wool cardigan with wooden buttons over cream-colored clothing",
+            "Average height and proportional build typical for ages 4-7, neither tall nor short",
+            "Gentle, slightly rounded facial features conveying innocence and determination",
+            "Small hands often positioned in wonder or gentle interaction with magical elements"
+        ],
+        "characterDesign": "A gentle, curious child aged 4-7 with large hazel-brown eyes full of natural wonder, soft wavy chestnut hair with tousled texture, medium-fair skin with naturally rosy cheeks, wearing a cozy forest-green wool cardigan with wooden buttons over cream clothes, expressing quiet determination mixed with pure awe at the magic around them",
+        "forbiddenDrift": [
+            "Hair color must remain consistent chestnut-brown, never darker or lighter",
+            "Eye color must stay hazel-brown, never blue, green, or pure brown",
+            "The forest-green cardigan with wooden buttons must appear in every scene",
+            "Facial structure and proportions cannot change between scenes",
+            "No dramatic emotion shifts - maintain gentle wonder and curiosity only",
+            "Hand gestures must remain small and gentle, never dramatic or adult-like",
+            "Skin tone and rosy cheek coloring must remain constant throughout"
+        ]
+    },
+    "imageGeneration": {
+        "provider": "replicate",
+        "modelStrategy": {
+            "model": "black-forest-labs/flux-2-pro"
+        },
+        "negativePromptDefault": "text, words, letters, writing, captions, harsh lighting, photorealistic, digital art, scary imagery, dark threatening atmosphere",
+        "resolution": "1 MP",
+        "outputFormat": "png",
+        "inputImages": {
+            "pageReference": true,
+            "childPhoto": true
+        }
+    },
+    "assets": {
+        "basePublicPath": "/uploads/books/forest-of-lost-stars/",
+        "defaults": {
+            "cover-default": "/uploads/books/forest-of-lost-stars/cover-default.png",
+            "dedication-default": "/uploads/books/forest-of-lost-stars/dedication-default.png",
+            "page-1-default": "/uploads/books/forest-of-lost-stars/page-1-default.png",
+            "page-2-default": "/uploads/books/forest-of-lost-stars/page-2-default.png",
+            "page-3-default": "/uploads/books/forest-of-lost-stars/page-3-default.png",
+            "page-4-default": "/uploads/books/forest-of-lost-stars/page-4-default.png",
+            "page-5-default": "/uploads/books/forest-of-lost-stars/page-5-default.png",
+            "page-6-default": "/uploads/books/forest-of-lost-stars/page-6-default.png",
+            "summary-default": "/uploads/books/forest-of-lost-stars/summary-default.png",
+            "back-cover-default": "/uploads/books/forest-of-lost-stars/back-cover-default.png"
+        }
+    },
+    "qa": {
+        "requiredPageTypes": [
+            "cover",
+            "dedication",
+            "story",
+            "summary",
+            "backCover"
+        ],
+        "requiredLocales": [
+            "fr",
+            "en",
+            "nl"
+        ],
+        "placeholderPolicy": {
+            "allowed": [
+                "{child_name}"
+            ],
+            "forbidden": []
+        },
+        "rules": [
+            "All locales must be semantically aligned",
+            "No text should appear within generated images",
+            "Hero character appearance must remain consistent",
+            "All scenes must be bedtime-safe and gentle",
+            "Premium watercolor style must be maintained throughout",
+            "Gender-neutral language required across all locales",
+            "Belgian cultural elements must be present"
+        ],
+        "scorecard": {
+            "editorialScore": {
+                "value": 92,
+                "rationale": "Strong emotional arc with clear discovery-and-return structure, climactic moment on page_4, culturally appropriate for Belgian market, excellent bedtime story qualities"
+            },
+            "imageabilityScore": {
+                "value": 95,
+                "rationale": "Highly visual scenes with clear composition, magical forest setting provides rich visual opportunities, star effects and watercolor style well-specified"
+            },
+            "heroConsistencyScore": {
+                "value": 90,
+                "rationale": "Detailed character design with specific appearance rules, comprehensive forbidden drift list, consistent emotional range specified"
+            },
+            "localeCompletenessScore": {
+                "value": 94,
+                "rationale": "Complete translations for FR/EN/NL with semantic alignment, culturally appropriate adaptations, consistent emotional tone across languages"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "cover",
+            "type": "cover",
+            "title_template": "La Forêt des Étoiles Perdues",
+            "text_template": "Une aventure magique avec {child_name}",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/cover-default.png",
+            "prompt_template": "Premium watercolor illustration of a curious child with hazel-brown eyes and chestnut hair in a forest-green wool cardigan standing in a moonlit enchanted Belgian forest, looking up at a star-filled sky with wonder, soft flowing brushstrokes, magical atmosphere, gentle moonlight filtering through trees, cinematic composition",
+            "negative_prompt": "text, words, letters, dark scary imagery, harsh shadows, realistic photography, digital art, bright lighting",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 1,
+            "scene_key": "cover"
+        },
+        {
+            "id": "dedication",
+            "type": "dedication",
+            "title_template": "Pour {child_name}",
+            "text_template": "Qui sait que même les plus petits gestes peuvent illuminer le monde entier",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/dedication-default.png",
+            "prompt_template": "Premium watercolor close-up of a single glowing star nestled in soft emerald moss on Belgian forest floor, gentle warm golden light radiating, intimate magical atmosphere, delicate flowing brushwork, serene composition with depth",
+            "negative_prompt": "text, words, letters, complex scenes, harsh lighting, photorealistic style, artificial colors",
+            "personalizable": false,
+            "aspect_ratio": null,
+            "page_number": 2,
+            "scene_key": "dedication"
+        },
+        {
+            "id": "page_1",
+            "type": "story",
+            "title_template": "L'Étoile qui Rêve",
+            "text_template": "Sous les racines nouées du grand chêne, {child_name} découvre une étoile pâle qui murmure des secrets de lumière oubliée.",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/page-1-default.png",
+            "prompt_template": "Watercolor illustration of a gentle child with hazel eyes and chestnut hair in forest-green cardigan kneeling by the gnarled roots of a massive ancient oak tree, discovering a pale, softly glowing star nestled among the roots, moonlit Belgian forest atmosphere, soft flowing brushwork, magical realism, golden light wash",
+            "negative_prompt": "text, words, bright daylight, harsh colors, scary atmosphere, photorealistic style, digital rendering",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 3,
+            "scene_key": "page_1"
+        },
+        {
+            "id": "page_2",
+            "type": "story",
+            "title_template": "Le Renard aux Yeux d'Ambre",
+            "text_template": "Un renard couleur cannelle de Bruges chuchote : « Viens, {child_name}, tes sœurs étoiles dorment dans les fougères ! »",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/page-2-default.png",
+            "prompt_template": "Watercolor forest scene with a child in forest-green cardigan following a friendly cinnamon-red fox deeper into an enchanted Belgian forest, dim stars scattered like jewels among emerald ferns and undergrowth, dappled moonlight filtering through ancient trees, magical atmosphere, cinematic composition",
+            "negative_prompt": "text, words, scary predators, dark threatening mood, bright artificial lighting, photorealistic style",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 4,
+            "scene_key": "page_2"
+        },
+        {
+            "id": "page_3",
+            "type": "story",
+            "title_template": "La Sage aux Plumes d'Argent",
+            "text_template": "La chouette aux yeux de lune révèle : « Les étoiles s'envolent vers leur palais quand les cœurs tendres leur offrent des mélodies. »",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/page-3-default.png",
+            "prompt_template": "Watercolor illustration of a child in forest-green cardigan listening attentively to a wise, gentle owl with silver-tipped feathers perched on an ancient branch, with a cinnamon-red fox nearby, in a moonlit Belgian forest clearing, soft magical atmosphere, detailed flowing brushwork, warm golden highlights",
+            "negative_prompt": "text, words, scary owl, threatening wildlife, harsh shadows, photorealistic rendering, cold lighting",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 5,
+            "scene_key": "page_3"
+        },
+        {
+            "id": "page_4",
+            "type": "story",
+            "title_template": "La Spirale d'Or",
+            "text_template": "Paupières closes comme pour un vœu de Noël, {child_name} fredonne une berceuse. Les étoiles s'élèvent en spirale dorée, tissant la nuit de fils de lumière !",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/page-4-default.png",
+            "prompt_template": "Magnificent watercolor illustration of a child in forest-green cardigan singing with eyes peacefully closed as fallen stars rise in a beautiful golden spiral toward the night sky, magical climactic moment, warm golden light threads weaving through the air, premium artistic technique, cinematic composition, flowing brushwork",
+            "negative_prompt": "text, words, static stars, cold lighting, photographic realism, harsh edges, digital art",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 6,
+            "scene_key": "page_4"
+        },
+        {
+            "id": "page_5",
+            "type": "story",
+            "title_template": "Le Ciel en Liesse",
+            "text_template": "Allongés sur l'herbe tendre comme un édredon, {child_name} et les gardiens contemplent leur chef-d'œuvre scintillant au-dessus des sapins wallons.",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/page-5-default.png",
+            "prompt_template": "Serene watercolor scene of a child in forest-green cardigan lying in a soft meadow clearing with a cinnamon-red fox and wise owl, all looking up at a beautifully restored star-filled sky, peaceful atmosphere, gentle starlight washing over the scene, flowing brushwork, Belgian countryside feeling",
+            "negative_prompt": "text, words, empty sky, restless poses, artificial lighting, digital art style, cold atmosphere",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 7,
+            "scene_key": "page_5"
+        },
+        {
+            "id": "page_6",
+            "type": "story",
+            "title_template": "La Fenêtre Complice",
+            "text_template": "Dans sa chambre aux murs de brique rouge, {child_name} sourit aux étoiles qui clignotent leurs mercis à travers les carreaux givrés de dentelle.",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/page-6-default.png",
+            "prompt_template": "Cozy watercolor illustration of a child in forest-green cardigan looking out a Belgian-style bedroom window with frosted panes at friendly twinkling stars, warm interior lighting from red brick walls, peaceful bedtime atmosphere, soft domestic details, magical connection to outside, flowing brushwork",
+            "negative_prompt": "text, words, bright lighting, daytime, cold atmosphere, stark interior, photorealistic style",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 8,
+            "scene_key": "page_6"
+        },
+        {
+            "id": "summary",
+            "type": "summary",
+            "title_template": "Le Don de {child_name}",
+            "text_template": "Dans la forêt enchantée, {child_name} a découvert que sa voix porte la magie qui ramène les étoiles chez elles.",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/summary-default.png",
+            "prompt_template": "Heartwarming watercolor illustration of a child in forest-green cardigan standing with a cinnamon-red fox and wise owl in an enchanted Belgian forest clearing, star-filled sky above, warm magical atmosphere, sense of accomplished friendship and wonder, flowing brushwork, golden light wash",
+            "negative_prompt": "text, words, sad expressions, dark mood, photorealistic style, harsh lighting",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 9,
+            "scene_key": "summary"
+        },
+        {
+            "id": "backCover",
+            "type": "backCover",
+            "title_template": "La Magie Continue",
+            "text_template": "Chaque soir, {child_name} se rappelle que les petits gestes illuminent l'univers entier.",
+            "default_image_path": "/uploads/books/forest-of-lost-stars/back-cover-default.png",
+            "prompt_template": "Peaceful watercolor landscape showing the silhouette of an enchanted Belgian forest under a magnificent star-filled sky, gentle moonlight, soft atmospheric rendering, sense of ongoing magic and wonder, flowing brushwork, cinematic composition",
+            "negative_prompt": "text, words, harsh contrasts, bright daylight, photorealistic style, empty sky, digital art",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 10,
+            "scene_key": "backCover"
+        }
+    ]
+}

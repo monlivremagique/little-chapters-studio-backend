@@ -1,0 +1,159 @@
+{
+  "schema": "book_blueprint_v2",
+  "schemaVersion": 2,
+  "metadata": {
+    "slug": "aventure-enchantee",
+    "supportedLocales": ["fr", "en", "nl"]
+  },
+  "locales": {
+    "fr": {
+      "book": {
+        "title_template": "{child_name} et l'aventure enchantee"
+      },
+      "pages": {
+        "cover": {
+          "title_template": "{child_name} et l'aventure enchantee"
+        },
+        "dedication": {
+          "text_template": "Pour {child_name}, que cette aventure te rappelle combien tu es courageux."
+        },
+        "page_1": {
+          "text_template": "{child_name} ouvre la porte du grand bois et entend les arbres lui souhaiter la bienvenue."
+        },
+        "summary": {
+          "title_template": "Le souvenir de {child_name}",
+          "text_template": "{child_name} repart avec un secret precieux : le courage grandit a chaque pas."
+        }
+      }
+    },
+    "en": {
+      "book": {
+        "title_template": "{child_name} and the Enchanted Adventure"
+      },
+      "pages": {
+        "cover": {
+          "title_template": "{child_name} and the Enchanted Adventure"
+        },
+        "dedication": {
+          "text_template": "For {child_name}, may this adventure remind you how brave you are."
+        },
+        "page_1": {
+          "text_template": "{child_name} opens the door to the great forest and hears the trees welcoming them."
+        },
+        "summary": {
+          "title_template": "{child_name}'s keepsake",
+          "text_template": "{child_name} leaves with a precious secret: courage grows with every step."
+        }
+      }
+    },
+    "nl": {
+      "book": {
+        "title_template": "{child_name} en het Betoverde Avontuur"
+      },
+      "pages": {
+        "cover": {
+          "title_template": "{child_name} en het Betoverde Avontuur"
+        },
+        "dedication": {
+          "text_template": "Voor {child_name}, moge dit avontuur je eraan herinneren hoe dapper je bent."
+        },
+        "page_1": {
+          "text_template": "{child_name} opent de deur naar het grote woud en hoort de bomen {child_name} verwelkomen met een zacht gefluister."
+        },
+        "summary": {
+          "title_template": "De herinnering van {child_name}",
+          "text_template": "{child_name} vertrekt met een kostbaar geheim: moed groeit met elke stap."
+        }
+      }
+    }
+  },
+  "visualBible": {
+    "style_rules": [
+      "children's book illustration"
+    ]
+  },
+  "heroBible": {
+    "identityRules": [
+      "same face across pages"
+    ]
+  },
+  "sceneDefinitions": [
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "pageNumber": 2,
+      "personalizable": true,
+      "assetKey": "dedication-default",
+      "promptTemplate": null
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "pageNumber": 3,
+      "personalizable": true,
+      "assetKey": "page-1-default",
+      "promptTemplate": "storybook illustration of {child_name} stepping into a magical forest path, golden fireflies, gentle wonder",
+      "negativePrompt": null,
+      "aspectRatio": "3:4"
+    },
+    {
+      "id": "cover",
+      "type": "cover",
+      "pageNumber": 1,
+      "personalizable": true,
+      "assetKey": "cover-default",
+      "promptTemplate": "children's book cover showing {child_name} entering a magical forest with glowing lanterns and friendly creatures",
+      "negativePrompt": null,
+      "aspectRatio": "3:4"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "pageNumber": 4,
+      "personalizable": true,
+      "assetKey": "summary-default",
+      "promptTemplate": null
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "pageNumber": 5,
+      "personalizable": false,
+      "assetKey": "back-cover-default",
+      "promptTemplate": "storybook back cover illustration of a peaceful magical forest under twilight, premium elegant composition",
+      "negativePrompt": null,
+      "aspectRatio": "3:4"
+    }
+  ],
+  "imageGeneration": {
+    "provider": "replicate",
+    "modelStrategy": {
+      "model": "black-forest-labs/flux-2-pro"
+    },
+    "negativePromptDefault": "blurry",
+    "resolution": "1 MP",
+    "outputFormat": "png"
+  },
+  "assets": {
+    "basePublicPath": "/uploads/books/aventure-enchantee",
+    "defaults": {
+      "cover-default": "/uploads/books/aventure-enchantee/cover-default.svg",
+      "dedication-default": "/uploads/books/aventure-enchantee/dedication-default.svg",
+      "page-1-default": "/uploads/books/aventure-enchantee/page-1-default.svg",
+      "summary-default": "/uploads/books/aventure-enchantee/summary-default.svg",
+      "back-cover-default": "/uploads/books/aventure-enchantee/back-cover-default.svg"
+    }
+  },
+  "qa": {
+    "requiredPageTypes": ["cover", "dedication", "story", "summary", "backCover"],
+    "requiredLocales": ["fr", "en", "nl"],
+    "placeholderPolicy": {"allowed": ["{child_name}"], "forbidden": []},
+    "rules": ["No text inside generated images", "All locales must maintain semantic alignment"],
+    "scorecard": {
+      "editorialScore": {"value": 88, "rationale": "Story arc stays age-appropriate and emotionally clear."},
+      "imageabilityScore": {"value": 90, "rationale": "Scenes are concrete and highly illustratable."},
+      "heroConsistencyScore": {"value": 85, "rationale": "Hero identity rules are explicit enough for the pilot."},
+      "localeCompletenessScore": {"value": 100, "rationale": "FR, EN, and NL all contain book and page nodes."}
+    }
+  }
+}

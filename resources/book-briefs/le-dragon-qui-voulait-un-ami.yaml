@@ -1,0 +1,72 @@
+slug: le-dragon-qui-voulait-un-ami
+title: Le dragon qui voulait un ami
+theme:
+  - courage
+  - kindness
+  - friendship
+  - wonder
+age: 4-7
+story_subject: Un enfant découvre un dragon caché dans la forêt derrière chez lui. Tout le monde dit que les dragons sont dangereux, mais celui-ci est juste triste et seul. En apprenant à le connaître, l'enfant découvre que la vraie force, c'est la douceur, et que les plus belles amitiés naissent quand on dépasse ses peurs.
+main_emotion: courage tendre, émerveillement et chaleur de l'amitié
+learning_message: La véritable force n'est pas dans le rugissement, mais dans le courage d'ouvrir son coeur.
+languages:
+  - fr
+  - en
+  - nl
+visual_style: premium watercolor storybook, soft fantasy palette, misty forest mornings, glowing dragon scales, warm golden light through ancient trees, cinematic medieval fantasy landscapes
+story_page_count: 6
+constraints:
+  - bedtime safe for 4-7
+  - dragons must be majestic and gentle, never scary or threatening
+  - no fire breathing, no destruction, no violence
+  - Belgian premium quality — cozy fantasy, emotional warmth
+  - coherent hero design across all pages
+  - coherent dragon design across all pages
+  - no text inside generated images
+  - no visible letters, signs, logos or readable labels
+  - strong visual variety between pages (forest, cave, village, castle hilltop)
+  - every page must contain a clear action and visible emotion
+  - warm, safe, cozy atmosphere throughout
+  - dragon must feel alive and expressive (eyes, posture, wing position)
+arc_type: ordinary-to-extraordinary
+climax_page: page_5
+setting: une forêt belge ancestrale aux chênes majestueux, une clairière secrète avec des pierres moussues, un village pittoresque au pied d'une colline avec un château en ruine, une grotte douce illuminée par des cristaux naturels
+cultural_context: Belgique premium — forêt ardennaise, châteaux de Namur, brumes matinales sur les collines, légendes locales de dragons bienveillants, chaleur du foyer au village
+parent_emotion_goal: Le parent veut que l'enfant comprenne que le courage, ce n'est pas l'absence de peur, mais la décision d'aller vers l'autre avec un coeur ouvert.
+secondary_characters:
+  - un vieux chêne parlant appelé Grand-Racine, sage et bienveillant, visage dans l'écorce
+  - une petite chouette blanche curieuse qui observe et guide discrètement
+scenes:
+  - id: page_1
+    moment: >-
+      L'enfant joue dans la forêt derrière sa maison quand il entend un son étrange
+      et doux, comme un grondement lointain mais triste. Intrigué, il écarte les
+      branches et aperçoit une grande silhouette bleutée derrière les arbres.
+  - id: page_2
+    moment: >-
+      C'est un dragon, tapi dans une clairière cachée. Il n'est pas effrayant:
+      ses grandes ailes sont repliées, sa tête repose sur ses pattes, et ses
+      yeux ambrés sont doux et humides. Il observe l'enfant sans bouger.
+  - id: page_3
+    moment: >-
+      Grand-Racine, le vieux chêne, raconte que le dragon est seul depuis des
+      siècles. Les villageois ont peur de lui, mais il ne veut que de la compagnie.
+      L'enfant décide de lui apporter un peu de réconfort.
+  - id: page_4
+    moment: >-
+      L'enfant prépare un petit panier avec du pain frais et des fleurs des
+      champs, puis retourne dans la clairière. Il s'assoit doucement près du
+      dragon et lui tend une fleur. Le dragon la regarde, hésite, puis baisse
+      doucement la tête.
+  - id: page_5
+    moment: >-
+      Le dragon accepte la fleur. Pour la première fois, il déploie ses ailes
+      autour de l'enfant comme un abri lumineux, et un sourire doux éclaire son
+      grand visage. Des écailles scintillent de mille reflets dorés dans la
+      lumière de la clairière. C'est le grand moment de connexion magique.
+  - id: page_6
+    moment: >-
+      Le soir, l'enfant rentre chez lui sous les étoiles. Le dragon veille sur
+      la forêt depuis la colline, une fleur posée près de lui. L'enfant sait
+      qu'il a gagné un ami pour la vie. Il s'endort avec un sourire, le coeur
+      plein de courage doux.

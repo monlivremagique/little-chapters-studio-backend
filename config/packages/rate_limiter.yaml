@@ -1,0 +1,47 @@
+framework:
+    rate_limiter:
+
+        generation:
+            policy: sliding_window
+            limit: '%env(int:RL_GENERATION_LIMIT)%'
+            interval: '%env(int:RL_GENERATION_INTERVAL)% seconds'
+
+        photo_upload:
+            policy: sliding_window
+            limit: '%env(int:RL_UPLOAD_LIMIT)%'
+            interval: '%env(int:RL_UPLOAD_INTERVAL)% seconds'
+
+        session_mutation:
+            policy: sliding_window
+            limit: '%env(int:RL_MUTATION_LIMIT)%'
+            interval: '%env(int:RL_MUTATION_INTERVAL)% seconds'
+
+        auth:
+            policy: sliding_window
+            limit: '%env(int:RL_AUTH_LIMIT)%'
+            interval: '%env(int:RL_AUTH_INTERVAL)% seconds'
+
+        checkout:
+            policy: sliding_window
+            limit: '%env(int:RL_CHECKOUT_LIMIT)%'
+            interval: '%env(int:RL_CHECKOUT_INTERVAL)% seconds'
+
+        read:
+            policy: sliding_window
+            limit: '%env(int:RL_READ_LIMIT)%'
+            interval: '%env(int:RL_READ_INTERVAL)% seconds'
+
+        webhook:
+            policy: sliding_window
+            limit: '%env(int:RL_WEBHOOK_LIMIT)%'
+            interval: '%env(int:RL_WEBHOOK_INTERVAL)% seconds'
+
+        support:
+            policy: sliding_window
+            limit: '%env(int:RL_SUPPORT_LIMIT)%'
+            interval: '%env(int:RL_SUPPORT_INTERVAL)% seconds'
+
+        global:
+            policy: sliding_window
+            limit: '%env(int:RL_GLOBAL_LIMIT)%'
+            interval: '%env(int:RL_GLOBAL_INTERVAL)% seconds'

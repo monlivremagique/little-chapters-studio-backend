@@ -1,0 +1,268 @@
+{
+    "version": 2,
+    "title_template": "Mon grand jour en ville",
+    "negative_prompt_default": "text, words, letters, captions, speech bubbles, dark atmosphere, scary elements, adult proportions on child, inconsistent clothing",
+    "style_rules": [
+        "Premium gouache illustration with rich watercolor washes",
+        "Warm golden hour lighting throughout urban scenes",
+        "Belgian Art Nouveau architectural details in backgrounds",
+        "Soft edges with gentle color bleeding typical of watercolor",
+        "Cinematic composition with foreground, midground, background layers",
+        "Pastel color palette with warm ochres, soft blues, gentle greens",
+        "Storybook illustration quality with premium artistic finish"
+    ],
+    "metadata": {
+        "schema": "book_blueprint_v2",
+        "schemaVersion": 2,
+        "slug": "ville-ecole",
+        "bookId": "ville-ecole-001",
+        "locale": "fr"
+    },
+    "visualBible": {
+        "style_rules": [
+            "Premium gouache illustration with rich watercolor washes",
+            "Warm golden hour lighting throughout urban scenes",
+            "Belgian Art Nouveau architectural details in backgrounds",
+            "Soft edges with gentle color bleeding typical of watercolor",
+            "Cinematic composition with foreground, midground, background layers",
+            "Pastel color palette with warm ochres, soft blues, gentle greens",
+            "Storybook illustration quality with premium artistic finish"
+        ],
+        "palette": "Warm urban pastels: golden honey, soft sky blue, sage green, cream white, gentle rose, warm ochre",
+        "lighting": "Golden hour morning light with soft shadows, creating warmth and security",
+        "compositionRules": [
+            "Child hero always positioned in lower third for age-appropriate perspective",
+            "Belgian urban elements integrated naturally in backgrounds",
+            "Clear visual hierarchy with hero as focal point",
+            "Gentle depth of field with soft background details",
+            "Emotional beats emphasized through lighting and composition"
+        ]
+    },
+    "heroBible": {
+        "identityRules": [
+            "Small child aged 3-4 with bright curious eyes",
+            "Wearing a soft yellow cardigan over blue overalls",
+            "Short tousled brown hair with natural cowlick",
+            "Rosy cheeks and expressive eyebrows",
+            "Small red sneakers with white laces",
+            "Carries a small canvas shoulder bag",
+            "Height reaches parent's hip level consistently"
+        ],
+        "characterDesign": "A petite preschooler with warm brown eyes, gentle freckles across the nose, wearing a cozy yellow cardigan over blue denim overalls. The child has an earnest, thoughtful expression with naturally tousled brown hair and small red sneakers that ground them as authentically young.",
+        "forbiddenDrift": [
+            "No aging up or down between scenes",
+            "No changes to clothing colors or style",
+            "No dramatic expression changes that break character",
+            "No size inconsistencies relative to background elements",
+            "No hair color or style variations",
+            "No removal of signature yellow cardigan",
+            "No adult-like proportions or posture"
+        ]
+    },
+    "imageGeneration": {
+        "provider": "replicate",
+        "modelStrategy": {
+            "model": "black-forest-labs/flux-2-pro"
+        },
+        "negativePromptDefault": "text, words, letters, captions, speech bubbles, dark atmosphere, scary elements, adult proportions on child, inconsistent clothing",
+        "resolution": "1 MP",
+        "outputFormat": "png",
+        "inputImages": {
+            "pageReference": true,
+            "childPhoto": true
+        }
+    },
+    "assets": {
+        "basePublicPath": "/uploads/books/ville-ecole/",
+        "defaults": {
+            "cover-default": "/uploads/books/ville-ecole/cover-default.png",
+            "dedication-default": "/uploads/books/ville-ecole/dedication-default.png",
+            "page-1-default": "/uploads/books/ville-ecole/page-1-default.png",
+            "page-2-default": "/uploads/books/ville-ecole/page-2-default.png",
+            "page-3-default": "/uploads/books/ville-ecole/page-3-default.png",
+            "page-4-default": "/uploads/books/ville-ecole/page-4-default.png",
+            "page-5-default": "/uploads/books/ville-ecole/page-5-default.png",
+            "page-6-default": "/uploads/books/ville-ecole/page-6-default.png",
+            "summary-default": "/uploads/books/ville-ecole/summary-default.png",
+            "back-cover-default": "/uploads/books/ville-ecole/back-cover-default.png"
+        }
+    },
+    "qa": {
+        "requiredPageTypes": [
+            "cover",
+            "dedication",
+            "story",
+            "summary",
+            "backCover"
+        ],
+        "requiredLocales": [
+            "fr",
+            "en",
+            "nl"
+        ],
+        "placeholderPolicy": {
+            "allowed": [
+                "{child_name}"
+            ],
+            "forbidden": []
+        },
+        "rules": [
+            "All story pages must advance the comfort-to-courage arc",
+            "Page 4 must be the emotional climax with triumph moment",
+            "Belgian cultural elements must appear in settings and prompts",
+            "Hero consistency must be maintained across all scenes",
+            "No text may appear inside generated images",
+            "All text must be short and read-aloud friendly"
+        ],
+        "scorecard": {
+            "editorialScore": {
+                "value": 92,
+                "rationale": "Strong emotional arc with clear comfort-to-courage progression, authentic Belgian setting, age-appropriate language, and meaningful climax moment"
+            },
+            "imageabilityScore": {
+                "value": 88,
+                "rationale": "Clear visual scenes with specific Belgian elements, good composition guidance, premium gouache style well-defined"
+            },
+            "heroConsistencyScore": {
+                "value": 90,
+                "rationale": "Detailed character design with specific clothing and features, strong identity rules and drift prevention"
+            },
+            "localeCompletenessScore": {
+                "value": 95,
+                "rationale": "All three locales complete with semantically aligned content, consistent emotional tone across languages"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "cover",
+            "type": "cover",
+            "title_template": "Mon grand jour en ville",
+            "text_template": null,
+            "default_image_path": "/uploads/books/ville-ecole/cover-default.png",
+            "prompt_template": "Premium gouache illustration of a small child in yellow cardigan standing on a charming Belgian street, Art Nouveau architecture, warm morning light, watercolor style, storybook quality, gentle urban scene",
+            "negative_prompt": "text, words, letters, dark atmosphere, scary elements, adult proportions",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 1,
+            "scene_key": "cover"
+        },
+        {
+            "id": "dedication",
+            "type": "dedication",
+            "title_template": null,
+            "text_template": "Pour {child_name}, petit explorateur des merveilles bruxelloises",
+            "default_image_path": "/uploads/books/ville-ecole/dedication-default.png",
+            "prompt_template": null,
+            "negative_prompt": null,
+            "personalizable": false,
+            "aspect_ratio": null,
+            "page_number": 2,
+            "scene_key": "dedication"
+        },
+        {
+            "id": "page_1",
+            "type": "story",
+            "title_template": "Sur le seuil",
+            "text_template": "{child_name} serre la main de Papa. Les pavés brillent au soleil. Le grand monde l'attend.",
+            "default_image_path": "/uploads/books/ville-ecole/page-1-default.png",
+            "prompt_template": "Gouache illustration of small child in yellow cardigan holding adult hand at doorway threshold, bright Belgian city street beyond, Art Nouveau buildings, warm morning sunlight, watercolor washes, storybook illustration",
+            "negative_prompt": "text, letters, dark atmosphere, scary urban elements, adult child proportions",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 3,
+            "scene_key": "page_1"
+        },
+        {
+            "id": "page_2",
+            "type": "story",
+            "title_template": "Le pigeon espiègle",
+            "text_template": "Au marché Saint-Géry, un pigeon coquin s'envole avec le béret ! {child_name} court et l'attrape. Bravo !",
+            "default_image_path": "/uploads/books/ville-ecole/page-2-default.png",
+            "prompt_template": "Watercolor illustration of small child in yellow cardigan chasing friendly pigeon carrying hat, Belgian market with colorful stalls, warm dappled light through awnings, gouache style, whimsical scene",
+            "negative_prompt": "text, words, scary birds, chaotic market, dark corners",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 4,
+            "scene_key": "page_2"
+        },
+        {
+            "id": "page_3",
+            "type": "story",
+            "title_template": "Chez la boulangère",
+            "text_template": "Dans la boulangerie aux carreaux bleus, {child_name} dit tout seul : 'Un pain au chocolat, madame !' Quelle fierté !",
+            "default_image_path": "/uploads/books/ville-ecole/page-3-default.png",
+            "prompt_template": "Gouache illustration of small child in yellow cardigan at Belgian bakery counter, warm smiling baker, display of croissants and pastries, cozy interior lighting, watercolor warmth, storybook quality",
+            "negative_prompt": "text, letters, stern faces, overwhelming details, dark bakery",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 5,
+            "scene_key": "page_3"
+        },
+        {
+            "id": "page_4",
+            "type": "story",
+            "title_template": "Roi du toboggan",
+            "text_template": "{child_name} grimpe au sommet ! Il descend en criant de joie. Papa applaudit sous les marronniers.",
+            "default_image_path": "/uploads/books/ville-ecole/page-4-default.png",
+            "prompt_template": "Dramatic gouache illustration of small child in yellow cardigan triumphant at top of slide, low angle view, Belgian park setting, golden sunlight, parent clapping below, watercolor celebration, heroic moment",
+            "negative_prompt": "text, words, dangerous playground, empty scene, dark atmosphere",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 6,
+            "scene_key": "page_4"
+        },
+        {
+            "id": "page_5",
+            "type": "story",
+            "title_template": "Chef d'expédition",
+            "text_template": "Maintenant, {child_name} guide Papa. Il compte les trams bleus : 'Un, deux, trois qui passent !'",
+            "default_image_path": "/uploads/books/ville-ecole/page-5-default.png",
+            "prompt_template": "Watercolor illustration of small child in yellow cardigan confidently leading parent down Belgian street, colorful trams passing, Art Nouveau residential buildings, warm late morning light, gouache style",
+            "negative_prompt": "text, letters, busy traffic, unsafe streets, industrial setting",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 7,
+            "scene_key": "page_5"
+        },
+        {
+            "id": "page_6",
+            "type": "story",
+            "title_template": "Confidences du soir",
+            "text_template": "{child_name} chuchote sa journée à Nounours. Ses yeux se ferment, tout heureux.",
+            "default_image_path": "/uploads/books/ville-ecole/page-6-default.png",
+            "prompt_template": "Tender gouache illustration of small child in yellow pajamas in cozy bed, talking to teddy bear, warm lamp light, Belgian home interior, peaceful evening, watercolor softness, bedtime serenity",
+            "negative_prompt": "text, words, bright lights, active scenes, daytime lighting",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 8,
+            "scene_key": "page_6"
+        },
+        {
+            "id": "summary",
+            "type": "summary",
+            "title_template": "Une belle aventure",
+            "text_template": "{child_name} a découvert que le courage, c'est oser un petit pas nouveau dans sa belle ville.",
+            "default_image_path": "/uploads/books/ville-ecole/summary-default.png",
+            "prompt_template": null,
+            "negative_prompt": null,
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 9,
+            "scene_key": "summary"
+        },
+        {
+            "id": "backCover",
+            "type": "backCover",
+            "title_template": null,
+            "text_template": "Une histoire de courage et de fierté dans les rues ensoleillées de Bruxelles",
+            "default_image_path": "/uploads/books/ville-ecole/back-cover-default.png",
+            "prompt_template": "Elegant gouache detail of Belgian Art Nouveau architecture, warm morning light on cobblestone street, gentle watercolor washes, premium storybook quality, inviting urban scene",
+            "negative_prompt": "text, letters, people, busy street, modern architecture",
+            "personalizable": false,
+            "aspect_ratio": null,
+            "page_number": 10,
+            "scene_key": "backCover"
+        }
+    ]
+}

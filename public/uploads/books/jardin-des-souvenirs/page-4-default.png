@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="1024" viewBox="0 0 768 1024" role="img" aria-label="The Sleeping Song">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A3E2B" />
+      <stop offset="100%" stop-color="#F8F5EF" />
+    </linearGradient>
+  </defs>
+  <rect width="768" height="1024" fill="url(#bg)" />
+  <rect x="48" y="48" width="672" height="928" rx="40" ry="40" fill="#FFFDF9" opacity="0.95" />
+  <rect x="88" y="108" width="592" height="360" rx="28" ry="28" fill="#FFFFFF" opacity="0.85" />
+  <rect x="88" y="516" width="592" height="340" rx="28" ry="28" fill="#FFFFFF" opacity="0.92" />
+  <text x="112" y="170" fill="#7A3E2B" font-family="Georgia, serif" font-size="28" font-weight="700">Little Chapters</text>
+  <text x="112" y="228" fill="#111827" font-family="Georgia, serif" font-size="42" font-weight="700">The Sleeping Song</text>
+  <text x="112" y="284" fill="#6B7280" font-family="Arial, sans-serif" font-size="22">STORY</text>
+  <text x="112" y="360" fill="#374151" font-family="Arial, sans-serif" font-size="24">Asset admin par defaut issu du blueprint</text>
+  <text x="112" y="416" fill="#6B7280" font-family="Arial, sans-serif" font-size="18">Delicate watercolor showing child studying large sapphire crystal flower containing luminous memory of young woman with white ribbon laughing under flowered gazebo, soft magical garden background, gentle melancholic beauty</text>
+  <text x="112" y="588" fill="#111827" font-family="Arial, sans-serif" font-size="24" font-weight="700">Texte template</text>
+  <text x="112" y="640" fill="#374151" font-family="Arial, sans-serif" font-size="24">One sapphire flower, larger than the rest, trembles gently. In its blue petals, {child_name} glimpses young Grandma Alma with a white ribbon in her hair, laughing beneath a flowered bower. But the bloom closes slowly — no one remembers its secret melody.</text>
+  <text x="112" y="906" fill="#6B7280" font-family="Arial, sans-serif" font-size="18">Produit Sylius pilote par book_blueprint_json</text>
+</svg>

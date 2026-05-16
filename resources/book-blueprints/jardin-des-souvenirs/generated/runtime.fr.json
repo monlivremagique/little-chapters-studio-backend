@@ -1,0 +1,261 @@
+{
+    "version": 2,
+    "title_template": "Le jardin des souvenirs lumineux de {child_name}",
+    "negative_prompt_default": "text, letters, words, signs, labels, scary, dark, sad, realistic photography, harsh lighting, modern digital art, anime, manga",
+    "style_rules": [
+        "Premium Belgian watercolor and gouache with cinematic depth",
+        "Soft magical realism emphasizing warm brick architecture",
+        "Luminous firefly effects and crystal flower transparency",
+        "Rich texture showing rain-dampened gardens and weathered surfaces",
+        "Golden hour lighting filtering through diamond-paned windows"
+    ],
+    "metadata": {
+        "schema": "book_blueprint_v2",
+        "schemaVersion": 2,
+        "slug": "jardin-des-souvenirs",
+        "bookId": "jardin-des-souvenirs-001",
+        "locale": "fr"
+    },
+    "visualBible": {
+        "style_rules": [
+            "Premium Belgian watercolor and gouache with cinematic depth",
+            "Soft magical realism emphasizing warm brick architecture",
+            "Luminous firefly effects and crystal flower transparency",
+            "Rich texture showing rain-dampened gardens and weathered surfaces",
+            "Golden hour lighting filtering through diamond-paned windows"
+        ],
+        "palette": "Warm ochre and sienna earth tones, deep forest greens, cream Belgian lace whites, sapphire blue magical accents, honeyed golden light",
+        "lighting": "Belgian golden hour filtering through bow windows, gentle firefly luminescence, warm interior amber glow, magical sparkle cascades",
+        "compositionRules": [
+            "Child protagonist centered with confident posture and empathetic expression",
+            "Grandmother Alma maintains dignified Belgian elegance throughout",
+            "Miso provides visual continuity with distinctive tabby markings",
+            "Belgian architectural details: brick patterns, weathered terrace stones, diamond window panes",
+            "Each page escalates magical intensity toward climactic healing moment"
+        ]
+    },
+    "heroBible": {
+        "identityRules": [
+            "7-year-old with chin-length chestnut brown bob hair, round hazel eyes with long lashes, rosy cheeks, small upturned nose, wearing sage green wool cardigan over cream linen shirt and dark brown corduroy pants with small brass buttons",
+            "Grandmother Alma: 65 years old, silver-grey hair in elegant low chignon, gentle blue eyes behind thin wire-rimmed spectacles, wearing cream wool apron over soft lavender cardigan, sturdy brown leather shoes, delicate gold wedding ring",
+            "Miso: small tabby cat with distinctive orange and black striped fur pattern, white chest patch shaped like a heart, white paws, bright emerald green eyes, pink triangular nose, fluffy tail with black rings"
+        ],
+        "characterDesign": "The 7-year-old hero has a distinctive chin-length chestnut brown bob with slight waves, round hazel eyes that sparkle with curiosity, rosy apple cheeks, and wears a sage green wool cardigan over cream shirt with dark brown corduroy pants. Posture shows confident empathy - standing tall but leaning in to listen, hands often reaching out gently. Expression combines brave curiosity with tender concern for grandmother's wellbeing.",
+        "forbiddenDrift": [
+            "Never alter child's chestnut brown bob haircut or hazel eyes with lashes",
+            "Never change Grandmother Alma's silver chignon or wire spectacles",
+            "Never modify Miso's distinctive orange-black tabby stripes or white heart-shaped chest patch",
+            "Never show characters with fearful or deeply distressed expressions",
+            "Never alter the warm sage-cream-lavender color palette of clothing",
+            "Never change the child's confident yet gentle empathetic posture",
+            "Never remove child's rosy cheeks or small upturned nose",
+            "Never change Miso's emerald green eyes or fluffy ringed tail"
+        ]
+    },
+    "imageGeneration": {
+        "provider": "replicate",
+        "modelStrategy": {
+            "model": "black-forest-labs/flux-2-pro"
+        },
+        "negativePromptDefault": "text, letters, words, signs, labels, scary, dark, sad, realistic photography, harsh lighting, modern digital art, anime, manga",
+        "resolution": "1 MP",
+        "outputFormat": "png",
+        "inputImages": {
+            "pageReference": true,
+            "childPhoto": true
+        }
+    },
+    "assets": {
+        "basePublicPath": "/uploads/books/jardin-des-souvenirs/",
+        "defaults": {
+            "cover-default": "/uploads/books/jardin-des-souvenirs/cover-default.png",
+            "dedication-default": "/uploads/books/jardin-des-souvenirs/dedication-default.png",
+            "page-1-default": "/uploads/books/jardin-des-souvenirs/page-1-default.png",
+            "page-2-default": "/uploads/books/jardin-des-souvenirs/page-2-default.png",
+            "page-3-default": "/uploads/books/jardin-des-souvenirs/page-3-default.png",
+            "page-4-default": "/uploads/books/jardin-des-souvenirs/page-4-default.png",
+            "page-5-default": "/uploads/books/jardin-des-souvenirs/page-5-default.png",
+            "page-6-default": "/uploads/books/jardin-des-souvenirs/page-6-default.png",
+            "summary-default": "/uploads/books/jardin-des-souvenirs/summary-default.png",
+            "back-cover-default": "/uploads/books/jardin-des-souvenirs/back-cover-default.png"
+        }
+    },
+    "qa": {
+        "requiredPageTypes": [
+            "cover",
+            "dedication",
+            "story",
+            "summary",
+            "backCover"
+        ],
+        "requiredLocales": [
+            "fr",
+            "en",
+            "nl"
+        ],
+        "placeholderPolicy": {
+            "allowed": [
+                "{child_name}"
+            ],
+            "forbidden": []
+        },
+        "rules": [
+            "All text must be age-appropriate for 6-8 year olds",
+            "No text elements should appear in generated images",
+            "Each story page must advance the mystery-to-healing narrative arc",
+            "Magical elements must remain gentle and wonder-filled",
+            "Belgian cultural context must be authentically premium",
+            "Character visual consistency maintained through detailed identity rules"
+        ],
+        "scorecard": {
+            "editorialScore": {
+                "value": 95,
+                "rationale": "Strong emotional arc with clear progression from concern to magical discovery to healing connection. Authentic Belgian setting with rich cultural details. Age-appropriate language that reads beautifully aloud."
+            },
+            "imageabilityScore": {
+                "value": 92,
+                "rationale": "Excellent visual variety across pages. Each scene has clear, distinctive visual elements. Magical flowers and luminous effects provide strong focal points. Belgian architectural and garden elements enhance authenticity."
+            },
+            "heroConsistencyScore": {
+                "value": 90,
+                "rationale": "Clear physical descriptions for child hero, Grandmother Alma, and Miso cat. Consistent character presence across key scenes. Strong emotional continuity and character development."
+            },
+            "localeCompletenessScore": {
+                "value": 95,
+                "rationale": "Complete translations for all three target locales. Text semantically aligned while respecting language-specific cultural nuances. Consistent emotional tone across all versions."
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "cover",
+            "type": "cover",
+            "title_template": "Le jardin des souvenirs lumineux de {child_name}",
+            "text_template": null,
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/cover-default.png",
+            "prompt_template": "Premium watercolor gouache illustration, child with chestnut bob and grandmother with silver bun standing in magical Belgian garden with floating crystal flowers, warm brick house with diamond windows, golden hour cinematic lighting, soft magical realism style, gift-book quality",
+            "negative_prompt": "text, letters, words, signs, scary, dark, sad, realistic photography, digital art, anime, modern architecture",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 1,
+            "scene_key": "cover"
+        },
+        {
+            "id": "dedication",
+            "type": "dedication",
+            "title_template": "Pour {child_name}",
+            "text_template": "qui sait écouter les murmures du cœur",
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/dedication-default.png",
+            "prompt_template": null,
+            "negative_prompt": null,
+            "personalizable": false,
+            "aspect_ratio": null,
+            "page_number": 2,
+            "scene_key": "dedication"
+        },
+        {
+            "id": "page_1",
+            "type": "story",
+            "title_template": "Un mystère dans le silence",
+            "text_template": "Ce matin-là, {child_name} sent que quelque chose cloche. Mamie Alma fixe son jardin derrière la fenêtre à petits carreaux, mais son sourire habituel a disparu. Le chocolat chaud refroidit, oublié. Miso, le petit chat tigré, pousse la porte de son museau et lance un regard complice.",
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/page-1-default.png",
+            "prompt_template": "Watercolor gouache Belgian interior, child with chestnut bob watching grandmother with silver bun gazing wistfully through diamond-paned bow window, tabby cat near door, forgotten chocolate on wooden table, warm morning light, premium storybook style",
+            "negative_prompt": "text, letters, scary, dark, sad expressions, modern furniture, harsh lighting, digital art",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 3,
+            "scene_key": "page_1"
+        },
+        {
+            "id": "page_2",
+            "type": "story",
+            "title_template": "La lueur entre les feuilles",
+            "text_template": "Derrière la haie d'hortensias mouillés, {child_name} trouve un sentier qu'il n'avait jamais vu. Les feuilles scintillent comme des diamants verts. Miso bondit en avant, queue dressée. Au bout du chemin mystérieux, une luciole dorée danse devant une grille rouillée où grimpent des roses sauvages.",
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/page-2-default.png",
+            "prompt_template": "Enchanting watercolor scene, child following tabby cat through rain-dappled hydrangea passage with emerald-shimmering leaves, golden firefly illuminating rusty gate overgrown with wild roses, Belgian garden setting, magical forest lighting",
+            "negative_prompt": "text, letters, scary, dark, artificial lighting, modern elements, digital art",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 4,
+            "scene_key": "page_2"
+        },
+        {
+            "id": "page_3",
+            "type": "story",
+            "title_template": "Le ballet des souvenirs flottants",
+            "text_template": "Dans ce jardin secret, des fleurs de cristal flottent au-dessus de la mousse dorée. Dans chaque pétale transparent, une scène minuscule s'anime : une valse sous la tonnelle, des gaufres au sucre partagées, un fou rire sous l'averse. {child_name} retient son souffle, émerveillé.",
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/page-3-default.png",
+            "prompt_template": "Magical watercolor masterpiece, child with chestnut bob in sage cardigan reaching toward floating crystal flowers containing tiny luminous memory scenes, golden moss floor, ethereal lighting, premium fantasy storybook illustration",
+            "negative_prompt": "text, letters, scary, dark, realistic photo, harsh colors, digital art",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 5,
+            "scene_key": "page_3"
+        },
+        {
+            "id": "page_4",
+            "type": "story",
+            "title_template": "La chanson endormie",
+            "text_template": "Une fleur bleue, plus grande que les autres, tremble doucement. Dans ses pétales de saphir, {child_name} voit Mamie Alma toute jeune, un ruban blanc dans les cheveux, qui rit aux éclats sous une tonnelle fleurie. Mais la fleur se referme lentement — personne ne se souvient de sa mélodie secrète.",
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/page-4-default.png",
+            "prompt_template": "Delicate watercolor showing child studying large sapphire crystal flower containing luminous memory of young woman with white ribbon laughing under flowered gazebo, soft magical garden background, gentle melancholic beauty",
+            "negative_prompt": "text, letters, scary, dark, death imagery, harsh sadness, digital art",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 6,
+            "scene_key": "page_4"
+        },
+        {
+            "id": "page_5",
+            "type": "story",
+            "title_template": "Le réveil magique de la mémoire",
+            "text_template": "Main dans la main, {child_name} et Mamie Alma reviennent au jardin enchanté. Ensemble, ils murmurent une mélodie toute simple que Mamie se rappelle soudain. La fleur bleue s'épanouit en cascade d'étincelles chaudes, baignant leurs visages de lumière dorée. Le mystère se transforme en guérison.",
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/page-5-default.png",
+            "prompt_template": "Climactic watercolor moment, child and grandmother humming together as massive sapphire crystal flower bursts in cascade of golden sparkles, illuminating their joyful faces and tabby cat, magical garden setting, peak healing transformation",
+            "negative_prompt": "text, letters, scary, dark, sad, harsh lighting, digital art",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 7,
+            "scene_key": "page_5"
+        },
+        {
+            "id": "page_6",
+            "type": "story",
+            "title_template": "La tendresse des guirlandes",
+            "text_template": "Sur la terrasse belge aux briques patinées, Mamie Alma raconte maintenant son souvenir retrouvé. {child_name} installe délicatement une petite fleur lumineuse dans un pot d'argile près du bow-window. Les guirlandes du jardin scintillent, Miso ronronne en boule, et la maison tout entière respire la paix.",
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/page-6-default.png",
+            "prompt_template": "Peaceful watercolor evening scene, grandmother and child on weathered brick Belgian terrace, grandmother sharing stories while child tends small luminous flower in clay pot, sleeping tabby cat, fairy lights on house, perfect tranquil resolution",
+            "negative_prompt": "text, letters, scary, dark, sadness, harsh lighting, modern elements",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 8,
+            "scene_key": "page_6"
+        },
+        {
+            "id": "summary",
+            "type": "summary",
+            "title_template": "Un voyage au cœur des liens",
+            "text_template": "{child_name} a appris que les souvenirs deviennent plus forts quand on les partage avec ceux qu'on aime.",
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/summary-default.png",
+            "prompt_template": null,
+            "negative_prompt": null,
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 9,
+            "scene_key": "summary"
+        },
+        {
+            "id": "backCover",
+            "type": "backCover",
+            "title_template": "Une histoire de {child_name}",
+            "text_template": "Dans le jardin secret des souvenirs, chaque fleur raconte une histoire d'amour.",
+            "default_image_path": "/uploads/books/jardin-des-souvenirs/back-cover-default.png",
+            "prompt_template": "Atmospheric watercolor back cover showing magical Belgian garden at twilight with crystal flowers and winding paths, brick house silhouette with warm lit windows, inviting and mysterious mood, premium children's book style",
+            "negative_prompt": "text, letters, characters, scary, dark, modern elements, digital art",
+            "personalizable": false,
+            "aspect_ratio": null,
+            "page_number": 10,
+            "scene_key": "backCover"
+        }
+    ]
+}

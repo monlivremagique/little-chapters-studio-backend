@@ -1,0 +1,151 @@
+{% extends 'Admin/BookCreation/base.html.twig' %}
+
+{% block title %}Validation — {{ project.title }}{% endblock %}
+
+{% block content %}
+<div class="page-header" data-sticky-header>
+    <div class="container-xl">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('sylius_admin_dashboard') }}">Tableau de bord</a></li>
+            <li class="breadcrumb-item"><a href="{{ path('app_admin_book_creation_index') }}">Création de livres</a></li>
+            <li class="breadcrumb-item"><a href="{{ path('app_admin_book_creation_show', {'id': project.id}) }}">{{ project.title }}</a></li>
+            <li class="breadcrumb-item active">Validation</li>
+        </ol>
+        <div class="row mt-3 row-gap-2">
+            <div class="col-12 col-md">
+                <div class="d-flex gap-3 align-items-center">
+                    <div>{{ ux_icon('tabler:checklist', {'class': 'icon icon-md text-primary'}) }}</div>
+                    <div>
+                        <h1 class="page-title mb-1">Validation : {{ project.title }}</h1>
+                        <small class="text-muted"><code>{{ project.slug }}</code></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <div class="container-xl">
+        {% if project.qaScores %}
+        <div class="card mb-4">
+            <div class="card-header"><h3 class="card-title">Scores QA</h3></div>
+            <div class="table-responsive">
+                <table class="table table-vcenter">
+                    {% for dim, score in project.qaScores %}
+                    <tr>
+                        <td style="width:200px">{{ dim }}</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="progress" style="width:300px;height:12px">
+                                    {% set cls = score >= 9 ? 'bg-success' : (score >= 8 ? 'bg-warning' : 'bg-danger') %}
+                                    <div class="progress-bar {{ cls }}" style="width:{{ score * 10 }}%"></div>
+                                </div>
+                                <strong>{{ score }}/10</strong>
+                                <span class="badge {{ score >= 9 ? 'bg-success' : (score >= 8 ? 'bg-warning' : 'bg-danger') }}">
+                                    {{ score >= 9 ? 'Excellent' : (score >= 8 ? 'Correct' : 'À améliorer') }}
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card mb-4">
+            <div class="card-header"><h3 class="card-title">Récapitulatif éditorial</h3></div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-2">Titre</dt>
+                    <dd class="col-sm-10">{{ project.title }}</dd>
+                    <dt class="col-sm-2">Âge</dt>
+                    <dd class="col-sm-10">{{ project.brief.age ?? 'N/A' }}</dd>
+                    <dt class="col-sm-2">Thèmes</dt>
+                    <dd class="col-sm-10">
+                        {% for theme in project.brief.theme|default([]) %}
+                        <span class="badge bg-secondary me-1">{{ theme }}</span>
+                        {% else %}N/A{% endfor %}
+                    </dd>
+                    <dt class="col-sm-2">Langues</dt>
+                    <dd class="col-sm-10">{{ project.brief.languages|join(', ')|upper }}</dd>
+                    <dt class="col-sm-2">Sujet</dt>
+                    <dd class="col-sm-10">{{ project.brief.story_subject }}</dd>
+                </dl>
+            </div>
+        </div>
+
+        {% if assets|length > 0 %}
+        <div class="card mb-4">
+            <div class="card-header"><h3 class="card-title">Illustrations</h3></div>
+            <div class="card-body">
+                <div class="row g-3">
+                    {% for asset in assets %}
+                    <div class="col-md-3">
+                        <a href="{{ asset }}" target="_blank">
+                            <img src="{{ asset }}" class="img-thumbnail" style="width:100%;max-height:200px;object-fit:cover">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if master is not null %}
+        <div class="card mb-4">
+            <div class="card-header"><h3 class="card-title">Textes du livre</h3></div>
+            <div class="card-body">
+                {% for locale in ['fr', 'en', 'nl'] %}
+                    {% set pages = master.locales[locale].pages ?? {} %}
+                    {% if pages|length > 0 %}
+                    <h4 class="mt-3 border-bottom pb-2">{{ locale|upper }}</h4>
+                    {% for pageId, pageContent in pages %}
+                    <div class="p-3 mb-2 bg-light rounded">
+                        <strong class="d-block mb-1">{{ pageId }}</strong>
+                        {% if pageContent.text_template %}
+                        <p class="mb-0" style="white-space:pre-wrap">{{ pageContent.text_template }}</p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="row g-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body d-flex gap-2 flex-wrap">
+                        <a href="{{ path('app_admin_book_creation_show', {'id': project.id}) }}" class="btn btn-outline-secondary">
+                            {{ ux_icon('tabler:arrow-left') }} Voir le suivi
+                        </a>
+                        {% if project.status == 'validation' %}
+                        <form method="post" action="{{ path('app_admin_book_creation_publish', {'id': project.id}) }}" class="d-inline">
+                            <button class="btn btn-primary">
+                                {{ ux_icon('tabler:check') }} Publier le livre
+                            </button>
+                        </form>
+                        <form method="post" action="{{ path('app_admin_book_creation_regenerate', {'id': project.id}) }}" class="d-inline">
+                            <button class="btn btn-warning">
+                                {{ ux_icon('tabler:refresh') }} Regénérer
+                            </button>
+                        </form>
+                        {% endif %}
+                        {% if project.status != 'published' %}
+                        <form method="post" action="{{ path('app_admin_book_creation_reject', {'id': project.id}) }}" class="d-inline"
+                              onsubmit="return prompt('Raison du rejet:')">
+                            <button class="btn btn-ghost-danger">
+                                {{ ux_icon('tabler:x') }} Rejeter
+                            </button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

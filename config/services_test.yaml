@@ -1,0 +1,25 @@
+services:
+    App\Tests\Double\Replicate\FakeReplicatePredictionClient:
+        public: true
+
+    App\Integration\Replicate\ReplicatePredictionClientInterface: '@App\Tests\Double\Replicate\FakeReplicatePredictionClient'
+
+    App\Tests\Double\Replicate\FakeReplicateTextGenerationClient:
+        public: true
+
+    App\Integration\Replicate\ReplicateTextGenerationClientInterface: '@App\Tests\Double\Replicate\FakeReplicateTextGenerationClient'
+
+    App\Command\BookFactoryCreateFromBriefCommand:
+        public: true
+        autowire: true
+        autoconfigure: true
+
+    App\Tests\Double\Stripe\FakeStripeCheckoutClient:
+        public: true
+
+    App\Stripe\StripeCheckoutClientInterface: '@App\Tests\Double\Stripe\FakeStripeCheckoutClient'
+
+    App\Tests\Double\Gelato\FakeGelatoClient:
+        public: true
+
+    App\Gelato\GelatoClientInterface: '@App\Tests\Double\Gelato\FakeGelatoClient'

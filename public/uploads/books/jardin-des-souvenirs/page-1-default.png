@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="1024" viewBox="0 0 768 1024" role="img" aria-label="A Mystery in the Silence">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A3E2B" />
+      <stop offset="100%" stop-color="#F8F5EF" />
+    </linearGradient>
+  </defs>
+  <rect width="768" height="1024" fill="url(#bg)" />
+  <rect x="48" y="48" width="672" height="928" rx="40" ry="40" fill="#FFFDF9" opacity="0.95" />
+  <rect x="88" y="108" width="592" height="360" rx="28" ry="28" fill="#FFFFFF" opacity="0.85" />
+  <rect x="88" y="516" width="592" height="340" rx="28" ry="28" fill="#FFFFFF" opacity="0.92" />
+  <text x="112" y="170" fill="#7A3E2B" font-family="Georgia, serif" font-size="28" font-weight="700">Little Chapters</text>
+  <text x="112" y="228" fill="#111827" font-family="Georgia, serif" font-size="42" font-weight="700">A Mystery in the Silence</text>
+  <text x="112" y="284" fill="#6B7280" font-family="Arial, sans-serif" font-size="22">STORY</text>
+  <text x="112" y="360" fill="#374151" font-family="Arial, sans-serif" font-size="24">Asset admin par defaut issu du blueprint</text>
+  <text x="112" y="416" fill="#6B7280" font-family="Arial, sans-serif" font-size="18">Watercolor gouache Belgian interior, child with chestnut bob watching grandmother with silver bun gazing wistfully through diamond-paned bow window, tabby cat near door, forgotten chocolate on wooden table, warm morning light, premium storybook style</text>
+  <text x="112" y="588" fill="#111827" font-family="Arial, sans-serif" font-size="24" font-weight="700">Texte template</text>
+  <text x="112" y="640" fill="#374151" font-family="Arial, sans-serif" font-size="24">This morning, {child_name} senses something is amiss. Grandma Alma stares through the diamond-paned window at her garden, but her usual smile has vanished. Hot chocolate grows cold, forgotten. Miso, the little tabby cat, nudges the door with his nose and shoots a knowing glance.</text>
+  <text x="112" y="906" fill="#6B7280" font-family="Arial, sans-serif" font-size="18">Produit Sylius pilote par book_blueprint_json</text>
+</svg>

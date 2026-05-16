@@ -1,0 +1,152 @@
+{% extends 'Admin/BookCreation/base.html.twig' %}
+
+{% block title %}Suivi — {{ project.title }}{% endblock %}
+
+{% block content %}
+<div class="page-header" data-sticky-header>
+    <div class="container-xl">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('sylius_admin_dashboard') }}">Tableau de bord</a></li>
+            <li class="breadcrumb-item"><a href="{{ path('app_admin_book_creation_index') }}">Création de livres</a></li>
+            <li class="breadcrumb-item active">{{ project.title }}</li>
+        </ol>
+        <div class="row mt-3 row-gap-2">
+            <div class="col-12 col-md">
+                <div class="d-flex gap-3 align-items-center">
+                    <div>{{ ux_icon('tabler:book', {'class': 'icon icon-md text-primary'}) }}</div>
+                    <div>
+                        <h1 class="page-title mb-1">{{ project.title }}</h1>
+                        <small class="text-muted"><code>{{ project.slug }}</code></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-auto ms-auto d-print-none">
+                <div class="btn-list">
+                    {% if project.status == 'validation' %}
+                    <a href="{{ path('app_admin_book_creation_validation', {'id': project.id}) }}" class="btn btn-success">
+                        {{ ux_icon('tabler:check') }} Valider
+                    </a>
+                    {% endif %}
+                    {% if project.status == 'failed' %}
+                    <form method="post" action="{{ path('app_admin_book_creation_regenerate', {'id': project.id}) }}" class="d-inline">
+                        <button class="btn btn-warning">{{ ux_icon('tabler:refresh') }} Regénérer</button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <div class="container-xl">
+        <div class="progress mb-4" style="height:12px">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress-bar"
+                 style="width:{{ project.progressPct }}%"></div>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-12">
+                {% if project.qaScores %}
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">Scores QA</h3></div>
+                    <div class="table-responsive">
+                        <table class="table table-vcenter">
+                            {% for dim, score in project.qaScores %}
+                            <tr>
+                                <td style="width:200px">{{ dim }}</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="progress" style="width:250px;height:10px">
+                                            {% set cls = score >= 9 ? 'bg-success' : (score >= 8 ? 'bg-warning' : 'bg-danger') %}
+                                            <div class="progress-bar {{ cls }}" style="width:{{ score * 10 }}%"></div>
+                                        </div>
+                                        <strong>{{ score }}/10</strong>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">Logs</h3></div>
+                    <div class="card-body" id="log-feed" style="max-height:400px;overflow-y:auto">
+                        {% for log in project.logs %}
+                        <div class="mb-2">
+                            {% if log.level == 'error' %}<span class="text-danger">✗</span>
+                            {% elseif log.level == 'warning' %}<span class="text-warning">⚠</span>
+                            {% elseif log.level == 'success' %}<span class="text-success">✓</span>
+                            {% else %}<span class="text-primary">●</span>{% endif %}
+                            {{ log.message }}
+                            <small class="text-muted ms-2">{{ log.time }}</small>
+                        </div>
+                        {% else %}
+                        <p class="text-muted mb-0"><em>En attente des logs...</em></p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var projectId = {{ project.id }};
+    var isRunning = {{ project.status == 'running' ? 'true' : 'false' }};
+
+    if (isRunning) {
+        setInterval(function() {
+            fetch('/admin/book-creation/' + projectId + '/json')
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (data.error) return;
+                    var bar = document.getElementById('progress-bar');
+                    if (bar) bar.style.width = data.progressPct + '%';
+
+                    if (data.qaScores) {
+                        var qaDiv = document.querySelector('#qa-scores .table-responsive');
+                        if (qaDiv) {
+                            var html = '';
+                            for (var dim in data.qaScores) {
+                                var score = data.qaScores[dim];
+                                var cls = score >= 9 ? 'success' : (score >= 8 ? 'warning' : 'danger');
+                                html += '<tr><td style="width:200px">' + dim + '</td><td>' +
+                                    '<div class="d-flex align-items-center gap-2"><div class="progress" style="width:250px;height:10px">' +
+                                    '<div class="progress-bar bg-' + cls + '" style="width:' + (score * 10) + '%"></div></div>' +
+                                    '<strong>' + score + '/10</strong></div></td></tr>';
+                            }
+                            qaDiv.innerHTML = html;
+                        }
+                    }
+
+                    if (data.logs && data.logs.length > 0) {
+                        var feed = document.getElementById('log-feed');
+                        if (feed) {
+                            feed.innerHTML = data.logs.map(function(log) {
+                                var icon = '●', color = 'primary';
+                                if (log.level === 'error') { icon = '✗'; color = 'danger'; }
+                                else if (log.level === 'warning') { icon = '⚠'; color = 'warning'; }
+                                else if (log.level === 'success') { icon = '✓'; color = 'success'; }
+                                return '<div class="mb-2"><span class="text-' + color + '">' + icon + '</span> ' +
+                                    log.message + ' <small class="text-muted ms-2">' + (log.time || '') + '</small></div>';
+                            }).join('');
+                        }
+                    }
+
+                    if (data.status === 'validation') { window.location.reload(); }
+                    if (data.status === 'failed') { window.location.reload(); }
+                });
+        }, 3000);
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,360 @@
+sylius_fixtures:
+    suites:
+        little_chapters_phase2:
+            listeners:
+                orm_purger: ~
+                images_purger: ~
+                logger: ~
+
+            fixtures:
+                locale:
+                    options:
+                        locales:
+                            - 'fr_FR'
+
+                currency:
+                    options:
+                        currencies:
+                            - 'EUR'
+
+                geographical:
+                    options:
+                        countries:
+                            - 'BE'
+                        zones:
+                            BE:
+                                name: 'Belgique'
+                                countries:
+                                    - 'BE'
+
+                menu_taxon:
+                    name: taxon
+                    options:
+                        custom:
+                            catalogue_livres:
+                                code: 'CATALOGUE_LIVRES'
+                                name: 'Catalogue'
+                                slug: 'catalogue'
+                                translations:
+                                    fr_FR:
+                                        name: 'Catalogue'
+                                        slug: 'catalogue'
+
+                channel:
+                    options:
+                        custom:
+                            little_chapters_be_fr:
+                                name: 'Little Chapters Belgique FR'
+                                code: 'LITTLE_CHAPTERS_BE_FR'
+                                locales:
+                                    - 'fr_FR'
+                                default_locale: 'fr_FR'
+                                currencies:
+                                    - 'EUR'
+                                base_currency: 'EUR'
+                                enabled: true
+                                hostname: 'localhost'
+                                contact_phone_number: '+32 2 555 01 01'
+                                contact_email: 'bonjour@monlivremagique.local'
+                                menu_taxon: 'CATALOGUE_LIVRES'
+                                shop_billing_data:
+                                    company: 'Mon Livre Magique'
+                                    tax_id: 'BE0123456789'
+                                    country_code: 'BE'
+                                    street: 'Rue du Livre 12'
+                                    city: 'Bruxelles'
+                                    postcode: '1000'
+
+                admin_user:
+                    name: 'admin_user'
+                    options:
+                        custom:
+                            -   email: 'sylius@example.com'
+                                username: 'sylius'
+                                password: 'sylius'
+                                enabled: true
+                                locale_code: 'fr_FR'
+                                first_name: 'Admin'
+                                last_name: 'Mon Livre Magique'
+                            -   email: 'api@example.com'
+                                username: 'api'
+                                password: 'sylius-api'
+                                enabled: true
+                                locale_code: 'fr_FR'
+                                first_name: 'API'
+                                last_name: 'Little Chapters'
+                                api: true
+
+                shop_user:
+                    name: 'shop_user'
+                    options:
+                        custom:
+                            -   email: 'client@example.com'
+                                first_name: 'Claire'
+                                last_name: 'Martin'
+                                password: 'sylius'
+
+                tax_category:
+                    options:
+                        custom:
+                            livre_personnalise:
+                                code: 'livre_personnalise'
+                                name: 'Livre personnalise'
+
+                tax_rate:
+                    options:
+                        custom:
+                            livres_be:
+                                code: 'livres_be_6'
+                                name: 'TVA livre Belgique 6%'
+                                zone: 'BE'
+                                category: 'livre_personnalise'
+                                amount: 0.06
+
+                payment_method:
+                    options:
+                        custom:
+                            stripe_checkout_be:
+                                code: 'stripe_checkout_be'
+                                name: 'Carte / Bancontact (Stripe)'
+                                channels:
+                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                enabled: true
+
+                shipping_method:
+                    options:
+                        custom:
+                            livraison_standard_be:
+                                code: 'livraison_standard_be'
+                                name: 'Livraison standard Belgique'
+                                enabled: true
+                                zone: 'BE'
+                                channels:
+                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                tax_category: 'livre_personnalise'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        LITTLE_CHAPTERS_BE_FR:
+                                            amount: 490
+
+                livre_attribute:
+                    name: product_attribute
+                    options:
+                        custom:
+                            -   name: 'Sous-titre marketing'
+                                code: 'book_subtitle'
+                                type: 'text'
+                            -   name: 'Age minimum'
+                                code: 'book_age_min'
+                                type: 'integer'
+                                translatable: false
+                            -   name: 'Age maximum'
+                                code: 'book_age_max'
+                                type: 'integer'
+                                translatable: false
+                            -   name: 'Theme'
+                                code: 'book_theme'
+                                type: 'text'
+                            -   name: 'Niveau personnalisation'
+                                code: 'book_personalization_level'
+                                type: 'text'
+                            -   name: 'Langue'
+                                code: 'book_language'
+                                type: 'text'
+                            -   name: 'Pages'
+                                code: 'book_pages'
+                                type: 'integer'
+                                translatable: false
+                            -   name: 'Format'
+                                code: 'book_format'
+                                type: 'text'
+                            -   name: 'Type de couverture'
+                                code: 'book_cover_type'
+                                type: 'text'
+                            -   name: 'Badge marketing'
+                                code: 'book_badge'
+                                type: 'text'
+                            -   name: 'Blueprint JSON du livre'
+                                code: 'book_blueprint_json'
+                                type: 'text'
+
+                livre_taxon:
+                    name: taxon
+                    options:
+                        custom:
+                            catalogue_livres:
+                                code: 'CATALOGUE_LIVRES'
+                                name: 'Catalogue'
+                                slug: 'catalogue'
+                                translations:
+                                    fr_FR:
+                                        name: 'Catalogue'
+                                        slug: 'catalogue'
+                                children:
+                                    -   code: 'AVENTURES_MAGIQUES'
+                                        name: 'Aventures Magiques'
+                                        slug: 'aventures-magiques'
+                                        translations:
+                                            fr_FR:
+                                                name: 'Aventures Magiques'
+                                                slug: 'aventures-magiques'
+                                    -   code: 'HISTOIRES_DU_SOIR'
+                                        name: 'Histoires du Soir'
+                                        slug: 'histoires-du-soir'
+                                        translations:
+                                            fr_FR:
+                                                name: 'Histoires du Soir'
+                                                slug: 'histoires-du-soir'
+                                    -   code: 'AMIS_ANIMAUX'
+                                        name: 'Amis Animaux'
+                                        slug: 'amis-animaux'
+                                        translations:
+                                            fr_FR:
+                                                name: 'Amis Animaux'
+                                                slug: 'amis-animaux'
+                                    -   code: 'FETES_CELEBRATIONS'
+                                        name: 'Fetes et Celebrations'
+                                        slug: 'fetes-et-celebrations'
+                                        translations:
+                                            fr_FR:
+                                                name: 'Fetes et Celebrations'
+                                                slug: 'fetes-et-celebrations'
+                                    -   code: 'HEROS_DU_QUOTIDIEN'
+                                        name: 'Heros du Quotidien'
+                                        slug: 'heros-du-quotidien'
+                                        translations:
+                                            fr_FR:
+                                                name: 'Heros du Quotidien'
+                                                slug: 'heros-du-quotidien'
+
+                livre_product:
+                    name: product
+                    options:
+                        custom:
+                            -   name: "L'Aventure Enchantee"
+                                code: 'BOOK_AVENTURE_ENCHANTEE'
+                                slug: 'aventure-enchantee'
+                                short_description: "Quand votre enfant devient le heros d'une quete magique"
+                                description: "Livre personnalise premium d'aventure pour enfants, pense pour le catalogue headless Little Chapters."
+                                tax_category: 'livre_personnalise'
+                                channels:
+                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                main_taxon: 'AVENTURES_MAGIQUES'
+                                taxons:
+                                    - 'AVENTURES_MAGIQUES'
+                                product_attributes:
+                                    book_subtitle: "Quand votre enfant devient le heros d'une quete magique"
+                                    book_age_min: 3
+                                    book_age_max: 7
+                                    book_theme: 'aventure'
+                                    book_personalization_level: 'premium'
+                                    book_language: 'fr'
+                                    book_pages: 28
+                                    book_format: '21 x 21 cm'
+                                    book_cover_type: 'rigide'
+                                    book_badge: 'Best-seller'
+                                images:
+                                    - { path: '@SyliusCoreBundle/Resources/fixtures/t-shirts/woman/t-shirt_01_1.webp', type: 'main' }
+
+                            -   name: 'Le Voyage des Etoiles'
+                                code: 'BOOK_VOYAGE_DES_ETOILES'
+                                slug: 'voyage-des-etoiles'
+                                short_description: 'Une odyssee celeste personnalisee pour les petits reveurs'
+                                description: 'Livre personnalise premium d aventure douce avec positionnement cadeau.'
+                                tax_category: 'livre_personnalise'
+                                channels:
+                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                main_taxon: 'AVENTURES_MAGIQUES'
+                                taxons:
+                                    - 'AVENTURES_MAGIQUES'
+                                product_attributes:
+                                    book_subtitle: 'Une odyssee celeste personnalisee pour les petits reveurs'
+                                    book_age_min: 4
+                                    book_age_max: 8
+                                    book_theme: 'aventure'
+                                    book_personalization_level: 'premium'
+                                    book_language: 'fr'
+                                    book_pages: 28
+                                    book_format: '21 x 21 cm'
+                                    book_cover_type: 'rigide'
+                                    book_badge: 'Nouveau'
+                                images:
+                                    - { path: '@SyliusCoreBundle/Resources/fixtures/t-shirts/woman/t-shirt_02_1.webp', type: 'main' }
+
+                            -   name: 'La Foret des Merveilles'
+                                code: 'BOOK_FORET_DES_MERVEILLES'
+                                slug: 'foret-des-merveilles'
+                                short_description: 'Une promenade douce entre animaux et magie'
+                                description: 'Livre personnalise oriente animaux et rituel de lecture.'
+                                tax_category: 'livre_personnalise'
+                                channels:
+                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                main_taxon: 'AMIS_ANIMAUX'
+                                taxons:
+                                    - 'AMIS_ANIMAUX'
+                                    - 'HISTOIRES_DU_SOIR'
+                                product_attributes:
+                                    book_subtitle: 'Une promenade douce entre animaux et magie'
+                                    book_age_min: 2
+                                    book_age_max: 5
+                                    book_theme: 'animaux'
+                                    book_personalization_level: 'avancee'
+                                    book_language: 'fr'
+                                    book_pages: 24
+                                    book_format: '21 x 21 cm'
+                                    book_cover_type: 'rigide'
+                                    book_badge: ''
+                                images:
+                                    - { path: '@SyliusCoreBundle/Resources/fixtures/t-shirts/woman/t-shirt_03_1.webp', type: 'main' }
+
+                            -   name: 'Super-Heros du Quotidien'
+                                code: 'BOOK_SUPER_HEROS_DU_QUOTIDIEN'
+                                slug: 'super-heros-du-quotidien'
+                                short_description: 'Votre enfant decouvre ses super-pouvoirs interieurs'
+                                description: 'Livre personnalise heroique et rassurant, centre sur la confiance en soi.'
+                                tax_category: 'livre_personnalise'
+                                channels:
+                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                main_taxon: 'HEROS_DU_QUOTIDIEN'
+                                taxons:
+                                    - 'HEROS_DU_QUOTIDIEN'
+                                    - 'AVENTURES_MAGIQUES'
+                                product_attributes:
+                                    book_subtitle: 'Votre enfant decouvre ses super-pouvoirs interieurs'
+                                    book_age_min: 4
+                                    book_age_max: 8
+                                    book_theme: 'heros'
+                                    book_personalization_level: 'premium'
+                                    book_language: 'fr'
+                                    book_pages: 28
+                                    book_format: '21 x 21 cm'
+                                    book_cover_type: 'rigide'
+                                    book_badge: 'Coup de coeur'
+                                images:
+                                    - { path: '@SyliusCoreBundle/Resources/fixtures/t-shirts/woman/t-shirt_04_1.webp', type: 'main' }
+
+                            -   name: 'Douce Nuit Etoilee'
+                                code: 'BOOK_DOUCE_NUIT_ETOILEE'
+                                slug: 'douce-nuit-etoilee'
+                                short_description: "L'histoire du soir parfaite, avec votre enfant en personnage principal"
+                                description: 'Livre personnalise de coucher, plus simple et plus doux.'
+                                tax_category: 'livre_personnalise'
+                                channels:
+                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                main_taxon: 'HISTOIRES_DU_SOIR'
+                                taxons:
+                                    - 'HISTOIRES_DU_SOIR'
+                                product_attributes:
+                                    book_subtitle: "L'histoire du soir parfaite, avec votre enfant en personnage principal"
+                                    book_age_min: 1
+                                    book_age_max: 4
+                                    book_theme: 'douceur'
+                                    book_personalization_level: 'simple'
+                                    book_language: 'fr'
+                                    book_pages: 20
+                                    book_format: '21 x 21 cm'
+                                    book_cover_type: 'souple'
+                                    book_badge: ''
+                                images:
+                                    - { path: '@SyliusCoreBundle/Resources/fixtures/t-shirts/woman/t-shirt_05_1.webp', type: 'main' }
