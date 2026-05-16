@@ -365,7 +365,6 @@ final class BookFactoryCreateFromBriefCommandTest extends TestCase
         $fakeKernel = $this->createMock(KernelInterface::class);
         $generateMasterCommand = new GenerateMasterFromBriefCommand(
             new BookBriefPromptBuilder(),
-            new BookBriefQaPromptBuilder(),
             new BlueprintValidator(),
             $fakeClient,
         );
