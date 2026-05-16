@@ -1,0 +1,85 @@
+{% extends 'email/base.html.twig' %}
+
+{% block subject %}
+    {% if localeCode == 'fr' %}
+        Paiement confirmé pour la commande {{ orderNumber }}
+    {% elseif localeCode == 'nl' %}
+        Betaling bevestigd voor bestelling {{ orderNumber }}
+    {% else %}
+        Payment confirmed for order {{ orderNumber }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% set locale = localeCode|default('fr') %}
+
+    <div style="text-align: center; margin-bottom: 28px;">
+        <div style="font-size: 42px; margin-bottom: 8px;">&#x2705;</div>
+        <h1 style="font-size: 24px; color: #2d1b69; margin: 0 0 6px;">
+            {% if locale == 'fr' %}Paiement confirmé !{% elseif locale == 'nl' %}Betaling bevestigd!{% else %}Payment confirmed!{% endif %}
+        </h1>
+        <p style="color: #666; margin: 0; font-size: 15px;">
+            {% if locale == 'fr' %}Votre règlement de {{ orderTotal }} a bien été reçu{% elseif locale == 'nl' %}Uw betaling van {{ orderTotal }} is ontvangen{% else %}Your payment of {{ orderTotal }} has been received{% endif %}
+        </p>
+    </div>
+
+    <div style="background: #f8f6ff; border-radius: 8px; padding: 20px 24px; margin-bottom: 24px; border: 1px solid #e8e0f0;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Commande{% elseif locale == 'nl' %}Bestelling{% else %}Order{% endif %}
+                </td>
+                <td style="padding: 6px 12px; font-weight: 700; color: #2d1b69; text-align: right;">{{ orderNumber }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Livre{% elseif locale == 'nl' %}Boek{% else %}Book{% endif %}
+                </td>
+                <td style="padding: 6px 12px; text-align: right;"><strong>{{ bookTitle }}</strong></td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Enfant{% elseif locale == 'nl' %}Kind{% else %}Child{% endif %}
+                </td>
+                <td style="padding: 6px 12px; text-align: right;">{{ childName }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Montant payé{% elseif locale == 'nl' %}Betaald bedrag{% else %}Amount paid{% endif %}
+                </td>
+                <td style="padding: 6px 12px; text-align: right; font-size: 18px; font-weight: 700; color: #2d1b69;">{{ orderTotal }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="background: #e8f5e9; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px; border: 1px solid #a5d6a7;">
+        <p style="margin: 0; font-size: 14px; color: #2e7d32;">
+            {% if locale == 'fr' %}
+                &#x1F3EB; Bonne nouvelle ! Votre livre personnalisé <strong>{{ bookTitle }}</strong> pour <strong>{{ childName }}</strong> sera bientôt en production. Vous serez tenu au courant de chaque étape.
+            {% elseif locale == 'nl' %}
+                &#x1F3EB; Goed nieuws! Uw gepersonaliseerde boek <strong>{{ bookTitle }}</strong> voor <strong>{{ childName }}</strong> gaat binnenkort in productie. We houden u op de hoogte van elke stap.
+            {% else %}
+                &#x1F3EB; Great news! Your personalized book <strong>{{ bookTitle }}</strong> for <strong>{{ childName }}</strong> will soon go into production. We will keep you updated at every step.
+            {% endif %}
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 24px;">
+        <a href="https://www.monlivremagique.be{% if locale == 'fr' %}/fr{% elseif locale == 'nl' %}/nl{% else %}/en{% endif %}/compte/commandes/{{ orderNumber }}"
+           style="display: inline-block; background: #2d1b69; color: #ffffff; text-decoration: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 15px;">
+            {% if locale == 'fr' %}Voir ma commande{% elseif locale == 'nl' %}Mijn bestelling bekijken{% else %}View my order{% endif %}
+        </a>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px; font-size: 13px; color: #999; border-top: 1px solid #eee; padding-top: 20px;">
+        <p style="margin: 0;">
+            {% if locale == 'fr' %}
+                Une question ? Répondrez simplement à cet email ou écrivez à <a href="mailto:bonjour@monlivremagique.be" style="color: #2d1b69;">bonjour@monlivremagique.be</a>
+            {% elseif locale == 'nl' %}
+                Een vraag? Antwoord gewoon op deze e-mail of stuur een bericht naar <a href="mailto:bonjour@monlivremagique.be" style="color: #2d1b69;">bonjour@monlivremagique.be</a>
+            {% else %}
+                Questions? Simply reply to this email or write to <a href="mailto:bonjour@monlivremagique.be" style="color: #2d1b69;">bonjour@monlivremagique.be</a>
+            {% endif %}
+        </p>
+    </div>
+{% endblock %}

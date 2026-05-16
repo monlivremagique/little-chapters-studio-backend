@@ -1,0 +1,90 @@
+{% extends 'email/base.html.twig' %}
+
+{% block subject %}
+    {% if localeCode == 'fr' %}
+        Votre livre est arrivé ! {{ bookTitle }} est entre les mains de {{ childName }}
+    {% elseif localeCode == 'nl' %}
+        Uw boek is aangekomen! {{ bookTitle }} is in de handen van {{ childName }}
+    {% else %}
+        Your book has arrived! {{ bookTitle }} is in {{ childName }}'s hands
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% set locale = localeCode|default('fr') %}
+
+    <div style="text-align: center; margin-bottom: 28px;">
+        <div style="font-size: 42px; margin-bottom: 8px;">&#x1F389;</div>
+        <h1 style="font-size: 24px; color: #2d1b69; margin: 0 0 6px;">
+            {% if locale == 'fr' %}Livré avec amour &#x2764;&#xFE0F;{% elseif locale == 'nl' %}Bezorgd met liefde &#x2764;&#xFE0F;{% else %}Delivered with love &#x2764;&#xFE0F;{% endif %}
+        </h1>
+        <p style="color: #666; margin: 0; font-size: 15px;">
+            {% if locale == 'fr' %}Votre colis a été livré avec succès{% elseif locale == 'nl' %}Uw pakket is succesvol bezorgd{% else %}Your package has been successfully delivered{% endif %}
+        </p>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #f8f6ff 0%, #fce4ec 100%); border-radius: 12px; padding: 28px 24px; text-align: center; margin-bottom: 24px; border: 1px solid #e8e0f0;">
+        <div style="font-size: 56px; margin-bottom: 12px;">&#x1F4D6;</div>
+        <h2 style="font-size: 22px; color: #2d1b69; margin: 0 0 4px;">{{ bookTitle }}</h2>
+        <p style="color: #888; margin: 0 0 12px; font-size: 15px;">
+            {% if locale == 'fr' %}pour{% elseif locale == 'nl' %}voor{% else %}for{% endif %}
+            <strong style="color: #2d1b69;">{{ childName }}</strong>
+        </p>
+        <p style="font-size: 14px; color: #666; margin: 0; font-style: italic;">
+            &#x201C;
+            {% if locale == 'fr' %}
+                Chaque histoire commence par un rêve. Merci d'avoir choisi Mon Livre Magique pour écrire celle de {{ childName }}.
+            {% elseif locale == 'nl' %}
+                Elk verhaal begint met een droom. Bedankt dat u Mijn Magische Boek hebt gekozen om dat van {{ childName }} te schrijven.
+            {% else %}
+                Every story begins with a dream. Thank you for choosing My Magic Book to write {{ childName }}'s.
+            {% endif %}
+            &#x201D;
+        </p>
+    </div>
+
+    <div style="background: #f8f6ff; border-radius: 8px; padding: 20px 24px; margin-bottom: 24px; border: 1px solid #e8e0f0;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Commande{% elseif locale == 'nl' %}Bestelling{% else %}Order{% endif %}
+                </td>
+                <td style="padding: 6px 12px; font-weight: 700; color: #2d1b69; text-align: right;">{{ orderNumber }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Numéro de suivi{% elseif locale == 'nl' %}Track & trace{% else %}Tracking number{% endif %}
+                </td>
+                <td style="padding: 6px 12px; text-align: right;">{{ trackingNumber }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <p style="font-size: 14px; color: #666; margin: 0 0 12px;">
+            {% if locale == 'fr' %}
+                Vous avez aimé cette expérience ? Partagez-la avec vos proches !
+            {% elseif locale == 'nl' %}
+                Vond u deze ervaring leuk? Deel het met uw vrienden!
+            {% else %}
+                Loved this experience? Share it with your friends!
+            {% endif %}
+        </p>
+        <a href="https://www.monlivremagique.be{% if locale == 'fr' %}/fr{% elseif locale == 'nl' %}/nl{% else %}/en{% endif %}/catalogue"
+           style="display: inline-block; background: #2d1b69; color: #ffffff; text-decoration: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 15px;">
+            {% if locale == 'fr' %}Découvrir d'autres livres{% elseif locale == 'nl' %}Andere boeken ontdekken{% else %}Discover more books{% endif %}
+        </a>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px; font-size: 13px; color: #999; border-top: 1px solid #eee; padding-top: 20px;">
+        <p style="margin: 0;">
+            {% if locale == 'fr' %}
+                &#x1F4F7; N'oubliez pas de nous taguer sur Instagram <strong>@monlivremagique</strong> pour partager la joie de {{ childName }} !
+            {% elseif locale == 'nl' %}
+                &#x1F4F7; Vergeet ons niet te taggen op Instagram <strong>@monlivremagique</strong> om de vreugde van {{ childName }} te delen!
+            {% else %}
+                &#x1F4F7; Don't forget to tag us on Instagram <strong>@monlivremagique</strong> to share {{ childName }}'s joy!
+            {% endif %}
+        </p>
+    </div>
+{% endblock %}

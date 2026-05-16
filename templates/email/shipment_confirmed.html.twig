@@ -1,0 +1,90 @@
+{% extends 'email/base.html.twig' %}
+
+{% block subject %}
+    {% if localeCode == 'fr' %}
+        Votre commande {{ orderNumber }} a été expédiée !
+    {% elseif localeCode == 'nl' %}
+        Uw bestelling {{ orderNumber }} is verzonden!
+    {% else %}
+        Your order {{ orderNumber }} has been shipped!
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% set locale = localeCode|default('fr') %}
+
+    <div style="text-align: center; margin-bottom: 28px;">
+        <div style="font-size: 42px; margin-bottom: 8px;">&#x1F69A;</div>
+        <h1 style="font-size: 24px; color: #2d1b69; margin: 0 0 6px;">
+            {% if locale == 'fr' %}Votre livre est en route !{% elseif locale == 'nl' %}Uw boek is onderweg!{% else %}Your book is on its way!{% endif %}
+        </h1>
+        <p style="color: #666; margin: 0; font-size: 15px;">
+            {% if locale == 'fr' %}Le colis contenant votre commande a été expédié{% elseif locale == 'nl' %}Het pakket met uw bestelling is verzonden{% else %}The package with your order has been shipped{% endif %}
+        </p>
+    </div>
+
+    <div style="background: #f8f6ff; border-radius: 8px; padding: 20px 24px; margin-bottom: 24px; border: 1px solid #e8e0f0;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Commande{% elseif locale == 'nl' %}Bestelling{% else %}Order{% endif %}
+                </td>
+                <td style="padding: 6px 12px; font-weight: 700; color: #2d1b69; text-align: right;">{{ orderNumber }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Livre{% elseif locale == 'nl' %}Boek{% else %}Book{% endif %}
+                </td>
+                <td style="padding: 6px 12px; text-align: right;"><strong>{{ bookTitle }}</strong></td>
+            </tr>
+            {% if trackingNumber is defined and trackingNumber is not empty %}
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Numéro de suivi{% elseif locale == 'nl' %}Track & trace{% else %}Tracking number{% endif %}
+                </td>
+                <td style="padding: 6px 12px; text-align: right; font-weight: 600; font-family: monospace;">{{ trackingNumber }}</td>
+            </tr>
+            {% endif %}
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Livraison estimée{% elseif locale == 'nl' %}Verwachte levering{% else %}Estimated delivery{% endif %}
+                </td>
+                <td style="padding: 6px 12px; text-align: right; font-weight: 600;">{{ estimatedDelivery }}</td>
+            </tr>
+        </table>
+    </div>
+
+    {% if trackingUrl is defined and trackingUrl is not empty %}
+    <div style="text-align: center; margin-bottom: 24px;">
+        <a href="{{ trackingUrl }}"
+           style="display: inline-block; background: #2d1b69; color: #ffffff; text-decoration: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 15px;">
+            {% if locale == 'fr' %}Suivre mon colis{% elseif locale == 'nl' %}Mijn pakket volgen{% else %}Track my package{% endif %}
+        </a>
+    </div>
+    {% endif %}
+
+    <div style="background: #e8f5e9; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px; border: 1px solid #a5d6a7;">
+        <p style="margin: 0; font-size: 14px; color: #2e7d32;">
+            &#x1F31F;
+            {% if locale == 'fr' %}
+                Le livre <strong>{{ bookTitle }}</strong> arrivera bientôt dans la boîte aux lettres de {{ childName }} ! Préparez-vous à vivre un moment magique.
+            {% elseif locale == 'nl' %}
+                Het boek <strong>{{ bookTitle }}</strong> komt binnenkort aan in de brievenbus van {{ childName }}! Maak je klaar voor een magisch moment.
+            {% else %}
+                The book <strong>{{ bookTitle }}</strong> will soon arrive in {{ childName }}'s mailbox! Get ready for a magical moment.
+            {% endif %}
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 12px; font-size: 13px; color: #999; border-top: 1px solid #eee; padding-top: 20px;">
+        <p style="margin: 0;">
+            {% if locale == 'fr' %}
+                Une question sur la livraison ? Contactez-nous à <a href="mailto:bonjour@monlivremagique.be" style="color: #2d1b69;">bonjour@monlivremagique.be</a>
+            {% elseif locale == 'nl' %}
+                Een vraag over de levering? Neem contact op via <a href="mailto:bonjour@monlivremagique.be" style="color: #2d1b69;">bonjour@monlivremagique.be</a>
+            {% else %}
+                Questions about delivery? Contact us at <a href="mailto:bonjour@monlivremagique.be" style="color: #2d1b69;">bonjour@monlivremagique.be</a>
+            {% endif %}
+        </p>
+    </div>
+{% endblock %}

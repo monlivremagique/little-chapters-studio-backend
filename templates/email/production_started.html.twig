@@ -1,0 +1,92 @@
+{% extends 'email/base.html.twig' %}
+
+{% block subject %}
+    {% if localeCode == 'fr' %}
+        Votre livre {{ bookTitle }} est en cours d'impression !
+    {% elseif localeCode == 'nl' %}
+        Uw boek {{ bookTitle }} wordt gedrukt!
+    {% else %}
+        Your book {{ bookTitle }} is being printed!
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% set locale = localeCode|default('fr') %}
+
+    <div style="text-align: center; margin-bottom: 28px;">
+        <div style="font-size: 42px; margin-bottom: 8px;">&#x1F4C8;</div>
+        <h1 style="font-size: 24px; color: #2d1b69; margin: 0 0 6px;">
+            {% if locale == 'fr' %}C'est parti !{% elseif locale == 'nl' %}Daar gaan we!{% else %}Here we go!{% endif %}
+        </h1>
+        <p style="color: #666; margin: 0; font-size: 15px;">
+            {% if locale == 'fr' %}Votre livre personnalisé est en cours de production{% elseif locale == 'nl' %}Uw gepersonaliseerde boek is in productie{% else %}Your personalized book is now in production{% endif %}
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 24px;">
+        <div style="font-size: 48px; color: #2d1b69; background: #f0ebf8; width: 80px; height: 80px; line-height: 80px; border-radius: 50%; margin: 0 auto 12px;">&#x1F4D6;</div>
+        <h2 style="font-size: 20px; color: #2d1b69; margin: 0 0 4px;">{{ bookTitle }}</h2>
+        <p style="color: #888; margin: 0; font-size: 14px;">
+            {% if locale == 'fr' %}Pour{% elseif locale == 'nl' %}Voor{% else %}For{% endif %} {{ childName }}
+        </p>
+    </div>
+
+    <div style="background: #f8f6ff; border-radius: 8px; padding: 20px 24px; margin-bottom: 24px; border: 1px solid #e8e0f0;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Commande{% elseif locale == 'nl' %}Bestelling{% else %}Order{% endif %}
+                </td>
+                <td style="padding: 6px 12px; font-weight: 700; color: #2d1b69; text-align: right;">{{ orderNumber }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Statut{% elseif locale == 'nl' %}Status{% else %}Status{% endif %}
+                </td>
+                <td style="padding: 6px 12px; text-align: right;">
+                    <span style="display: inline-block; background: #fff3e0; color: #e65100; padding: 2px 12px; border-radius: 12px; font-size: 13px; font-weight: 600;">
+                        {{ status }}
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; color: #888; font-size: 13px; white-space: nowrap;">
+                    {% if locale == 'fr' %}Livraison estimée{% elseif locale == 'nl' %}Verwachte levering{% else %}Estimated delivery{% endif %}
+                </td>
+                <td style="padding: 6px 12px; text-align: right; font-weight: 600;">{{ estimatedDelivery }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="background: #fff8e1; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px; border: 1px solid #ffe082;">
+        <p style="margin: 0 0 4px; font-size: 14px; color: #e65100;">
+            <strong>&#x2728;</strong>
+            {% if locale == 'fr' %}
+                Chaque page est imprimée avec soin pour créer un souvenir unique que {{ childName }} chérira pour toujours. Livraison estimée : <strong>{{ estimatedDelivery }}</strong>.
+            {% elseif locale == 'nl' %}
+                Elke pagina wordt met zorg gedrukt om een unieke herinnering te creëren waar {{ childName }} voor altijd van zal houden. Verwachte levering: <strong>{{ estimatedDelivery }}</strong>.
+            {% else %}
+                Every page is printed with care to create a unique keepsake that {{ childName }} will treasure forever. Estimated delivery: <strong>{{ estimatedDelivery }}</strong>.
+            {% endif %}
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 24px;">
+        <a href="https://www.monlivremagique.be{% if locale == 'fr' %}/fr{% elseif locale == 'nl' %}/nl{% else %}/en{% endif %}/compte/commandes/{{ orderNumber }}"
+           style="display: inline-block; background: #2d1b69; color: #ffffff; text-decoration: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 15px;">
+            {% if locale == 'fr' %}Suivre la production{% elseif locale == 'nl' %}Productie volgen{% else %}Track production{% endif %}
+        </a>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px; font-size: 13px; color: #999; border-top: 1px solid #eee; padding-top: 20px;">
+        <p style="margin: 0;">
+            {% if locale == 'fr' %}
+                Vous avez hâte ? Nous aussi ! Suivez votre commande en temps réel depuis votre compte.
+            {% elseif locale == 'nl' %}
+                Kunt u niet wachten? Wij ook niet! Volg uw bestelling in realtime via uw account.
+            {% else %}
+                Can't wait? Neither can we! Track your order in real-time from your account.
+            {% endif %}
+        </p>
+    </div>
+{% endblock %}

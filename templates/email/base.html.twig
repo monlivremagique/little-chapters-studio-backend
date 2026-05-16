@@ -1,0 +1,39 @@
+{% block body %}
+    {% autoescape false %}
+        {% set locale = localeCode|default('fr') %}
+
+        <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f4f0eb; padding: 30px 0; font-size: 16px; color: #333; line-height: 1.6">
+            <div style="max-width: 600px; margin: 0 auto;">
+
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <img src="https://www.monlivremagique.be/images/logo.png" alt="Mon Livre Magique" style="width: 200px; height: auto;"
+                         onerror="this.style.display='none'">
+                    <div style="font-size: 22px; font-weight: 700; color: #2d1b69; margin-top: 8px; letter-spacing: 1px;">
+                        {% if locale == 'fr' %}Mon Livre Magique{% elseif locale == 'nl' %}Mijn Magische Boek{% else %}My Magic Book{% endif %}
+                    </div>
+                </div>
+
+                <div style="background: #ffffff; border-radius: 12px; padding: 40px 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                    {% block content %}{% endblock %}
+                </div>
+
+                <div style="text-align: center; padding: 28px 20px 10px; font-size: 13px; color: #888;">
+                    <p style="margin: 0 0 6px;">
+                        {% if locale == 'fr' %}
+                            Mon Livre Magique &mdash; Des histoires uniques pour des enfants exceptionnels
+                        {% elseif locale == 'nl' %}
+                            Mijn Magische Boek &mdash; Unieke verhalen voor bijzondere kinderen
+                        {% else %}
+                            My Magic Book &mdash; Unique stories for exceptional children
+                        {% endif %}
+                    </p>
+                    <p style="margin: 0;">
+                        <a href="https://www.monlivremagique.be{% if locale == 'fr' %}/fr{% elseif locale == 'nl' %}/nl{% else %}/en{% endif %}"
+                           style="color: #2d1b69; text-decoration: none;">www.monlivremagique.be</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    {% endautoescape %}
+{% endblock %}
