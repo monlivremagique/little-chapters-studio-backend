@@ -55,6 +55,6 @@ if (in_array('hostname', $argv ?? [])) {
     $defaultUri = getenv('DEFAULT_URI') ?: 'http://localhost';
     $hostname = str_replace(array('https://', 'http://'), '', $defaultUri);
     $stmt = $pdo->prepare('UPDATE sylius_channel SET hostname = ? WHERE code = ?');
-    $stmt->execute(array($hostname, 'LITTLE_CHAPTERS_BE_FR'));
+    $stmt->execute(array($hostname, 'MLM_BE_FR'));
     echo "[setup] Channel hostname set to: " . $hostname . "\n";
 }

@@ -1,6 +1,6 @@
 sylius_fixtures:
     suites:
-        little_chapters_phase2:
+        mlm_phase2:
             listeners:
                 orm_purger: ~
                 images_purger: ~
@@ -43,9 +43,9 @@ sylius_fixtures:
                 channel:
                     options:
                         custom:
-                            little_chapters_be_fr:
-                                name: 'Little Chapters Belgique FR'
-                                code: 'LITTLE_CHAPTERS_BE_FR'
+                            mlm_be_fr:
+                                name: 'Mon Livre Magique Belgique FR'
+                                code: 'MLM_BE_FR'
                                 locales:
                                     - 'fr_FR'
                                 default_locale: 'fr_FR'
@@ -82,7 +82,7 @@ sylius_fixtures:
                                 enabled: true
                                 locale_code: 'fr_FR'
                                 first_name: 'API'
-                                last_name: 'Little Chapters'
+                                last_name: 'Mon Livre Magique'
                                 api: true
 
                 shop_user:
@@ -118,7 +118,7 @@ sylius_fixtures:
                                 code: 'stripe_checkout_be'
                                 name: 'Carte / Bancontact (Stripe)'
                                 channels:
-                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                    - 'MLM_BE_FR'
                                 enabled: true
 
                 shipping_method:
@@ -130,12 +130,12 @@ sylius_fixtures:
                                 enabled: true
                                 zone: 'BE'
                                 channels:
-                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                    - 'MLM_BE_FR'
                                 tax_category: 'livre_personnalise'
                                 calculator:
                                     type: 'flat_rate'
                                     configuration:
-                                        LITTLE_CHAPTERS_BE_FR:
+                                        MLM_BE_FR:
                                             amount: 490
 
                 livre_attribute:
@@ -236,10 +236,10 @@ sylius_fixtures:
                                 code: 'BOOK_AVENTURE_ENCHANTEE'
                                 slug: 'aventure-enchantee'
                                 short_description: "Quand votre enfant devient le heros d'une quete magique"
-                                description: "Livre personnalise premium d'aventure pour enfants, pense pour le catalogue headless Little Chapters."
+                                description: "Livre personnalise premium d'aventure pour enfants, pense pour le catalogue headless Mon Livre Magique."
                                 tax_category: 'livre_personnalise'
                                 channels:
-                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                    - 'MLM_BE_FR'
                                 main_taxon: 'AVENTURES_MAGIQUES'
                                 taxons:
                                     - 'AVENTURES_MAGIQUES'
@@ -264,7 +264,7 @@ sylius_fixtures:
                                 description: 'Livre personnalise premium d aventure douce avec positionnement cadeau.'
                                 tax_category: 'livre_personnalise'
                                 channels:
-                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                    - 'MLM_BE_FR'
                                 main_taxon: 'AVENTURES_MAGIQUES'
                                 taxons:
                                     - 'AVENTURES_MAGIQUES'
@@ -289,7 +289,7 @@ sylius_fixtures:
                                 description: 'Livre personnalise oriente animaux et rituel de lecture.'
                                 tax_category: 'livre_personnalise'
                                 channels:
-                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                    - 'MLM_BE_FR'
                                 main_taxon: 'AMIS_ANIMAUX'
                                 taxons:
                                     - 'AMIS_ANIMAUX'
@@ -315,7 +315,7 @@ sylius_fixtures:
                                 description: 'Livre personnalise heroique et rassurant, centre sur la confiance en soi.'
                                 tax_category: 'livre_personnalise'
                                 channels:
-                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                    - 'MLM_BE_FR'
                                 main_taxon: 'HEROS_DU_QUOTIDIEN'
                                 taxons:
                                     - 'HEROS_DU_QUOTIDIEN'
@@ -341,7 +341,7 @@ sylius_fixtures:
                                 description: 'Livre personnalise de coucher, plus simple et plus doux.'
                                 tax_category: 'livre_personnalise'
                                 channels:
-                                    - 'LITTLE_CHAPTERS_BE_FR'
+                                    - 'MLM_BE_FR'
                                 main_taxon: 'HISTOIRES_DU_SOIR'
                                 taxons:
                                     - 'HISTOIRES_DU_SOIR'

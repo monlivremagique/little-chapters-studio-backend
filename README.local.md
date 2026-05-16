@@ -92,7 +92,7 @@ docker compose exec php php bin/console app:personalization:process-generation-j
 docker compose exec php php bin/console doctrine:database:drop --force
 docker compose exec php php bin/console doctrine:database:create
 docker compose exec php php bin/console doctrine:migrations:migrate --no-interaction
-docker compose exec php php bin/console sylius:fixtures:load little_chapters_phase2 --no-interaction
+docker compose exec php php bin/console sylius:fixtures:load mlm_phase2 --no-interaction
 ```
 
 ---

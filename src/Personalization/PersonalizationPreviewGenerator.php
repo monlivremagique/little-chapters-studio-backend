@@ -882,11 +882,11 @@ final class PersonalizationPreviewGenerator
         imagerectangle($image, 64, 528, 704, 920, $accent);
 
         $title = strtoupper((string) ($pagePlan['type'] ?? 'PAGE'));
-        $subtitle = trim((string) ($pagePlan['compiledTitle'] ?? $pagePlan['label'] ?? 'Little Chapters'));
+        $subtitle = trim((string) ($pagePlan['compiledTitle'] ?? $pagePlan['label'] ?? 'Mon Livre Magique'));
         $prompt = trim((string) ($pagePlan['promptTemplate'] ?? ''));
         $negative = trim((string) ($pagePlan['finalNegativePrompt'] ?? ''));
 
-        imagestring($image, 5, 88, 128, 'Little Chapters', $accent);
+        imagestring($image, 5, 88, 128, 'Mon Livre Magique', $accent);
         imagestring($image, 5, 88, 184, substr($title, 0, 48), $accent);
         imagestring($image, 4, 88, 236, substr($subtitle, 0, 60), $muted);
         imagestring($image, 3, 88, 332, substr($prompt, 0, 86), $muted);

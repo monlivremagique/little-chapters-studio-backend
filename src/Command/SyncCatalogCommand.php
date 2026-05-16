@@ -39,7 +39,7 @@ final class SyncCatalogCommand extends Command
 
             $statusCode = $this->runCommand($application, [
                 'command' => 'sylius:fixtures:load',
-                'suite' => 'little_chapters_phase2',
+                'suite' => 'mlm_phase2',
                 '--no-interaction' => true,
             ], $output);
 

@@ -142,7 +142,7 @@ final class PageGenerationService
         $emotion = trim((string) ($scene['emotion'] ?? ''));
         $mustShow = is_array($scene['must_show'] ?? null) ? implode(', ', array_values($scene['must_show'])) : '';
 
-        imagestring($image, 5, 80, 92, 'Little Chapters - Page guide', $accent);
+        imagestring($image, 5, 80, 92, 'Mon Livre Magique - Page guide', $accent);
         imagestring($image, 5, 80, 156, substr($title, 0, 54), $accent);
         imagestring($image, 3, 80, 230, substr($composition, 0, 92), $muted);
         imagestring($image, 4, 80, 512, 'Reference image for framing and scene rhythm', $accent);

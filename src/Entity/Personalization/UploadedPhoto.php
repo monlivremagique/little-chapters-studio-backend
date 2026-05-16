@@ -61,6 +61,9 @@ class UploadedPhoto
     #[ORM\Column(name: 'deleted_at', type: 'datetime_immutable', nullable: true)]
     private ?\DateTimeImmutable $deletedAt = null;
 
+    #[ORM\Column(name: 'public_path', length: 512, nullable: true)]
+    private ?string $publicPath = null;
+
     #[ORM\Column(name: 'deleted_reason', length: 64, nullable: true)]
     private ?string $deletedReason = null;
 

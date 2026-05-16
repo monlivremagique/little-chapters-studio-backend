@@ -18,7 +18,7 @@ services:
         environment:
             APP_ENV: ${APP_ENV:-dev}
             APP_SECRET: ${APP_SECRET:-phase1-local-secret}
-            DATABASE_URL: pgsql://sylius:sylius@postgres:5432/little_chapters_sylius?serverVersion=16&charset=utf8
+            DATABASE_URL: pgsql://sylius:sylius@postgres:5432/mlm_sylius?serverVersion=16&charset=utf8
             MAILER_DSN: ${MAILER_DSN:-smtp://mailhog:1025}
             MESSENGER_TRANSPORT_DSN: ${MESSENGER_TRANSPORT_DSN:-doctrine://default}
             SYLIUS_MESSENGER_TRANSPORT_MAIN_DSN: ${SYLIUS_MESSENGER_TRANSPORT_MAIN_DSN:-doctrine://default}
@@ -55,7 +55,7 @@ services:
         environment:
             APP_ENV: ${APP_ENV:-dev}
             APP_SECRET: ${APP_SECRET:-phase1-local-secret}
-            DATABASE_URL: pgsql://sylius:sylius@postgres:5432/little_chapters_sylius?serverVersion=16&charset=utf8
+            DATABASE_URL: pgsql://sylius:sylius@postgres:5432/mlm_sylius?serverVersion=16&charset=utf8
             MAILER_DSN: ${MAILER_DSN:-smtp://mailhog:1025}
             MESSENGER_TRANSPORT_DSN: ${MESSENGER_TRANSPORT_DSN:-doctrine://default}
             SYLIUS_MESSENGER_TRANSPORT_MAIN_DSN: ${SYLIUS_MESSENGER_TRANSPORT_MAIN_DSN:-doctrine://default}
@@ -73,12 +73,12 @@ services:
     postgres:
         image: postgres:16-alpine
         healthcheck:
-            test: ["CMD-SHELL", "pg_isready -U sylius -d little_chapters_sylius"]
+            test: ["CMD-SHELL", "pg_isready -U sylius -d mlm_sylius"]
             timeout: 3s
             interval: 2s
             retries: 20
         environment:
-            POSTGRES_DB: little_chapters_sylius
+            POSTGRES_DB: mlm_sylius
             POSTGRES_USER: sylius
             POSTGRES_PASSWORD: sylius
         ports:

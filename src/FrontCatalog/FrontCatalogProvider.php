@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 final class FrontCatalogProvider
 {
-    private const CHANNEL_CODE = 'LITTLE_CHAPTERS_BE_FR';
+    private const CHANNEL_CODE = 'MLM_BE_FR';
     private const LOCALE_CODE = 'fr_FR';
     private const CATALOGUE_ROOT_CODE = 'CATALOGUE_LIVRES';
 

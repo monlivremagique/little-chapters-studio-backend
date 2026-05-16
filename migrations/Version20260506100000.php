@@ -26,7 +26,7 @@ final class Version20260506100000 extends AbstractMigration
 
     private static function ch(): string
     {
-        return "(SELECT id FROM sylius_channel WHERE code='LITTLE_CHAPTERS_BE_FR')";
+        return "(SELECT id FROM sylius_channel WHERE code='MLM_BE_FR')";
     }
 
     private static function tax(string $code): string

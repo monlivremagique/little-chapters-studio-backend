@@ -197,8 +197,8 @@ final class PersonalizationSessionController
             'photo_id' => $photo->getId(),
             'mime_type' => $photo->getMimeType(),
             'file_size' => $photo->getFileSize(),
-            'image_width' => $photo->getImageWidth(),
-            'image_height' => $photo->getImageHeight(),
+            'image_width' => $photo->getOptimizedWidth(),
+            'image_height' => $photo->getOptimizedHeight(),
         ]);
         $this->operationalEventRecorder->record('personalization.photo_uploaded', 'info', $session->getId(), null, [
             'photo_id' => $photo->getId(),

@@ -36,7 +36,7 @@ final class SyncBookBlueprintsCommand extends Command
         'nl' => 'nl_NL',
     ];
 
-    private const CHANNEL_CODE = 'LITTLE_CHAPTERS_BE_FR';
+    private const CHANNEL_CODE = 'MLM_BE_FR';
     private const DEFAULT_PRICE = 3990;
     private const DEFAULT_ORIGINAL_PRICE = 4490;
     private const DEFAULT_FORMAT = '21 x 21 cm';
@@ -938,7 +938,7 @@ final class SyncBookBlueprintsCommand extends Command
   <rect x="48" y="48" width="672" height="928" rx="40" ry="40" fill="#FFFDF9" opacity="0.95" />
   <rect x="88" y="108" width="592" height="360" rx="28" ry="28" fill="#FFFFFF" opacity="0.85" />
   <rect x="88" y="516" width="592" height="340" rx="28" ry="28" fill="#FFFFFF" opacity="0.92" />
-  <text x="112" y="170" fill="#7A3E2B" font-family="Georgia, serif" font-size="28" font-weight="700">Little Chapters</text>
+  <text x="112" y="170" fill="#7A3E2B" font-family="Georgia, serif" font-size="28" font-weight="700">Mon Livre Magique</text>
   <text x="112" y="228" fill="#111827" font-family="Georgia, serif" font-size="42" font-weight="700">{$safeTitle}</text>
   <text x="112" y="284" fill="#6B7280" font-family="Arial, sans-serif" font-size="22">{$safeType}</text>
   <text x="112" y="360" fill="#374151" font-family="Arial, sans-serif" font-size="24">Asset admin par defaut issu du blueprint</text>

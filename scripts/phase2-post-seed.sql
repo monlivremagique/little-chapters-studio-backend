@@ -53,7 +53,7 @@ END
 FROM sylius_product_variant v
 JOIN sylius_product p ON p.id = v.product_id
 WHERE cp.product_variant_id = v.id
-  AND cp.channel_code = 'LITTLE_CHAPTERS_BE_FR'
+  AND cp.channel_code = 'MLM_BE_FR'
   AND p.code IN (
       'BOOK_AVENTURE_ENCHANTEE',
       'BOOK_VOYAGE_DES_ETOILES',

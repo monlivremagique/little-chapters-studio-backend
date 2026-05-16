@@ -127,14 +127,14 @@ final class DiagnoseCatalogLocalesCommand extends Command
                 INNER JOIN sylius_locale locale ON locale.id = channel_locale.locale_id
                 WHERE channel.code = ?
             SQL,
-            ['LITTLE_CHAPTERS_BE_FR'],
+            ['MLM_BE_FR'],
         );
 
         $issues = [];
 
         foreach (self::LOCALES as $localeCode) {
             if (!in_array($localeCode, $rows, true)) {
-                $issues[] = sprintf('Channel LITTLE_CHAPTERS_BE_FR is missing locale %s.', $localeCode);
+                $issues[] = sprintf('Channel MLM_BE_FR is missing locale %s.', $localeCode);
             }
         }
 

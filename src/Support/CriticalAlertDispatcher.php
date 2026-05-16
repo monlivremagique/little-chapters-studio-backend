@@ -30,7 +30,7 @@ final class CriticalAlertDispatcher
     public function dispatch(string $type, array $context = []): void
     {
         $normalizedContext = $this->normalizeContext($context);
-        $subject = sprintf('[Little Chapters][CRITICAL] %s', $type);
+        $subject = sprintf('[Mon Livre Magique][CRITIQUE] %s', $type);
         $body = json_encode($normalizedContext, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
         try {
