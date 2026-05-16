@@ -14,6 +14,7 @@ use App\Stripe\StripeCheckoutClientInterface;
 use App\Stripe\StripeCheckoutManager;
 use App\Stripe\StripeCheckoutOwnershipGuard;
 use App\Stripe\StripeCheckoutSynchronizer;
+use App\Trait\ApiErrorTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use Sylius\Abstraction\StateMachine\StateMachineInterface;
 use Sylius\Component\Core\OrderCheckoutTransitions;
@@ -26,6 +27,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class StripeCheckoutController
 {
+    use ApiErrorTrait;
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly PersonalizationOrderLinker $personalizationOrderLinker,
@@ -179,7 +181,7 @@ final class StripeCheckoutController
 
     private function errorResponse(string $message, int $statusCode): JsonResponse
     {
-        return new JsonResponse(['message' => $message], $statusCode);
+        return $this->errorFromException(new \RuntimeException($message), $statusCode);
     }
 
     private function completeCheckoutIfPossible(Order $order): void

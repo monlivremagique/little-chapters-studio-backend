@@ -9,6 +9,7 @@ use App\Entity\Personalization\PersonalizationSession;
 use App\Entity\User\ShopUser;
 use App\FrontCatalog\FrontCatalogProvider;
 use App\Personalization\PersonalizationSessionOwnershipGuard;
+use App\Trait\ApiErrorTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -18,6 +19,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class CustomerProjectController
 {
+    use ApiErrorTrait;
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly FrontCatalogProvider $frontCatalogProvider,
@@ -34,7 +36,7 @@ final class CustomerProjectController
     public function listProjects(Request $request): JsonResponse
     {
         if (!$this->hasOwnershipContext($request)) {
-            return new JsonResponse(['message' => 'A valid customer or owner context is required.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Vous n\'avez pas les droits nécessaires pour accéder à cette ressource.', Response::HTTP_FORBIDDEN);
         }
 
         $sessions = $this->findAccessibleSessions($request);
@@ -59,7 +61,7 @@ final class CustomerProjectController
     public function readProject(string $id, Request $request): JsonResponse
     {
         if (!$this->hasOwnershipContext($request)) {
-            return new JsonResponse(['message' => 'Project not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Projet introuvable.', Response::HTTP_NOT_FOUND);
         }
 
         foreach ($this->findAccessibleSessions($request) as $session) {
@@ -74,7 +76,7 @@ final class CustomerProjectController
             }
         }
 
-        return new JsonResponse(['message' => 'Project not found.'], Response::HTTP_NOT_FOUND);
+        return $this->error('Projet introuvable.', Response::HTTP_NOT_FOUND);
     }
 
     /** @return list<PersonalizationSession> */

@@ -7,6 +7,7 @@ namespace App\Controller;
 use App\Entity\Customer\Customer;
 use App\Entity\User\ShopUser;
 use App\RateLimiting\RateLimit;
+use App\Trait\ApiErrorTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
 use Symfony\Bundle\SecurityBundle\Security;
@@ -18,6 +19,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class CustomerAccountController
 {
+    use ApiErrorTrait;
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly UserPasswordHasherInterface $passwordHasher,
@@ -116,7 +118,7 @@ final class CustomerAccountController
 
     private function errorResponse(string $message, int $statusCode): JsonResponse
     {
-        return new JsonResponse(['message' => $message], $statusCode);
+        return $this->errorFromException(new \RuntimeException($message), $statusCode);
     }
 
     /** @return array<string, mixed> */

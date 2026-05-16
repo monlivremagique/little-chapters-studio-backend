@@ -11,6 +11,7 @@ use App\Gelato\GelatoFulfillmentService;
 use App\Personalization\PersonalizationOrderLinker;
 use App\RateLimiting\RateLimit;
 use App\Personalization\PersonalizationSessionOwnershipGuard;
+use App\Trait\ApiErrorTrait;
 use Doctrine\DBAL\Platforms\PostgreSQLPlatform;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -22,6 +23,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class FulfillmentController
 {
+    use ApiErrorTrait;
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly PersonalizationOrderLinker $personalizationOrderLinker,
@@ -46,7 +48,7 @@ final class FulfillmentController
         try {
             $this->personalizationSessionOwnershipGuard->assertCanAccessSessions($sessions, $request);
         } catch (NotFoundHttpException) {
-            return new JsonResponse(['message' => 'Fulfillment order not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Les informations de livraison sont introuvables.', Response::HTTP_NOT_FOUND);
         }
 
         $items = [];
@@ -84,13 +86,13 @@ final class FulfillmentController
     public function handleGelatoWebhook(Request $request): JsonResponse
     {
         if (!$this->isGelatoWebhookSecretValid($request)) {
-            return new JsonResponse(['message' => 'Invalid Gelato webhook secret.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Signature de webhook invalide.', Response::HTTP_FORBIDDEN);
         }
 
         try {
             $payload = $request->toArray();
         } catch (\Throwable) {
-            return new JsonResponse(['message' => 'Invalid Gelato webhook payload.'], Response::HTTP_BAD_REQUEST);
+            return $this->error('Le payload du webhook est invalide.', Response::HTTP_BAD_REQUEST);
         }
 
         $eventKey = $this->resolveWebhookEventKey($payload);
@@ -129,7 +131,7 @@ final class FulfillmentController
         }
 
         if (!$fulfillment instanceof FulfillmentOrder) {
-            return new JsonResponse(['message' => 'Fulfillment order not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Les informations de livraison sont introuvables.', Response::HTTP_NOT_FOUND);
         }
 
         return new JsonResponse($this->normalizeFulfillment($fulfillment));

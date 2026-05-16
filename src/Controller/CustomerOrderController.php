@@ -12,6 +12,7 @@ use App\Entity\User\ShopUser;
 use App\FrontCatalog\FrontCatalogProvider;
 use App\Personalization\PersonalizationOrderLinker;
 use App\Personalization\PersonalizationSessionOwnershipGuard;
+use App\Trait\ApiErrorTrait;
 use Doctrine\DBAL\Connection;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\SecurityBundle\Security;
@@ -22,6 +23,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class CustomerOrderController
 {
+    use ApiErrorTrait;
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly Connection $connection,
@@ -41,7 +43,7 @@ final class CustomerOrderController
     public function listOrders(Request $request): JsonResponse
     {
         if (!$this->hasOwnershipContext($request)) {
-            return new JsonResponse(['message' => 'A valid customer or owner context is required.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Vous n\'avez pas les droits nécessaires pour accéder à cette ressource.', Response::HTTP_FORBIDDEN);
         }
 
         $sessions = $this->findAccessibleSessions($request);
@@ -84,20 +86,20 @@ final class CustomerOrderController
     public function readOrder(string $orderNumber, Request $request): JsonResponse
     {
         if (!$this->hasOwnershipContext($request)) {
-            return new JsonResponse(['message' => 'Order not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Commande introuvable.', Response::HTTP_NOT_FOUND);
         }
 
         $sessions = $this->personalizationOrderLinker->findSessionsByOrderNumber($orderNumber);
         $this->personalizationSessionOwnershipGuard->assertCanAccessSessions($sessions, $request);
 
         if ([] === $sessions) {
-            return new JsonResponse(['message' => 'Order not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Commande introuvable.', Response::HTTP_NOT_FOUND);
         }
 
         $orderRow = $this->findOrderRow($orderNumber);
 
         if (null === $orderRow) {
-            return new JsonResponse(['message' => 'Order not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Commande introuvable.', Response::HTTP_NOT_FOUND);
         }
 
         return new JsonResponse($this->normalizeOrder($orderRow, $sessions));

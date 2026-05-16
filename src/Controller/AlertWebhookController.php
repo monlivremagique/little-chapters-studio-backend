@@ -42,12 +42,12 @@ final class AlertWebhookController
 
         $expectedToken = trim((string) $this->supportToken);
         if ('' !== $expectedToken && $token !== $expectedToken) {
-            return new JsonResponse(['error' => 'Unauthorized'], Response::HTTP_UNAUTHORIZED);
+            return $this->error('Authentification requise.', Response::HTTP_UNAUTHORIZED);
         }
 
         $payload = json_decode($request->getContent(), true);
         if (!is_array($payload)) {
-            return new JsonResponse(['error' => 'Invalid JSON payload'], Response::HTTP_BAD_REQUEST);
+            return $this->error('Payload JSON invalide.', Response::HTTP_BAD_REQUEST);
         }
 
         $type = isset($payload['type']) ? 'alert.' . (string) $payload['type'] : 'alert.unknown';

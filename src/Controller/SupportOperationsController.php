@@ -17,6 +17,7 @@ use App\Personalization\PersonalizationOrderLinker;
 use App\Personalization\PersonalizationPreviewGenerator;
 use App\RateLimiting\RateLimit;
 use App\Stripe\StripeCheckoutSynchronizer;
+use App\Trait\ApiErrorTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -27,6 +28,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[RateLimit('support', 'ip')]
 final class SupportOperationsController
 {
+    use ApiErrorTrait;
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly PersonalizationPreviewGenerator $personalizationPreviewGenerator,
@@ -46,7 +48,7 @@ final class SupportOperationsController
     public function readOrderEvents(string $orderNumber, Request $request): JsonResponse
     {
         if (!$this->isSupportTokenValid($request)) {
-            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Authentification support requise.', Response::HTTP_FORBIDDEN);
         }
 
         $events = $this->entityManager->getRepository(OperationalEvent::class)->findBy(
@@ -76,7 +78,7 @@ final class SupportOperationsController
     public function readOrderTrace(string $orderNumber, Request $request): JsonResponse
     {
         if (!$this->isSupportTokenValid($request)) {
-            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Authentification support requise.', Response::HTTP_FORBIDDEN);
         }
 
         $sessions = $this->personalizationOrderLinker->findSessionsByOrderNumber($orderNumber);
@@ -197,7 +199,7 @@ final class SupportOperationsController
     public function listGenerationJobs(Request $request): JsonResponse
     {
         if (!$this->isSupportTokenValid($request)) {
-            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Authentification support requise.', Response::HTTP_FORBIDDEN);
         }
 
         $failedOnly = filter_var($request->query->get('failedOnly', '0'), FILTER_VALIDATE_BOOL);
@@ -244,20 +246,20 @@ final class SupportOperationsController
     public function retryGenerationJob(string $jobId, Request $request): JsonResponse
     {
         if (!$this->isSupportTokenValid($request)) {
-            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Authentification support requise.', Response::HTTP_FORBIDDEN);
         }
 
         /** @var PersonalizationGenerationJob|null $job */
         $job = $this->entityManager->getRepository(PersonalizationGenerationJob::class)->find($jobId);
 
         if (!$job instanceof PersonalizationGenerationJob) {
-            return new JsonResponse(['message' => 'Generation job not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Tâche de génération introuvable.', Response::HTTP_NOT_FOUND);
         }
 
         try {
             $retriedJob = $this->personalizationPreviewGenerator->retryFailedJob($job);
         } catch (\RuntimeException $exception) {
-            return new JsonResponse(['message' => $exception->getMessage()], Response::HTTP_UNPROCESSABLE_ENTITY);
+            return $this->errorFromException($exception, Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
         return new JsonResponse([
@@ -277,21 +279,21 @@ final class SupportOperationsController
     public function forceGenerationFailure(string $sessionId, Request $request): JsonResponse
     {
         if (!$this->isSupportTokenValid($request)) {
-            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Authentification support requise.', Response::HTTP_FORBIDDEN);
         }
 
         /** @var PersonalizationSession|null $session */
         $session = $this->entityManager->getRepository(PersonalizationSession::class)->find($sessionId);
 
         if (!$session instanceof PersonalizationSession) {
-            return new JsonResponse(['message' => 'Personalization session not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Session de personnalisation introuvable.', Response::HTTP_NOT_FOUND);
         }
 
         $message = trim((string) (($request->toArray()['message'] ?? 'Forced provider failure.') ?: 'Forced provider failure.'));
         $job = $this->personalizationPreviewGenerator->forceLatestJobFailure($session, $message);
 
         if (!$job instanceof PersonalizationGenerationJob) {
-            return new JsonResponse(['message' => 'Generation job not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Tâche de génération introuvable.', Response::HTTP_NOT_FOUND);
         }
 
         return new JsonResponse([
@@ -311,7 +313,7 @@ final class SupportOperationsController
     public function forceStripeCheckoutFailure(string $providerSessionId, Request $request): JsonResponse
     {
         if (!$this->isSupportTokenValid($request)) {
-            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Authentification support requise.', Response::HTTP_FORBIDDEN);
         }
 
         /** @var StripeCheckoutSession|null $checkoutSession */
@@ -320,7 +322,7 @@ final class SupportOperationsController
         ]);
 
         if (!$checkoutSession instanceof StripeCheckoutSession) {
-            return new JsonResponse(['message' => 'Stripe checkout session not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Session de paiement introuvable.', Response::HTTP_NOT_FOUND);
         }
 
         $this->stripeCheckoutSynchronizer->forceFailureForSupport($checkoutSession, 'Support forced failure.');
@@ -342,7 +344,7 @@ final class SupportOperationsController
     public function readStripeCheckoutSessionByOrderToken(string $orderTokenValue, Request $request): JsonResponse
     {
         if (!$this->isSupportTokenValid($request)) {
-            return new JsonResponse(['message' => 'A valid support token is required.'], Response::HTTP_FORBIDDEN);
+            return $this->error('Authentification support requise.', Response::HTTP_FORBIDDEN);
         }
 
         /** @var StripeCheckoutSession|null $checkoutSession */
@@ -351,7 +353,7 @@ final class SupportOperationsController
         ], ['id' => 'DESC']);
 
         if (!$checkoutSession instanceof StripeCheckoutSession) {
-            return new JsonResponse(['message' => 'Stripe checkout session not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Session de paiement introuvable.', Response::HTTP_NOT_FOUND);
         }
 
         return new JsonResponse([

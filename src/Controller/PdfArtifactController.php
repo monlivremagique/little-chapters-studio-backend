@@ -8,6 +8,7 @@ use App\Entity\Personalization\PdfArtifact;
 use App\RateLimiting\RateLimit;
 use App\Service\EncryptionService;
 use App\Service\SignedUrlService;
+use App\Trait\ApiErrorTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -16,6 +17,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class PdfArtifactController
 {
+    use ApiErrorTrait;
     private const string ENCRYPTION_CONTEXT_PDF = 'pdf_artifact';
 
     public function __construct(
@@ -38,7 +40,7 @@ final class PdfArtifactController
         try {
             $sessionId = $this->signedUrlService->verify($token, 'pdf_access');
         } catch (\RuntimeException $exception) {
-            return new JsonResponse(['message' => $exception->getMessage()], Response::HTTP_FORBIDDEN);
+            return $this->error('Vous n\'avez pas accès à ce document.', Response::HTTP_FORBIDDEN);
         }
 
         /** @var PdfArtifact|null $artifact */
@@ -48,17 +50,17 @@ final class PdfArtifactController
         );
 
         if (!$artifact instanceof PdfArtifact) {
-            return new JsonResponse(['message' => 'PDF artifact not found.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Le PDF demandé n\'est plus disponible.', Response::HTTP_NOT_FOUND);
         }
 
         $storagePath = $artifact->getStoragePath();
         if (!is_file($storagePath)) {
-            return new JsonResponse(['message' => 'PDF file not found in private storage.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Le PDF demandé n\'est plus disponible.', Response::HTTP_NOT_FOUND);
         }
 
         $encrypted = @file_get_contents($storagePath);
         if (false === $encrypted) {
-            return new JsonResponse(['message' => 'PDF could not be read from private storage.'], Response::HTTP_INTERNAL_SERVER_ERROR);
+            return $this->error('Le PDF n\'a pas pu être lu.', Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 
         try {
@@ -68,7 +70,7 @@ final class PdfArtifactController
                 'session_id' => $sessionId,
                 'error' => $exception->getMessage(),
             ]);
-            return new JsonResponse(['message' => 'PDF content is unavailable.'], Response::HTTP_INTERNAL_SERVER_ERROR);
+            return $this->error('Le contenu du PDF est temporairement indisponible.', Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 
         $this->logger->info('PDF artifact accessed via signed URL.', [

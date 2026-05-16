@@ -9,6 +9,7 @@ use App\Personalization\PersonalizationOrderLinker;
 use App\Personalization\PersonalizationSessionOwnershipGuard;
 use App\RateLimiting\RateLimit;
 use App\Service\SignedUrlService;
+use App\Trait\ApiErrorTrait;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,6 +18,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[RateLimit('read', 'session')]
 final class CustomOrderPersonalizationController
 {
+    use ApiErrorTrait;
     public function __construct(
         private readonly PersonalizationOrderLinker $personalizationOrderLinker,
         private readonly PersonalizationSessionOwnershipGuard $personalizationSessionOwnershipGuard,
@@ -54,7 +56,7 @@ final class CustomOrderPersonalizationController
         $session = $sessions[0] ?? null;
 
         if (null === $session) {
-            return new JsonResponse(['message' => 'Linked personalization session not found for this order.'], Response::HTTP_NOT_FOUND);
+            return $this->error('Session de personnalisation introuvable pour cette commande.', Response::HTTP_NOT_FOUND);
         }
 
         return new JsonResponse($this->normalizeSession($session));

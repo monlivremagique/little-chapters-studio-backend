@@ -110,10 +110,20 @@ final class RateLimitSubscriber implements EventSubscriberInterface
                 ? 'Trop de requêtes. Veuillez réessayer dans 1 seconde.'
                 : \sprintf('Trop de requêtes. Veuillez réessayer dans %d secondes.', $retryAfter);
 
+            $correlationId = bin2hex(random_bytes(16));
+
             $response = new JsonResponse(
-                ['message' => $message, 'retryAfter' => $retryAfter],
+                [
+                    'error' => [
+                        'message' => $message,
+                        'code' => Response::HTTP_TOO_MANY_REQUESTS,
+                        'correlationId' => $correlationId,
+                    ],
+                    'retryAfter' => $retryAfter,
+                ],
                 Response::HTTP_TOO_MANY_REQUESTS,
                 [
+                    'X-Correlation-ID' => $correlationId,
                     'Retry-After' => (string) $retryAfter,
                     'X-RateLimit-Limit' => (string) $resolved->getLimit(),
                     'X-RateLimit-Remaining' => '0',

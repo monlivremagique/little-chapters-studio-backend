@@ -10,6 +10,7 @@ use App\Entity\Personalization\PersonalizationGenerationJobStatus;
 use App\Entity\Personalization\PersonalizationPreviewArtifact;
 use App\Entity\Personalization\PersonalizationSessionStatus;
 use App\Entity\Personalization\UploadedPhoto;
+use App\Error\ErrorMessageMapper;
 use App\FrontCatalog\FrontCatalogMetadata;
 use App\FrontCatalog\FrontCatalogProvider;
 use App\Personalization\PersonalizationOrderLinker;
@@ -20,6 +21,7 @@ use App\Personalization\PreviewVersionFactory;
 use App\RateLimiting\RateLimit;
 use App\Service\SignedUrlService;
 use App\Support\OperationalEventRecorder;
+use App\Trait\ApiErrorTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
@@ -32,6 +34,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class PersonalizationSessionController
 {
+    use ApiErrorTrait;
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly FrontCatalogProvider $frontCatalogProvider,
@@ -541,6 +544,17 @@ final class PersonalizationSessionController
         return new JsonResponse($this->buildGenerationContract($session, $generationJob));
     }
 
+    private function sanitizeGenerationErrorMessage(?string $rawMessage): ?string
+    {
+        if (null === $rawMessage || '' === trim($rawMessage)) {
+            return null;
+        }
+
+        $mapper = new ErrorMessageMapper();
+
+        return $mapper->toPublicMessage($rawMessage, Response::HTTP_INTERNAL_SERVER_ERROR);
+    }
+
     private function findSession(string $id): ?PersonalizationSession
     {
         return $this->entityManager->getRepository(PersonalizationSession::class)->find($id);
@@ -558,7 +572,7 @@ final class PersonalizationSessionController
 
     private function errorResponse(string $message, int $statusCode): JsonResponse
     {
-        return new JsonResponse(['message' => $message], $statusCode);
+        return $this->errorFromException(new \RuntimeException($message), $statusCode);
     }
 
     /** @return array<string, mixed> */
@@ -717,7 +731,7 @@ final class PersonalizationSessionController
             'attemptNumber' => $generationJob?->getAttemptNumber(),
             'startedAt' => $generationJob?->getStartedAt()?->format(DATE_ATOM),
             'completedAt' => $generationJob?->getCompletedAt()?->format(DATE_ATOM),
-            'errorMessage' => $generationJob?->getErrorMessage(),
+            'errorMessage' => $this->sanitizeGenerationErrorMessage($generationJob?->getErrorMessage()),
             'nextContract' => [
                 'trigger' => sprintf('/api/personalization/sessions/%s/generation-requests', $session->getId()),
                 'status' => sprintf('/api/personalization/sessions/%s/generation-status', $session->getId()),

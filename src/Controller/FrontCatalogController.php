@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\FrontCatalog\FrontCatalogProvider;
 use App\RateLimiting\RateLimit;
+use App\Trait\ApiErrorTrait;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
@@ -15,6 +16,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[RateLimit('read', 'ip')]
 final class FrontCatalogController
 {
+    use ApiErrorTrait;
     public function __construct(
         private readonly FrontCatalogProvider $frontCatalogProvider,
     ) {
@@ -33,7 +35,7 @@ final class FrontCatalogController
         try {
             return new JsonResponse($this->frontCatalogProvider->getBooks($locale));
         } catch (BadRequestHttpException $e) {
-            return new JsonResponse(['error' => $e->getMessage()], 400);
+            return $this->error('Le catalogue n\'a pas pu être chargé.', 400);
         }
     }
 
@@ -50,11 +52,9 @@ final class FrontCatalogController
         try {
             return new JsonResponse($this->frontCatalogProvider->getBookBySlug($slug, $locale));
         } catch (BadRequestHttpException $e) {
-            return new JsonResponse(['error' => $e->getMessage()], 400);
+            return $this->error('Cette langue n\'est pas disponible pour le moment.', 400);
         } catch (NotFoundHttpException $e) {
-            // Catch here to return JSON 404 directly. Symfony's default exception handler
-            // tries to initialize a session on stateless routes, causing HTTP 500 instead of 404.
-            return new JsonResponse(['error' => $e->getMessage()], 404);
+            return $this->error('Livre introuvable.', 404);
         }
     }
 
@@ -71,7 +71,7 @@ final class FrontCatalogController
         try {
             return new JsonResponse($this->frontCatalogProvider->getCollections($locale));
         } catch (BadRequestHttpException $e) {
-            return new JsonResponse(['error' => $e->getMessage()], 400);
+            return $this->error('Le catalogue n\'a pas pu être chargé.', 400);
         }
     }
 
@@ -88,9 +88,9 @@ final class FrontCatalogController
         try {
             return new JsonResponse($this->frontCatalogProvider->getCollectionBySlug($slug, $locale));
         } catch (BadRequestHttpException $e) {
-            return new JsonResponse(['error' => $e->getMessage()], 400);
+            return $this->error('Cette langue n\'est pas disponible pour le moment.', 400);
         } catch (NotFoundHttpException $e) {
-            return new JsonResponse(['error' => $e->getMessage()], 404);
+            return $this->error('Collection introuvable.', 404);
         }
     }
 }
