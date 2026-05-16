@@ -44,7 +44,7 @@ final class BookBriefPromptBuilderTest extends TestCase
         self::assertStringContainsString('heroBible', $prompt);
         self::assertStringContainsString('visualBible', $prompt);
         self::assertStringContainsString('black-forest-labs/flux-2-pro', $prompt);
-        self::assertStringContainsString('Never use locales.<locale>.scenes', $prompt);
+        self::assertStringContainsString('requiredLocales', $prompt);
     }
 
     // ─────────────────────────────────────────────────────────────────────────
