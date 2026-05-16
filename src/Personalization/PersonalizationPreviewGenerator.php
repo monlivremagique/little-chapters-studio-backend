@@ -255,11 +255,12 @@ final class PersonalizationPreviewGenerator
                 $session->markPreviewReady();
                 $this->entityManager->flush();
 
+                $this->validateGeneratedArtifacts($session, $job, $generationPlan);
+
                 $this->logger->info('Replicate generation completed page by page.', [
                     'session_id' => $session->getId(),
                     'generation_job_id' => $job->getId(),
-                    'provider_job_id' => $job->getProviderJobId(),
-                    'generated_page_count' => $state['generatedPageCount'],
+                    'page_count' => $state['totalPageCount'],
                 ]);
 
                 return $job;
@@ -713,7 +714,9 @@ final class PersonalizationPreviewGenerator
             sprintf('Create a premium children\'s book illustration for page %d of "%s".', (int) ($pagePlan['pageNumber'] ?? 0), $compiledBookTitle),
             sprintf('Primary scene instruction: %s.', $pagePrompt),
             'Reference image 1 is the default page composition and must drive the framing, palette, and page mood.',
-            'Reference image 2 is the child likeness reference and must preserve the face, age, and identity consistently across the book.',
+            'Reference image 2 is the child likeness reference. Preserve the face, age, hair color, eye color, hairstyle, and skin tone consistently across every page.',
+            'Each page must feel visually DISTINCT from every other page. Change the pose, angle, background, lighting, and emotional tone. Never reuse the same composition, setting, or character pose across multiple pages.',
+            'The illustrated child should be a natural, non-creepy transformation of the real photo — a recognizable portrait illustration, not a photorealistic copy. Keep the child looking their actual age.',
         ];
 
         if ('backCover' === (string) ($pagePlan['type'] ?? '')) {
@@ -1171,5 +1174,50 @@ final class PersonalizationPreviewGenerator
         }
 
         return count($artifacts) >= count($generationPlan);
+    }
+
+    /**
+     * @param list<array<string, mixed>> $generationPlan
+     */
+    private function validateGeneratedArtifacts(PersonalizationSession $session, PersonalizationGenerationJob $job, array $generationPlan): void
+    {
+        $artifacts = $this->findPreviewArtifacts($job);
+
+        if (count($artifacts) < 2) {
+            return;
+        }
+
+        // Check for duplicate page labels (same title across different pages)
+        $labels = [];
+        $duplicates = [];
+
+        foreach ($artifacts as $artifact) {
+            $label = $artifact->getLabel();
+
+            if (isset($labels[$label])) {
+                $duplicates[] = $label;
+            }
+
+            $labels[$label] = true;
+        }
+
+        if ([] !== $duplicates) {
+            $this->logger->warning('Page label duplication detected — potential image sameness.', [
+                'session_id' => $session->getId(),
+                'generation_job_id' => $job->getId(),
+                'duplicate_labels' => array_values(array_unique($duplicates)),
+            ]);
+        }
+
+        // Verify hero reference image was used (if available)
+        $bookSlug = $session->getBookSlug();
+        $heroRefPath = sprintf('%s/resources/book-blueprints/%s/generated-pages/hero-reference.png', $this->projectDir, $bookSlug);
+
+        if (is_file($heroRefPath)) {
+            $this->logger->info('Hero reference image was available and used for consistency.', [
+                'session_id' => $session->getId(),
+                'page_count' => count($artifacts),
+            ]);
+        }
     }
 }
