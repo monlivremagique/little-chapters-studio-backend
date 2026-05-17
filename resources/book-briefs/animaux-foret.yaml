@@ -55,15 +55,17 @@ scenes:
     oak trunks rise like cathedral pillars. Sunlight pours through the canopy in golden shafts. A weathered wooden sign reads
     ''Forêt des Animaux'' in hand-painted letters. Ferns and wild strawberries carpet the ground. {child_name} wears a light
     blue sweater and red boots — steps forward into a beam of light, eyes wide with curiosity. Butterflies dance in the warm
-    air.'
+    air. {child_pronoun_subject} feels a surge of emotion.'
 - id: page_2
   moment: 'EMOTION: quiet wonder. A winding dirt path leads deeper into the forest. Giant ferns brush against {child_name}''s
     shoulders. Wild strawberries gleam like rubies among the moss. Sunlight filters through the canopy in golden beams, illuminating
-    dust motes that float like tiny stars. The sound of a distant stream is almost audible in the stillness.'
+    dust motes that float like tiny stars. The sound of a distant stream is almost audible in the stillness. {child_pronoun_subject}
+    feels a surge of emotion.'
 - id: page_3
   moment: 'EMOTION: concern turning to determination. {child_name} finds Tortue Lente struggling to carry a large basket of
     acorns up a mossy hill. Her shell glistens with morning dew. Her little legs move slowly but steadily. {child_name} kneels
-    down — eye level with Tortue — and offers to help carry the basket. Tortue''s tired eyes brighten with gratitude.'
+    down — eye level with Tortue — and offers to help carry the basket. Tortue''s tired eyes brighten with gratitude. {child_pronoun_subject}
+    feels a surge of emotion.'
 - id: page_4
   moment: 'EMOTION: gentle pride. Together, {child_name} and Tortue reach the hilltop. A clearing opens before them carpeted
     in bluebells. Tortue looks up at {child_name} with warm, ancient eyes. ''Slow and steady wins the race, dear {child_name}.

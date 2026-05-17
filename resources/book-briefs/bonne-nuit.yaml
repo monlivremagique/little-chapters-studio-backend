@@ -49,15 +49,15 @@ scenes:
 - id: page_1
   moment: 'EMOTION: peaceful transition. The sun sets over a quiet Belgian neighbourhood. Rooftops with pitched slate tiles
     catch the last orange light. Warm amber glow fills {child_name}''s bedroom through lace curtains. The day is ending, soft
-    and slow. A carillon plays in the distance — a gentle, melodic toll.'
+    and slow. A carillon plays in the distance — a gentle, melodic toll. {child_pronoun_subject} feels a surge of emotion.'
 - id: page_2
   moment: 'EMOTION: cosy comfort. Maman helps {child_name} put on soft blue pyjamas with tiny embroidered stars. {child_name}
     yawns — a big, open-mouthed yawn — and hugs a plush bunny with floppy ears. The bunny is well-loved, slightly worn. The
-    nightlight — a crescent moon shape — glows on the wall.'
+    nightlight — a crescent moon shape — glows on the wall. {child_pronoun_subject} feels a surge of emotion.'
 - id: page_3
   moment: 'EMOTION: quiet routine. {child_name} stands on a small wooden stool in the bathroom, brushing teeth. The crescent
     moon nightlight casts soft golden light. The tap drips slowly — plip... plip... plip. A small towel with {child_name}''s
-    name embroidered hangs on the rack.'
+    name embroidered hangs on the rack. {child_pronoun_subject} feels a surge of emotion.'
 - id: page_4
   moment: 'EMOTION: warm comfort. In the kitchen, Papa warms a small cup of lait à la camomille on the stove. Steam curls
     upward lazily. The kitchen clock reads 19:30. On the counter, a plate with two speculoos — a bedtime tradition. The kitchen

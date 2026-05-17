@@ -68,15 +68,17 @@ scenes:
 - id: page_5
   moment: 'EMOTION: serene bonding. {child_name} is swaddled in the lace blanket, nestled in Maman''s arms. Maman sits in
     a rocking chair, looking down at {child_name} with a soft, private smile — the kind of smile only a mother has. The room
-    glows golden. The chair creaks gently, rhythmically. The cat curls at her feet.'
+    glows golden. The chair creaks gently, rhythmically. The cat curls at her feet. {child_pronoun_subject} feels a surge
+    of emotion.'
 - id: page_6
   moment: 'EMOTION: protective love. Papa holds {child_name} against his broad chest, walking slow circles around the nursery.
     His hand supports the tiny head. The mobile turns lazily overhead. A music box on the dresser plays ''Bonne Nuit, Petit''
-    — soft, tinkling notes. Shadows of the mobile animals dance on the wall.'
+    — soft, tinkling notes. Shadows of the mobile animals dance on the wall. {child_pronoun_subject} feels a surge of emotion.'
 - id: page_7
   moment: 'EMOTION: curious wonder. An older sibling (or cousin) peeks over the edge of the cradle, face full of reverent
     curiosity. They hold out a stuffed bunny — worn, well-loved — offering it to {child_name}. {child_name}''s tiny hand reaches
-    up instinctively, fingers brushing the bunny''s ear. The older sibling''s face lights up.'
+    up instinctively, fingers brushing the bunny''s ear. The older sibling''s face lights up. {child_pronoun_subject} feels
+    a surge of emotion.'
 - id: page_8
   moment: 'EMOTION: cosy domesticity. Grand-mère knits by the fireplace, the lace blanket half-finished on her lap. {child_name}
     sleeps in a wicker bassinet beside her, perfectly peaceful. The fire crackles. A copper kettle hums on the stove. A plate
