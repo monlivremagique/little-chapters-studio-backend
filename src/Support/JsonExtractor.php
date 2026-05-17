@@ -113,6 +113,12 @@ final class JsonExtractor
         $candidate = preg_replace_callback('/\b(True|False)\b/', static fn (array $m): string => strtolower($m[1]), $candidate);
         // Fix Null
         $candidate = str_replace('Null', 'null', $candidate);
+        // Fix unclosed braces (LLMs sometimes miss closing braces on deeply nested JSON)
+        $opens = substr_count($candidate, '{');
+        $closes = substr_count($candidate, '}');
+        if ($opens > $closes) {
+            $candidate .= str_repeat('}', $opens - $closes);
+        }
 
         if ($candidate === substr($text, (int) $firstBrace, $lastBrace - $firstBrace + 1)) {
             return null;
@@ -137,6 +143,12 @@ final class JsonExtractor
 
         $candidate = substr($text, $firstBrace, $lastBrace - $firstBrace + 1);
         $candidate = preg_replace('/[^\x20-\x7E\x0A\x0D\xC0-\xFF{},\[\]:"]/', '', $candidate) ?? $candidate;
+        // Fix unclosed braces
+        $opens = substr_count($candidate, '{');
+        $closes = substr_count($candidate, '}');
+        if ($opens > $closes) {
+            $candidate .= str_repeat('}', $opens - $closes);
+        }
 
         try {
             $decoded = json_decode($candidate, true, 512, JSON_THROW_ON_ERROR);

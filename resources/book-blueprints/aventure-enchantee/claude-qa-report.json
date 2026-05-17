@@ -1,0 +1,25 @@
+{
+    "brief": "resources/book-briefs/aventure-enchantee.yaml",
+    "source": "resources/book-blueprints/aventure-enchantee/master.json",
+    "model": "openai/gpt-5.4",
+    "iteration": 1,
+    "dryRun": false,
+    "verdict": "NO_GO",
+    "scores": {
+        "editorial": 8.4,
+        "imageability": 9.6,
+        "heroConsistency": 9.8,
+        "localeCompleteness": 8.3,
+        "bedtimeSafety": 9.1,
+        "premiumBelgium": 8.9,
+        "translationNaturalness": 8.1
+    },
+    "blockingIssues": [
+        "FR text violates mandatory gender-neutral rule in several places by using gendered wording for the child, e.g. \"{child_name} se sent enveloppé\" on page_15.",
+        "NL locale contains several phrases that read like close translation rather than fully native premium Flemish copy, reducing translation naturalness and locale completeness.",
+        "EN and NL page_21 underplay the briefed beat of sharing the full adventure with parents; this weakens editorial arc fidelity and semantically diverges from FR/original brief.",
+        "FR page_18 omits the emotional farewell line about being braver, kinder, and more loved than imaginable, softening the premium emotional payoff requested in the brief.",
+        "Premium Belgian localization is slightly under-realized in some locale texts, especially EN/NL domestic scenes, which can be made more gift-worthy and culturally grounded without altering already-strong scene prompts."
+    ],
+    "correctedMasterApplied": true
+}
