@@ -35,6 +35,10 @@ constraints:
 - Positive, uplifting tone throughout — even the bullying scene resolves with empathy.
 - '{child_name} wears a red cape (homemade) and a blue jumper over a white shirt — consistent throughout.'
 - The cape is a visual anchor — it appears in every scene, even if just a glimpse.
+- 'FORBIDDEN in FR locale: ''lui'', ''elle'', ''ils'', ''son'', ''sa'', ''ses'' for the child hero. Use {child_name} or ''l''enfant''
+  uniquement.'
+- 'FORBIDDEN in NL locale: ''haar'', ''zijn'' for the child hero. Use {child_possessive_det} or {child_name}.'
+- 'FORBIDDEN in EN locale: ''his'', ''her'', ''he'', ''she'' for the child hero. Use {child_name} or they/them.'
 arc_type: comfort-to-courage
 climax_page: page_18
 setting: A typical Belgian town — terraced houses, a neighbourhood park, a corner bakery, a schoolyard

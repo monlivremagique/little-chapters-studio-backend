@@ -35,6 +35,10 @@ constraints:
 - 'The colour palette darkens page by page: golden sunset → soft twilight → deep night → dreamy silver.'
 - '{child_name} wears soft blue pyjamas with stars throughout.'
 - The bunny plush is a consistent companion in every scene.
+- 'FORBIDDEN in FR locale: ''lui'', ''elle'', ''ils'', ''son'', ''sa'', ''ses'' for the child hero. Use {child_name} or ''l''enfant''
+  uniquement.'
+- 'FORBIDDEN in NL locale: ''haar'', ''zijn'' for the child hero. Use {child_possessive_det} or {child_name}.'
+- 'FORBIDDEN in EN locale: ''his'', ''her'', ''he'', ''she'' for the child hero. Use {child_name} or they/them.'
 arc_type: comfort-to-courage
 climax_page: page_14
 setting: A cosy Belgian home — a child's bedroom, kitchen, garden, the night sky

@@ -2,24 +2,25 @@
     "brief": "resources/book-briefs/aventure-enchantee.yaml",
     "source": "resources/book-blueprints/aventure-enchantee/master.json",
     "model": "openai/gpt-5.4",
-    "iteration": 1,
+    "iteration": 2,
     "dryRun": false,
     "verdict": "NO_GO",
     "scores": {
-        "editorial": 8.4,
+        "editorial": 8.7,
         "imageability": 9.6,
-        "heroConsistency": 9.8,
-        "localeCompleteness": 8.3,
-        "bedtimeSafety": 9.1,
-        "premiumBelgium": 8.9,
-        "translationNaturalness": 8.1
+        "heroConsistency": 9.7,
+        "localeCompleteness": 8.8,
+        "bedtimeSafety": 8.9,
+        "premiumBelgium": 9.2,
+        "translationNaturalness": 8.7
     },
     "blockingIssues": [
-        "FR text violates mandatory gender-neutral rule in several places by using gendered wording for the child, e.g. \"{child_name} se sent enveloppé\" on page_15.",
-        "NL locale contains several phrases that read like close translation rather than fully native premium Flemish copy, reducing translation naturalness and locale completeness.",
-        "EN and NL page_21 underplay the briefed beat of sharing the full adventure with parents; this weakens editorial arc fidelity and semantically diverges from FR/original brief.",
-        "FR page_18 omits the emotional farewell line about being braver, kinder, and more loved than imaginable, softening the premium emotional payoff requested in the brief.",
-        "Premium Belgian localization is slightly under-realized in some locale texts, especially EN/NL domestic scenes, which can be made more gift-worthy and culturally grounded without altering already-strong scene prompts."
+        "FR locale violates mandatory gender-neutral rule for the child hero with repeated uses of \"lui/soi\" in pages 18 and similar phrasing that should stay with {child_name} or \"l'enfant\" only.",
+        "NL locale violates mandatory rule forbidding hij/hem/zijn-style child references by using \"haar\" in page 17 for the child hero; child references must be restructured to use {child_name}.",
+        "Several locale pages are semantically incomplete versus the brief: page 21 in FR/EN/NL drops the explicit sharing of the full adventure and emotional parental reaction, weakening equivalence and narrative beat progression.",
+        "Bedtime safety/rhythm is slightly compromised by page 10 source adaptation retaining heavy sadness; wording should be softened to gentle worry rather than intense distress for ages 3-7.",
+        "Editorial arc weakens on page 21 because the return-home sharing beat is compressed into atmosphere rather than a clear action beat, creating slight filler and loss of the brief's exact progression.",
+        "Mandatory schema issue for NO_GO correction: corrected master must be complete and valid, with all pages preserved and underperforming locales/editorial beats corrected."
     ],
     "correctedMasterApplied": true
 }

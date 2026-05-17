@@ -36,6 +36,10 @@ constraints:
 - No conflict, tension, or negative emotion of any kind.
 - Repetitive 'Je t'aime quand...' structure creates a soothing, predictable rhythm.
 - '{child_name} wears the same soft cream jumper with a red stripe throughout.'
+- 'FORBIDDEN in FR locale: ''lui'', ''elle'', ''ils'', ''son'', ''sa'', ''ses'' for the child hero. Use {child_name} or ''l''enfant''
+  uniquement.'
+- 'FORBIDDEN in NL locale: ''haar'', ''zijn'' for the child hero. Use {child_possessive_det} or {child_name}.'
+- 'FORBIDDEN in EN locale: ''his'', ''her'', ''he'', ''she'' for the child hero. Use {child_name} or they/them.'
 arc_type: comfort-to-courage
 climax_page: page_14
 setting: A cosy Belgian home — bedrooms, kitchen, garden, living room, bath

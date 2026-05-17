@@ -378,7 +378,7 @@ Raw master JSON to review and correct:
                 },
                 "page_18": {
                     "title_template": "L'Adieu Tendre",
-                    "text_template": "À la lisière, Rusé serre {child_name} dans ses pattes douces. Dans la paume de l'enfant, le renard dépose un petit gland. C'est un cadeau simple et précieux. Il dira toujours à {child_name} de rester brave, bon, et plein de confiance."
+                    "text_template": "À la lisière, Rusé serre {child_name} dans ses pattes douces. Dans la paume de l'enfant, le renard dépose un petit gland. Puis il souffle ces mots qui réchauffent le cœur : plus brave que tu ne crois, plus bon que tu ne l'imagines, et plus aimé encore que tu ne le sais. {child_name} garde ce trésor contre soi."
                 },
                 "page_19": {
                     "title_template": "La Preuve Magique",
@@ -390,7 +390,7 @@ Raw master JSON to review and correct:
                 },
                 "page_21": {
                     "title_template": "Un Secret qui Rayonne",
-                    "text_template": "Après le dîner, {child_name} pose le cristal sur la table de la cuisine. La lumière y bat doucement, comme un souvenir heureux. Maman et Papa se regardent en souriant. Dans la maison, la merveille trouve déjà sa place."
+                    "text_template": "Après le dîner, {child_name} montre le cristal à Maman et Papa sur la table de la cuisine. Rusé, le blaireau, le pont arc-en-ciel, le château, Maître Hibou : toute l'aventure revient en phrases émerveillées. Le cristal bat doucement au rythme du récit. Dans cette maison bruxelloise, chacun écoute comme on accueille un trésor."
                 },
                 "page_22": {
                     "title_template": "Les Rêves Enchantés",
@@ -477,7 +477,7 @@ Raw master JSON to review and correct:
                 },
                 "page_15": {
                     "title_template": "The Magic Crystal",
-                    "text_template": "In the great hall, a crystal as large as a melon turns above a stone pedestal. Inside it, rainbow light unfurls like a living ribbon. {child_name} steps closer and lays a hand upon it. At once, warm colour fills the whole hall. Rusé and Master Owl bow low. {child_name} feels wrapped in light, safe and deeply at home."
+                    "text_template": "In the great hall, a crystal as large as a melon turns above a stone pedestal. Inside it, rainbow light unfurls like a living ribbon. {child_name} steps closer and lays a hand upon it. At once, warm colour fills the whole hall. Rusé and Master Owl bow low. Wrapped in that shining glow, {child_name} feels safe and wonderfully at home."
                 },
                 "page_16": {
                     "title_template": "The Vision of Home",
@@ -489,7 +489,7 @@ Raw master JSON to review and correct:
                 },
                 "page_18": {
                     "title_template": "The Tender Farewell",
-                    "text_template": "At the edge of the forest, Rusé gathers {child_name} into a soft embrace. Into {child_name}'s palm, the fox presses a small acorn. It is a simple, precious gift. It will always remind {child_name} to be brave, kind, and full of trust."
+                    "text_template": "At the edge of the forest, Rusé gathers {child_name} into a soft embrace. Into {child_name}'s palm, the fox presses a small acorn. Then comes a whisper to keep forever: braver than you know, kinder than you think, and loved more than you can imagine. {child_name} closes a hand around the gift."
                 },
                 "page_19": {
                     "title_template": "The Magic Proof",
@@ -501,7 +501,7 @@ Raw master JSON to review and correct:
                 },
                 "page_21": {
                     "title_template": "A Secret That Shines",
-                    "text_template": "After supper, {child_name} sets the crystal on the kitchen table. Its light beats softly, like a happy memory. Mum and Dad share a quiet smile. In this warm house, wonder has already found a place to stay."
+                    "text_template": "After supper, {child_name} sets the glowing crystal on the kitchen table and tells Mum and Dad everything. Rusé, the badger, the rainbow bridge, the castle, Master Owl—each part of the adventure returns in a bright, eager rush. The crystal pulses softly with every remembered wonder. In the warm Brussels house, everyone leans in as if listening to a precious secret."
                 },
                 "page_22": {
                     "title_template": "Enchanted Dreams",
@@ -528,51 +528,51 @@ Raw master JSON to review and correct:
             "pages": {
                 "dedication": {
                     "title_template": "Voor {child_name}",
-                    "text_template": "Moge dit avontuur je er altijd aan herinneren dat moed en vriendelijkheid de mooiste magie van allemaal zijn."
+                    "text_template": "Mag dit avontuur je er altijd aan herinneren dat moed en vriendelijkheid de mooiste magie van allemaal zijn."
                 },
                 "page_1": {
                     "title_template": "De Geheimzinnige Vondst",
-                    "text_template": "In de zonnige woonkamer in Brussel knabbelt {child_name} aan een vergeten speculoosje op een klein bord. Tussen de hoge, zware boeken steekt een opgerolde perkamentrol uit. {child_name} trekt die voorzichtig los. In een gouden lichtstraal dansen stofjes op."
+                    "text_template": "In de zonnige Brusselse woonkamer knabbelt {child_name} aan een half opgegeten speculoosje op een klein bordje. Tussen de hoge boeken steekt een opgerold perkament uit. {child_name} trekt het voorzichtig los. In een schuine bundel namiddaglicht dwarrelt het stof op."
                 },
                 "page_2": {
-                    "title_template": "De Glinsterende Kaart",
-                    "text_template": "Op het tapijt vouwt de kaart zich open als een oud geheim. Er klopt een zacht gouden licht doorheen, rustig en warm. Een pad slingert door een bos, naar een regenboog en daarna naar een kasteel met drie torens. Onder de vingertoppen van {child_name} voelt het perkament ineens behaaglijk aan."
+                    "title_template": "De Gloeiende Kaart",
+                    "text_template": "Op het tapijt rolt de kaart open als een oud geheim. Er stroomt een zachte gouden gloed doorheen, rustig als een slapend hart. Een kronkelpad loopt door een bos, naar een regenboog en daarna naar een kasteel met drie torens. Onder de vingers van {child_name} wordt het perkament aangenaam warm."
                 },
                 "page_3": {
                     "title_template": "De Magische Deur",
-                    "text_template": "{child_name} klimt naar de zolder en duwt de oude deur open. Aan de andere kant ligt een immens bos, helder als een groene kathedraal van beuken en eiken. Blauwe boshyacinten spreiden zich uit over de grond. Achter een bemoste stam kijkt een vos met amberkleurige ogen stil toe."
+                    "text_template": "{child_name} klimt de krakende trap naar de zolder op en duwt de oude deur open. Aan de andere kant wacht een groot, licht bos, als een groene kathedraal van beuken en eiken. Blauwe boshyacinten spreiden zich uit over de grond. Achter een bemoste stam kijkt een vos met amberkleurige ogen nieuwsgierig toe."
                 },
                 "page_4": {
                     "title_template": "Ontmoeting met Rusé",
-                    "text_template": "Rusé de Vos stapt naar voren en maakt een sierlijke buiging, met één poot op de borst. De stem die {child_name} begroet, klinkt zacht en hartelijk. Gouden licht glijdt tussen de bladeren door en de boshyacinten lijken rondom mee te stralen. Het bos heeft echt op {child_name} gewacht."
+                    "text_template": "Rusé de Vos stapt naar voren en maakt een sierlijke buiging, met één poot op de borst. De begroeting klinkt warm en vriendelijk. Gouden licht glijdt tussen de bladeren, en rondom {child_name} lijken de boshyacinten mee te glimlachen. Het bos had hier echt op gewacht."
                 },
                 "page_5": {
                     "title_template": "Het Betoverde Pad",
-                    "text_template": "Samen volgen {child_name} en Rusé een slingerend pad tussen de bleke stammen. Paddenstoelen in zachtblauw en lila geven een milde gloed over het mos. Een eekhoorn zwaait vanaf een tak, een hert kijkt zonder schrik toe, en Rusé wijst met de snuit naar een hartvormig blad."
+                    "text_template": "Samen wandelen {child_name} en Rusé over een slingerend pad tussen bleke stammen. Paddenstoelen in zachtblauw en lila geven het mos een vriendelijke gloed. Een eekhoorn zwaait vanaf een tak, een hert kijkt zonder angst toe, en Rusé wijst met de snuit naar een blad in de vorm van een hart."
                 },
                 "page_6": {
                     "title_template": "Het Raadsel van de Drie Zuilen",
-                    "text_template": "Op een open plek staan drie stenen zuilen met een haas, een beer en een duif erin gekerfd. Onderaan wacht een stil raadsel: wat wordt groter als je het weggeeft? Het pad splitst zich in drie richtingen. Naast Rusé blijft {child_name} even staan denken."
+                    "text_template": "Op een open plek staan drie stenen zuilen, uitgekapt met een haas, een beer en een duif. Onderaan wacht een stil raadsel: wat wordt groter als je het weggeeft? Het pad splitst zich in drie richtingen. Naast Rusé blijft {child_name} even rustig staan nadenken."
                 },
                 "page_7": {
                     "title_template": "Het Juiste Antwoord",
-                    "text_template": "Dan vindt {child_name} het goede woord: vriendelijkheid. Meteen gaat er een kleine, vriendelijke rilling door de grond. De zuilen beginnen te gloeien. Voor hen komt langzaam een verborgen stenen brug omhoog, bedekt met mos en kleine witte bloemetjes."
+                    "text_template": "Dan vindt {child_name} het goede woord: vriendelijkheid. Meteen gaat er een kleine, zachte trilling door de grond. De zuilen beginnen te gloeien. Voor hen komt langzaam een verborgen stenen brug omhoog, bedekt met mos en kleine witte bloemetjes."
                 },
                 "page_8": {
                     "title_template": "De Regenboogbrug",
-                    "text_template": "De regenboogbrug buigt over een beek die helder is als glas. In het water dansen kleuren als levende prisma's. Kleine goudkleurige visjes springen onder hun stappen door. Hoog boven hen lijkt de roze-lila lucht zacht mee te zingen."
+                    "text_template": "De regenboogbrug buigt over een beek die helder is als glas. In het water dansen kleuren als levende prisma's. Kleine goudkleurige visjes springen vrolijk onder hun stappen door. Hoog boven hen lijkt de roze lucht met lavendelwolken zacht mee te zingen."
                 },
                 "page_9": {
-                    "title_template": "Het Veld vol Reuzenzonnebloemen",
-                    "text_template": "Aan de overkant tillen reuzenzonnebloemen hun gouden gezichten omhoog. Terwijl {child_name} verder wandelt, draaien de bloemen langzaam mee, alsof ze de reizigers beter willen bekijken. Er hangt een geur van honing in de lucht. Rusé proeft van een zoet blaadje en knippert tevreden."
+                    "title_template": "Het Veld met Reuzenzonnebloemen",
+                    "text_template": "Aan de overkant tillen reuzenzonnebloemen hun gouden gezichten omhoog. Terwijl {child_name} verder wandelt, draaien de bloemen langzaam mee, alsof ze de reizigers van dichtbij willen bewonderen. Er hangt een geur van honing in de lucht. Rusé proeft van een zoet blaadje en knippert tevreden."
                 },
                 "page_10": {
                     "title_template": "De Verdrietige Das",
-                    "text_template": "Bij een boomstronk zit een das met natte ogen en hangende snorharen. Een kostbaar medaillon van oma is verdwenen. {child_name} knielt dichtbij en legt geruststellend een hand op de arm van de das. De belofte volgt meteen: samen gaan ze zoeken."
+                    "text_template": "Bij een boomstronk zit een das met natte ogen en hangende snorharen. Een kostbaar medaillon van oma is verdwenen. {child_name} knielt dichtbij en legt geruststellend een hand op de arm van de das. De belofte volgt meteen: samen gaan ze het zoeken."
                 },
                 "page_11": {
-                    "title_template": "Vriendelijkheid Krijgt Antwoord",
-                    "text_template": "Onder een grote rode vliegenzwam schittert iets gouds in het zachte licht. Het is het medaillon. Wanneer {child_name} het teruggeeft, drukt de das {child_name} in een dankbare knuffel. Daarna volgt een geschenk: een gouden veer die glanst in regenboogkleuren."
+                    "title_template": "Vriendelijkheid Wordt Beloond",
+                    "text_template": "Onder een grote rode vliegenzwam schittert iets gouds in het zachte licht. Het is het medaillon. Wanneer {child_name} het teruggeeft, trekt de das {child_name} in een dankbare knuffel. Daarna komt er nog een geschenk: een gouden veer die glanst in regenboogkleuren."
                 },
                 "page_12": {
                     "title_template": "Het Kasteel op de Heuvel",
@@ -583,16 +583,16 @@ Raw master JSON to review and correct:
                     "text_template": "Aan de grote kasteelpoort zit Meester Uil op de ijzeren ring. Trage, wijze ogen knipperen één keer. De vraag valt zacht in de lucht: wat kun je geven en toch houden? {child_name} kijkt omhoog en zoekt het antwoord."
                 },
                 "page_14": {
-                    "title_template": "De Inzichtflits",
+                    "title_template": "Het Inzicht",
                     "text_template": "Langzaam klaart het gezicht van {child_name} op. Het antwoord komt als een rustig licht: een belofte. Meester Uil laat een warme, goedkeurende roep horen. De poorten openen naar een gang vol goud licht, en Rusé legt trots een poot tegen de schouder van {child_name}."
                 },
                 "page_15": {
                     "title_template": "Het Magische Kristal",
-                    "text_template": "In de grote zaal draait een kristal zo groot als een meloen boven een stenen sokkel. Binnenin rolt regenbooglicht als een levend lint. {child_name} stapt dichterbij en legt er een hand op. Meteen vult warme kleur de hele zaal. Rusé en Meester Uil buigen diep. {child_name} voelt zich veilig, omhuld door licht, helemaal thuis."
+                    "text_template": "In de grote zaal draait een kristal zo groot als een meloen boven een stenen sokkel. Binnenin rolt regenbooglicht als een levend lint. {child_name} stapt dichterbij en legt er een hand op. Meteen vult warme kleur de hele zaal. Rusé en Meester Uil buigen diep. In die stralende gloed voelt {child_name} zich veilig en helemaal thuis."
                 },
                 "page_16": {
                     "title_template": "Het Beeld van Thuis",
-                    "text_template": "Het kristal rust warm in de handen van {child_name}. In het glanzende hart verschijnen een tafel die wordt gedekt, een krant die openvouwt en de huiskat bij het vuur. In elke gloed zit thuis verstopt. Rusé glimlacht zacht: het bos blijft altijd bestaan, maar nu licht de weg terug op."
+                    "text_template": "Het kristal rust warm in de handen van {child_name}. In het glanzende hart verschijnen een tafel die wordt gedekt, een krant die opengevouwen wordt en de huiskat bij het vuur. In elke gloed zit thuis verstopt. Rusé glimlacht zacht: het bos blijft altijd bestaan, maar nu licht de weg terug op."
                 },
                 "page_17": {
                     "title_template": "De Lichtende Terugweg",
@@ -600,7 +600,7 @@ Raw master JSON to review and correct:
                 },
                 "page_18": {
                     "title_template": "Het Tedere Afscheid",
-                    "text_template": "Aan de rand van het bos neemt Rusé {child_name} in een zachte omhelzing. In de handpalm van {child_name} legt de vos een kleine eikel. Het is een eenvoudig en kostbaar cadeau. Die zal {child_name} altijd herinneren aan moed, zachtheid en vertrouwen."
+                    "text_template": "Aan de rand van het bos neemt Rusé {child_name} in een zachte omhelzing. In de handpalm van {child_name} legt de vos een kleine eikel. Dan fluistert Rusé iets om te bewaren: dapperder dan je denkt, liever dan je zelf vermoedt, en meer geliefd dan je je kunt voorstellen. {child_name} sluit de hand stevig om dat kleine geschenk."
                 },
                 "page_19": {
                     "title_template": "Het Bewijs van de Magie",
@@ -608,11 +608,11 @@ Raw master JSON to review and correct:
                 },
                 "page_20": {
                     "title_template": "Hoop Planten",
-                    "text_template": "Bij het raam plant {child_name} de eikel in een terracottapot en strijkt de aarde glad. Het kristal rust op het nachttafeltje en klopt heel zacht met licht. Helemaal achter in de tuin zit een vosachtige schaduw, met de staart rond de poten, als een laatste goedenacht."
+                    "text_template": "Bij het raam plant {child_name} de eikel in een terracottapot en strijkt de aarde glad. Het kristal rust op het nachtkastje en pulseert heel zacht. Helemaal achter in de tuin zit een vossensilhouet, met de staart rond de poten, als een laatste goedenacht."
                 },
                 "page_21": {
                     "title_template": "Een Geheim dat Blijft Schijnen",
-                    "text_template": "Na het avondeten zet {child_name} het kristal op de keukentafel. Het licht erin klopt zacht, als een gelukkige herinnering. Mama en papa wisselen een stille glimlach uit. In dit warme huis heeft verwondering al een eigen plek gevonden."
+                    "text_template": "Na het avondeten zet {child_name} het gloeiende kristal op de keukentafel en vertelt alles aan mama en papa. Rusé, de das, de regenboogbrug, het kasteel, Meester Uil: het hele avontuur komt weer tot leven. Bij elk stukje van het verhaal pulseert het kristal zacht mee. In het warme Brusselse huis luistert iedereen alsof er een kostbare schat wordt uitgepakt."
                 },
                 "page_22": {
                     "title_template": "Betoverde Dromen",

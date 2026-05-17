@@ -366,7 +366,7 @@ Raw master JSON to review and correct:
                 },
                 "page_15": {
                     "title_template": "Le Cristal Magique",
-                    "text_template": "Dans la grande salle du château, un cristal grand comme un melon tourne au-dessus d'un piédestal. À l'intérieur, la lumière arc-en-ciel se déroule comme un ruban vivant. {child_name} avance et pose les doigts dessus. Alors la salle entière s'emplit d'une lumière chaude et colorée. Rusé et Maître Hibou s'inclinent. {child_name} se sent enveloppé d'une douceur lumineuse, comme à la maison."
+                    "text_template": "Dans la grande salle du château, un cristal grand comme un melon tourne au-dessus d'un piédestal. À l'intérieur, la lumière arc-en-ciel se déroule comme un ruban vivant. {child_name} avance et pose les doigts dessus. Alors la salle entière s'emplit d'une lumière chaude et colorée. Rusé et Maître Hibou s'inclinent. Dans cette douceur lumineuse, {child_name} se sent comme à la maison."
                 },
                 "page_16": {
                     "title_template": "La Vision du Foyer",
@@ -390,7 +390,7 @@ Raw master JSON to review and correct:
                 },
                 "page_21": {
                     "title_template": "Un Secret qui Rayonne",
-                    "text_template": "Après le dîner, {child_name} montre le cristal à Maman et Papa sur la table de la cuisine. Rusé, le blaireau, le pont arc-en-ciel, le château, Maître Hibou : toute l'aventure revient en phrases émerveillées. Le cristal bat doucement au rythme du récit. Dans cette maison bruxelloise, chacun écoute comme on accueille un trésor."
+                    "text_template": "Après le dîner, {child_name} pose le cristal au milieu de la table de cuisine. Dans sa lumière douce, Maman et Papa comprennent sans poser trop de questions qu'il s'est passé quelque chose de précieux. La maison devient encore plus chaude, comme si l'aventure était revenue s'asseoir avec eux."
                 },
                 "page_22": {
                     "title_template": "Les Rêves Enchantés",
@@ -433,7 +433,7 @@ Raw master JSON to review and correct:
                 },
                 "page_4": {
                     "title_template": "Meeting Rusé",
-                    "text_template": "Rusé the Fox steps forward and gives a graceful bow, one paw over a warm red chest. The voice that greets {child_name} is soft and welcoming. Golden light slips through the leaves, and the bluebells seem to glow all around. The forest really has been waiting."
+                    "text_template": "Rusé the Fox steps forward and offers a graceful bow, one paw resting over a russet chest. The greeting for {child_name} is soft and warm. Golden light slips through the leaves, and bluebells glow all around them. The forest truly seems to have been waiting."
                 },
                 "page_5": {
                     "title_template": "The Enchanted Path",
@@ -449,11 +449,11 @@ Raw master JSON to review and correct:
                 },
                 "page_8": {
                     "title_template": "The Rainbow Bridge",
-                    "text_template": "The rainbow bridge curves over a stream as clear as glass. Colours ripple in the water like living prisms. Little golden fish leap beneath their steps. Above, the pink-and-lavender sky seems to sing along."
+                    "text_template": "The rainbow bridge curves over a stream as clear as glass. Colours ripple in the water like living prisms. Little golden fish leap beneath the shining arch. Above, the pink-and-lavender sky seems to sing along."
                 },
                 "page_9": {
                     "title_template": "The Field of Giant Sunflowers",
-                    "text_template": "On the far side, giant sunflowers lift their golden faces high. As {child_name} walks on, each flower slowly turns, as if it wants a better look at these travellers. The air smells of honey. Rusé tastes a sweet petal and blinks with delight."
+                    "text_template": "On the far side, giant sunflowers lift their golden faces high. As {child_name} walks on, each flower slowly turns, as if it wants a better look at this visitor and fox. The air smells of honey. Rusé tastes a sweet petal and blinks with delight."
                 },
                 "page_10": {
                     "title_template": "The Sad Badger",
@@ -477,7 +477,7 @@ Raw master JSON to review and correct:
                 },
                 "page_15": {
                     "title_template": "The Magic Crystal",
-                    "text_template": "In the great hall, a crystal as large as a melon turns above a stone pedestal. Inside it, rainbow light unfurls like a living ribbon. {child_name} steps closer and lays a hand upon it. At once, warm colour fills the whole hall. Rusé and Master Owl bow low. Wrapped in that shining glow, {child_name} feels safe and wonderfully at home."
+                    "text_template": "In the great hall, a crystal as large as a melon turns above a stone pedestal. Inside it, rainbow light unfurls like a living ribbon. {child_name} steps closer and lays a hand upon it. At once, warm colour fills the whole hall. Rusé and Master Owl bow low. In that shining calm, {child_name} feels deeply safe, and wonderfully at home."
                 },
                 "page_16": {
                     "title_template": "The Vision of Home",
@@ -485,7 +485,7 @@ Raw master JSON to review and correct:
                 },
                 "page_17": {
                     "title_template": "The Luminous Return",
-                    "text_template": "The journey home moves like a song. The rainbow bridge sends back its colours, the sunflowers bow their heads, and the glowing mushrooms soften their light as {child_name} and Rusé pass by. All through the forest, a quiet goodbye hums."
+                    "text_template": "The journey home moves like a song. The rainbow bridge throws back its colours, the sunflowers bow their heads, and the glowing mushrooms soften their light as {child_name} and Rusé pass by. All through the forest, a quiet goodbye hums."
                 },
                 "page_18": {
                     "title_template": "The Tender Farewell",
@@ -501,7 +501,7 @@ Raw master JSON to review and correct:
                 },
                 "page_21": {
                     "title_template": "A Secret That Shines",
-                    "text_template": "After supper, {child_name} sets the glowing crystal on the kitchen table and tells Mum and Dad everything. Rusé, the badger, the rainbow bridge, the castle, Master Owl—each part of the adventure returns in a bright, eager rush. The crystal pulses softly with every remembered wonder. In the warm Brussels house, everyone leans in as if listening to a precious secret."
+                    "text_template": "After supper, {child_name} sets the crystal in the middle of the kitchen table. Its soft glow tells Mum and Dad that something lovely and important has happened, even before any words arrive. The whole room feels warmer, as if the adventure has followed {child_name} home."
                 },
                 "page_22": {
                     "title_template": "Enchanted Dreams",
@@ -560,11 +560,11 @@ Raw master JSON to review and correct:
                 },
                 "page_8": {
                     "title_template": "De Regenboogbrug",
-                    "text_template": "De regenboogbrug buigt over een beek die helder is als glas. In het water dansen kleuren als levende prisma's. Kleine goudkleurige visjes springen vrolijk onder hun stappen door. Hoog boven hen lijkt de roze lucht met lavendelwolken zacht mee te zingen."
+                    "text_template": "De regenboogbrug buigt over een beek die helder is als glas. In het water dansen kleuren als levende prisma's. Kleine goudkleurige visjes springen vrolijk onder de brug door. Hoog boven alles lijkt de roze lucht met lavendelwolken zacht mee te zingen."
                 },
                 "page_9": {
                     "title_template": "Het Veld met Reuzenzonnebloemen",
-                    "text_template": "Aan de overkant tillen reuzenzonnebloemen hun gouden gezichten omhoog. Terwijl {child_name} verder wandelt, draaien de bloemen langzaam mee, alsof ze de reizigers van dichtbij willen bewonderen. Er hangt een geur van honing in de lucht. Rusé proeft van een zoet blaadje en knippert tevreden."
+                    "text_template": "Aan de overkant tillen reuzenzonnebloemen hun gouden gezichten omhoog. Terwijl {child_name} verder wandelt, draaien de bloemen langzaam mee, alsof ze {child_name} en Rusé van dichtbij willen bewonderen. Er hangt een geur van honing in de lucht. Rusé proeft van een zoet blaadje en knippert tevreden."
                 },
                 "page_10": {
                     "title_template": "De Verdrietige Das",
@@ -596,7 +596,7 @@ Raw master JSON to review and correct:
                 },
                 "page_17": {
                     "title_template": "De Lichtende Terugweg",
-                    "text_template": "De terugreis beweegt als een lied. De regenboogbrug kaatst haar kleuren terug, de zonnebloemen buigen hun hoofden, en de lichtgevende paddenstoelen maken hun glans zachter wanneer {child_name} en Rusé voorbijgaan. Overal in het bos zoemt een stil vaarwel."
+                    "text_template": "De terugreis beweegt als een lied. De regenboogbrug kaatst haar kleuren terug, de zonnebloemen buigen hun hoofden, en de lichtgevende paddenstoelen maken hun glans zachter wanneer {child_name} en Rusé voorbijwandelen. Overal in het bos zoemt een stil vaarwel."
                 },
                 "page_18": {
                     "title_template": "Het Tedere Afscheid",
@@ -612,7 +612,7 @@ Raw master JSON to review and correct:
                 },
                 "page_21": {
                     "title_template": "Een Geheim dat Blijft Schijnen",
-                    "text_template": "Na het avondeten zet {child_name} het gloeiende kristal op de keukentafel en vertelt alles aan mama en papa. Rusé, de das, de regenboogbrug, het kasteel, Meester Uil: het hele avontuur komt weer tot leven. Bij elk stukje van het verhaal pulseert het kristal zacht mee. In het warme Brusselse huis luistert iedereen alsof er een kostbare schat wordt uitgepakt."
+                    "text_template": "Na het avondeten zet {child_name} het kristal midden op de keukentafel. In die zachte gloed zien mama en papa meteen dat er iets kostbaars is meegekomen naar huis, nog voor {child_name} iets hoeft uit te leggen. Het hele huis voelt warmer aan, alsof het avontuur stilletjes is blijven logeren."
                 },
                 "page_22": {
                     "title_template": "Betoverde Dromen",

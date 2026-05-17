@@ -37,6 +37,10 @@ constraints:
 - 'The colour palette shifts: morning soft blues → afternoon bright yellows → evening warm golds.'
 - 'Belgian birthday traditions must be visually clear: gaufres, speculoos, stoemp, Lang zal hij/zij leven.'
 - The climax (new swing) must feel like a gasp-worthy, heart-melting surprise.
+- 'FORBIDDEN in FR locale: ''lui'', ''elle'', ''ils'', ''son'', ''sa'', ''ses'' for the child hero. Use {child_name} or ''l''enfant''
+  uniquement.'
+- 'FORBIDDEN in NL locale: ''haar'', ''zijn'' for the child hero. Use {child_possessive_det} or {child_name}.'
+- 'FORBIDDEN in EN locale: ''his'', ''her'', ''he'', ''she'' for the child hero. Use {child_name} or they/them.'
 arc_type: ordinary-to-extraordinary
 climax_page: page_18
 setting: A festive Belgian home — decorated living room, garden with party tent, kitchen with birthday cake

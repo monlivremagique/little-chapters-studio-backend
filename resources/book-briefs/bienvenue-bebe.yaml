@@ -35,6 +35,10 @@ constraints:
 - Soft, rounded illustrations — everything feels safe, warm, and enveloping.
 - Repetitive, lyrical phrasing throughout — 'Bienvenue, petit {child_name}' as a recurring anchor.
 - 'Colour palette: creams, soft pinks, pale blues, warm beiges — no bright primary colours.'
+- 'FORBIDDEN in FR locale: ''lui'', ''elle'', ''ils'', ''son'', ''sa'', ''ses'' for the child hero. Use {child_name} or ''l''enfant''
+  uniquement.'
+- 'FORBIDDEN in NL locale: ''haar'', ''zijn'' for the child hero. Use {child_possessive_det} or {child_name}.'
+- 'FORBIDDEN in EN locale: ''his'', ''her'', ''he'', ''she'' for the child hero. Use {child_name} or they/them.'
 arc_type: comfort-to-courage
 climax_page: page_14
 setting: A warm Belgian home — nursery, living room, garden, the family bed

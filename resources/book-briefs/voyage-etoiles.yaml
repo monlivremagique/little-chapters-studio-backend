@@ -39,6 +39,10 @@ constraints:
 - Each planet gets 1-2 pages with at least one scientifically interesting fact integrated.
 - '{child_name} wears a bicycle helmet (silver) and a red scarf throughout the space journey.'
 - Pepin the lamp-robot has a single eye (the bulb) and a box body — consistent design every page.
+- 'FORBIDDEN in FR locale: ''lui'', ''elle'', ''ils'', ''son'', ''sa'', ''ses'' for the child hero. Use {child_name} or ''l''enfant''
+  uniquement.'
+- 'FORBIDDEN in NL locale: ''haar'', ''zijn'' for the child hero. Use {child_possessive_det} or {child_name}.'
+- 'FORBIDDEN in EN locale: ''his'', ''her'', ''he'', ''she'' for the child hero. Use {child_name} or they/them.'
 arc_type: quest-with-revelation
 climax_page: page_22
 setting: A Belgian home, a backyard, the solar system (Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune
