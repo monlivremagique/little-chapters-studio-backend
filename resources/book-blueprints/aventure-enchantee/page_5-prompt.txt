@@ -1,13 +1,13 @@
-Interior page 4 for a premium children's book. No text anywhere — text is external.
+Interior page 8 for a premium children's book. No text anywhere — text is external.
 Story: Une aventure magique où {child_name} découvre que le vrai courage vient de la gentillesse
 Style: Aquarelle belge premium avec ligne claire inspirée Hergé et Tintin, Couleurs chaudes façon Marcel Marlier/Martine : ocres, verts profonds, bleus doux, Texture papier aquarelle visible, jamais numérique, Lumière naturelle dorée, ombres douces, Détails fins type ligne claire : expressions précises, décors riches, Palette évolutive : bruns d'atelier → verts/ors de forêt → pastels de pont → bleus de château → arc-en-ciel de cristal
 Match the hero EXACTLY from the reference image: same face shape, same features, same hairstyle, same outfit, same age. Zero drift. Rules: Enfant européen aux cheveux châtain clair ondulés mi-longs jusqu'aux épaules, avec mèche rebelle sur le front, Yeux noisette expressifs avec reflets dorés et sourcils châtain clair bien définis, Teint pêche rosé avec quelques taches de rousseur sur le nez et les joues, Taille et corpulence typique d'un enfant de 5-6 ans, ni grand ni petit, Pull en laine moutarde à col rond avec texture visible et pantalon bleu marine en velours côtelé, Baskets blanches en cuir légèrement usées avec lacets détachés, Expression toujours bienveillante avec sourire spontané et regard curieux pétillant, Gestuelle naturelle d'enfant : mains expressives, posture droite mais détendue, pas énergique
 The hero reference image is your PRIMARY guide for hero appearance. The cover image guides palette and style. Ignore the page composition guide for hero details — focus on hero consistency.
-Shot: plan moyen intimiste, hauteur d'enfant
-Mood: curiosité découverte
-Light: lumière naturelle d'après-midi par grandes fenêtres
-Composition: salon belge chaleureux avec {child_name} près de l'étagère
-Front: {child_name} en pull moutarde près d'une haute étagère en bois, speculoos à moitié mangé
-Middle: Salon bruxellois : parquet, fauteuils en cuir, fenêtre haute
-Back: Bibliothèque fournie, rayons de soleil par la fenêtre
-Include: child_name en pull moutarde avec cheveux châtain clair ondulés, étagère haute, speculoos, parchemin qui dépasse, salon belge, poussière dorée
+Shot: plan d'ensemble, travelling latéral
+Mood: sérénité enchantée
+Light: bioluminescence douce des champignons, lumière forestière dorée
+Composition: chemin forestier sinueux avec éléments magiques
+Front: {child_name} et Rusé côte à côte sur sentier moussu
+Middle: Champignons lumineux bleus et lilas ponctuant le chemin
+Back: Écureuil saluant, biche observant, arbres majestueux
+Include: child_name et Rusé marchant ensemble, champignons lumineux bleus/lilas, écureuil saluant, biche curieuse, sentier magique
