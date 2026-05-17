@@ -1,0 +1,13 @@
+Interior page 3 for a premium children's book. No text anywhere — text is external.
+Story: Une aventure magique où {child_name} découvre que le vrai courage vient de la gentillesse
+Style: Aquarelle belge premium avec ligne claire inspirée Hergé et Tintin, Couleurs chaudes façon Marcel Marlier/Martine : ocres, verts profonds, bleus doux, Texture papier aquarelle visible, jamais numérique, Lumière naturelle dorée, ombres douces, Détails fins type ligne claire : expressions précises, décors riches, Palette évolutive : bruns d'atelier → verts/ors de forêt → pastels de pont → bleus de château → arc-en-ciel de cristal
+Match the hero EXACTLY from the reference image: same face shape, same features, same hairstyle, same outfit, same age. Zero drift. Rules: Enfant européen aux cheveux châtain clair ondulés mi-longs jusqu'aux épaules, avec mèche rebelle sur le front, Yeux noisette expressifs avec reflets dorés et sourcils châtain clair bien définis, Teint pêche rosé avec quelques taches de rousseur sur le nez et les joues, Taille et corpulence typique d'un enfant de 5-6 ans, ni grand ni petit, Pull en laine moutarde à col rond avec texture visible et pantalon bleu marine en velours côtelé, Baskets blanches en cuir légèrement usées avec lacets détachés, Expression toujours bienveillante avec sourire spontané et regard curieux pétillant, Gestuelle naturelle d'enfant : mains expressives, posture droite mais détendue, pas énergique
+The hero reference image is your PRIMARY guide for hero appearance. The cover image guides palette and style. Ignore the page composition guide for hero details — focus on hero consistency.
+Shot: portrait frontal, plan buste, héros regardant chaleureusement le spectateur
+Mood: chaleureux, accessible, doux
+Light: éclairage portrait doux, chaud et uniforme
+Composition: portrait centré, fond neutre chaleureux
+Front: Enfant de 5-6 ans aux cheveux châtain clair ondulés mi-longs avec mèche rebelle
+Middle: Yeux noisette expressifs à reflets dorés avec sourcils châtain bien définis
+Back: Fond studio neutre beige doux
+Include: cheveux châtain clair ondulés mi-longs avec mèche rebelle, yeux noisette à reflets dorés, teint pêche rosé avec taches de rousseur, pull moutarde en laine à col rond, pantalon bleu marine en velours côtelé, expression bienveillante et curieuse

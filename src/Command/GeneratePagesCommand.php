@@ -115,7 +115,22 @@ final class GeneratePagesCommand extends Command
         $io->writeln(sprintf('Dry run: %s', $dryRun ? 'yes' : 'no'));
         $io->writeln(sprintf('Force: %s', $force ? 'yes' : 'no'));
         $io->writeln(sprintf('Photo provided: %s', '' !== $photoPath ? 'yes' : 'no'));
-        $io->writeln(sprintf('Pages: %s', implode(', ', array_map(static fn (array $scene): string => (string) ($scene['id'] ?? 'page'), $scenes))));
+        $totalScenes = count($scenes);
+        $existingScenes = 0;
+        foreach ($scenes as $scene) {
+            $sid = (string) ($scene['id'] ?? '');
+            $genPath = sprintf('%s/%s-generated.png', $outputDir, $sid);
+            if (!$force && !$dryRun && is_file($genPath)) {
+                $existingScenes++;
+            }
+        }
+        $toGenerate = $totalScenes - $existingScenes;
+        if ($dryRun) $toGenerate = $totalScenes;
+        $io->writeln(sprintf('Pages (%d total, %d to generate): %s',
+            $totalScenes,
+            $toGenerate,
+            implode(', ', array_map(static fn (array $scene): string => (string) ($scene['id'] ?? 'page'), $scenes))
+        ));
 
         if (!$dryRun) {
             $this->replicatePredictionClient->assertConfigured();

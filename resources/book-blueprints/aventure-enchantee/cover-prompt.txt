@@ -1,0 +1,11 @@
+Premium children's book cover. No text anywhere — text will be overlaid in design.
+Story: Une aventure magique où {child_name} découvre que le vrai courage vient de la gentillesse
+Style: Aquarelle belge premium avec ligne claire inspirée Hergé et Tintin, Couleurs chaudes façon Marcel Marlier/Martine : ocres, verts profonds, bleus doux, Texture papier aquarelle visible, jamais numérique, Lumière naturelle dorée, ombres douces, Détails fins type ligne claire : expressions précises, décors riches, Palette évolutive : bruns d'atelier → verts/ors de forêt → pastels de pont → bleus de château → arc-en-ciel de cristal
+Hero: match the hero from the reference image exactly: same face shape, same features, same hairstyle, same outfit, same perceived age — zero drift allowed
+Shot: plan large cinématographique, angle légèrement en plongée
+Mood: émerveillement et invitation à l'aventure
+Light: heure dorée avec rayons de soleil filtrant à travers les arbres
+Composition: composition triangulaire : {child_name} au premier plan, forêt au second plan, château à l'horizon
+Framing: Format carré 21x21cm optimisé, Règle des tiers pour placer {child_name}, Premier plan net, arrière-plan légèrement flou, Mouvement dirigé vers le centre d'intérêt, Cadrage cinématographique : plans larges pour la magie, plans moyens pour l'émotion
+Upper third must be kept clear (no hero face, no elements) — title will be placed here during book design.
+Include: child_name en pull moutarde avec cheveux châtain clair ondulés, carte dorée brillante, forêt enchantée, château lointain, lumière magique

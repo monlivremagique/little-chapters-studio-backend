@@ -35,7 +35,9 @@ final class PageGenerationService
             $type = (string) ($scene['type'] ?? '');
             $id = (string) ($scene['id'] ?? '');
 
-            if (!in_array($type, ['story', 'summary', 'backCover', 'reference', 'dedication'], true)) {
+            // Exclude reference (hero portrait generated separately by generate-hero-reference)
+            // and cover (generated separately by generate-cover)
+            if (!in_array($type, ['story', 'summary', 'backCover', 'dedication'], true)) {
                 continue;
             }
 
