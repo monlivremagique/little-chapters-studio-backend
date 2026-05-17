@@ -39,6 +39,14 @@ constraints:
   uniquement.'
 - 'FORBIDDEN in NL locale: ''haar'', ''zijn'' for the child hero. Use {child_possessive_det} or {child_name}.'
 - 'FORBIDDEN in EN locale: ''his'', ''her'', ''he'', ''she'' for the child hero. Use {child_name} or they/them.'
+- 'NL HARD RULE: Never write NL as a French translation. Example: BAD="Il traverse le pont" → BAD NL="Hij steekt de brug over"
+  → GOOD NL="{child_name} wandelt over de brug".'
+- 'NL HARD RULE: Use Flemish vocabulary: patat (not frites/friet), seffens (not straks), een keer (not even), schoon (not
+  mooi) for casual speech.'
+- 'NL HARD RULE: Avoid French sentence skeletons in NL: no "Il y a", "C''est", "Pour", "Dans", "Avec", "Mais", "Leur", "Qui".
+  Use native NL structures.'
+- 'NL HARD RULE: Subject-verb inversion after fronting: "Dan loopt {child_name}" NOT "Dan {child_name} loopt". SOV in subordinate:
+  "...dat {child_name} een framboos plukt" NOT "...dat {child_name} plukt een framboos".'
 arc_type: comfort-to-courage
 climax_page: page_14
 setting: A warm Belgian home — nursery, living room, garden, the family bed

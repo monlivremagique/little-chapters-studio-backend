@@ -1,1356 +1,1356 @@
 {
-    "schema": "book_blueprint_v2",
-    "schemaVersion": 2,
-    "metadata": {
-        "bookId": "aventure-enchantee-2024",
-        "slug": "aventure-enchantee",
-        "productCode": "BOOK_AVENTURE-ENCHANTEE",
-        "version": 2,
-        "status": "draft",
-        "sourceLocale": "fr",
-        "supportedLocales": [
-            "fr",
-            "en",
-            "nl"
-        ],
-        "pageCount": 28,
-        "generationPageCount": 24,
-        "ageRange": "3-7",
-        "theme": [
-            "adventure",
-            "magic",
-            "courage",
-            "kindness"
-        ],
-        "promise": "Une aventure magique où {child_name} découvre que le vrai courage vient de la gentillesse",
-        "editorialPositioning": "Album belge premium inspiré de la ligne claire et des aquarelles de Marcel Marlier"
-    },
-    "locales": {
-        "fr": {
-            "book": {
-                "title_template": "L'Aventure Enchantée de {child_name}"
-            },
-            "pages": {
-                "cover": {
-                    "title_template": "L'Aventure Enchantée de {child_name}",
-                    "text_template": ""
-                },
-                "dedication": {
-                    "title_template": "",
-                    "text_template": "À {child_name}, dont le cœur brave peut transformer n'importe quel jour ordinaire en aventure extraordinaire."
-                },
-                "page_1": {
-                    "title_template": "",
-                    "text_template": "Dans le salon ensoleillé de leur maison bruxelloise, {child_name} grignote un speculoos. Entre les livres de la grande étagère, un parchemin roulé dépasse. {child_name} le tire doucement — la poussière danse dans un rayon de lumière."
-                },
-                "page_2": {
-                    "title_template": "",
-                    "text_template": "{child_name} déroule la carte sur le tapis. Elle BRILLE d'une lumière dorée qui pulse comme un cœur ! Le chemin dessiné serpente à travers une forêt verte vers un arc-en-ciel et un château aux trois tours."
-                },
-                "page_3": {
-                    "title_template": "",
-                    "text_template": "{child_name} grimpe les marches grinçantes du grenier et pousse une vieille porte... pour découvrir une FORÊT IMMENSE ET LUMINEUSE ! Les hêtres s'élèvent comme une cathédrale verte. Un renard aux yeux ambrés observe depuis un tronc moussu."
-                },
-                "page_4": {
-                    "title_template": "",
-                    "text_template": "Rusé le Renard s'avance avec une révérence théâtrale. 'Bienvenue, {child_name} !' dit-il d'une voix chaleureuse. 'La forêt vous attendait.' Les jacinthes s'étendent à perte de vue dans la lumière dorée tachetée."
-                },
-                "page_5": {
-                    "title_template": "",
-                    "text_template": "{child_name} et Rusé suivent un sentier sinueux. Des champignons lumineux — bleus et lilas — éclairent leur chemin. Un écureuil salue depuis une branche. L'air sent la terre humide et l'ail des ours."
-                },
-                "page_6": {
-                    "title_template": "",
-                    "text_template": "Dans une clairière, trois piliers de pierre sculptés d'un lièvre, d'un ours et d'une colombe. L'énigme gravée dans la mousse dit : 'Que devient plus grand quand on le partage ?' Le sentier se divise en trois. Un seul est le bon."
-                },
-                "page_7": {
-                    "title_template": "",
-                    "text_template": "{child_name} réfléchit puis déclare : 'La gentillesse !' À ces mots, le sol tremble doucement. Les piliers brillent. De la terre surgit un pont de pierre caché, couvert de mousse et de petites fleurs blanches."
-                },
-                "page_8": {
-                    "title_template": "",
-                    "text_template": "{child_pronoun_subject} traverse un pont arc-en-ciel scintillant qui enjambe un ruisseau cristallin. L'eau reflète chaque couleur — un prisme vivant. Des poissons aux écailles dorées bondissent joyeusement. Le pont fredonne une mélodie."
-                },
-                "page_9": {
-                    "title_template": "",
-                    "text_template": "De l'autre côté, une prairie de tournesols géants — chacun plus grand que {child_name}. En marchant, chaque tournesol tourne lentement sa tête pour les suivre. Une brise douce porte un parfum de miel."
-                },
-                "page_10": {
-                    "title_template": "",
-                    "text_template": "Près d'une souche, un blaireau sanglote à gros bouillons. Il a perdu le médaillon de sa grand-mère — son seul souvenir d'elle. {child_name} s'agenouille et pose la main sur son bras poilu. 'Je vais vous aider à le retrouver.'"
-                },
-                "page_11": {
-                    "title_template": "",
-                    "text_template": "{child_name} aperçoit un éclat doré sous un champignon rouge géant. Le médaillon ! {child_pronoun_subject} le rend au blaireau fou de joie qui serre {child_name} si fort que ses pieds quittent le sol. En remerciement, il lui donne une plume dorée irisée."
-                },
-                "page_12": {
-                    "title_template": "",
-                    "text_template": "La forêt s'ouvre sur une colline. En contrebas, un château magnifique émerge de la brume — trois tours de pierre aux pennons bleus flottants. Rusé murmure : 'L'épreuve finale vous attend. Êtes-vous prêt ?'"
-                },
-                "page_13": {
-                    "title_template": "",
-                    "text_template": "À la porte du château — massive et ferrée — Maître Hibou perche sur un anneau. Le vieux hibou sage cligne lentement. 'Qu'est-ce qu'on peut donner tout en gardant ?' Sa voix résonne comme un tonnerre lointain."
-                },
-                "page_14": {
-                    "title_template": "",
-                    "text_template": "Le visage de {child_name} s'éclaire de compréhension. {child_pronoun_subject} chuchote : 'Une promesse.' Les yeux du hibou s'écarquillent puis il hulule longuement, approuvant. Les portes du château grincent et s'ouvrent sur un corridor de lumière dorée."
-                },
-                "page_15": {
-                    "title_template": "",
-                    "text_template": "Dans la salle immense du château, un cristal gros comme un melon flotte au-dessus d'un socle de pierre, rempli de lumière arc-en-ciel tourbillonnante. {child_name} tend la main tremblante. Au contact — BOUM ! Le cristal explose de lumière aveuglante qui remplit chaque recoin. Des prismes dansent sur les murs. {child_name} se sent CHEZ SOI."
-                },
-                "page_16": {
-                    "title_template": "",
-                    "text_template": "{child_name} tient le cristal chaud dans ses mains. À l'intérieur, des images se forment — Maman qui met la table, Papa qui lit le journal, le chat de la famille près du feu. Une vague d'amour et de nostalgie l'envahit."
-                },
-                "page_17": {
-                    "title_template": "",
-                    "text_template": "Le voyage de retour est rapide et lumineux. {child_pronoun_subject} glisse sur le pont arc-en-ciel, à travers la prairie de tournesols qui s'inclinent en adieu, devant les champignons qui s'éteignent. La forêt semble fredonner un chant d'au revoir."
-                },
-                "page_18": {
-                    "title_template": "",
-                    "text_template": "À la lisière de la forêt, Rusé et {child_name} s'embrassent. 'Plantez ceci,' dit-il en pressant un gland dans la paume de l'enfant. 'Et quand vous verrez le chêne, souvenez-vous : vous êtes plus brave que vous ne le pensez, plus gentil que vous ne l'imaginez.'"
-                },
-                "page_19": {
-                    "title_template": "",
-                    "text_template": "{child_name} franchit la porte du grenier. La carte au sol est maintenant complètement vierge. Mais dans ses mains : le cristal brille doucement et le gland est bien réel. C'était vrai."
-                },
-                "page_20": {
-                    "title_template": "",
-                    "text_template": "{child_name} plante le gland dans un pot en terre cuite près de la fenêtre, tapotant doucement la terre. Le cristal pulse faiblement sur la table de nuit. Au bord du jardin, une silhouette de renard observe en souriant."
-                },
-                "page_21": {
-                    "title_template": "",
-                    "text_template": "Après dîner, {child_name} montre le cristal scintillant à Maman et Papa dans la cuisine. {child_pronoun_subject} raconte tout — Rusé, le blaireau, le château, le hibou. Le cristal pulse au rythme de ses mots. Maman essuie une larme."
-                },
-                "page_22": {
-                    "title_template": "",
-                    "text_template": "Cette nuit-là, {child_name} rêve de voler au-dessus de la Forêt de Soignes avec Rusé bondissant à ses côtés dans les airs. Le pont arc-en-ciel forme un arc parfait de couleurs. Le hululement de Maître Hibou résonne, doux et rassurant."
-                },
-                "page_23": {
-                    "title_template": "",
-                    "text_template": "Le lendemain matin, {child_name} trouve une minuscule pousse verte qui perce la terre du pot. {child_pronoun_subject} l'arrose délicatement avec un petit arrosoir. Une plume de geai bleu gît à côté — la même teinte que celle du blaireau."
-                },
-                "page_24": {
-                    "title_template": "",
-                    "text_template": "Des mois plus tard, un jeune chêne se dresse près de la fenêtre, ses feuilles bruissent dans la brise. {child_name} lit dessous un livre sur les animaux des bois, le cristal captant la lumière de l'après-midi. Au bord du jardin, un renard familier observe. L'aventure n'est qu'à un pas."
-                },
-                "summary": {
-                    "title_template": "",
-                    "text_template": "Dans cette aventure magique, {child_name} découvre qu'une carte mystérieuse peut mener vers la plus belle des découvertes : le courage de la gentillesse vit en chacun de nous."
-                },
-                "backCover": {
-                    "title_template": "",
-                    "text_template": "Une histoire belge enchantée où la magie naît de la bonté du cœur."
-                }
-            }
-        },
-        "en": {
-            "book": {
-                "title_template": "The Enchanted Adventure of {child_name}"
-            },
-            "pages": {
-                "cover": {
-                    "title_template": "The Enchanted Adventure of {child_name}",
-                    "text_template": ""
-                },
-                "dedication": {
-                    "title_template": "",
-                    "text_template": "For {child_name}, whose brave heart can turn any ordinary day into an extraordinary adventure."
-                },
-                "page_1": {
-                    "title_template": "",
-                    "text_template": "In the sunny living room of their Brussels home, {child_name} nibbles on a speculoos biscuit. Between the books on the tall shelf, a rolled parchment peeks out. {child_name} tugs it gently — dust dances in a beam of light."
-                },
-                "page_2": {
-                    "title_template": "",
-                    "text_template": "{child_name} unrolls the map on the carpet. It GLOWS with golden light that pulses like a heartbeat! The drawn path winds through a green forest toward a rainbow and a castle with three towers."
-                },
-                "page_3": {
-                    "title_template": "",
-                    "text_template": "{child_name} climbs the creaky attic stairs and pushes through an old door... to discover a VAST, LUMINOUS FOREST! Beech trees rise like a green cathedral. A fox with amber eyes watches from behind a mossy trunk."
-                },
-                "page_4": {
-                    "title_template": "",
-                    "text_template": "Rusé the Fox steps forward with a theatrical bow. 'Welcome, {child_name}!' he says in a warm voice. 'The forest has been expecting you.' Bluebells stretch endlessly in the dappled golden light."
-                },
-                "page_5": {
-                    "title_template": "",
-                    "text_template": "{child_name} and Rusé follow a winding path. Glowing mushrooms — blue and lilac — light their way. A squirrel waves from a branch. The air smells of damp earth and wild garlic."
-                },
-                "page_6": {
-                    "title_template": "",
-                    "text_template": "In a clearing stand three stone pillars carved with a hare, a bear, and a dove. The riddle etched in moss reads: 'What grows larger when shared?' The path splits three ways. Only one is correct."
-                },
-                "page_7": {
-                    "title_template": "",
-                    "text_template": "{child_name} thinks, then declares: 'Kindness!' At these words, the ground trembles gently. The pillars glow. From the earth rises a hidden stone bridge, covered in moss and tiny white flowers."
-                },
-                "page_8": {
-                    "title_template": "",
-                    "text_template": "{child_pronoun_subject} crosses a shimmering rainbow bridge that spans a crystal stream. The water reflects every colour — a living prism. Golden-scaled fish leap joyfully. The bridge hums with melody."
-                },
-                "page_9": {
-                    "title_template": "",
-                    "text_template": "On the other side, a meadow of giant sunflowers — each one taller than {child_name}. As they walk, every sunflower slowly turns its head to follow them. A gentle breeze carries the scent of honey."
-                },
-                "page_10": {
-                    "title_template": "",
-                    "text_template": "By a tree stump, a badger sobs great heaving sobs. He lost his grandmother's locket — his only memory of her. {child_name} kneels and places a hand on his furry arm. 'I'll help you find it.'"
-                },
-                "page_11": {
-                    "title_template": "",
-                    "text_template": "{child_name} spots a golden glint under a giant red mushroom. The locket! {child_pronoun_subject} returns it to the overjoyed badger who hugs {child_name} so tight their feet leave the ground. In thanks, he gives them an iridescent golden feather."
-                },
-                "page_12": {
-                    "title_template": "",
-                    "text_template": "The forest opens onto a hilltop. Below, a magnificent castle emerges from the mist — three stone towers with fluttering blue pennants. Rusé whispers: 'The final trial awaits. Are you ready?'"
-                },
-                "page_13": {
-                    "title_template": "",
-                    "text_template": "At the castle gate — massive and iron-bound — Master Owl perches on a ring handle. The wise old owl blinks slowly. 'What can you give away and still keep?' His voice echoes like distant thunder."
-                },
-                "page_14": {
-                    "title_template": "",
-                    "text_template": "{child_name}'s face lights up with understanding. {child_pronoun_subject} whispers: 'A promise.' The owl's eyes widen, then he hoots long and approvingly. The castle gates creak open to reveal a corridor of golden light."
-                },
-                "page_15": {
-                    "title_template": "",
-                    "text_template": "In the vast castle hall, a crystal the size of a melon floats above a stone pedestal, filled with swirling rainbow light. {child_name} reaches out with trembling fingers. At the touch — BOOM! The crystal erupts with blinding light that fills every corner. Prisms dance on the walls. {child_name} feels HOME."
-                },
-                "page_16": {
-                    "title_template": "",
-                    "text_template": "{child_name} holds the warm crystal in both hands. Inside it, images form — Mama setting the table, Papa reading the newspaper, the family cat by the fire. A wave of love and longing washes over them."
-                },
-                "page_17": {
-                    "title_template": "",
-                    "text_template": "The journey back is swift and luminous. {child_pronoun_subject} glides over the rainbow bridge, through the sunflower meadow that bows farewell, past the mushrooms that dim. The forest hums a goodbye song."
-                },
-                "page_18": {
-                    "title_template": "",
-                    "text_template": "At the forest's edge, Rusé and {child_name} embrace. 'Plant this,' he says, pressing an acorn into the child's palm. 'When you see the oak, remember: you are braver than you know, kinder than you think.'"
-                },
-                "page_19": {
-                    "title_template": "",
-                    "text_template": "{child_name} steps back through the attic door. The map on the floor is now completely blank. But in their hands: the crystal glows softly and the acorn is solid and real. It was true."
-                },
-                "page_20": {
-                    "title_template": "",
-                    "text_template": "{child_name} plants the acorn in a terracotta pot by the window, patting the soil gently. The crystal pulses faintly on the nightstand. At the garden's edge, a fox silhouette watches, smiling."
-                },
-                "page_21": {
-                    "title_template": "",
-                    "text_template": "After dinner, {child_name} shows the glowing crystal to Mama and Papa in the kitchen. {child_pronoun_subject} tells them everything — Rusé, the badger, the castle, the owl. The crystal pulses with their words. Mama brushes away a tear."
-                },
-                "page_22": {
-                    "title_template": "",
-                    "text_template": "That night, {child_name} dreams of flying over the Forest of Soignes with Rusé bounding beside them through the air. The rainbow bridge forms a perfect arc of colours. Master Owl's hoot echoes, soft and reassuring."
-                },
-                "page_23": {
-                    "title_template": "",
-                    "text_template": "The next morning, {child_name} finds a tiny green sprout pushing through the soil in the pot. {child_pronoun_subject} waters it carefully with a small watering can. A blue jay feather lies beside it — the same shade as the badger's gift."
-                },
-                "page_24": {
-                    "title_template": "",
-                    "text_template": "Months later, a young oak sapling stands tall by the window, leaves rustling in the breeze. {child_name} reads beneath it about woodland animals, the crystal catching afternoon light. At the garden's edge, a familiar fox watches. Adventure is always just a step away."
-                },
-                "summary": {
-                    "title_template": "",
-                    "text_template": "In this magical adventure, {child_name} discovers that a mysterious map can lead to the most beautiful discovery of all: the courage of kindness lives within us all."
-                },
-                "backCover": {
-                    "title_template": "",
-                    "text_template": "A Belgian enchanted story where magic is born from the goodness of the heart."
-                }
-            }
-        },
-        "nl": {
-            "book": {
-                "title_template": "Het Betoverende Avontuur van {child_name}"
-            },
-            "pages": {
-                "cover": {
-                    "title_template": "Het Betoverende Avontuur van {child_name}",
-                    "text_template": ""
-                },
-                "dedication": {
-                    "title_template": "",
-                    "text_template": "Voor {child_name}, wiens dappere hart van elke gewone dag een buitengewoon avontuur kan maken."
-                },
-                "page_1": {
-                    "title_template": "",
-                    "text_template": "In de zonnige woonkamer van hun Brusselse huis knabbelt {child_name} aan een speculoos. Tussen de boeken op de hoge kast piept een opgerold perkament uit. {child_name} trekt het voorzichtig naar zich toe — stofdeeltjes dansen in een lichtstraal."
-                },
-                "page_2": {
-                    "title_template": "",
-                    "text_template": "{child_name} rolt de kaart uit op het kleed. Ze STRAALT van gouden licht dat klopt als een hartslag! Het getekende pad kronkelt door een groen woud naar een regenboog en een kasteel met drie torens."
-                },
-                "page_3": {
-                    "title_template": "",
-                    "text_template": "{child_name} beklimt de krakende zoldertrap en duwt een oude deur open... om een ENORM, LICHTEND WOUD te ontdekken! Beukenbomen rijzen op als een groene kathedraal. Een vos met gouden ogen kijkt van achter een bemoste stam."
-                },
-                "page_4": {
-                    "title_template": "",
-                    "text_template": "Slimme de Vos stapt naar voren met een theatrale buiging. 'Welkom, {child_name}!' zegt hij met warme stem. 'Het woud wachtte al op je.' Wilde hyacinten strekken zich eindeloos uit in het gevlekte gouden licht."
-                },
-                "page_5": {
-                    "title_template": "",
-                    "text_template": "{child_name} en Slimme volgen een kronkelend paadje. Gloeiende paddenstoelen — blauw en paars — verlichten hun weg. Een eekhoorn zwaait vanaf een tak. De lucht ruikt naar vochtige aarde en wilde knoflook."
-                },
-                "page_6": {
-                    "title_template": "",
-                    "text_template": "In een open plek staan drie stenen zuilen met een haas, een beer en een duif erop gehouwen. Het raadsel gegraveerd in het mos luidt: 'Wat wordt groter als je het deelt?' Het pad splitst in drieën. Slechts één klopt."
-                },
-                "page_7": {
-                    "title_template": "",
-                    "text_template": "{child_name} denkt na en roept dan: 'Vriendelijkheid!' Bij deze woorden trilt de grond zachtjes. De zuilen gloeien op. Uit de aarde rijst een verborgen stenen brug, begroeid met mos en kleine witte bloempjes."
-                },
-                "page_8": {
-                    "title_template": "",
-                    "text_template": "{child_pronoun_subject} steekt een glinsterende regenboogbrug over die een kristalhelder beekje overspant. Het water weerkaatst elke kleur — een levend prisma. Vissen met gouden schubben springen vrolijk op. De brug neuriet een melodie."
-                },
-                "page_9": {
-                    "title_template": "",
-                    "text_template": "Aan de overkant ligt een weide vol reuzenzonnebloemen — elke hoger dan {child_name}. Terwijl ze wandelen, draait elke zonnebloem langzaam zijn kop om hen te volgen. Een zachte bries brengt de geur van honing mee."
-                },
-                "page_10": {
-                    "title_template": "",
-                    "text_template": "Bij een boomstronk snikt een das hartverscheurend. Hij verloor het kettinkje van zijn oma — zijn enige herinnering aan haar. {child_name} knielt neer en legt een hand op zijn harige arm. 'Ik help je wel zoeken.'"
-                },
-                "page_11": {
-                    "title_template": "",
-                    "text_template": "{child_name} spot een gouden glinstering onder een reusachtige rode paddenstoel. Het kettinkje! {child_pronoun_subject} geeft het terug aan de dolgelukkige das die {child_name} zo stevig knuffelt dat {child_possessive_det} voeten van de grond komen. Uit dankbaarheid geeft hij een schitterend gouden veertje."
-                },
-                "page_12": {
-                    "title_template": "",
-                    "text_template": "Het woud opent zich naar een heuveltop. Beneden doemt een prachtig kasteel op uit de nevel — drie stenen torens met wapperende blauwe vaantjes. Slimme fluistert: 'De laatste beproeving wacht. Ben je er klaar voor?'"
-                },
-                "page_13": {
-                    "title_template": "",
-                    "text_template": "Bij de kasteelpoort — massief en met ijzer beslagen — zit Meester Uil op een ringhandvat. De wijze oude uil knippert langzaam. 'Wat kun je weggeven en toch behouden?' Zijn stem galmt als verre donder."
-                },
-                "page_14": {
-                    "title_template": "",
-                    "text_template": "{child_name} straalt van begrip. {child_pronoun_subject} fluistert: 'Een belofte.' De ogen van de uil worden groot, dan oehoe-t hij lang en goedkeurend. De kasteelpoorten kraken open en tonen een gang van gouden licht."
-                },
-                "page_15": {
-                    "title_template": "",
-                    "text_template": "In de uitgestrekte kasteelzaal zweeft een kristal zo groot als een meloen boven een stenen sokkel, gevuld met wervelend regenbooklicht. {child_name} reikt uit met trillende vingers. Bij aanraking — BOEM! Het kristal barst uit van verblindend licht dat elke hoek vult. Prisma's dansen op de muren. {child_name} voelt zich THUIS."
-                },
-                "page_16": {
-                    "title_template": "",
-                    "text_template": "{child_name} houdt het warme kristal in beide handen. Binnenin vormen zich beelden — Mama die de tafel dekt, Papa die de krant leest, de huiskat bij het vuur. Een golf van liefde en heimwee spoelt over hen heen."
-                },
-                "page_17": {
-                    "title_template": "",
-                    "text_template": "De terugtocht verloopt vlot en lichtend. {child_pronoun_subject} glijdt over de regenboogbrug, door de zonnebloemweide die afscheid buigt, langs de paddenstoelen die dimmen. Het woud neuriet een afscheidsliedje."
-                },
-                "page_18": {
-                    "title_template": "",
-                    "text_template": "Aan de bosrand omhelzen Slimme en {child_name} elkaar. 'Plant dit,' zegt hij, terwijl hij een eikel in de handpalm drukt. 'Als je de eik ziet, onthoud dan: je bent dapperder dan je weet, vriendelijker dan je beseft.'"
-                },
-                "page_19": {
-                    "title_template": "",
-                    "text_template": "{child_name} stapt terug door de zolderdeur. De kaart op de vloer is nu helemaal blanco. Maar in hun handen: het kristal gloeit zachtjes en de eikel is stevig en echt. Het was waar."
-                },
-                "page_20": {
-                    "title_template": "",
-                    "text_template": "{child_name} plant de eikel in een terracotta pot bij het raam en klopt de aarde zachtjes aan. Het kristal pulseert zwakjes op het nachtkastje. Aan de tuinrand kijkt een vossensilhouet toe en glimlacht."
-                },
-                "page_21": {
-                    "title_template": "",
-                    "text_template": "Na het avondeten toont {child_name} het gloeiende kristal aan Mama en Papa in de keuken. {child_pronoun_subject} vertelt alles — Slimme, de das, het kasteel, de uil. Het kristal pulseert mee met hun woorden. Mama veegt een traan weg."
-                },
-                "page_22": {
-                    "title_template": "",
-                    "text_template": "Die nacht droomt {child_name} dat ze boven het Zoniënwoud vliegen met Slimme die naast hen door de lucht springt. De regenboogbrug vormt een perfecte kleurenboog. Meester Uils geroep echoot, zacht en geruststellend."
-                },
-                "page_23": {
-                    "title_template": "",
-                    "text_template": "De volgende ochtend vindt {child_name} een piepklein groen spruitje dat door de aarde in de pot prikt. {child_pronoun_subject} geeft het voorzichtig water met een klein gietertje. Een gaaienveer ligt ernaast — dezelfde tint als het geschenk van de das."
-                },
-                "page_24": {
-                    "title_template": "",
-                    "text_template": "Maanden later staat een jonge eikenspruit fier bij het raam, de bladeren ruisen in de wind. {child_name} leest eronder over bosdieren, terwijl het kristal het middaglicht vangt. Aan de tuinrand kijkt een vertrouwde vos toe. Het avontuur is altijd maar een stap verwijderd."
-                },
-                "summary": {
-                    "title_template": "",
-                    "text_template": "In dit magische avontuur ontdekt {child_name} dat een mysterieuze kaart kan leiden tot de mooiste ontdekking van allemaal: de moed van vriendelijkheid leeft in ons allemaal."
-                },
-                "backCover": {
-                    "title_template": "",
-                    "text_template": "Een Belgisch betoverend verhaal waar magie ontstaat uit de goedheid van het hart."
-                }
-            }
-        }
-    },
-    "visualBible": {
-        "style_rules": [
-            "Aquarelle belge premium avec ligne claire inspirée Hergé et Tintin",
-            "Couleurs chaudes façon Marcel Marlier/Martine : ocres, verts profonds, bleus doux",
-            "Texture papier aquarelle visible, jamais numérique",
-            "Lumière naturelle dorée, ombres douces",
-            "Détails fins type ligne claire : expressions précises, décors riches",
-            "Palette évolutive : bruns d'atelier → verts/ors de forêt → pastels de pont → bleus de château → arc-en-ciel de cristal"
-        ],
-        "palette": "Terre de Sienne, ocre jaune, vert forêt, bleu cobalt, rouge vermillon, violet outremer, blanc de titane",
-        "lighting": "Lumière naturelle dorée avec ombres portées douces, éclairage latéral pour la profondeur",
-        "compositionRules": [
-            "Format carré 21x21cm optimisé",
-            "Règle des tiers pour placer {child_name}",
-            "Premier plan net, arrière-plan légèrement flou",
-            "Mouvement dirigé vers le centre d'intérêt",
-            "Cadrage cinématographique : plans larges pour la magie, plans moyens pour l'émotion"
-        ]
-    },
-    "heroBible": {
-        "identityRules": [
-            "Enfant européen aux cheveux châtain clair ondulés mi-longs jusqu'aux épaules, avec mèche rebelle sur le front",
-            "Yeux noisette expressifs avec reflets dorés et sourcils châtain clair bien définis",
-            "Teint pêche rosé avec quelques taches de rousseur sur le nez et les joues",
-            "Taille et corpulence typique d'un enfant de 5-6 ans, ni grand ni petit",
-            "Pull en laine moutarde à col rond avec texture visible et pantalon bleu marine en velours côtelé",
-            "Baskets blanches en cuir légèrement usées avec lacets détachés",
-            "Expression toujours bienveillante avec sourire spontané et regard curieux pétillant",
-            "Gestuelle naturelle d'enfant : mains expressives, posture droite mais détendue, pas énergique"
-        ],
-        "characterDesign": "Enfant de 5-6 ans aux cheveux châtain clair ondulés mi-longs avec mèche rebelle, yeux noisette à reflets dorés, teint pêche rosé avec taches de rousseur, pull moutarde en laine à col rond, pantalon bleu marine en velours côtelé, baskets blanches en cuir usées, expression bienveillante et curieuse, gestuelle naturelle d'enfant, style ligne claire belge",
-        "forbiddenDrift": [
-            "INTERDICTION absolue de changer la couleur châtain clair des cheveux ou la texture ondulée",
-            "INTERDICTION de modifier les yeux noisette à reflets dorés",
-            "INTERDICTION de changer le pull moutarde (couleur signature obligatoire)",
-            "INTERDICTION de vieillir ou rajeunir le personnage",
-            "INTERDICTION de style cartoon exagéré, manga ou anime",
-            "INTERDICTION d'expression de peur dominante ou de tristesse accablante",
-            "INTERDICTION de transformation physique fantastique ou surnaturelle",
-            "INTERDICTION de modifier les proportions corporelles d'enfant de 5-6 ans"
-        ]
-    },
-    "sceneDefinitions": [
-        {
-            "id": "hero_reference",
-            "type": "reference",
-            "pageNumber": 3,
-            "personalizable": true,
-            "assetKey": "hero-reference-default",
-            "camera": "portrait frontal, plan buste, héros regardant chaleureusement le spectateur",
-            "composition": "portrait centré, fond neutre chaleureux",
-            "foreground": "Enfant de 5-6 ans aux cheveux châtain clair ondulés mi-longs avec mèche rebelle",
-            "midground": "Yeux noisette expressifs à reflets dorés avec sourcils châtain bien définis",
-            "background": "Fond studio neutre beige doux",
-            "lighting": "éclairage portrait doux, chaud et uniforme",
-            "emotion": "chaleureux, accessible, doux",
-            "must_show": [
-                "cheveux châtain clair ondulés mi-longs avec mèche rebelle",
-                "yeux noisette à reflets dorés",
-                "teint pêche rosé avec taches de rousseur",
-                "pull moutarde en laine à col rond",
-                "pantalon bleu marine en velours côtelé",
-                "expression bienveillante et curieuse"
-            ],
-            "must_not_show": [
-                "décor",
-                "éléments narratifs",
-                "texte",
-                "accessoires"
-            ],
-            "promptTemplate": "Portrait aquarelle ligne claire d'un enfant de 5-6 ans aux cheveux châtain clair ondulés mi-longs avec mèche rebelle sur le front, yeux noisette expressifs à reflets dorés, teint pêche rosé avec taches de rousseur, portant un pull moutarde en laine à col rond et un pantalon bleu marine en velours côtelé, sourire chaleureux et bienveillant, style Marcel Marlier premium",
-            "negativePrompt": "décor, arrière-plan détaillé, texte, cartoon, manga, peur, tristesse"
-        },
-        {
-            "id": "cover",
-            "type": "cover",
-            "pageNumber": 1,
-            "personalizable": true,
-            "assetKey": "cover-default",
-            "camera": "plan large cinématographique, angle légèrement en plongée",
-            "composition": "composition triangulaire : {child_name} au premier plan, forêt au second plan, château à l'horizon",
-            "foreground": "{child_name} en pull moutarde tenant une carte dorée brillante",
-            "midground": "Lisière de forêt enchantée avec hêtres majestueux et champignons lumineux",
-            "background": "Château aux trois tours dans la brume dorée, arc-en-ciel subtil",
-            "lighting": "heure dorée avec rayons de soleil filtrant à travers les arbres",
-            "emotion": "émerveillement et invitation à l'aventure",
-            "must_show": [
-                "child_name en pull moutarde avec cheveux châtain clair ondulés",
-                "carte dorée brillante",
-                "forêt enchantée",
-                "château lointain",
-                "lumière magique"
-            ],
-            "must_not_show": [
-                "texte intégré",
-                "personnages secondaires",
-                "éléments sombres"
-            ],
-            "promptTemplate": "Couverture aquarelle ligne claire premium : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde tenant une carte dorée scintillante, debout à la lisière d'une forêt enchantée de hêtres avec champignons bleus lumineux, château fantastique aux trois tours dans la brume dorée à l'horizon, arc-en-ciel subtil, lumière dorée magique, style Marcel Marlier/Hergé",
-            "negativePrompt": "texte, lettrage, sombre, effrayant, réaliste photographique"
-        },
-        {
-            "id": "dedication",
-            "type": "dedication",
-            "pageNumber": 2,
-            "personalizable": false,
-            "assetKey": "dedication-default",
-            "camera": "plan large paisible, vue douce",
-            "composition": "fond décoratif belge avec espace central pour texte",
-            "foreground": "Bordure décorative de feuilles de chêne et glands aquarelle",
-            "midground": "Paysage belge stylisé : maisons à pignon, pavés, ciel doux",
-            "background": "Aquarelle douce aux tons chauds : ocres, beiges, verts tendres",
-            "lighting": "lumière douce diffuse d'après-midi",
-            "emotion": "tendresse et nostalgie",
-            "must_show": [
-                "éléments décoratifs belges",
-                "feuilles de chêne",
-                "tons chauds",
-                "espace pour texte"
-            ],
-            "must_not_show": [
-                "personnages",
-                "action",
-                "éléments sombres"
-            ],
-            "promptTemplate": "Fond aquarelle belge tendre avec bordure décorative de feuilles de chêne et glands, paysage stylisé de maisons flamandes à pignon, pavés anciens, tons ocre et vert tendre, lumière douce, style ligne claire délicat",
-            "negativePrompt": "personnages, action, texte intégré, couleurs vives"
-        },
-        {
-            "id": "page_1",
-            "type": "story",
-            "pageNumber": 4,
-            "personalizable": true,
-            "assetKey": "page-1-default",
-            "camera": "plan moyen intimiste, hauteur d'enfant",
-            "composition": "salon belge chaleureux avec {child_name} près de l'étagère",
-            "foreground": "{child_name} en pull moutarde près d'une haute étagère en bois, speculoos à moitié mangé",
-            "midground": "Salon bruxellois : parquet, fauteuils en cuir, fenêtre haute",
-            "background": "Bibliothèque fournie, rayons de soleil par la fenêtre",
-            "lighting": "lumière naturelle d'après-midi par grandes fenêtres",
-            "emotion": "curiosité découverte",
-            "must_show": [
-                "child_name en pull moutarde avec cheveux châtain clair ondulés",
-                "étagère haute",
-                "speculoos",
-                "parchemin qui dépasse",
-                "salon belge",
-                "poussière dorée"
-            ],
-            "must_not_show": [
-                "magie visible",
-                "éléments fantastiques"
-            ],
-            "promptTemplate": "Aquarelle ligne claire : salon bruxellois chaleureux avec parquet et grandes fenêtres, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde debout près d'une haute étagère en bois, speculoos à moitié mangé sur une assiette, parchemin roulé qui dépasse entre les livres, poussière dorée dansant dans un rayon de soleil, style Marcel Marlier",
-            "negativePrompt": "magie, fantastique, sombre, moderne"
-        },
-        {
-            "id": "page_2",
-            "type": "story",
-            "pageNumber": 5,
-            "personalizable": true,
-            "assetKey": "page-2-default",
-            "camera": "plan rapproché sur la carte, angle léger en plongée",
-            "composition": "carte déroulée au centre, {child_name} agenouillé",
-            "foreground": "Carte parchemin avec tracé doré BRILLANT pulsant comme un cœur",
-            "midground": "{child_name} agenouillé, mains près de la carte, expression émerveillée",
-            "background": "Plancher de bois avec tapis persan, lumière dorée",
-            "lighting": "carte illuminée de l'intérieur, lueur dorée magique",
-            "emotion": "émerveillement pur",
-            "must_show": [
-                "carte brillante dorée",
-                "tracé lumineux pulsant",
-                "child_name émerveillé avec cheveux châtain clair",
-                "lueur magique",
-                "parchemin ancien"
-            ],
-            "must_not_show": [
-                "éléments sombres",
-                "peur"
-            ],
-            "promptTemplate": "Aquarelle ligne claire magique : {child_name} aux cheveux châtain clair ondulés en pull moutarde agenouillé devant une carte parchemin déroulée qui BRILLE d'une lumière dorée pulsante, tracé lumineux montrant forêt-arc-en-ciel-château, plancher de bois avec tapis persan, lueur magique dorée, style Marcel Marlier enchantement",
-            "negativePrompt": "sombre, effrayant, réaliste, numérique"
-        },
-        {
-            "id": "page_3",
-            "type": "story",
-            "pageNumber": 6,
-            "personalizable": true,
-            "assetKey": "page-3-default",
-            "camera": "plan large spectaculaire, contre-plongée majestueuse",
-            "composition": "transition magique : porte d'un côté, forêt immense de l'autre",
-            "foreground": "{child_name} franchissant le seuil, expression de stupéfaction",
-            "midground": "Forêt cathédrale : hêtres géants, voûte de feuillage vert",
-            "background": "Rusé le renard derrière un tronc moussu, yeux ambrés curieux",
-            "lighting": "lumière forestière dorée filtrant par la canopée",
-            "emotion": "stupéfaction émerveillée",
-            "must_show": [
-                "child_name franchissant seuil avec cheveux châtain clair ondulés",
-                "forêt cathédrale immense",
-                "hêtres géants",
-                "renard aux yeux ambrés",
-                "lumière magique filtrée"
-            ],
-            "must_not_show": [
-                "éléments sombres",
-                "peur",
-                "danger"
-            ],
-            "promptTemplate": "Aquarelle ligne claire spectaculaire : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde franchissant une porte vers une IMMENSE forêt cathédrale de hêtres géants, voûte verte majestueuse, renard roux aux yeux ambrés curieux derrière tronc moussu, lumière dorée filtrée, bluebells au sol, style Marcel Marlier epic fantasy",
-            "negativePrompt": "sombre, menaçant, petit, confiné"
-        },
-        {
-            "id": "page_4",
-            "type": "story",
-            "pageNumber": 7,
-            "personalizable": true,
-            "assetKey": "page-4-default",
-            "camera": "plan moyen convivial, niveau des yeux",
-            "composition": "rencontre amicale dans clairière de bluebells",
-            "foreground": "Rusé le renard en révérence théâtrale, patte sur le cœur",
-            "midground": "{child_name} souriant, légèrement surpris mais ravi",
-            "background": "Prairie de bluebells violettes s'étendant, lumière tachetée dorée",
-            "lighting": "lumière dorée tachetée filtrant par les feuilles",
-            "emotion": "connexion délicieuse",
-            "must_show": [
-                "Rusé en révérence élégante",
-                "child_name souriant avec cheveux châtain clair ondulés",
-                "bluebells violettes",
-                "lumière tachetée",
-                "rencontre amicale"
-            ],
-            "must_not_show": [
-                "méfiance",
-                "peur",
-                "agressivité"
-            ],
-            "promptTemplate": "Aquarelle ligne claire chaleureuse : Rusé le renard roux élégant en révérence théâtrale, une patte sur le cœur, face à {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde qui sourit avec ravissement, prairie de bluebells violettes, lumière dorée tachetée, atmosphère bienveillante, style Marcel Marlier",
-            "negativePrompt": "menaçant, sombre, réaliste, peur"
-        },
-        {
-            "id": "page_5",
-            "type": "story",
-            "pageNumber": 8,
-            "personalizable": true,
-            "assetKey": "page-5-default",
-            "camera": "plan d'ensemble, travelling latéral",
-            "composition": "chemin forestier sinueux avec éléments magiques",
-            "foreground": "{child_name} et Rusé côte à côte sur sentier moussu",
-            "midground": "Champignons lumineux bleus et lilas ponctuant le chemin",
-            "background": "Écureuil saluant, biche observant, arbres majestueux",
-            "lighting": "bioluminescence douce des champignons, lumière forestière dorée",
-            "emotion": "sérénité enchantée",
-            "must_show": [
-                "child_name et Rusé marchant ensemble",
-                "champignons lumineux bleus/lilas",
-                "écureuil saluant",
-                "biche curieuse",
-                "sentier magique"
-            ],
-            "must_not_show": [
-                "danger",
-                "obscurité",
-                "solitude"
-            ],
-            "promptTemplate": "Aquarelle ligne claire féerique : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé le renard roux marchant sur sentier forestier moussu, champignons bioluminescents bleus et lilas, écureuil saluant depuis branche, biche observant paisiblement, lumière dorée et magique, style Marcel Marlier enchanteur",
-            "negativePrompt": "sombre, menaçant, réaliste photographique"
-        },
-        {
-            "id": "page_6",
-            "type": "story",
-            "pageNumber": 9,
-            "personalizable": true,
-            "assetKey": "page-6-default",
-            "camera": "plan large mystérieux, angle légèrement bas",
-            "composition": "clairière rituelle avec trois piliers anciens",
-            "foreground": "Trois piliers de pierre sculptés : lièvre, ours, colombe",
-            "midground": "{child_name} et Rusé observant, énigme gravée visible",
-            "background": "Trois sentiers divergents dans la brume dorée",
-            "lighting": "lumière mystique dorée, ombres douces des piliers",
-            "emotion": "détermination focalisée",
-            "must_show": [
-                "trois piliers sculptés distincts",
-                "child_name réfléchissant avec cheveux châtain clair",
-                "Rusé attentif",
-                "trois chemins",
-                "énigme gravée"
-            ],
-            "must_not_show": [
-                "urgence",
-                "peur",
-                "confusion"
-            ],
-            "promptTemplate": "Aquarelle ligne claire mystique : clairière avec trois piliers de pierre anciens sculptés d'un lièvre, d'un ours et d'une colombe, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé observant l'énigme gravée dans la mousse, trois sentiers forestiers divergeant vers brume dorée, lumière mystérieuse, style Marcel Marlier",
-            "negativePrompt": "sombre, effrayant, urgent, confus"
-        },
-        {
-            "id": "page_7",
-            "type": "story",
-            "pageNumber": 10,
-            "personalizable": true,
-            "assetKey": "page-7-default",
-            "camera": "plan rapproché dynamique sur la révélation",
-            "composition": "moment de triomphe avec pont surgissant",
-            "foreground": "Pont de pierre moussu surgissant de terre avec petites fleurs",
-            "midground": "{child_name} rayonnant de fierté, Rusé applaudissant",
-            "background": "Piliers brillants d'une lueur dorée, sol tremblant doucement",
-            "lighting": "explosion de lumière dorée, effets magiques scintillants",
-            "emotion": "percée triomphante",
-            "must_show": [
-                "pont surgissant",
-                "child_name fier avec cheveux châtain clair ondulés",
-                "Rusé applaudissant",
-                "piliers brillants",
-                "magie visible",
-                "fleurs blanches"
-            ],
-            "must_not_show": [
-                "violence",
-                "destruction",
-                "peur"
-            ],
-            "promptTemplate": "Aquarelle ligne claire triomphante : pont de pierre moussu avec petites fleurs blanches surgissant magiquement de la terre, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde rayonnant de fierté, Rusé le renard applaudissant, piliers brillant d'or, particules magiques dorées, style Marcel Marlier épique",
-            "negativePrompt": "violent, sombre, destructeur, réaliste"
-        },
-        {
-            "id": "page_8",
-            "type": "story",
-            "pageNumber": 11,
-            "personalizable": true,
-            "assetKey": "page-8-default",
-            "camera": "plan large aérien, traversée spectaculaire",
-            "composition": "pont arc-en-ciel majestueux over stream cristallin",
-            "foreground": "{child_name} et Rusé sur le pont scintillant",
-            "midground": "Pont arc-en-ciel translucide vibrant de couleurs",
-            "background": "Poissons dorés bondissant, ciel pastel rose et lavande",
-            "lighting": "réfraction prismatique, couleurs arc-en-ciel dansantes",
-            "emotion": "joie flottante",
-            "must_show": [
-                "pont arc-en-ciel transparent",
-                "child_name traversant joyeusement avec cheveux châtain clair",
-                "poissons dorés sautant",
-                "reflets colorés",
-                "ciel pastel"
-            ],
-            "must_not_show": [
-                "danger",
-                "vertige",
-                "instabilité"
-            ],
-            "promptTemplate": "Aquarelle ligne claire prismatique : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé traversant pont arc-en-ciel scintillant au-dessus ruisseau cristallin, poissons aux écailles dorées bondissant joyeusement, reflets colorés dansant, ciel pastel rose-lavande, lumière prismatique magique, style Marcel Marlier féerique",
-            "negativePrompt": "danger, vertige, sombre, réaliste"
-        },
-        {
-            "id": "page_9",
-            "type": "story",
-            "pageNumber": 12,
-            "personalizable": true,
-            "assetKey": "page-9-default",
-            "camera": "plan d'ensemble surréaliste, perspective admirative",
-            "composition": "prairie de tournesols géants créant allée naturelle",
-            "foreground": "{child_name} et Rusé marchant entre tournesols immenses",
-            "midground": "Tournesols géants tournant leurs têtes pour suivre",
-            "background": "Horizon doré avec parfum de miel visible en particules",
-            "lighting": "lumière dorée chaude, contre-jour des tournesols",
-            "emotion": "étonnement doux",
-            "must_show": [
-                "tournesols géants",
-                "child_name emerveillé avec cheveux châtain clair ondulés",
-                "têtes de tournesols suivant",
-                "Rusé curieux",
-                "lumière dorée miel"
-            ],
-            "must_not_show": [
-                "claustrophobie",
-                "gigantisme effrayant"
-            ],
-            "promptTemplate": "Aquarelle ligne claire surréaliste : prairie de tournesols géants plus grands que {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde, chaque tournesol tournant sa tête pour suivre leur passage, Rusé émerveillé, particules dorées de miel dans l'air, lumière chaude contre-jour, style Marcel Marlier merveilleux",
-            "negativePrompt": "claustrophobe, effrayant, sombre, réaliste"
-        },
-        {
-            "id": "page_10",
-            "type": "story",
-            "pageNumber": 13,
-            "personalizable": true,
-            "assetKey": "page-10-default",
-            "camera": "plan moyen empathique, niveau émotionnel",
-            "composition": "scène de compassion près de la souche",
-            "foreground": "Blaireau sanglotant, épaules secouées de chagrin",
-            "midground": "{child_name} s'agenouillant, main tendue vers blaireau",
-            "background": "Souche d'arbre, sous-bois doux, lumière tamisée",
-            "lighting": "lumière douce et consolante, tons chauds",
-            "emotion": "empathie profonde",
-            "must_show": [
-                "blaireau pleurant",
-                "child_name compatissant avec cheveux châtain clair ondulés",
-                "geste de réconfort",
-                "souche d'arbre",
-                "tendresse"
-            ],
-            "must_not_show": [
-                "indifférence",
-                "peur",
-                "rejet"
-            ],
-            "promptTemplate": "Aquarelle ligne claire empathique : blaireau rayé sanglotant près d'une souche moussue, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde s'agenouillant avec compassion et posant main réconfortante sur bras du blaireau, sous-bois doux, lumière tamisée bienveillante, style Marcel Marlier tendre",
-            "negativePrompt": "indifférent, froid, sombre, effrayant"
-        },
-        {
-            "id": "page_11",
-            "type": "story",
-            "pageNumber": 14,
-            "personalizable": true,
-            "assetKey": "page-11-default",
-            "camera": "plan rapproché sur la joie retrouvée",
-            "composition": "moment de pure joie et gratitude",
-            "foreground": "Médaillon doré brillant sous champignon rouge géant",
-            "midground": "Blaireau soulevant {child_name} dans un câlin exubérant",
-            "background": "Champignons colorés, particules de joie dorées",
-            "lighting": "éclat doré du médaillon, lumière de bonheur",
-            "emotion": "satisfaction dans la gentillesse",
-            "must_show": [
-                "médaillon doré retrouvé",
-                "câlin exubérant",
-                "child_name souriant avec cheveux châtain clair ondulés",
-                "blaireau joyeux",
-                "plume irisée cadeau"
-            ],
-            "must_not_show": [
-                "tristesse résiduelle",
-                "formalité"
-            ],
-            "promptTemplate": "Aquarelle ligne claire joyeuse : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde soulevé dans câlin exubérant par blaireau reconnaissant, médaillon doré brillant près champignon rouge géant, plume dorée irisée offerte en cadeau, particules de joie, lumière chaude bonheur, style Marcel Marlier célébration",
-            "negativePrompt": "triste, formel, sombre, distant"
-        },
-        {
-            "id": "page_12",
-            "type": "story",
-            "pageNumber": 15,
-            "personalizable": true,
-            "assetKey": "page-12-default",
-            "camera": "plan large épique, vue panoramique",
-            "composition": "révélation du château depuis colline",
-            "foreground": "{child_name} et Rusé au sommet de colline",
-            "midground": "Vallée brumeuse dorée s'étendant",
-            "background": "Château majestueux aux trois tours, pennons bleus",
-            "lighting": "brume dorée mystique, lumière de fin d'après-midi",
-            "emotion": "anticipation craintive + émerveillement",
-            "must_show": [
-                "château trois tours",
-                "pennons bleus",
-                "brume dorée",
-                "child_name déterminé avec cheveux châtain clair ondulés",
-                "Rusé encourageant",
-                "vue panoramique"
-            ],
-            "must_not_show": [
-                "château menaçant",
-                "obscurité",
-                "peur"
-            ],
-            "promptTemplate": "Aquarelle ligne claire épique : vue panoramique depuis colline avec {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé contemplant château majestueux aux trois tours de pierre émergeant de brume dorée, pennons bleus flottant, douves réfléchissant ciel, lumière mystique fin d'après-midi, style Marcel Marlier grandiose",
-            "negativePrompt": "menaçant, sombre, effrayant, hostile"
-        },
-        {
-            "id": "page_13",
-            "type": "story",
-            "pageNumber": 16,
-            "personalizable": true,
-            "assetKey": "page-13-default",
-            "camera": "plan moyen imposant, contre-plongée sur hibou",
-            "composition": "épreuve finale devant portes massives",
-            "foreground": "Maître Hibou majestueux perché sur anneau de fer",
-            "midground": "Portes de château massives ferrées, {child_name} levant les yeux",
-            "background": "Murs de pierre ancien, lumière crépusculaire dorée",
-            "lighting": "lumière dramatique dorée, ombres nobles",
-            "emotion": "réflexion profonde",
-            "must_show": [
-                "Maître Hibou imposant",
-                "child_name réfléchissant avec cheveux châtain clair ondulés",
-                "portes massives",
-                "ferrures anciennes",
-                "sagesse"
-            ],
-            "must_not_show": [
-                "intimidation",
-                "menace",
-                "urgence"
-            ],
-            "promptTemplate": "Aquarelle ligne claire noble : Maître Hibou sage aux plumes brunes et blanches perché sur anneau de fer massif, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde levant yeux pensifs vers lui, portes château ferrées imposantes, pierre ancienne, lumière crépusculaire dorée dramatique, style Marcel Marlier majestueux",
-            "negativePrompt": "intimidant, menaçant, urgent, effrayant"
-        },
-        {
-            "id": "page_14",
-            "type": "story",
-            "pageNumber": 17,
-            "personalizable": true,
-            "assetKey": "page-14-default",
-            "camera": "gros plan sur visage illuminé",
-            "composition": "moment de révélation personnelle",
-            "foreground": "Visage de {child_name} s'illuminant de compréhension",
-            "midground": "Maître Hibou approuvant, yeux brillants",
-            "background": "Portes s'ouvrant sur corridor de lumière dorée",
-            "lighting": "illumination dorée de révélation, lueur de sagesse",
-            "emotion": "certitude naissante",
-            "must_show": [
-                "child_name illuminé de compréhension avec cheveux châtain clair ondulés",
-                "hibou approuvant",
-                "portes s'ouvrant",
-                "corridor de lumière",
-                "moment de révélation"
-            ],
-            "must_not_show": [
-                "doute",
-                "confusion",
-                "hésitation"
-            ],
-            "promptTemplate": "Aquarelle ligne claire révélation : gros plan sur {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde, visage s'illuminant de compréhension pure, Maître Hibou aux yeux brillants approuvant, portes château s'ouvrant sur corridor de lumière dorée magique, particules de sagesse, style Marcel Marlier épiphanie",
-            "negativePrompt": "confus, hésitant, sombre, incertain"
-        },
-        {
-            "id": "page_15",
-            "type": "story",
-            "pageNumber": 18,
-            "personalizable": true,
-            "assetKey": "page-15-default",
-            "camera": "plan large spectaculaire, apothéose visuelle",
-            "composition": "explosion de lumière arc-en-ciel dans salle cathédrale",
-            "foreground": "{child_name} touchant cristal, explosion de lumière",
-            "midground": "Cristal géant flottant, prismes dansant sur murs",
-            "background": "Salle cathédrale immense, Rusé et hibou s'inclinant",
-            "lighting": "EXPLOSION de lumière arc-en-ciel aveuglante, prismes partout",
-            "emotion": "émerveillement pur - CLIMAX",
-            "must_show": [
-                "cristal explosant de lumière",
-                "child_name au centre avec cheveux châtain clair ondulés",
-                "prismes dansants",
-                "salle immense",
-                "Rusé et hibou révérents",
-                "lumière arc-en-ciel"
-            ],
-            "must_not_show": [
-                "peur",
-                "douleur",
-                "confusion"
-            ],
-            "promptTemplate": "Aquarelle ligne claire CLIMAX : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde touchant cristal géant qui EXPLOSE en lumière arc-en-ciel aveuglante remplissant salle cathédrale immense, prismes de couleur dansant sur murs de pierre, Rusé et Maître Hibou s'inclinant révérencieusement, particules magiques, style Marcel Marlier apothéose",
-            "negativePrompt": "sombre, douloureux, confus, terne"
-        },
-        {
-            "id": "page_16",
-            "type": "story",
-            "pageNumber": 19,
-            "personalizable": true,
-            "assetKey": "page-16-default",
-            "camera": "plan moyen intime, moment contemplatif",
-            "composition": "révélation émotionnelle dans cristal",
-            "foreground": "{child_name} tenant cristal, visions à l'intérieur",
-            "midground": "Images de famille flottant : maman, papa, chat",
-            "background": "Salle de château apaisée, lumière douce post-révélation",
-            "lighting": "lueur chaude du cristal, nostalgie dorée",
-            "emotion": "réalisation douce-amère",
-            "must_show": [
-                "child_name tenant cristal avec cheveux châtain clair ondulés",
-                "visions familiales",
-                "maman papa chat",
-                "nostalgie visible",
-                "amour"
-            ],
-            "must_not_show": [
-                "tristesse accablante",
-                "regret",
-                "peur"
-            ],
-            "promptTemplate": "Aquarelle ligne claire émotionnelle : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde tenant cristal chaud, visions tendres flottant à l'intérieur - maman mettant table, papa lisant journal, chat près feu, expression nostalgie aimante, lumière dorée douce, style Marcel Marlier intimiste",
-            "negativePrompt": "triste, accablant, effrayant, froid"
-        },
-        {
-            "id": "page_17",
-            "type": "story",
-            "pageNumber": 20,
-            "personalizable": true,
-            "assetKey": "page-17-default",
-            "camera": "plan d'ensemble fluide, mouvement de retour",
-            "composition": "voyage de retour accéléré et lumineux",
-            "foreground": "{child_name} glissant gracieusement",
-            "midground": "Tournesols s'inclinant, champignons s'éteignant en salut",
-            "background": "Pont arc-en-ciel, forêt fredonnant adieux",
-            "lighting": "lumière dorée fluide, trainées lumineuses",
-            "emotion": "retour joyeux",
-            "must_show": [
-                "child_name glissant avec cheveux châtain clair ondulés",
-                "tournesols saluant",
-                "champignons s'éteignant",
-                "pont arc-en-ciel",
-                "mouvement fluide"
-            ],
-            "must_not_show": [
-                "précipitation",
-                "tristesse",
-                "lourdeur"
-            ],
-            "promptTemplate": "Aquarelle ligne claire fluide : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde glissant gracieusement sur chemin de retour, tournesols géants s'inclinant en salut, champignons lumineux s'éteignant délicatement, pont arc-en-ciel au loin, trainées lumineuses dorées, mouvement poétique, style Marcel Marlier cinématique",
-            "negativePrompt": "précipité, triste, lourd, chaotique"
-        },
-        {
-            "id": "page_18",
-            "type": "story",
-            "pageNumber": 21,
-            "personalizable": true,
-            "assetKey": "page-18-default",
-            "camera": "plan moyen tendre, moment d'adieu",
-            "composition": "étreinte d'adieu à lisière de forêt",
-            "foreground": "{child_name} et Rusé s'embrassant tendrement",
-            "midground": "Rusé offrant gland, geste de transmission",
-            "background": "Lisière forestière dorée, transition vers monde réel",
-            "lighting": "lumière dorée d'adieu, chaleur de fourrure",
-            "emotion": "adieu tendre",
-            "must_show": [
-                "étreinte tendre",
-                "Rusé offrant gland",
-                "child_name ému avec cheveux châtain clair ondulés",
-                "fourrure chaude",
-                "sagesse transmise"
-            ],
-            "must_not_show": [
-                "tristesse déchirante",
-                "abandon",
-                "peur"
-            ],
-            "promptTemplate": "Aquarelle ligne claire tendre : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde embrassant chaleureusement Rusé le renard roux, qui presse petit gland dans paume de l'enfant, fourrure douce visible, lisière forestière dorée, lumière d'adieu bienveillante, transmission de sagesse, style Marcel Marlier émotionnel",
-            "negativePrompt": "déchirant, abandonné, effrayant, froid"
-        },
-        {
-            "id": "page_19",
-            "type": "story",
-            "pageNumber": 22,
-            "personalizable": true,
-            "assetKey": "page-19-default",
-            "camera": "plan moyen révélateur, retour réalité magique",
-            "composition": "chambre normale avec preuves magiques",
-            "foreground": "{child_name} tenant cristal et gland, preuves réelles",
-            "midground": "Carte maintenant vierge sur le sol",
-            "background": "Chambre d'enfant normale, lumière après-midi",
-            "lighting": "lumière naturelle + lueur douce du cristal",
-            "emotion": "émerveillement + preuve",
-            "must_show": [
-                "carte vierge",
-                "cristal brillant",
-                "gland réel",
-                "child_name émerveillé avec cheveux châtain clair ondulés",
-                "chambre normale"
-            ],
-            "must_not_show": [
-                "doute",
-                "confusion",
-                "tristesse"
-            ],
-            "promptTemplate": "Aquarelle ligne claire révélatrice : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde dans chambre normale tenant cristal brillant et gland solide, carte parchemin maintenant complètement vierge au sol, lumière après-midi naturelle avec lueur magique douce du cristal, preuve que l'aventure était réelle, style Marcel Marlier mystérieux",
-            "negativePrompt": "douteux, confus, triste, ordinaire"
-        },
-        {
-            "id": "page_20",
-            "type": "story",
-            "pageNumber": 23,
-            "personalizable": true,
-            "assetKey": "page-20-default",
-            "camera": "plan rapproché sur geste d'espoir",
-            "composition": "plantation rituelle près de fenêtre",
-            "foreground": "{child_name} plantant gland avec soin rituel",
-            "midground": "Pot terracotta, cristal pulsant sur table nuit",
-            "background": "Fenêtre donnant sur jardin, silhouette de renard",
-            "lighting": "lumière douce fenêtre + pulsation cristal",
-            "emotion": "continuation pleine d'espoir",
-            "must_show": [
-                "child_name plantant avec soin avec cheveux châtain clair ondulés",
-                "pot terracotta",
-                "cristal pulsant",
-                "silhouette renard souriante",
-                "espoir"
-            ],
-            "must_not_show": [
-                "incertitude",
-                "fin définitive"
-            ],
-            "promptTemplate": "Aquarelle ligne claire espoir : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde plantant délicatement gland dans pot terracotta près fenêtre, cristal pulsant doucement sur table de nuit, silhouette de renard souriant au bord du jardin, lumière après-midi tendre, geste plein d'espoir, style Marcel Marlier continuité",
-            "negativePrompt": "incertain, définitif, triste, abandonné"
-        },
-        {
-            "id": "page_21",
-            "type": "story",
-            "pageNumber": 24,
-            "personalizable": true,
-            "assetKey": "page-21-default",
-            "camera": "plan moyen familial, partage intime",
-            "composition": "cuisine familiale, moment de partage",
-            "foreground": "{child_name} montrant cristal à parents attentifs",
-            "midground": "Parents penchés, fascinés, maman émue",
-            "background": "Cuisine belge chaleureuse, table en bois",
-            "lighting": "lumière cuisine + pulsation cristal synchrone",
-            "emotion": "partage merveilleux",
-            "must_show": [
-                "child_name racontant avec cheveux châtain clair ondulés",
-                "parents fascinés",
-                "maman émue",
-                "cristal pulsant",
-                "cuisine belge",
-                "partage familial"
-            ],
-            "must_not_show": [
-                "incrédulité",
-                "moquerie",
-                "indifférence"
-            ],
-            "promptTemplate": "Aquarelle ligne claire familiale : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde montrant cristal brillant à maman et papa fascinés dans cuisine belge chaleureuse, table bois, maman essuyant larme émue, cristal pulsant au rythme des mots, lumière chaude partage, style Marcel Marlier intimité familiale",
-            "negativePrompt": "incrédule, moqueur, indifférent, froid"
-        },
-        {
-            "id": "page_22",
-            "type": "story",
-            "pageNumber": 25,
-            "personalizable": true,
-            "assetKey": "page-22-default",
-            "camera": "plan large onirique, vue aérienne rêve",
-            "composition": "rêve de vol au-dessus forêt",
-            "foreground": "{child_name} volant gracieusement",
-            "midground": "Rusé bondissant dans les airs à côté",
-            "background": "Forêt de Soignes vue du ciel, pont arc-en-ciel",
-            "lighting": "lumière onirique dorée, atmosphère rêve",
-            "emotion": "paix onirique",
-            "must_show": [
-                "child_name volant avec cheveux châtain clair ondulés",
-                "Rusé bondissant dans air",
-                "forêt vue du ciel",
-                "pont arc-en-ciel parfait",
-                "atmosphère rêve"
-            ],
-            "must_not_show": [
-                "cauchemar",
-                "chute",
-                "peur"
-            ],
-            "promptTemplate": "Aquarelle ligne claire onirique : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde volant gracieusement au-dessus Forêt de Soignes, Rusé bondissant joyeusement dans air à ses côtés, pont arc-en-ciel formant arc parfait, château brillant au loin, lumière rêve dorée douce, style Marcel Marlier fantastique",
-            "negativePrompt": "cauchemar, chute, effrayant, réaliste"
-        },
-        {
-            "id": "page_23",
-            "type": "story",
-            "pageNumber": 26,
-            "personalizable": true,
-            "assetKey": "page-23-default",
-            "camera": "gros plan sur miracle quotidien",
-            "composition": "découverte matinale de croissance",
-            "foreground": "Pousse verte minuscule perçant terre",
-            "midground": "{child_name} arrosant délicatement",
-            "background": "Plume de geai bleu cadeau, fenêtre lumineuse",
-            "lighting": "lumière matinale fraîche, rosée scintillante",
-            "emotion": "émerveillement matinal",
-            "must_show": [
-                "pousse verte tiny",
-                "child_name arrosant avec cheveux châtain clair ondulés",
-                "petit arrosoir",
-                "plume geai bleu",
-                "lumière matinale",
-                "miracle"
-            ],
-            "must_not_show": [
-                "échec",
-                "déception",
-                "ordinaire"
-            ],
-            "promptTemplate": "Aquarelle ligne claire miracle : minuscule pousse verte perçant délicatement terre de pot, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde arrosant avec petit arrosoir, plume de geai bleu même teinte que cadeau du blaireau, lumière matinale fraîche, rosée scintillante, miracle quotidien, style Marcel Marlier tendre",
-            "negativePrompt": "échec, déçu, ordinaire, terne"
-        },
-        {
-            "id": "page_24",
-            "type": "story",
-            "pageNumber": 27,
-            "personalizable": true,
-            "assetKey": "page-24-default",
-            "camera": "plan large d'accomplissement, bouclage",
-            "composition": "résolution apaisée avec ouverture sur futur",
-            "foreground": "{child_name} lisant sous jeune chêne",
-            "midground": "Sapling chêne, cristal captant lumière",
-            "background": "Renard familier au bord jardin, magie permanente",
-            "lighting": "lumière après-midi dorée, cycle complet",
-            "emotion": "magie perdurable - résolution",
-            "must_show": [
-                "child_name sous chêne avec cheveux châtain clair ondulés",
-                "sapling développé",
-                "cristal scintillant",
-                "renard observant",
-                "livre animaux",
-                "continuité magique"
-            ],
-            "must_not_show": [
-                "fin définitive",
-                "séparation",
-                "oubli"
-            ],
-            "promptTemplate": "Aquarelle ligne claire résolution : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde lisant livre sur animaux des bois sous jeune chêne aux feuilles bruissantes, cristal captant lumière après-midi sur rebord fenêtre, renard familier observant bienveillamment au bord du jardin, magie toujours présente, style Marcel Marlier accomplissement",
-            "negativePrompt": "définitif, séparé, oublié, triste"
-        },
-        {
-            "id": "summary",
-            "type": "summary",
-            "pageNumber": 28,
-            "personalizable": false,
-            "assetKey": "summary-default",
-            "camera": "plan large contemplatif, synthèse visuelle",
-            "composition": "collage aquarelle des moments clés",
-            "foreground": "Carte mystique, cristal, gland germé",
-            "midground": "Silhouettes évoquant forêt, pont, château",
-            "background": "Aquarelle douce tons chauds et magiques",
-            "lighting": "lumière synthesis dorée et apaisée",
-            "emotion": "contemplation résumée",
-            "must_show": [
-                "éléments magiques clés",
-                "tons chauds",
-                "évocation plutôt que détail",
-                "synthèse"
-            ],
-            "must_not_show": [
-                "personnages",
-                "action",
-                "narration"
-            ],
-            "promptTemplate": "Fond aquarelle belge contemplatif évoquant aventure magique : carte mystérieuse, cristal scintillant, gland germé, silhouettes douces de forêt enchantée, pont arc-en-ciel, château lointain, tons ocre et vert magiques, synthèse poétique sans personnages, style ligne claire délicat",
-            "negativePrompt": "personnages, action, récit, détails"
-        },
-        {
-            "id": "backCover",
-            "type": "backCover",
-            "pageNumber": 28,
-            "personalizable": false,
-            "assetKey": "back-cover-default",
-            "camera": "plan décoratif, invitation à l'achat",
-            "composition": "design belge premium avec éléments magiques",
-            "foreground": "Bordure décorative feuilles chêne et cristaux",
-            "midground": "Évocation forêt et château stylisés",
-            "background": "Aquarelle premium tons chauds belges",
-            "lighting": "lumière douce commerciale premium",
-            "emotion": "invitation et qualité",
-            "must_show": [
-                "design premium",
-                "éléments décoratifs",
-                "qualité belge",
-                "invitation"
-            ],
-            "must_not_show": [
-                "scènes narratives",
-                "spoilers",
-                "personnages"
-            ],
-            "promptTemplate": "Quatrième de couverture aquarelle belge premium : bordure décorative feuilles de chêne et cristaux scintillants, évocation stylisée forêt enchantée et château, tons ocre et vert profond, design ligne claire élégant, qualité haut de gamme, invitation à l'aventure",
-            "negativePrompt": "narratif, spoilers, personnages, bon marché"
-        }
+  "schema": "book_blueprint_v2",
+  "schemaVersion": 2,
+  "metadata": {
+    "bookId": "aventure-enchantee-2024",
+    "slug": "aventure-enchantee",
+    "productCode": "BOOK_AVENTURE-ENCHANTEE",
+    "version": 2,
+    "status": "draft",
+    "sourceLocale": "fr",
+    "supportedLocales": [
+      "fr",
+      "en",
+      "nl"
     ],
-    "assets": {
-        "basePublicPath": "/images/books/aventure-enchantee",
-        "defaults": {
-            "cover-default": "/cover.png",
-            "dedication-default": "/dedication.png",
-            "hero-reference-default": "/hero-reference.png",
-            "page-1-default": "/page-1.png",
-            "page-2-default": "/page-2.png",
-            "page-3-default": "/page-3.png",
-            "page-4-default": "/page-4.png",
-            "page-5-default": "/page-5.png",
-            "page-6-default": "/page-6.png",
-            "page-7-default": "/page-7.png",
-            "page-8-default": "/page-8.png",
-            "page-9-default": "/page-9.png",
-            "page-10-default": "/page-10.png",
-            "page-11-default": "/page-11.png",
-            "page-12-default": "/page-12.png",
-            "page-13-default": "/page-13.png",
-            "page-14-default": "/page-14.png",
-            "page-15-default": "/page-15.png",
-            "page-16-default": "/page-16.png",
-            "page-17-default": "/page-17.png",
-            "page-18-default": "/page-18.png",
-            "page-19-default": "/page-19.png",
-            "page-20-default": "/page-20.png",
-            "page-21-default": "/page-21.png",
-            "page-22-default": "/page-22.png",
-            "page-23-default": "/page-23.png",
-            "page-24-default": "/page-24.png",
-            "summary-default": "/summary.png",
-            "back-cover-default": "/back-cover.png"
-        }
-    },
-    "imageGeneration": {
-        "provider": "replicate",
-        "modelStrategy": {
-            "model": "black-forest-labs/flux-2-pro"
+    "pageCount": 28,
+    "generationPageCount": 24,
+    "ageRange": "3-7",
+    "theme": [
+      "adventure",
+      "magic",
+      "courage",
+      "kindness"
+    ],
+    "promise": "Une aventure magique où {child_name} découvre que le vrai courage vient de la gentillesse",
+    "editorialPositioning": "Album belge premium inspiré de la ligne claire et des aquarelles de Marcel Marlier"
+  },
+  "locales": {
+    "fr": {
+      "book": {
+        "title_template": "L'Aventure Enchantée de {child_name}"
+      },
+      "pages": {
+        "cover": {
+          "title_template": "L'Aventure Enchantée de {child_name}",
+          "text_template": ""
         },
-        "negativePromptDefault": "sombre, effrayant, violent, réaliste photographique, numérique, cartoon exagéré, anime, manga, texte, lettrage, low quality",
-        "resolution": "1 MP",
-        "outputFormat": "png",
-        "inputImages": {
-            "pageReference": true,
-            "childPhoto": true
-        }
-    },
-    "qa": {
-        "requiredPageTypes": [
-            "cover",
-            "dedication",
-            "story",
-            "summary",
-            "backCover",
-            "reference"
-        ],
-        "requiredLocales": [
-            "fr",
-            "en",
-            "nl"
-        ],
-        "placeholderPolicy": {
-            "allowed": [
-                "{child_name}",
-                "{child_pronoun_subject}",
-                "{child_possessive_det}"
-            ],
-            "forbidden": [
-                "il",
-                "elle",
-                "lui",
-                "son",
-                "sa",
-                "ses",
-                "he",
-                "she",
-                "his",
-                "her",
-                "hij",
-                "zij",
-                "zijn",
-                "haar"
-            ]
+        "dedication": {
+          "title_template": "",
+          "text_template": "À {child_name}, dont le cœur brave peut transformer n'importe quel jour ordinaire en aventure extraordinaire."
         },
-        "rules": [
-            "Chaque page story doit avoir text_template non vide",
-            "Pronoms genrés interdits pour l'enfant héros",
-            "Style visuel cohérent ligne claire belge",
-            "Émotions claires pour chaque scène",
-            "Climax à page_15 avec moment wow",
-            "Cohérence héros à travers heroBible",
-            "Authenticité culturelle belge"
-        ],
-        "scorecard": {
-            "editorialScore": {
-                "value": 92,
-                "rationale": "Histoire structurée avec arc émotionnel fort, climax spectaculaire page 15, message universel sur courage et gentillesse, personnages attachants"
-            },
-            "imageabilityScore": {
-                "value": 95,
-                "rationale": "Scènes visuellement riches et spécifiques, progression couleurs, éléments magiques clairs, style ligne claire défini"
-            },
-            "heroConsistencyScore": {
-                "value": 90,
-                "rationale": "Description physique très précise avec détails spécifiques, pull moutarde signature, caractéristiques faciales définies, règles anti-drift renforcées"
-            },
-            "localeCompletenessScore": {
-                "value": 94,
-                "rationale": "Trois langues complètes avec authenticité culturelle, NL authentiquement flamand, EN naturel, évitement pronoms genrés réussi"
-            }
+        "page_1": {
+          "title_template": "",
+          "text_template": "Dans le salon ensoleillé de leur maison bruxelloise, {child_name} grignote un speculoos. Entre les livres de la grande étagère, un parchemin roulé dépasse. {child_name} le tire doucement — la poussière danse dans un rayon de lumière."
+        },
+        "page_2": {
+          "title_template": "",
+          "text_template": "{child_name} déroule la carte sur le tapis. Elle BRILLE d'une lumière dorée qui pulse comme un cœur ! Le chemin dessiné serpente à travers une forêt verte vers un arc-en-ciel et un château aux trois tours."
+        },
+        "page_3": {
+          "title_template": "",
+          "text_template": "{child_name} grimpe les marches grinçantes du grenier et pousse une vieille porte... pour découvrir une FORÊT IMMENSE ET LUMINEUSE ! Les hêtres s'élèvent comme une cathédrale verte. Un renard aux yeux ambrés observe depuis un tronc moussu."
+        },
+        "page_4": {
+          "title_template": "",
+          "text_template": "Rusé le Renard s'avance avec une révérence théâtrale. 'Bienvenue, {child_name} !' dit-il d'une voix chaleureuse. 'La forêt vous attendait.' Les jacinthes s'étendent à perte de vue dans la lumière dorée tachetée."
+        },
+        "page_5": {
+          "title_template": "",
+          "text_template": "{child_name} et Rusé suivent un sentier sinueux. Des champignons lumineux — bleus et lilas — éclairent leur chemin. Un écureuil salue depuis une branche. L'air sent la terre humide et l'ail des ours."
+        },
+        "page_6": {
+          "title_template": "",
+          "text_template": "Dans une clairière, trois piliers de pierre sculptés d'un lièvre, d'un ours et d'une colombe. L'énigme gravée dans la mousse dit : 'Que devient plus grand quand on le partage ?' Le sentier se divise en trois. Un seul est le bon."
+        },
+        "page_7": {
+          "title_template": "",
+          "text_template": "{child_name} réfléchit puis déclare : 'La gentillesse !' À ces mots, le sol tremble doucement. Les piliers brillent. De la terre surgit un pont de pierre caché, couvert de mousse et de petites fleurs blanches."
+        },
+        "page_8": {
+          "title_template": "",
+          "text_template": "{child_pronoun_subject} traverse un pont arc-en-ciel scintillant qui enjambe un ruisseau cristallin. L'eau reflète chaque couleur — un prisme vivant. Des poissons aux écailles dorées bondissent joyeusement. Le pont fredonne une mélodie."
+        },
+        "page_9": {
+          "title_template": "",
+          "text_template": "De l'autre côté, une prairie de tournesols géants — chacun plus grand que {child_name}. En marchant, chaque tournesol tourne lentement sa tête pour les suivre. Une brise douce porte un parfum de miel."
+        },
+        "page_10": {
+          "title_template": "",
+          "text_template": "Près d'une souche, un blaireau sanglote à gros bouillons. Il a perdu le médaillon de sa grand-mère — son seul souvenir d'elle. {child_name} s'agenouille et pose la main sur son bras poilu. 'Je vais vous aider à le retrouver.'"
+        },
+        "page_11": {
+          "title_template": "",
+          "text_template": "{child_name} aperçoit un éclat doré sous un champignon rouge géant. Le médaillon ! {child_pronoun_subject} le rend au blaireau fou de joie qui serre {child_name} si fort que ses pieds quittent le sol. En remerciement, il lui donne une plume dorée irisée."
+        },
+        "page_12": {
+          "title_template": "",
+          "text_template": "La forêt s'ouvre sur une colline. En contrebas, un château magnifique émerge de la brume — trois tours de pierre aux pennons bleus flottants. Rusé murmure : 'L'épreuve finale vous attend. Êtes-vous prêt ?'"
+        },
+        "page_13": {
+          "title_template": "",
+          "text_template": "À la porte du château — massive et ferrée — Maître Hibou perche sur un anneau. Le vieux hibou sage cligne lentement. 'Qu'est-ce qu'on peut donner tout en gardant ?' Sa voix résonne comme un tonnerre lointain."
+        },
+        "page_14": {
+          "title_template": "",
+          "text_template": "Le visage de {child_name} s'éclaire de compréhension. {child_pronoun_subject} chuchote : 'Une promesse.' Les yeux du hibou s'écarquillent puis il hulule longuement, approuvant. Les portes du château grincent et s'ouvrent sur un corridor de lumière dorée."
+        },
+        "page_15": {
+          "title_template": "",
+          "text_template": "Dans la salle immense du château, un cristal gros comme un melon flotte au-dessus d'un socle de pierre, rempli de lumière arc-en-ciel tourbillonnante. {child_name} tend la main tremblante. Au contact — BOUM ! Le cristal explose de lumière aveuglante qui remplit chaque recoin. Des prismes dansent sur les murs. {child_name} se sent CHEZ SOI."
+        },
+        "page_16": {
+          "title_template": "",
+          "text_template": "{child_name} tient le cristal chaud dans ses mains. À l'intérieur, des images se forment — Maman qui met la table, Papa qui lit le journal, le chat de la famille près du feu. Une vague d'amour et de nostalgie l'envahit."
+        },
+        "page_17": {
+          "title_template": "",
+          "text_template": "Le voyage de retour est rapide et lumineux. {child_pronoun_subject} glisse sur le pont arc-en-ciel, à travers la prairie de tournesols qui s'inclinent en adieu, devant les champignons qui s'éteignent. La forêt semble fredonner un chant d'au revoir."
+        },
+        "page_18": {
+          "title_template": "",
+          "text_template": "À la lisière de la forêt, Rusé et {child_name} s'embrassent. 'Plantez ceci,' dit-il en pressant un gland dans la paume de l'enfant. 'Et quand vous verrez le chêne, souvenez-vous : vous êtes plus brave que vous ne le pensez, plus gentil que vous ne l'imaginez.'"
+        },
+        "page_19": {
+          "title_template": "",
+          "text_template": "{child_name} franchit la porte du grenier. La carte au sol est maintenant complètement vierge. Mais dans ses mains : le cristal brille doucement et le gland est bien réel. C'était vrai."
+        },
+        "page_20": {
+          "title_template": "",
+          "text_template": "{child_name} plante le gland dans un pot en terre cuite près de la fenêtre, tapotant doucement la terre. Le cristal pulse faiblement sur la table de nuit. Au bord du jardin, une silhouette de renard observe en souriant."
+        },
+        "page_21": {
+          "title_template": "",
+          "text_template": "Après dîner, {child_name} montre le cristal scintillant à Maman et Papa dans la cuisine. {child_pronoun_subject} raconte tout — Rusé, le blaireau, le château, le hibou. Le cristal pulse au rythme de ses mots. Maman essuie une larme."
+        },
+        "page_22": {
+          "title_template": "",
+          "text_template": "Cette nuit-là, {child_name} rêve de voler au-dessus de la Forêt de Soignes avec Rusé bondissant à ses côtés dans les airs. Le pont arc-en-ciel forme un arc parfait de couleurs. Le hululement de Maître Hibou résonne, doux et rassurant."
+        },
+        "page_23": {
+          "title_template": "",
+          "text_template": "Le lendemain matin, {child_name} trouve une minuscule pousse verte qui perce la terre du pot. {child_pronoun_subject} l'arrose délicatement avec un petit arrosoir. Une plume de geai bleu gît à côté — la même teinte que celle du blaireau."
+        },
+        "page_24": {
+          "title_template": "",
+          "text_template": "Des mois plus tard, un jeune chêne se dresse près de la fenêtre, ses feuilles bruissent dans la brise. {child_name} lit dessous un livre sur les animaux des bois, le cristal captant la lumière de l'après-midi. Au bord du jardin, un renard familier observe. L'aventure n'est qu'à un pas."
+        },
+        "summary": {
+          "title_template": "",
+          "text_template": "Dans cette aventure magique, {child_name} découvre qu'une carte mystérieuse peut mener vers la plus belle des découvertes : le courage de la gentillesse vit en chacun de nous."
+        },
+        "backCover": {
+          "title_template": "",
+          "text_template": "Une histoire belge enchantée où la magie naît de la bonté du cœur."
         }
+      }
+    },
+    "en": {
+      "book": {
+        "title_template": "The Enchanted Adventure of {child_name}"
+      },
+      "pages": {
+        "cover": {
+          "title_template": "The Enchanted Adventure of {child_name}",
+          "text_template": ""
+        },
+        "dedication": {
+          "title_template": "",
+          "text_template": "For {child_name}, whose brave heart can turn any ordinary day into an extraordinary adventure."
+        },
+        "page_1": {
+          "title_template": "",
+          "text_template": "In the sunny living room of their Brussels home, {child_name} nibbles on a speculoos biscuit. Between the books on the tall shelf, a rolled parchment peeks out. {child_name} tugs it gently — dust dances in a beam of light."
+        },
+        "page_2": {
+          "title_template": "",
+          "text_template": "{child_name} unrolls the map on the carpet. It GLOWS with golden light that pulses like a heartbeat! The drawn path winds through a green forest toward a rainbow and a castle with three towers."
+        },
+        "page_3": {
+          "title_template": "",
+          "text_template": "{child_name} climbs the creaky attic stairs and pushes through an old door... to discover a VAST, LUMINOUS FOREST! Beech trees rise like a green cathedral. A fox with amber eyes watches from behind a mossy trunk."
+        },
+        "page_4": {
+          "title_template": "",
+          "text_template": "Rusé the Fox steps forward with a theatrical bow. 'Welcome, {child_name}!' he says in a warm voice. 'The forest has been expecting you.' Bluebells stretch endlessly in the dappled golden light."
+        },
+        "page_5": {
+          "title_template": "",
+          "text_template": "{child_name} and Rusé follow a winding path. Glowing mushrooms — blue and lilac — light their way. A squirrel waves from a branch. The air smells of damp earth and wild garlic."
+        },
+        "page_6": {
+          "title_template": "",
+          "text_template": "In a clearing stand three stone pillars carved with a hare, a bear, and a dove. The riddle etched in moss reads: 'What grows larger when shared?' The path splits three ways. Only one is correct."
+        },
+        "page_7": {
+          "title_template": "",
+          "text_template": "{child_name} thinks, then declares: 'Kindness!' At these words, the ground trembles gently. The pillars glow. From the earth rises a hidden stone bridge, covered in moss and tiny white flowers."
+        },
+        "page_8": {
+          "title_template": "",
+          "text_template": "{child_pronoun_subject} crosses a shimmering rainbow bridge that spans a crystal stream. The water reflects every colour — a living prism. Golden-scaled fish leap joyfully. The bridge hums with melody."
+        },
+        "page_9": {
+          "title_template": "",
+          "text_template": "On the other side, a meadow of giant sunflowers — each one taller than {child_name}. As they walk, every sunflower slowly turns its head to follow them. A gentle breeze carries the scent of honey."
+        },
+        "page_10": {
+          "title_template": "",
+          "text_template": "By a tree stump, a badger sobs great heaving sobs. He lost his grandmother's locket — his only memory of her. {child_name} kneels and places a hand on his furry arm. 'I'll help you find it.'"
+        },
+        "page_11": {
+          "title_template": "",
+          "text_template": "{child_name} spots a golden glint under a giant red mushroom. The locket! {child_pronoun_subject} returns it to the overjoyed badger who hugs {child_name} so tight their feet leave the ground. In thanks, he gives them an iridescent golden feather."
+        },
+        "page_12": {
+          "title_template": "",
+          "text_template": "The forest opens onto a hilltop. Below, a magnificent castle emerges from the mist — three stone towers with fluttering blue pennants. Rusé whispers: 'The final trial awaits. Are you ready?'"
+        },
+        "page_13": {
+          "title_template": "",
+          "text_template": "At the castle gate — massive and iron-bound — Master Owl perches on a ring handle. The wise old owl blinks slowly. 'What can you give away and still keep?' His voice echoes like distant thunder."
+        },
+        "page_14": {
+          "title_template": "",
+          "text_template": "{child_name}'s face lights up with understanding. {child_pronoun_subject} whispers: 'A promise.' The owl's eyes widen, then he hoots long and approvingly. The castle gates creak open to reveal a corridor of golden light."
+        },
+        "page_15": {
+          "title_template": "",
+          "text_template": "In the vast castle hall, a crystal the size of a melon floats above a stone pedestal, filled with swirling rainbow light. {child_name} reaches out with trembling fingers. At the touch — BOOM! The crystal erupts with blinding light that fills every corner. Prisms dance on the walls. {child_name} feels HOME."
+        },
+        "page_16": {
+          "title_template": "",
+          "text_template": "{child_name} holds the warm crystal in both hands. Inside it, images form — Mama setting the table, Papa reading the newspaper, the family cat by the fire. A wave of love and longing washes over them."
+        },
+        "page_17": {
+          "title_template": "",
+          "text_template": "The journey back is swift and luminous. {child_pronoun_subject} glides over the rainbow bridge, through the sunflower meadow that bows farewell, past the mushrooms that dim. The forest hums a goodbye song."
+        },
+        "page_18": {
+          "title_template": "",
+          "text_template": "At the forest's edge, Rusé and {child_name} embrace. 'Plant this,' he says, pressing an acorn into the child's palm. 'When you see the oak, remember: you are braver than you know, kinder than you think.'"
+        },
+        "page_19": {
+          "title_template": "",
+          "text_template": "{child_name} steps back through the attic door. The map on the floor is now completely blank. But in their hands: the crystal glows softly and the acorn is solid and real. It was true."
+        },
+        "page_20": {
+          "title_template": "",
+          "text_template": "{child_name} plants the acorn in a terracotta pot by the window, patting the soil gently. The crystal pulses faintly on the nightstand. At the garden's edge, a fox silhouette watches, smiling."
+        },
+        "page_21": {
+          "title_template": "",
+          "text_template": "After dinner, {child_name} shows the glowing crystal to Mama and Papa in the kitchen. {child_pronoun_subject} tells them everything — Rusé, the badger, the castle, the owl. The crystal pulses with their words. Mama brushes away a tear."
+        },
+        "page_22": {
+          "title_template": "",
+          "text_template": "That night, {child_name} dreams of flying over the Forest of Soignes with Rusé bounding beside them through the air. The rainbow bridge forms a perfect arc of colours. Master Owl's hoot echoes, soft and reassuring."
+        },
+        "page_23": {
+          "title_template": "",
+          "text_template": "The next morning, {child_name} finds a tiny green sprout pushing through the soil in the pot. {child_pronoun_subject} waters it carefully with a small watering can. A blue jay feather lies beside it — the same shade as the badger's gift."
+        },
+        "page_24": {
+          "title_template": "",
+          "text_template": "Months later, a young oak sapling stands tall by the window, leaves rustling in the breeze. {child_name} reads beneath it about woodland animals, the crystal catching afternoon light. At the garden's edge, a familiar fox watches. Adventure is always just a step away."
+        },
+        "summary": {
+          "title_template": "",
+          "text_template": "In this magical adventure, {child_name} discovers that a mysterious map can lead to the most beautiful discovery of all: the courage of kindness lives within us all."
+        },
+        "backCover": {
+          "title_template": "",
+          "text_template": "A Belgian enchanted story where magic is born from the goodness of the heart."
+        }
+      }
+    },
+    "nl": {
+      "book": {
+        "title_template": "Het Betoverende Avontuur van {child_name}"
+      },
+      "pages": {
+        "cover": {
+          "title_template": "Het Betoverende Avontuur van {child_name}",
+          "text_template": ""
+        },
+        "dedication": {
+          "title_template": "",
+          "text_template": "Voor {child_name}, wiens dappere hart van elke gewone dag een buitengewoon avontuur kan maken."
+        },
+        "page_1": {
+          "title_template": "",
+          "text_template": "In de zonnige woonkamer van hun Brusselse huis knabbelt {child_name} aan een speculoos. Tussen de boeken op de hoge kast piept een opgerold perkament uit. {child_name} trekt het behoedzaam naar zich toe — stofdeeltjes dansen in een lichtstraal."
+        },
+        "page_2": {
+          "title_template": "",
+          "text_template": "{child_name} rolt de kaart uit op het kleed. Ze STRAALT van gouden licht dat klopt als een hartslag! Het getekende pad kronkelt door een groen woud naar een regenboog en een kasteel met drie torens."
+        },
+        "page_3": {
+          "title_template": "",
+          "text_template": "{child_name} beklimt de krakende zoldertrap en duwt een oude deur open... om een ENORM, LICHTEND WOUD te ontdekken! Beukenbomen rijzen op als een groene kathedraal. Een vos met gouden ogen kijkt van achter een bemoste stam."
+        },
+        "page_4": {
+          "title_template": "",
+          "text_template": "Slimme de Vos stapt naar voren met een theatrale buiging. 'Welkom, {child_name}!' zegt hij met warme stem. 'Het woud wachtte al op je.' Wilde hyacinten strekken zich eindeloos uit in het gevlekte gouden licht."
+        },
+        "page_5": {
+          "title_template": "",
+          "text_template": "{child_name} en Slimme volgen een kronkelend paadje. Gloeiende paddenstoelen — blauw en paars — verlichten hun weg. Een eekhoorn zwaait vanaf een tak. De lucht ruikt naar vochtige aarde en wilde knoflook."
+        },
+        "page_6": {
+          "title_template": "",
+          "text_template": "In een open plek staan drie stenen zuilen met een haas, een beer en een duif erop gehouwen. Het raadsel gegraveerd in het mos luidt: 'Wat wordt groter als je het deelt?' Het pad splitst in drieën. Slechts één klopt."
+        },
+        "page_7": {
+          "title_template": "",
+          "text_template": "{child_name} denkt na en roept dan: 'Vriendelijkheid!' Bij deze woorden trilt de grond zachtjes. De zuilen gloeien op. Uit de aarde rijst een verborgen stenen brug, begroeid met mos en kleine witte bloempjes."
+        },
+        "page_8": {
+          "title_template": "",
+          "text_template": "{child_pronoun_subject} steekt een glinsterende regenboogbrug over die een kristalhelder beekje overspant. Het water weerkaatst elke kleur — een levend prisma. Vissen met gouden schubben springen vrolijk op. De brug neuriet een melodie."
+        },
+        "page_9": {
+          "title_template": "",
+          "text_template": "Aan de overkant ligt een weide vol reuzenzonnebloemen — elke hoger dan {child_name}. Terwijl ze wandelen, draait elke zonnebloem langzaam zijn kop om hen te volgen. Een zachte bries brengt de geur van honing mee."
+        },
+        "page_10": {
+          "title_template": "",
+          "text_template": "Bij een boomstronk snikt een das hartverscheurend. Hij verloor het kettinkje van zijn oma — zijn enige herinnering aan haar. {child_name} knielt neer en legt een hand op zijn harige arm. 'Ik help je wel zoeken.'"
+        },
+        "page_11": {
+          "title_template": "",
+          "text_template": "{child_name} spot een gouden glinstering onder een reusachtige rode paddenstoel. Het kettinkje! {child_pronoun_subject} geeft het terug aan de dolgelukkige das die {child_name} zo stevig knuffelt dat {child_possessive_det} voeten van de grond komen. Uit dankbaarheid geeft hij een schitterend gouden veertje."
+        },
+        "page_12": {
+          "title_template": "",
+          "text_template": "Het woud opent zich naar een heuveltop. Beneden doemt een prachtig kasteel op uit de nevel — drie stenen torens met wapperende blauwe vaantjes. Slimme fluistert: 'De laatste beproeving wacht. Ben je er klaar voor?'"
+        },
+        "page_13": {
+          "title_template": "",
+          "text_template": "Bij de kasteelpoort — massief en met ijzer beslagen — zit Meester Uil op een ringhandvat. De wijze oude uil knippert langzaam. 'Wat kun je weggeven en toch behouden?' Zijn stem galmt als verre donder."
+        },
+        "page_14": {
+          "title_template": "",
+          "text_template": "{child_name} straalt van begrip. {child_pronoun_subject} fluistert: 'Een belofte.' De ogen van de uil worden reusachtig, dan oehoe-t hij lang en goedkeurend. De kasteelpoorten kraken open en tonen een gang van gouden licht."
+        },
+        "page_15": {
+          "title_template": "",
+          "text_template": "In de uitgestrekte kasteelzaal zweeft een kristal zo reusachtig als een meloen boven een stenen sokkel, gevuld met wervelend regenbooklicht. {child_name} reikt uit met trillende vingers. Bij aanraking — BOEM! Het kristal barst uit van verblindend licht dat elke hoek vult. Prisma's dansen op de muren. {child_name} voelt zich THUIS."
+        },
+        "page_16": {
+          "title_template": "",
+          "text_template": "{child_name} houdt het warme kristal in beide handen. Binnenin vormen zich beelden — Mama die de tafel dekt, Papa die de krant leest, de huiskat bij het vuur. Een golf van liefde en heimwee spoelt over hen heen."
+        },
+        "page_17": {
+          "title_template": "",
+          "text_template": "De terugtocht verloopt vlot en lichtend. {child_pronoun_subject} glijdt over de regenboogbrug, door de zonnebloemweide die afscheid buigt, langs de paddenstoelen die dimmen. Het woud neuriet een afscheidsliedje."
+        },
+        "page_18": {
+          "title_template": "",
+          "text_template": "Aan de bosrand omhelzen Slimme en {child_name} elkaar. 'Plant dit,' zegt hij, terwijl hij een eikel in de handpalm drukt. 'Als je de eik ziet, onthoud dan: je bent dapperder dan je weet, vriendelijker dan je beseft.'"
+        },
+        "page_19": {
+          "title_template": "",
+          "text_template": "{child_name} stapt terug door de zolderdeur. De kaart op de vloer is nu helemaal blanco. Maar in hun handen: het kristal gloeit zachtjes en de eikel is stevig en echt. Het was waar."
+        },
+        "page_20": {
+          "title_template": "",
+          "text_template": "{child_name} plant de eikel in een terracotta pot bij het raam en klopt de aarde zachtjes aan. Het kristal pulseert zwakjes op het nachtkastje. Aan de tuinrand kijkt een vossensilhouet toe en glimlacht."
+        },
+        "page_21": {
+          "title_template": "",
+          "text_template": "Na het avondeten toont {child_name} het gloeiende kristal aan Mama en Papa in de keuken. {child_pronoun_subject} vertelt alles — Slimme, de das, het kasteel, de uil. Het kristal pulseert mee met hun woorden. Mama veegt een traan weg."
+        },
+        "page_22": {
+          "title_template": "",
+          "text_template": "Die nacht droomt {child_name} dat ze boven het Zoniënwoud vliegen met Slimme die naast hen door de lucht springt. De regenboogbrug vormt een perfecte kleurenboog. Meester Uils geroep echoot, zacht en geruststellend."
+        },
+        "page_23": {
+          "title_template": "",
+          "text_template": "De volgende ochtend vindt {child_name} een piepklein groen spruitje dat door de aarde in de pot prikt. {child_pronoun_subject} geeft het behoedzaam water met een tenger gietertje. Een gaaienveer ligt ernaast — dezelfde tint als het geschenk van de das."
+        },
+        "page_24": {
+          "title_template": "",
+          "text_template": "Maanden later staat een jonge eikenspruit fier bij het raam, de bladeren ruisen in de wind. {child_name} leest eronder over bosdieren, terwijl het kristal het middaglicht vangt. Aan de tuinrand kijkt een vertrouwde vos toe. Het avontuur is altijd maar een stap verwijderd."
+        },
+        "summary": {
+          "title_template": "",
+          "text_template": "In dit magische avontuur ontdekt {child_name} dat een mysterieuze kaart kan leiden tot de mooiste ontdekking van allemaal: de moed van vriendelijkheid leeft in ons allemaal."
+        },
+        "backCover": {
+          "title_template": "",
+          "text_template": "Een Belgisch betoverend verhaal waar magie ontstaat uit de goedheid van het hart."
+        }
+      }
     }
+  },
+  "visualBible": {
+    "style_rules": [
+      "Aquarelle belge premium avec ligne claire inspirée Hergé et Tintin",
+      "Couleurs chaudes façon Marcel Marlier/Martine : ocres, verts profonds, bleus doux",
+      "Texture papier aquarelle visible, jamais numérique",
+      "Lumière naturelle dorée, ombres douces",
+      "Détails fins type ligne claire : expressions précises, décors riches",
+      "Palette évolutive : bruns d'atelier → verts/ors de forêt → pastels de pont → bleus de château → arc-en-ciel de cristal"
+    ],
+    "palette": "Terre de Sienne, ocre jaune, vert forêt, bleu cobalt, rouge vermillon, violet outremer, blanc de titane",
+    "lighting": "Lumière naturelle dorée avec ombres portées douces, éclairage latéral pour la profondeur",
+    "compositionRules": [
+      "Format carré 21x21cm optimisé",
+      "Règle des tiers pour placer {child_name}",
+      "Premier plan net, arrière-plan légèrement flou",
+      "Mouvement dirigé vers le centre d'intérêt",
+      "Cadrage cinématographique : plans larges pour la magie, plans moyens pour l'émotion"
+    ]
+  },
+  "heroBible": {
+    "identityRules": [
+      "Enfant européen aux cheveux châtain clair ondulés mi-longs jusqu'aux épaules, avec mèche rebelle sur le front",
+      "Yeux noisette expressifs avec reflets dorés et sourcils châtain clair bien définis",
+      "Teint pêche rosé avec quelques taches de rousseur sur le nez et les joues",
+      "Taille et corpulence typique d'un enfant de 5-6 ans, ni grand ni petit",
+      "Pull en laine moutarde à col rond avec texture visible et pantalon bleu marine en velours côtelé",
+      "Baskets blanches en cuir légèrement usées avec lacets détachés",
+      "Expression toujours bienveillante avec sourire spontané et regard curieux pétillant",
+      "Gestuelle naturelle d'enfant : mains expressives, posture droite mais détendue, pas énergique"
+    ],
+    "characterDesign": "Enfant de 5-6 ans aux cheveux châtain clair ondulés mi-longs avec mèche rebelle, yeux noisette à reflets dorés, teint pêche rosé avec taches de rousseur, pull moutarde en laine à col rond, pantalon bleu marine en velours côtelé, baskets blanches en cuir usées, expression bienveillante et curieuse, gestuelle naturelle d'enfant, style ligne claire belge",
+    "forbiddenDrift": [
+      "INTERDICTION absolue de changer la couleur châtain clair des cheveux ou la texture ondulée",
+      "INTERDICTION de modifier les yeux noisette à reflets dorés",
+      "INTERDICTION de changer le pull moutarde (couleur signature obligatoire)",
+      "INTERDICTION de vieillir ou rajeunir le personnage",
+      "INTERDICTION de style cartoon exagéré, manga ou anime",
+      "INTERDICTION d'expression de peur dominante ou de tristesse accablante",
+      "INTERDICTION de transformation physique fantastique ou surnaturelle",
+      "INTERDICTION de modifier les proportions corporelles d'enfant de 5-6 ans"
+    ]
+  },
+  "sceneDefinitions": [
+    {
+      "id": "hero_reference",
+      "type": "reference",
+      "pageNumber": 3,
+      "personalizable": true,
+      "assetKey": "hero-reference-default",
+      "camera": "portrait frontal, plan buste, héros regardant chaleureusement le spectateur",
+      "composition": "portrait centré, fond neutre chaleureux",
+      "foreground": "Enfant de 5-6 ans aux cheveux châtain clair ondulés mi-longs avec mèche rebelle",
+      "midground": "Yeux noisette expressifs à reflets dorés avec sourcils châtain bien définis",
+      "background": "Fond studio neutre beige doux",
+      "lighting": "éclairage portrait doux, chaud et uniforme",
+      "emotion": "chaleureux, accessible, doux",
+      "must_show": [
+        "cheveux châtain clair ondulés mi-longs avec mèche rebelle",
+        "yeux noisette à reflets dorés",
+        "teint pêche rosé avec taches de rousseur",
+        "pull moutarde en laine à col rond",
+        "pantalon bleu marine en velours côtelé",
+        "expression bienveillante et curieuse"
+      ],
+      "must_not_show": [
+        "décor",
+        "éléments narratifs",
+        "texte",
+        "accessoires"
+      ],
+      "promptTemplate": "Portrait aquarelle ligne claire d'un enfant de 5-6 ans aux cheveux châtain clair ondulés mi-longs avec mèche rebelle sur le front, yeux noisette expressifs à reflets dorés, teint pêche rosé avec taches de rousseur, portant un pull moutarde en laine à col rond et un pantalon bleu marine en velours côtelé, sourire chaleureux et bienveillant, style Marcel Marlier premium",
+      "negativePrompt": "décor, arrière-plan détaillé, texte, cartoon, manga, peur, tristesse"
+    },
+    {
+      "id": "cover",
+      "type": "cover",
+      "pageNumber": 1,
+      "personalizable": true,
+      "assetKey": "cover-default",
+      "camera": "plan large cinématographique, angle légèrement en plongée",
+      "composition": "composition triangulaire : {child_name} au premier plan, forêt au second plan, château à l'horizon",
+      "foreground": "{child_name} en pull moutarde tenant une carte dorée brillante",
+      "midground": "Lisière de forêt enchantée avec hêtres majestueux et champignons lumineux",
+      "background": "Château aux trois tours dans la brume dorée, arc-en-ciel subtil",
+      "lighting": "heure dorée avec rayons de soleil filtrant à travers les arbres",
+      "emotion": "émerveillement et invitation à l'aventure",
+      "must_show": [
+        "child_name en pull moutarde avec cheveux châtain clair ondulés",
+        "carte dorée brillante",
+        "forêt enchantée",
+        "château lointain",
+        "lumière magique"
+      ],
+      "must_not_show": [
+        "texte intégré",
+        "personnages secondaires",
+        "éléments sombres"
+      ],
+      "promptTemplate": "Couverture aquarelle ligne claire premium : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde tenant une carte dorée scintillante, debout à la lisière d'une forêt enchantée de hêtres avec champignons bleus lumineux, château fantastique aux trois tours dans la brume dorée à l'horizon, arc-en-ciel subtil, lumière dorée magique, style Marcel Marlier/Hergé",
+      "negativePrompt": "texte, lettrage, sombre, effrayant, réaliste photographique"
+    },
+    {
+      "id": "dedication",
+      "type": "dedication",
+      "pageNumber": 2,
+      "personalizable": false,
+      "assetKey": "dedication-default",
+      "camera": "plan large paisible, vue douce",
+      "composition": "fond décoratif belge avec espace central pour texte",
+      "foreground": "Bordure décorative de feuilles de chêne et glands aquarelle",
+      "midground": "Paysage belge stylisé : maisons à pignon, pavés, ciel doux",
+      "background": "Aquarelle douce aux tons chauds : ocres, beiges, verts tendres",
+      "lighting": "lumière douce diffuse d'après-midi",
+      "emotion": "tendresse et nostalgie",
+      "must_show": [
+        "éléments décoratifs belges",
+        "feuilles de chêne",
+        "tons chauds",
+        "espace pour texte"
+      ],
+      "must_not_show": [
+        "personnages",
+        "action",
+        "éléments sombres"
+      ],
+      "promptTemplate": "Fond aquarelle belge tendre avec bordure décorative de feuilles de chêne et glands, paysage stylisé de maisons flamandes à pignon, pavés anciens, tons ocre et vert tendre, lumière douce, style ligne claire délicat",
+      "negativePrompt": "personnages, action, texte intégré, couleurs vives"
+    },
+    {
+      "id": "page_1",
+      "type": "story",
+      "pageNumber": 4,
+      "personalizable": true,
+      "assetKey": "page-1-default",
+      "camera": "plan moyen intimiste, hauteur d'enfant",
+      "composition": "salon belge chaleureux avec {child_name} près de l'étagère",
+      "foreground": "{child_name} en pull moutarde près d'une haute étagère en bois, speculoos à moitié mangé",
+      "midground": "Salon bruxellois : parquet, fauteuils en cuir, fenêtre haute",
+      "background": "Bibliothèque fournie, rayons de soleil par la fenêtre",
+      "lighting": "lumière naturelle d'après-midi par grandes fenêtres",
+      "emotion": "curiosité découverte",
+      "must_show": [
+        "child_name en pull moutarde avec cheveux châtain clair ondulés",
+        "étagère haute",
+        "speculoos",
+        "parchemin qui dépasse",
+        "salon belge",
+        "poussière dorée"
+      ],
+      "must_not_show": [
+        "magie visible",
+        "éléments fantastiques"
+      ],
+      "promptTemplate": "Aquarelle ligne claire : salon bruxellois chaleureux avec parquet et grandes fenêtres, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde debout près d'une haute étagère en bois, speculoos à moitié mangé sur une assiette, parchemin roulé qui dépasse entre les livres, poussière dorée dansant dans un rayon de soleil, style Marcel Marlier",
+      "negativePrompt": "magie, fantastique, sombre, moderne"
+    },
+    {
+      "id": "page_2",
+      "type": "story",
+      "pageNumber": 5,
+      "personalizable": true,
+      "assetKey": "page-2-default",
+      "camera": "plan rapproché sur la carte, angle léger en plongée",
+      "composition": "carte déroulée au centre, {child_name} agenouillé",
+      "foreground": "Carte parchemin avec tracé doré BRILLANT pulsant comme un cœur",
+      "midground": "{child_name} agenouillé, mains près de la carte, expression émerveillée",
+      "background": "Plancher de bois avec tapis persan, lumière dorée",
+      "lighting": "carte illuminée de l'intérieur, lueur dorée magique",
+      "emotion": "émerveillement pur",
+      "must_show": [
+        "carte brillante dorée",
+        "tracé lumineux pulsant",
+        "child_name émerveillé avec cheveux châtain clair",
+        "lueur magique",
+        "parchemin ancien"
+      ],
+      "must_not_show": [
+        "éléments sombres",
+        "peur"
+      ],
+      "promptTemplate": "Aquarelle ligne claire magique : {child_name} aux cheveux châtain clair ondulés en pull moutarde agenouillé devant une carte parchemin déroulée qui BRILLE d'une lumière dorée pulsante, tracé lumineux montrant forêt-arc-en-ciel-château, plancher de bois avec tapis persan, lueur magique dorée, style Marcel Marlier enchantement",
+      "negativePrompt": "sombre, effrayant, réaliste, numérique"
+    },
+    {
+      "id": "page_3",
+      "type": "story",
+      "pageNumber": 6,
+      "personalizable": true,
+      "assetKey": "page-3-default",
+      "camera": "plan large spectaculaire, contre-plongée majestueuse",
+      "composition": "transition magique : porte d'un côté, forêt immense de l'autre",
+      "foreground": "{child_name} franchissant le seuil, expression de stupéfaction",
+      "midground": "Forêt cathédrale : hêtres géants, voûte de feuillage vert",
+      "background": "Rusé le renard derrière un tronc moussu, yeux ambrés curieux",
+      "lighting": "lumière forestière dorée filtrant par la canopée",
+      "emotion": "stupéfaction émerveillée",
+      "must_show": [
+        "child_name franchissant seuil avec cheveux châtain clair ondulés",
+        "forêt cathédrale immense",
+        "hêtres géants",
+        "renard aux yeux ambrés",
+        "lumière magique filtrée"
+      ],
+      "must_not_show": [
+        "éléments sombres",
+        "peur",
+        "danger"
+      ],
+      "promptTemplate": "Aquarelle ligne claire spectaculaire : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde franchissant une porte vers une IMMENSE forêt cathédrale de hêtres géants, voûte verte majestueuse, renard roux aux yeux ambrés curieux derrière tronc moussu, lumière dorée filtrée, bluebells au sol, style Marcel Marlier epic fantasy",
+      "negativePrompt": "sombre, menaçant, petit, confiné"
+    },
+    {
+      "id": "page_4",
+      "type": "story",
+      "pageNumber": 7,
+      "personalizable": true,
+      "assetKey": "page-4-default",
+      "camera": "plan moyen convivial, niveau des yeux",
+      "composition": "rencontre amicale dans clairière de bluebells",
+      "foreground": "Rusé le renard en révérence théâtrale, patte sur le cœur",
+      "midground": "{child_name} souriant, légèrement surpris mais ravi",
+      "background": "Prairie de bluebells violettes s'étendant, lumière tachetée dorée",
+      "lighting": "lumière dorée tachetée filtrant par les feuilles",
+      "emotion": "connexion délicieuse",
+      "must_show": [
+        "Rusé en révérence élégante",
+        "child_name souriant avec cheveux châtain clair ondulés",
+        "bluebells violettes",
+        "lumière tachetée",
+        "rencontre amicale"
+      ],
+      "must_not_show": [
+        "méfiance",
+        "peur",
+        "agressivité"
+      ],
+      "promptTemplate": "Aquarelle ligne claire chaleureuse : Rusé le renard roux élégant en révérence théâtrale, une patte sur le cœur, face à {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde qui sourit avec ravissement, prairie de bluebells violettes, lumière dorée tachetée, atmosphère bienveillante, style Marcel Marlier",
+      "negativePrompt": "menaçant, sombre, réaliste, peur"
+    },
+    {
+      "id": "page_5",
+      "type": "story",
+      "pageNumber": 8,
+      "personalizable": true,
+      "assetKey": "page-5-default",
+      "camera": "plan d'ensemble, travelling latéral",
+      "composition": "chemin forestier sinueux avec éléments magiques",
+      "foreground": "{child_name} et Rusé côte à côte sur sentier moussu",
+      "midground": "Champignons lumineux bleus et lilas ponctuant le chemin",
+      "background": "Écureuil saluant, biche observant, arbres majestueux",
+      "lighting": "bioluminescence douce des champignons, lumière forestière dorée",
+      "emotion": "sérénité enchantée",
+      "must_show": [
+        "child_name et Rusé marchant ensemble",
+        "champignons lumineux bleus/lilas",
+        "écureuil saluant",
+        "biche curieuse",
+        "sentier magique"
+      ],
+      "must_not_show": [
+        "danger",
+        "obscurité",
+        "solitude"
+      ],
+      "promptTemplate": "Aquarelle ligne claire féerique : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé le renard roux marchant sur sentier forestier moussu, champignons bioluminescents bleus et lilas, écureuil saluant depuis branche, biche observant paisiblement, lumière dorée et magique, style Marcel Marlier enchanteur",
+      "negativePrompt": "sombre, menaçant, réaliste photographique"
+    },
+    {
+      "id": "page_6",
+      "type": "story",
+      "pageNumber": 9,
+      "personalizable": true,
+      "assetKey": "page-6-default",
+      "camera": "plan large mystérieux, angle légèrement bas",
+      "composition": "clairière rituelle avec trois piliers anciens",
+      "foreground": "Trois piliers de pierre sculptés : lièvre, ours, colombe",
+      "midground": "{child_name} et Rusé observant, énigme gravée visible",
+      "background": "Trois sentiers divergents dans la brume dorée",
+      "lighting": "lumière mystique dorée, ombres douces des piliers",
+      "emotion": "détermination focalisée",
+      "must_show": [
+        "trois piliers sculptés distincts",
+        "child_name réfléchissant avec cheveux châtain clair",
+        "Rusé attentif",
+        "trois chemins",
+        "énigme gravée"
+      ],
+      "must_not_show": [
+        "urgence",
+        "peur",
+        "confusion"
+      ],
+      "promptTemplate": "Aquarelle ligne claire mystique : clairière avec trois piliers de pierre anciens sculptés d'un lièvre, d'un ours et d'une colombe, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé observant l'énigme gravée dans la mousse, trois sentiers forestiers divergeant vers brume dorée, lumière mystérieuse, style Marcel Marlier",
+      "negativePrompt": "sombre, effrayant, urgent, confus"
+    },
+    {
+      "id": "page_7",
+      "type": "story",
+      "pageNumber": 10,
+      "personalizable": true,
+      "assetKey": "page-7-default",
+      "camera": "plan rapproché dynamique sur la révélation",
+      "composition": "moment de triomphe avec pont surgissant",
+      "foreground": "Pont de pierre moussu surgissant de terre avec petites fleurs",
+      "midground": "{child_name} rayonnant de fierté, Rusé applaudissant",
+      "background": "Piliers brillants d'une lueur dorée, sol tremblant doucement",
+      "lighting": "explosion de lumière dorée, effets magiques scintillants",
+      "emotion": "percée triomphante",
+      "must_show": [
+        "pont surgissant",
+        "child_name fier avec cheveux châtain clair ondulés",
+        "Rusé applaudissant",
+        "piliers brillants",
+        "magie visible",
+        "fleurs blanches"
+      ],
+      "must_not_show": [
+        "violence",
+        "destruction",
+        "peur"
+      ],
+      "promptTemplate": "Aquarelle ligne claire triomphante : pont de pierre moussu avec petites fleurs blanches surgissant magiquement de la terre, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde rayonnant de fierté, Rusé le renard applaudissant, piliers brillant d'or, particules magiques dorées, style Marcel Marlier épique",
+      "negativePrompt": "violent, sombre, destructeur, réaliste"
+    },
+    {
+      "id": "page_8",
+      "type": "story",
+      "pageNumber": 11,
+      "personalizable": true,
+      "assetKey": "page-8-default",
+      "camera": "plan large aérien, traversée spectaculaire",
+      "composition": "pont arc-en-ciel majestueux over stream cristallin",
+      "foreground": "{child_name} et Rusé sur le pont scintillant",
+      "midground": "Pont arc-en-ciel translucide vibrant de couleurs",
+      "background": "Poissons dorés bondissant, ciel pastel rose et lavande",
+      "lighting": "réfraction prismatique, couleurs arc-en-ciel dansantes",
+      "emotion": "joie flottante",
+      "must_show": [
+        "pont arc-en-ciel transparent",
+        "child_name traversant joyeusement avec cheveux châtain clair",
+        "poissons dorés sautant",
+        "reflets colorés",
+        "ciel pastel"
+      ],
+      "must_not_show": [
+        "danger",
+        "vertige",
+        "instabilité"
+      ],
+      "promptTemplate": "Aquarelle ligne claire prismatique : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé traversant pont arc-en-ciel scintillant au-dessus ruisseau cristallin, poissons aux écailles dorées bondissant joyeusement, reflets colorés dansant, ciel pastel rose-lavande, lumière prismatique magique, style Marcel Marlier féerique",
+      "negativePrompt": "danger, vertige, sombre, réaliste"
+    },
+    {
+      "id": "page_9",
+      "type": "story",
+      "pageNumber": 12,
+      "personalizable": true,
+      "assetKey": "page-9-default",
+      "camera": "plan d'ensemble surréaliste, perspective admirative",
+      "composition": "prairie de tournesols géants créant allée naturelle",
+      "foreground": "{child_name} et Rusé marchant entre tournesols immenses",
+      "midground": "Tournesols géants tournant leurs têtes pour suivre",
+      "background": "Horizon doré avec parfum de miel visible en particules",
+      "lighting": "lumière dorée chaude, contre-jour des tournesols",
+      "emotion": "étonnement doux",
+      "must_show": [
+        "tournesols géants",
+        "child_name emerveillé avec cheveux châtain clair ondulés",
+        "têtes de tournesols suivant",
+        "Rusé curieux",
+        "lumière dorée miel"
+      ],
+      "must_not_show": [
+        "claustrophobie",
+        "gigantisme effrayant"
+      ],
+      "promptTemplate": "Aquarelle ligne claire surréaliste : prairie de tournesols géants plus grands que {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde, chaque tournesol tournant sa tête pour suivre leur passage, Rusé émerveillé, particules dorées de miel dans l'air, lumière chaude contre-jour, style Marcel Marlier merveilleux",
+      "negativePrompt": "claustrophobe, effrayant, sombre, réaliste"
+    },
+    {
+      "id": "page_10",
+      "type": "story",
+      "pageNumber": 13,
+      "personalizable": true,
+      "assetKey": "page-10-default",
+      "camera": "plan moyen empathique, niveau émotionnel",
+      "composition": "scène de compassion près de la souche",
+      "foreground": "Blaireau sanglotant, épaules secouées de chagrin",
+      "midground": "{child_name} s'agenouillant, main tendue vers blaireau",
+      "background": "Souche d'arbre, sous-bois doux, lumière tamisée",
+      "lighting": "lumière douce et consolante, tons chauds",
+      "emotion": "empathie profonde",
+      "must_show": [
+        "blaireau pleurant",
+        "child_name compatissant avec cheveux châtain clair ondulés",
+        "geste de réconfort",
+        "souche d'arbre",
+        "tendresse"
+      ],
+      "must_not_show": [
+        "indifférence",
+        "peur",
+        "rejet"
+      ],
+      "promptTemplate": "Aquarelle ligne claire empathique : blaireau rayé sanglotant près d'une souche moussue, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde s'agenouillant avec compassion et posant main réconfortante sur bras du blaireau, sous-bois doux, lumière tamisée bienveillante, style Marcel Marlier tendre",
+      "negativePrompt": "indifférent, froid, sombre, effrayant"
+    },
+    {
+      "id": "page_11",
+      "type": "story",
+      "pageNumber": 14,
+      "personalizable": true,
+      "assetKey": "page-11-default",
+      "camera": "plan rapproché sur la joie retrouvée",
+      "composition": "moment de pure joie et gratitude",
+      "foreground": "Médaillon doré brillant sous champignon rouge géant",
+      "midground": "Blaireau soulevant {child_name} dans un câlin exubérant",
+      "background": "Champignons colorés, particules de joie dorées",
+      "lighting": "éclat doré du médaillon, lumière de bonheur",
+      "emotion": "satisfaction dans la gentillesse",
+      "must_show": [
+        "médaillon doré retrouvé",
+        "câlin exubérant",
+        "child_name souriant avec cheveux châtain clair ondulés",
+        "blaireau joyeux",
+        "plume irisée cadeau"
+      ],
+      "must_not_show": [
+        "tristesse résiduelle",
+        "formalité"
+      ],
+      "promptTemplate": "Aquarelle ligne claire joyeuse : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde soulevé dans câlin exubérant par blaireau reconnaissant, médaillon doré brillant près champignon rouge géant, plume dorée irisée offerte en cadeau, particules de joie, lumière chaude bonheur, style Marcel Marlier célébration",
+      "negativePrompt": "triste, formel, sombre, distant"
+    },
+    {
+      "id": "page_12",
+      "type": "story",
+      "pageNumber": 15,
+      "personalizable": true,
+      "assetKey": "page-12-default",
+      "camera": "plan large épique, vue panoramique",
+      "composition": "révélation du château depuis colline",
+      "foreground": "{child_name} et Rusé au sommet de colline",
+      "midground": "Vallée brumeuse dorée s'étendant",
+      "background": "Château majestueux aux trois tours, pennons bleus",
+      "lighting": "brume dorée mystique, lumière de fin d'après-midi",
+      "emotion": "anticipation craintive + émerveillement",
+      "must_show": [
+        "château trois tours",
+        "pennons bleus",
+        "brume dorée",
+        "child_name déterminé avec cheveux châtain clair ondulés",
+        "Rusé encourageant",
+        "vue panoramique"
+      ],
+      "must_not_show": [
+        "château menaçant",
+        "obscurité",
+        "peur"
+      ],
+      "promptTemplate": "Aquarelle ligne claire épique : vue panoramique depuis colline avec {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé contemplant château majestueux aux trois tours de pierre émergeant de brume dorée, pennons bleus flottant, douves réfléchissant ciel, lumière mystique fin d'après-midi, style Marcel Marlier grandiose",
+      "negativePrompt": "menaçant, sombre, effrayant, hostile"
+    },
+    {
+      "id": "page_13",
+      "type": "story",
+      "pageNumber": 16,
+      "personalizable": true,
+      "assetKey": "page-13-default",
+      "camera": "plan moyen imposant, contre-plongée sur hibou",
+      "composition": "épreuve finale devant portes massives",
+      "foreground": "Maître Hibou majestueux perché sur anneau de fer",
+      "midground": "Portes de château massives ferrées, {child_name} levant les yeux",
+      "background": "Murs de pierre ancien, lumière crépusculaire dorée",
+      "lighting": "lumière dramatique dorée, ombres nobles",
+      "emotion": "réflexion profonde",
+      "must_show": [
+        "Maître Hibou imposant",
+        "child_name réfléchissant avec cheveux châtain clair ondulés",
+        "portes massives",
+        "ferrures anciennes",
+        "sagesse"
+      ],
+      "must_not_show": [
+        "intimidation",
+        "menace",
+        "urgence"
+      ],
+      "promptTemplate": "Aquarelle ligne claire noble : Maître Hibou sage aux plumes brunes et blanches perché sur anneau de fer massif, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde levant yeux pensifs vers lui, portes château ferrées imposantes, pierre ancienne, lumière crépusculaire dorée dramatique, style Marcel Marlier majestueux",
+      "negativePrompt": "intimidant, menaçant, urgent, effrayant"
+    },
+    {
+      "id": "page_14",
+      "type": "story",
+      "pageNumber": 17,
+      "personalizable": true,
+      "assetKey": "page-14-default",
+      "camera": "gros plan sur visage illuminé",
+      "composition": "moment de révélation personnelle",
+      "foreground": "Visage de {child_name} s'illuminant de compréhension",
+      "midground": "Maître Hibou approuvant, yeux brillants",
+      "background": "Portes s'ouvrant sur corridor de lumière dorée",
+      "lighting": "illumination dorée de révélation, lueur de sagesse",
+      "emotion": "certitude naissante",
+      "must_show": [
+        "child_name illuminé de compréhension avec cheveux châtain clair ondulés",
+        "hibou approuvant",
+        "portes s'ouvrant",
+        "corridor de lumière",
+        "moment de révélation"
+      ],
+      "must_not_show": [
+        "doute",
+        "confusion",
+        "hésitation"
+      ],
+      "promptTemplate": "Aquarelle ligne claire révélation : gros plan sur {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde, visage s'illuminant de compréhension pure, Maître Hibou aux yeux brillants approuvant, portes château s'ouvrant sur corridor de lumière dorée magique, particules de sagesse, style Marcel Marlier épiphanie",
+      "negativePrompt": "confus, hésitant, sombre, incertain"
+    },
+    {
+      "id": "page_15",
+      "type": "story",
+      "pageNumber": 18,
+      "personalizable": true,
+      "assetKey": "page-15-default",
+      "camera": "plan large spectaculaire, apothéose visuelle",
+      "composition": "explosion de lumière arc-en-ciel dans salle cathédrale",
+      "foreground": "{child_name} touchant cristal, explosion de lumière",
+      "midground": "Cristal géant flottant, prismes dansant sur murs",
+      "background": "Salle cathédrale immense, Rusé et hibou s'inclinant",
+      "lighting": "EXPLOSION de lumière arc-en-ciel aveuglante, prismes partout",
+      "emotion": "émerveillement pur - CLIMAX",
+      "must_show": [
+        "cristal explosant de lumière",
+        "child_name au centre avec cheveux châtain clair ondulés",
+        "prismes dansants",
+        "salle immense",
+        "Rusé et hibou révérents",
+        "lumière arc-en-ciel"
+      ],
+      "must_not_show": [
+        "peur",
+        "douleur",
+        "confusion"
+      ],
+      "promptTemplate": "Aquarelle ligne claire CLIMAX : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde touchant cristal géant qui EXPLOSE en lumière arc-en-ciel aveuglante remplissant salle cathédrale immense, prismes de couleur dansant sur murs de pierre, Rusé et Maître Hibou s'inclinant révérencieusement, particules magiques, style Marcel Marlier apothéose",
+      "negativePrompt": "sombre, douloureux, confus, terne"
+    },
+    {
+      "id": "page_16",
+      "type": "story",
+      "pageNumber": 19,
+      "personalizable": true,
+      "assetKey": "page-16-default",
+      "camera": "plan moyen intime, moment contemplatif",
+      "composition": "révélation émotionnelle dans cristal",
+      "foreground": "{child_name} tenant cristal, visions à l'intérieur",
+      "midground": "Images de famille flottant : maman, papa, chat",
+      "background": "Salle de château apaisée, lumière douce post-révélation",
+      "lighting": "lueur chaude du cristal, nostalgie dorée",
+      "emotion": "réalisation douce-amère",
+      "must_show": [
+        "child_name tenant cristal avec cheveux châtain clair ondulés",
+        "visions familiales",
+        "maman papa chat",
+        "nostalgie visible",
+        "amour"
+      ],
+      "must_not_show": [
+        "tristesse accablante",
+        "regret",
+        "peur"
+      ],
+      "promptTemplate": "Aquarelle ligne claire émotionnelle : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde tenant cristal chaud, visions tendres flottant à l'intérieur - maman mettant table, papa lisant journal, chat près feu, expression nostalgie aimante, lumière dorée douce, style Marcel Marlier intimiste",
+      "negativePrompt": "triste, accablant, effrayant, froid"
+    },
+    {
+      "id": "page_17",
+      "type": "story",
+      "pageNumber": 20,
+      "personalizable": true,
+      "assetKey": "page-17-default",
+      "camera": "plan d'ensemble fluide, mouvement de retour",
+      "composition": "voyage de retour accéléré et lumineux",
+      "foreground": "{child_name} glissant gracieusement",
+      "midground": "Tournesols s'inclinant, champignons s'éteignant en salut",
+      "background": "Pont arc-en-ciel, forêt fredonnant adieux",
+      "lighting": "lumière dorée fluide, trainées lumineuses",
+      "emotion": "retour joyeux",
+      "must_show": [
+        "child_name glissant avec cheveux châtain clair ondulés",
+        "tournesols saluant",
+        "champignons s'éteignant",
+        "pont arc-en-ciel",
+        "mouvement fluide"
+      ],
+      "must_not_show": [
+        "précipitation",
+        "tristesse",
+        "lourdeur"
+      ],
+      "promptTemplate": "Aquarelle ligne claire fluide : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde glissant gracieusement sur chemin de retour, tournesols géants s'inclinant en salut, champignons lumineux s'éteignant délicatement, pont arc-en-ciel au loin, trainées lumineuses dorées, mouvement poétique, style Marcel Marlier cinématique",
+      "negativePrompt": "précipité, triste, lourd, chaotique"
+    },
+    {
+      "id": "page_18",
+      "type": "story",
+      "pageNumber": 21,
+      "personalizable": true,
+      "assetKey": "page-18-default",
+      "camera": "plan moyen tendre, moment d'adieu",
+      "composition": "étreinte d'adieu à lisière de forêt",
+      "foreground": "{child_name} et Rusé s'embrassant tendrement",
+      "midground": "Rusé offrant gland, geste de transmission",
+      "background": "Lisière forestière dorée, transition vers monde réel",
+      "lighting": "lumière dorée d'adieu, chaleur de fourrure",
+      "emotion": "adieu tendre",
+      "must_show": [
+        "étreinte tendre",
+        "Rusé offrant gland",
+        "child_name ému avec cheveux châtain clair ondulés",
+        "fourrure chaude",
+        "sagesse transmise"
+      ],
+      "must_not_show": [
+        "tristesse déchirante",
+        "abandon",
+        "peur"
+      ],
+      "promptTemplate": "Aquarelle ligne claire tendre : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde embrassant chaleureusement Rusé le renard roux, qui presse petit gland dans paume de l'enfant, fourrure douce visible, lisière forestière dorée, lumière d'adieu bienveillante, transmission de sagesse, style Marcel Marlier émotionnel",
+      "negativePrompt": "déchirant, abandonné, effrayant, froid"
+    },
+    {
+      "id": "page_19",
+      "type": "story",
+      "pageNumber": 22,
+      "personalizable": true,
+      "assetKey": "page-19-default",
+      "camera": "plan moyen révélateur, retour réalité magique",
+      "composition": "chambre normale avec preuves magiques",
+      "foreground": "{child_name} tenant cristal et gland, preuves réelles",
+      "midground": "Carte maintenant vierge sur le sol",
+      "background": "Chambre d'enfant normale, lumière après-midi",
+      "lighting": "lumière naturelle + lueur douce du cristal",
+      "emotion": "émerveillement + preuve",
+      "must_show": [
+        "carte vierge",
+        "cristal brillant",
+        "gland réel",
+        "child_name émerveillé avec cheveux châtain clair ondulés",
+        "chambre normale"
+      ],
+      "must_not_show": [
+        "doute",
+        "confusion",
+        "tristesse"
+      ],
+      "promptTemplate": "Aquarelle ligne claire révélatrice : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde dans chambre normale tenant cristal brillant et gland solide, carte parchemin maintenant complètement vierge au sol, lumière après-midi naturelle avec lueur magique douce du cristal, preuve que l'aventure était réelle, style Marcel Marlier mystérieux",
+      "negativePrompt": "douteux, confus, triste, ordinaire"
+    },
+    {
+      "id": "page_20",
+      "type": "story",
+      "pageNumber": 23,
+      "personalizable": true,
+      "assetKey": "page-20-default",
+      "camera": "plan rapproché sur geste d'espoir",
+      "composition": "plantation rituelle près de fenêtre",
+      "foreground": "{child_name} plantant gland avec soin rituel",
+      "midground": "Pot terracotta, cristal pulsant sur table nuit",
+      "background": "Fenêtre donnant sur jardin, silhouette de renard",
+      "lighting": "lumière douce fenêtre + pulsation cristal",
+      "emotion": "continuation pleine d'espoir",
+      "must_show": [
+        "child_name plantant avec soin avec cheveux châtain clair ondulés",
+        "pot terracotta",
+        "cristal pulsant",
+        "silhouette renard souriante",
+        "espoir"
+      ],
+      "must_not_show": [
+        "incertitude",
+        "fin définitive"
+      ],
+      "promptTemplate": "Aquarelle ligne claire espoir : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde plantant délicatement gland dans pot terracotta près fenêtre, cristal pulsant doucement sur table de nuit, silhouette de renard souriant au bord du jardin, lumière après-midi tendre, geste plein d'espoir, style Marcel Marlier continuité",
+      "negativePrompt": "incertain, définitif, triste, abandonné"
+    },
+    {
+      "id": "page_21",
+      "type": "story",
+      "pageNumber": 24,
+      "personalizable": true,
+      "assetKey": "page-21-default",
+      "camera": "plan moyen familial, partage intime",
+      "composition": "cuisine familiale, moment de partage",
+      "foreground": "{child_name} montrant cristal à parents attentifs",
+      "midground": "Parents penchés, fascinés, maman émue",
+      "background": "Cuisine belge chaleureuse, table en bois",
+      "lighting": "lumière cuisine + pulsation cristal synchrone",
+      "emotion": "partage merveilleux",
+      "must_show": [
+        "child_name racontant avec cheveux châtain clair ondulés",
+        "parents fascinés",
+        "maman émue",
+        "cristal pulsant",
+        "cuisine belge",
+        "partage familial"
+      ],
+      "must_not_show": [
+        "incrédulité",
+        "moquerie",
+        "indifférence"
+      ],
+      "promptTemplate": "Aquarelle ligne claire familiale : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde montrant cristal brillant à maman et papa fascinés dans cuisine belge chaleureuse, table bois, maman essuyant larme émue, cristal pulsant au rythme des mots, lumière chaude partage, style Marcel Marlier intimité familiale",
+      "negativePrompt": "incrédule, moqueur, indifférent, froid"
+    },
+    {
+      "id": "page_22",
+      "type": "story",
+      "pageNumber": 25,
+      "personalizable": true,
+      "assetKey": "page-22-default",
+      "camera": "plan large onirique, vue aérienne rêve",
+      "composition": "rêve de vol au-dessus forêt",
+      "foreground": "{child_name} volant gracieusement",
+      "midground": "Rusé bondissant dans les airs à côté",
+      "background": "Forêt de Soignes vue du ciel, pont arc-en-ciel",
+      "lighting": "lumière onirique dorée, atmosphère rêve",
+      "emotion": "paix onirique",
+      "must_show": [
+        "child_name volant avec cheveux châtain clair ondulés",
+        "Rusé bondissant dans air",
+        "forêt vue du ciel",
+        "pont arc-en-ciel parfait",
+        "atmosphère rêve"
+      ],
+      "must_not_show": [
+        "cauchemar",
+        "chute",
+        "peur"
+      ],
+      "promptTemplate": "Aquarelle ligne claire onirique : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde volant gracieusement au-dessus Forêt de Soignes, Rusé bondissant joyeusement dans air à ses côtés, pont arc-en-ciel formant arc parfait, château brillant au loin, lumière rêve dorée douce, style Marcel Marlier fantastique",
+      "negativePrompt": "cauchemar, chute, effrayant, réaliste"
+    },
+    {
+      "id": "page_23",
+      "type": "story",
+      "pageNumber": 26,
+      "personalizable": true,
+      "assetKey": "page-23-default",
+      "camera": "gros plan sur miracle quotidien",
+      "composition": "découverte matinale de croissance",
+      "foreground": "Pousse verte minuscule perçant terre",
+      "midground": "{child_name} arrosant délicatement",
+      "background": "Plume de geai bleu cadeau, fenêtre lumineuse",
+      "lighting": "lumière matinale fraîche, rosée scintillante",
+      "emotion": "émerveillement matinal",
+      "must_show": [
+        "pousse verte tiny",
+        "child_name arrosant avec cheveux châtain clair ondulés",
+        "petit arrosoir",
+        "plume geai bleu",
+        "lumière matinale",
+        "miracle"
+      ],
+      "must_not_show": [
+        "échec",
+        "déception",
+        "ordinaire"
+      ],
+      "promptTemplate": "Aquarelle ligne claire miracle : minuscule pousse verte perçant délicatement terre de pot, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde arrosant avec petit arrosoir, plume de geai bleu même teinte que cadeau du blaireau, lumière matinale fraîche, rosée scintillante, miracle quotidien, style Marcel Marlier tendre",
+      "negativePrompt": "échec, déçu, ordinaire, terne"
+    },
+    {
+      "id": "page_24",
+      "type": "story",
+      "pageNumber": 27,
+      "personalizable": true,
+      "assetKey": "page-24-default",
+      "camera": "plan large d'accomplissement, bouclage",
+      "composition": "résolution apaisée avec ouverture sur futur",
+      "foreground": "{child_name} lisant sous jeune chêne",
+      "midground": "Sapling chêne, cristal captant lumière",
+      "background": "Renard familier au bord jardin, magie permanente",
+      "lighting": "lumière après-midi dorée, cycle complet",
+      "emotion": "magie perdurable - résolution",
+      "must_show": [
+        "child_name sous chêne avec cheveux châtain clair ondulés",
+        "sapling développé",
+        "cristal scintillant",
+        "renard observant",
+        "livre animaux",
+        "continuité magique"
+      ],
+      "must_not_show": [
+        "fin définitive",
+        "séparation",
+        "oubli"
+      ],
+      "promptTemplate": "Aquarelle ligne claire résolution : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde lisant livre sur animaux des bois sous jeune chêne aux feuilles bruissantes, cristal captant lumière après-midi sur rebord fenêtre, renard familier observant bienveillamment au bord du jardin, magie toujours présente, style Marcel Marlier accomplissement",
+      "negativePrompt": "définitif, séparé, oublié, triste"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "pageNumber": 28,
+      "personalizable": false,
+      "assetKey": "summary-default",
+      "camera": "plan large contemplatif, synthèse visuelle",
+      "composition": "collage aquarelle des moments clés",
+      "foreground": "Carte mystique, cristal, gland germé",
+      "midground": "Silhouettes évoquant forêt, pont, château",
+      "background": "Aquarelle douce tons chauds et magiques",
+      "lighting": "lumière synthesis dorée et apaisée",
+      "emotion": "contemplation résumée",
+      "must_show": [
+        "éléments magiques clés",
+        "tons chauds",
+        "évocation plutôt que détail",
+        "synthèse"
+      ],
+      "must_not_show": [
+        "personnages",
+        "action",
+        "narration"
+      ],
+      "promptTemplate": "Fond aquarelle belge contemplatif évoquant aventure magique : carte mystérieuse, cristal scintillant, gland germé, silhouettes douces de forêt enchantée, pont arc-en-ciel, château lointain, tons ocre et vert magiques, synthèse poétique sans personnages, style ligne claire délicat",
+      "negativePrompt": "personnages, action, récit, détails"
+    },
+    {
+      "id": "backCover",
+      "type": "backCover",
+      "pageNumber": 28,
+      "personalizable": false,
+      "assetKey": "back-cover-default",
+      "camera": "plan décoratif, invitation à l'achat",
+      "composition": "design belge premium avec éléments magiques",
+      "foreground": "Bordure décorative feuilles chêne et cristaux",
+      "midground": "Évocation forêt et château stylisés",
+      "background": "Aquarelle premium tons chauds belges",
+      "lighting": "lumière douce commerciale premium",
+      "emotion": "invitation et qualité",
+      "must_show": [
+        "design premium",
+        "éléments décoratifs",
+        "qualité belge",
+        "invitation"
+      ],
+      "must_not_show": [
+        "scènes narratives",
+        "spoilers",
+        "personnages"
+      ],
+      "promptTemplate": "Quatrième de couverture aquarelle belge premium : bordure décorative feuilles de chêne et cristaux scintillants, évocation stylisée forêt enchantée et château, tons ocre et vert profond, design ligne claire élégant, qualité haut de gamme, invitation à l'aventure",
+      "negativePrompt": "narratif, spoilers, personnages, bon marché"
+    }
+  ],
+  "assets": {
+    "basePublicPath": "/images/books/aventure-enchantee",
+    "defaults": {
+      "cover-default": "/cover.png",
+      "dedication-default": "/dedication.png",
+      "hero-reference-default": "/hero-reference.png",
+      "page-1-default": "/page-1.png",
+      "page-2-default": "/page-2.png",
+      "page-3-default": "/page-3.png",
+      "page-4-default": "/page-4.png",
+      "page-5-default": "/page-5.png",
+      "page-6-default": "/page-6.png",
+      "page-7-default": "/page-7.png",
+      "page-8-default": "/page-8.png",
+      "page-9-default": "/page-9.png",
+      "page-10-default": "/page-10.png",
+      "page-11-default": "/page-11.png",
+      "page-12-default": "/page-12.png",
+      "page-13-default": "/page-13.png",
+      "page-14-default": "/page-14.png",
+      "page-15-default": "/page-15.png",
+      "page-16-default": "/page-16.png",
+      "page-17-default": "/page-17.png",
+      "page-18-default": "/page-18.png",
+      "page-19-default": "/page-19.png",
+      "page-20-default": "/page-20.png",
+      "page-21-default": "/page-21.png",
+      "page-22-default": "/page-22.png",
+      "page-23-default": "/page-23.png",
+      "page-24-default": "/page-24.png",
+      "summary-default": "/summary.png",
+      "back-cover-default": "/back-cover.png"
+    }
+  },
+  "imageGeneration": {
+    "provider": "replicate",
+    "modelStrategy": {
+      "model": "black-forest-labs/flux-2-pro"
+    },
+    "negativePromptDefault": "sombre, effrayant, violent, réaliste photographique, numérique, cartoon exagéré, anime, manga, texte, lettrage, low quality",
+    "resolution": "1 MP",
+    "outputFormat": "png",
+    "inputImages": {
+      "pageReference": true,
+      "childPhoto": true
+    }
+  },
+  "qa": {
+    "requiredPageTypes": [
+      "cover",
+      "dedication",
+      "story",
+      "summary",
+      "backCover",
+      "reference"
+    ],
+    "requiredLocales": [
+      "fr",
+      "en",
+      "nl"
+    ],
+    "placeholderPolicy": {
+      "allowed": [
+        "{child_name}",
+        "{child_pronoun_subject}",
+        "{child_possessive_det}"
+      ],
+      "forbidden": [
+        "il",
+        "elle",
+        "lui",
+        "son",
+        "sa",
+        "ses",
+        "he",
+        "she",
+        "his",
+        "her",
+        "hij",
+        "zij",
+        "zijn",
+        "haar"
+      ]
+    },
+    "rules": [
+      "Chaque page story doit avoir text_template non vide",
+      "Pronoms genrés interdits pour l'enfant héros",
+      "Style visuel cohérent ligne claire belge",
+      "Émotions claires pour chaque scène",
+      "Climax à page_15 avec moment wow",
+      "Cohérence héros à travers heroBible",
+      "Authenticité culturelle belge"
+    ],
+    "scorecard": {
+      "editorialScore": {
+        "value": 92,
+        "rationale": "Histoire structurée avec arc émotionnel fort, climax spectaculaire page 15, message universel sur courage et gentillesse, personnages attachants"
+      },
+      "imageabilityScore": {
+        "value": 95,
+        "rationale": "Scènes visuellement riches et spécifiques, progression couleurs, éléments magiques clairs, style ligne claire défini"
+      },
+      "heroConsistencyScore": {
+        "value": 90,
+        "rationale": "Description physique très précise avec détails spécifiques, pull moutarde signature, caractéristiques faciales définies, règles anti-drift renforcées"
+      },
+      "localeCompletenessScore": {
+        "value": 94,
+        "rationale": "Trois langues complètes avec authenticité culturelle, NL authentiquement flamand, EN naturel, évitement pronoms genrés réussi"
+      }
+    }
+  }
 }
