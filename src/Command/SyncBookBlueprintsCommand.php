@@ -385,6 +385,10 @@ final class SyncBookBlueprintsCommand extends Command
         $metadataStatus = trim((string) ($masterBlueprint['metadata']['status'] ?? 'draft'));
         $shouldBeEnabled = 'published' === $metadataStatus;
 
+        if (!$shouldBeEnabled) {
+            $io->warning(sprintf('Product "%s" has status "%s" — NOT enabled in catalog. Set metadata.status to "published" to make it visible.', $slug, $metadataStatus));
+        }
+
         if (!$product instanceof Product) {
             $product = new Product();
             $product->setCode('' !== $productCode ? $productCode : strtoupper(str_replace('-', '_', $slug)));

@@ -46,15 +46,18 @@ final class GenerateBlueprintCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
         $sourcePath = trim((string) $input->getOption('source'));
-        $outputDir = trim((string) $input->getOption('output-dir'));
+        $outputDir = rtrim(trim((string) $input->getOption('output-dir')), '/');
+        $locales = explode(',', trim((string) $input->getOption('locales')));
         $dryRun = (bool) $input->getOption('dry-run');
-        $requestedLocales = $this->parseLocales((string) $input->getOption('locales'));
 
-        if ('' === $sourcePath) {
-            $io->error('The --source option is required.');
+        if ('' === $outputDir) {
+            $io->error('The --output-dir option is required.');
 
             return Command::FAILURE;
         }
+
+        // Always output runtime files to a 'generated' subdirectory (sync command expects it)
+        $outputDir .= '/generated';
 
         if ('' === $outputDir) {
             $io->error('The --output-dir option is required.');
