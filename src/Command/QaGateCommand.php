@@ -29,14 +29,20 @@ final class QaGateCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
-        $blueprintDir = rtrim(trim((string) $input->getArgument('blueprint-dir')), '/');
+        $inputPath = rtrim(trim((string) $input->getArgument('blueprint-dir')), '/');
 
-        if (!is_dir($blueprintDir)) {
-            $io->error(sprintf('Blueprint directory not found: %s', $blueprintDir));
+        // Accept both directory path and direct master.json path
+        if (is_file($inputPath) && str_ends_with($inputPath, '.json')) {
+            $masterPath = $inputPath;
+            $blueprintDir = dirname($masterPath);
+        } elseif (is_dir($inputPath)) {
+            $blueprintDir = $inputPath;
+            $masterPath = $blueprintDir.'/master.json';
+        } else {
+            $io->error(sprintf('Path not found: %s', $inputPath));
             return Command::FAILURE;
         }
 
-        $masterPath = $blueprintDir.'/master.json';
         if (!is_file($masterPath)) {
             $io->error(sprintf('master.json not found in: %s', $blueprintDir));
             return Command::FAILURE;
@@ -138,16 +144,20 @@ final class QaGateCommand extends Command
         $gateMode = strtolower(trim((string) getenv('QA_GATE_MODE') ?: 'balanced'));
         if ('balanced' === $gateMode || 'strict' === $gateMode) {
             $minIndividual = 'strict' === $gateMode ? self::QA_PREMIUM_MIN_SCORE : self::QA_PREMIUM_MIN_INDIVIDUAL;
+            $allAboveThreshold = true;
             foreach ($scores as $dimension => $value) {
                 $scoreVal = is_numeric($value) ? (float) $value : (is_array($value) ? ((float) ($value['value'] ?? 0) / 10) : 0);
                 if ($scoreVal < $minIndividual) {
+                    $allAboveThreshold = false;
                     $io->warning(sprintf(
                         'QA GATE (info): dimension "%s" score %.1f/10 is below recommended %.1f/10.',
                         (string) $dimension, $scoreVal, $minIndividual
                     ));
                 }
             }
-            $io->writeln(sprintf('<info>  ✓ %s mode: all individual scores ≥ %.1f/10</info>', $gateMode, $minIndividual));
+            if ($allAboveThreshold) {
+                $io->writeln(sprintf('<info>  ✓ %s mode: all individual scores ≥ %.1f/10</info>', $gateMode, $minIndividual));
+            }
         } else {
             $io->writeln(sprintf('<info>  ✓ lenient mode: no individual score check</info>'));
         }
