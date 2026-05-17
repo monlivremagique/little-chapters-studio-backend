@@ -26,7 +26,7 @@ final class ValidateBlueprintCommand extends Command
     protected function configure(): void
     {
         $this
-            ->addOption('file', null, InputOption::VALUE_REQUIRED, 'Absolute or relative path to the blueprint JSON file.')
+            ->addOption('file', null, InputOption::VALUE_REQUIRED, 'Absolute or relative path to the blueprint JSON file, or a directory containing master.json.')
             ->addOption('runtime', null, InputOption::VALUE_NONE, 'Validate a localized runtime blueprint instead of a master V2 blueprint.');
     }
 
@@ -37,9 +37,17 @@ final class ValidateBlueprintCommand extends Command
         $runtime = (bool) $input->getOption('runtime');
 
         if ('' === $filePath) {
-            $io->error('The --file option is required.');
+            $io->error('The --file option is required. Usage: app:book:validate-blueprint --file=path/to/master.json (or directory/)');
 
             return Command::FAILURE;
+        }
+
+        // Accept directory path: resolve to master.json inside
+        if (is_dir($filePath)) {
+            $resolved = rtrim($filePath, '/').'/master.json';
+            if (is_file($resolved)) {
+                $filePath = $resolved;
+            }
         }
 
         if (!is_file($filePath) || !is_readable($filePath)) {
