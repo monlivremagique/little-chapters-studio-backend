@@ -3,7 +3,7 @@
     "coverReference": null,
     "model": "black-forest-labs/flux-2-pro",
     "scene": "page_1",
-    "dryRun": true,
+    "dryRun": false,
     "photoProvided": false,
     "outputDir": "resources/book-blueprints/aventure-enchantee",
     "prompt": "Interior page 4 for a premium children's book. No text anywhere — text is external.\nStory: Une aventure magique où {child_name} découvre que le vrai courage vient de la gentillesse\nStyle: Aquarelle belge premium avec ligne claire inspirée Hergé et Tintin, Couleurs chaudes façon Marcel Marlier/Martine : ocres, verts profonds, bleus doux, Texture papier aquarelle visible, jamais numérique, Lumière naturelle dorée, ombres douces, Détails fins type ligne claire : expressions précises, décors riches, Palette évolutive : bruns d'atelier → verts/ors de forêt → pastels de pont → bleus de château → arc-en-ciel de cristal\nHero: Une aventure magique où {child_name} découvre que le vrai courage vient de la gentillesse\nFocus on consistent style with the established visual direction.\nShot: plan moyen intimiste, hauteur d'enfant\nMood: curiosité découverte\nLight: lumière naturelle d'après-midi par grandes fenêtres\nComposition: salon belge chaleureux avec {child_name} près de l'étagère\nFront: {child_name} en pull moutarde près d'une haute étagère en bois, speculoos à moitié mangé\nMiddle: Salon bruxellois : parquet, fauteuils en cuir, fenêtre haute\nBack: Bibliothèque fournie, rayons de soleil par la fenêtre\nInclude: child_name en pull moutarde avec cheveux châtain clair ondulés, étagère haute, speculoos, parchemin qui dépasse, salon belge, poussière dorée",
@@ -18,6 +18,42 @@
         "output_format": "png",
         "negative_prompt": "blurry, distorted anatomy, extra fingers, extra limbs, wrong anatomy, harsh darkness, horror mood, scary atmosphere, aggressive action, cluttered scene, teenage proportions, neon sci-fi, text, letters, words, title, readable characters, watermark, logo, sombre, effrayant, violent, réaliste photographique, numérique, cartoon exagéré, anime, manga, texte, lettrage, low quality, magie, fantastique, moderne"
     },
-    "prediction": null,
+    "prediction": {
+        "id": "sej4n01ev5rmr0cy6x3t5wejng",
+        "model": "black-forest-labs/flux-2-pro",
+        "version": "hidden",
+        "input": {
+            "aspect_ratio": "3:4",
+            "input_images": [
+                "data:image/png;base64,..."
+            ],
+            "negative_prompt": "blurry, distorted anatomy, extra fingers, extra limbs, wrong anatomy, harsh darkness, horror mood, scary atmosphere, aggressive action, cluttered scene, teenage proportions, neon sci-fi, text, letters, words, title, readable characters, watermark, logo, sombre, effrayant, violent, réaliste photographique, numérique, cartoon exagéré, anime, manga, texte, lettrage, low quality, magie, fantastique, moderne",
+            "output_format": "png",
+            "prompt": "Interior page 4 for a premium children's book. No text anywhere — text is external.\nStory: Une aventure magique où {child_name} découvre que le vrai courage vient de la gentillesse\nStyle: Aquarelle belge premium avec ligne claire inspirée Hergé et Tintin, Couleurs chaudes façon Marcel Marlier/Martine : ocres, verts profonds, bleus doux, Texture papier aquarelle visible, jamais numérique, Lumière naturelle dorée, ombres douces, Détails fins type ligne claire : expressions précises, décors riches, Palette évolutive : bruns d'atelier → verts/ors de forêt → pastels de pont → bleus de château → arc-en-ciel de cristal\nHero: Une aventure magique où {child_name} découvre que le vrai courage vient de la gentillesse\nFocus on consistent style with the established visual direction.\nShot: plan moyen intimiste, hauteur d'enfant\nMood: curiosité découverte\nLight: lumière naturelle d'après-midi par grandes fenêtres\nComposition: salon belge chaleureux avec {child_name} près de l'étagère\nFront: {child_name} en pull moutarde près d'une haute étagère en bois, speculoos à moitié mangé\nMiddle: Salon bruxellois : parquet, fauteuils en cuir, fenêtre haute\nBack: Bibliothèque fournie, rayons de soleil par la fenêtre\nInclude: child_name en pull moutarde avec cheveux châtain clair ondulés, étagère haute, speculoos, parchemin qui dépasse, salon belge, poussière dorée",
+            "resolution": "1 MP"
+        },
+        "logs": "Running prediction...\nUsing 1 MP resolution: 880x1168\nUsing seed: 11763\nProcessing input image\nImage size: 14.7KB\nGenerating image...\nCurrent status: {'id': '70e43c78-c486-44c6-98b6-fce1398b93e2', 'status': 'Pending', 'result': None, 'progress': None, 'details': None, 'preview': None}\nGenerated image in 12.7sec\nDownloaded image in 0.10sec\n",
+        "output": "https://replicate.delivery/xezq/ygEyPtMcf117GSq7FIDGuSMV3PCoLjse4dL4p8X14qLtA8lWA/tmp52tvswvi.png",
+        "data_removed": false,
+        "error": null,
+        "source": "api",
+        "status": "succeeded",
+        "created_at": "2026-05-17T18:51:12.473Z",
+        "started_at": "2026-05-17T18:51:12.514024271Z",
+        "completed_at": "2026-05-17T18:51:25.53183158Z",
+        "urls": {
+            "cancel": "https://api.replicate.com/v1/predictions/sej4n01ev5rmr0cy6x3t5wejng/cancel",
+            "get": "https://api.replicate.com/v1/predictions/sej4n01ev5rmr0cy6x3t5wejng",
+            "stream": "https://stream.replicate.com/v1/files/jbxs-g7u2dez26k3xoqr6safx7tqv4c7zzx67iqtiktbyki5mzcggqnya",
+            "web": "https://replicate.com/p/sej4n01ev5rmr0cy6x3t5wejng"
+        },
+        "metrics": {
+            "image_input_megapixel_count": 1,
+            "image_output_count": 1,
+            "image_output_megapixel_count": 1,
+            "predict_time": 13.017807315,
+            "total_time": 13.05883158
+        }
+    },
     "estimatedCostUsd": 0.055
 }

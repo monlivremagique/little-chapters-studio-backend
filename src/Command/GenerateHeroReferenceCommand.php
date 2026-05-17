@@ -125,6 +125,12 @@ final class GenerateHeroReferenceCommand extends Command
         }
 
         if (!$dryRun) {
+            // The sub-command generates page_1-generated.png. Copy it to hero-reference.png.
+            $generatedPage1 = sprintf('%s/page_1-generated.png', $outputDir);
+            if (is_file($generatedPage1) && is_readable($generatedPage1) && !is_file($heroReferencePath)) {
+                copy($generatedPage1, $heroReferencePath);
+            }
+
             if (!is_file($heroReferencePath) || !is_readable($heroReferencePath)) {
                 $io->error(sprintf('hero-reference.png was not created at "%s". Check GeneratePagesCommand output.', $heroReferencePath));
 
