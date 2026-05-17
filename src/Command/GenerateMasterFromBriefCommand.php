@@ -287,6 +287,11 @@ final class GenerateMasterFromBriefCommand extends Command
         $sds = is_array($masterBlueprint['sceneDefinitions'] ?? null) ? $masterBlueprint['sceneDefinitions'] : [];
         foreach ($sds as $i => $sd) {
             if (!is_array($sd)) continue;
+            // Fix missing/zero pageNumber: assign sequential from position
+            $pageNumber = (int) ($sd['pageNumber'] ?? 0);
+            if ($pageNumber < 1) {
+                $sd['pageNumber'] = $i + 1;
+            }
             foreach (['camera','composition','foreground','midground','background','lighting','emotion'] as $f) {
                 if (isset($sd[$f]) && is_array($sd[$f])) $sd[$f] = $this->flattenToSentence($sd[$f]);
             }

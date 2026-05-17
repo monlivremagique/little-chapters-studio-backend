@@ -80,6 +80,7 @@ final class BookBriefPromptBuilder
             '- Use title_template and text_template (NOT title/text) in locale pages.',
             '- scene IDs order: '.implode(', ', $sceneIds),
             '- scene types: cover, dedication, story, summary, backCover, reference',
+            '- sceneDefinitions[*].pageNumber: cover=1, dedication=2, hero_reference=3, story pages start at 4, summary/backCover are last. pageNumber MUST be ≥ 1.',
             '- Dedication + summary promptTemplate = thematic background WITHOUT hero (text overlay).',
             '- asset keys: '.implode(', ', array_keys($assetDefaults)),
             '- provider=replicate, model=black-forest-labs/flux-2-pro, format=png, resolution="1 MP"',
