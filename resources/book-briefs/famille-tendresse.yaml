@@ -4,16 +4,13 @@ theme:
 - family
 - love
 - tenderness
-story_subject: 'A warm celebration of family love told from the perspective of parents, grandparents, and siblings. Each page
-  expresses a different way the family loves {child_name} — through cuddles, play, meals, stories, and quiet moments. Simple,
-  tender, and deeply reassuring.
-
-  '
-main_emotion: love
-learning_message: 'You are loved completely, exactly as you are. Family love is the safest place in the world — it wraps around
-  you like a warm hug, every single day.
-
-  '
+story_subject: 'A lyrical celebration of family love told through everyday moments: Maman''s morning cuddles, Papa''s playful
+  lifts, Grand-mère''s knitting by the fire, Grand-père''s garden lessons, frites night, rainy afternoons, swing-time at sunset.
+  Each page follows the rhythm ''Je t''aime quand...'' — building to a climactic bedtime moment where both parents lean in
+  to kiss {child_name} goodnight, and a final page that wraps every expression of love into one quiet, powerful statement.'
+main_emotion: tender love
+learning_message: 'You are loved completely, exactly as you are — messy hands, sleepy yawns, and all. Family love is the safest
+  place in the world: it wraps around you like a warm hug, every single day, in a thousand small ways.'
 languages:
 - fr
 - en
@@ -28,14 +25,28 @@ constraints:
 - Faces must be warm and smiling
 - No conflict or tension of any kind
 - 'Repetitive structure: ''Je t''aime quand...'' pattern'
+- No generic descriptions. Every visual detail must be specific — textures, colours, lighting, camera angle.
+- Each scene's emotion must be clearly stated in a short phrase (e.g., 'wonderment', 'determination', 'joy').
+- The hero's appearance must remain consistent across all pages — same hair colour, eye colour, clothing style.
+- Avoid ambiguous phrasing that could lead to inconsistent image generation.
+- 'The story arc must be unbroken: setup → rising action → climax → resolution with clear emotional progression.'
+- Extremely simple text — 1-2 short sentences per page. Max 12 words per page.
+- Soft colour palette throughout — creams, warm pinks, sky blues, lavender, golden amber.
+- All faces must be warm, soft, and smiling — no neutral or ambiguous expressions.
+- No conflict, tension, or negative emotion of any kind.
+- Repetitive 'Je t'aime quand...' structure creates a soothing, predictable rhythm.
+- '{child_name} wears the same soft cream jumper with a red stripe throughout.'
 arc_type: lyrical (episodic expressions of love)
 climax_page: page_14
 setting: A cosy Belgian home — bedrooms, kitchen, garden, living room, bath
-cultural_context: 'The family eats tartines with choco spread for breakfast. Friday night is frites night with a paper cone.
-  Grand-mère knits in a rocking chair. The living room has a Delft lamp. The garden has a swing under a beech tree.
-
-  '
-parent_emotion_goal: Love — the parent feels their love for their child reflected and amplified
+cultural_context: The family eats tartines with Belgian choco spread (like Côte d'Or) for breakfast. Friday night is frites
+  night — served in a paper cone with mayonnaise, eaten at the kitchen table. Grand-mère knits in a rocking chair with a ball
+  of deep blue wool. The living room has a Delftware lamp — white with blue floral patterns. The garden has a wooden swing
+  under a beech tree.
+parent_emotion_goal: 'Deep, tearful resonance — the parent sees their own love for their child reflected on every page. Each
+  ''Je t''aime quand...'' scene is designed to echo the parent''s own private moments: the messy breakfasts, the bath-time
+  giggles, the quiet bedtime kiss. By the climax, the parent should feel seen, understood, and overwhelmed with love for their
+  family.'
 secondary_characters:
 - Maman — Mother
 - Papa — Father
@@ -43,66 +54,85 @@ secondary_characters:
 - Grand-père — Grandfather
 scenes:
 - id: page_1
-  moment: Maman holds {child_name} in a rocking chair by the window. Sunlight spills through lace curtains. A sleeping cat
-    curls on the rug. Maman strokes {child_name}'s hair. {child_pronoun_subject} feels completely safe and loved.
+  moment: 'EMOTION: complete safety. Maman holds {child_name} in a wooden rocking chair by the window. Afternoon sunlight
+    pours through lace curtains, spilling gold across their laps. A ginger cat curls on the rug, tail twitching in sleep.
+    Maman strokes {child_name}''s hair — slow, gentle, steady. ''Je t''aime quand tu es calmé(e) tout contre moi.'''
 - id: page_2
-  moment: Papa lifts {child_name} high in the air in the living room. {child_name}'s arms are outstretched, laughing. A dog
-    jumps excitedly nearby. Toys are scattered on the floor.
+  moment: 'EMOTION: pure joy. Papa lifts {child_name} high above his head in the living room — {child_name}''s arms spread
+    wide like an airplane, laughing so hard their eyes crinkle. The dog jumps up, barking happily. Toys scatter on the wooden
+    floor. ''Je t''aime quand tu ris.'''
 - id: page_3
-  moment: Breakfast at the kitchen table. Tartines with choco spread are laid out. {child_name}'s hands are messy. Maman wipes
-    {child_name}'s cheek with a napkin, smiling.
+  moment: 'EMOTION: messy love. Breakfast at the round kitchen table. Tartines with choco spread — {child_name}''s hands are
+    smeared brown. A smear of choco on {child_name}''s cheek. Maman wipes it gently with a napkin, smiling without a word.
+    ''Je t''aime quand tu es gourmand(e).'''
 - id: page_4
-  moment: Grand-mère sits in her rocking chair, knitting a blue scarf. {child_name} sits on her lap, watching the needles
-    click. A ball of yarn rolls on the floor. A fire crackles in the hearth.
+  moment: 'EMOTION: quiet connection. Grand-mère in her rocking chair by the fireplace, knitting a blue scarf. {child_name}
+    sits on her lap, mesmerized by the clicking needles. A ball of deep blue wool rolls across the floor. The fire crackles.
+    A cup of tea steams on the side table. ''Je t''aime quand tu es curieux(se).'''
 - id: page_5
-  moment: Grand-père and {child_name} in the garden. Grand-père shows {child_name} how to water the tulips with a small watering
-    can. Bees buzz lazily. The beech tree rustles.
+  moment: 'EMOTION: gentle discovery. Grand-père and {child_name} in the garden. He shows {child_name} how to pour water from
+    a small green watering can onto the tulips — red and yellow blooms bend with the weight of a droplet. Bees buzz lazily.
+    ''Je t''aime quand tu découvres le monde.'''
 - id: page_6
-  moment: '{child_name} builds a tower of coloured blocks in the playroom. Papa sits nearby, adding a block on top. {child_pronoun_subject}
-    concentrates hard on placing each block just right. The tower wobbles but stands. Sunbeams illuminate dancing dust motes.'
+  moment: 'EMOTION: focused concentration. {child_name} builds a tower of coloured wooden blocks in the playroom. Papa sits
+    nearby, adding a block on top with exaggerated care. {child_name}''s tongue pokes out in concentration. The tower wobbles
+    — but stands. Sunbeams illuminate dancing dust motes. ''Je t''aime quand tu construis.'''
 - id: page_7
-  moment: Bath time! Bubbles float in the air. A rubber duck bobs on the water. {child_name}'s hair is foamy. Maman kneels
-    beside the tub, laughing. Steam rises gently.
+  moment: 'EMOTION: bubbly glee. Bath time! Mountains of white bubbles. {child_name}''s hair is a foamy crown. A yellow rubber
+    duck bobs on the water. Maman kneels beside the tub, laughing at {child_name}''s attempt to catch bubbles in {child_possessive_det}
+    hands. Steam rises. ''Je t''aime quand tu joues.'''
 - id: page_8
-  moment: Grand-mère reads a storybook to {child_name} on the sofa. The book is open to a page with a bunny. {child_name}'s
-    stuffed bunny sits beside them. A lamp glows warmly.
+  moment: 'EMOTION: storytime stillness. Grand-mère reads a picture book to {child_name} on the sofa — a story about a bunny.
+    {child_name}''s own stuffed bunny is tucked under their arm. A warm lamp glows on the side table. The pages of the book
+    — old, well-loved — crinkle. ''Je t''aime quand tu écoutes.'''
 - id: page_9
-  moment: Friday night frites! A paper cone of golden frites sits on the table. {child_name} reaches for one. {child_pronoun_subject}
-    loves the golden, crispy frites with a dollop of mayonnaise. Papa squeezes mayonnaise from a tube. Everyone is laughing.
+  moment: 'EMOTION: happy tradition. Friday night frites! A paper cone of golden frites sits on the table with a dollop of
+    mayonnaise. {child_name} reaches for one — hot, crispy, perfect. Papa squeezes mayo from a tube in a zigzag pattern. Everyone
+    is laughing. ''Je t''aime quand on est ensemble.'''
 - id: page_10
-  moment: A rainstorm outside the window. {child_name} presses their nose to the glass. Maman wraps a blanket around both
-    their shoulders. Raindrops race down the pane.
+  moment: 'EMOTION: cosy intimacy. Rain streams down the window pane. {child_name} presses their nose to the cold glass, watching
+    raindrops race each other. Maman wraps a soft blanket around both their shoulders — they stand together, warm and dry.
+    Thunder rumbles softly, far away. ''Je t''aime quand tu es bien au chaud.'''
 - id: page_11
-  moment: '{child_name} and Papa in the garden swing. Papa pushes gently. {child_name}''s hair flies back. The sun sets, painting
-    the sky peach. The beech tree''s shadow stretches long.'
+  moment: 'EMOTION: golden peace. {child_name} and Papa on the garden swing. Papa pushes gently — {child_name}''s hair flies
+    back, a grin spread across their face. The sun sets behind the beech tree, painting the sky peach and lavender. Their
+    shadows stretch long across the grass. ''Je t''aime quand tu es libre.'''
 - id: page_12
-  moment: Grand-père shows {child_name} a caterpillar on a leaf. {child_name} kneels, observing with intense focus. The caterpillar
-    is tiny and green. A magnifying glass lies nearby.
+  moment: 'EMOTION: focused wonder. Grand-père shows {child_name} a tiny green caterpillar on a leaf — its body curved like
+    a question mark. {child_name} kneels, observing with intense focus through a magnifying glass. The caterpillar''s tiny
+    legs move one by one. ''Je t''aime quand tu t''émerveilles.'''
 - id: page_13
-  moment: Evening. The family gathers on the sofa. {child_name} is in the middle, leaning against Maman, feet on Papa's lap.
-    Grand-mère knits. Grand-père smiles. The dog sleeps at their feet.
+  moment: 'EMOTION: complete family warmth. Evening. The whole family gathers on the sofa: {child_name} in the middle, leaning
+    against Maman, feet on Papa''s lap. Grand-mère knits. Grand-père smiles. The dog sleeps at their feet. The Delft lamp
+    casts a soft blue-white glow. No one needs to speak.'
 - id: page_14
-  moment: CLIMAX — Bedtime. Maman and Papa both lean over {child_name}'s bed to kiss their forehead. The room is bathed in
-    soft nightlight glow. {child_name} holds the stuffed bunny. Stickers on the wall glow faintly.
+  moment: 'EMOTION: overwhelming tenderness — CLIMAX. Bedtime. {child_name} is tucked into bed, the duvet pulled up to their
+    chin. Maman leans in from one side — kisses {child_name}''s forehead. Papa leans in from the other — kisses {child_name}''s
+    cheek. Their faces frame {child_name}''s, suspended in love. The bunny is tucked under {child_name}''s arm. The nightlight
+    glows. Glow-in-the-dark stars on the ceiling form a constellation of love.'
 - id: page_15
-  moment: 'A dreamy spread of all the family members thinking of {child_name} as they sleep. Floating hearts connect everyone.
-    The moon shines above the house. Each heart has a tiny memory: blocks, frites, the swing.'
+  moment: 'EMOTION: love across distance. A dreamy spread: the house, seen from above at night. Floating hearts - soft pink
+    and gold — drift from each family member''s room toward {child_name}''s window. Each heart contains a tiny memory: a block,
+    a frite, a tulip, a knitted stitch. The full moon hangs above.'
 - id: page_16
-  moment: 'Final scene: Close-up of {child_name} sleeping peacefully, bunny tucked under arm. A small heart-shaped pendant
-    on the nightstand. Moonlight streams through the window. The last words: ''Bonne nuit, {child_name}. Notre trésor.'''
+  moment: 'EMOTION: eternal love — resolution. Close-up of {child_name} sleeping peacefully, bunny tucked under arm. A small
+    heart-shaped pendant on the nightstand — silver, worn smooth — catches moonlight. The last words, hand-lettered: ''Bonne
+    nuit, {child_name}. Notre trésor. Je t''aime pour toujours.'''
 - id: page_17
-  moment: '{child_name} wakes from a nap, cuddled in Maman''s arms on the sofa. {child_pronoun_subject} blinks sleepily and
-    smiles up at her. Maman kisses {child_possessive_det} forehead. ''Je t''aime, mon trésor,'' she whispers warmly.'
+  moment: 'EMOTION: sleepy reconnection. {child_name} blinks awake from a nap, cuddled in Maman''s arms on the sofa. The fire
+    crackles. The afternoon light is low and golden. {child_pronoun_subject} looks up at Maman and smiles. Maman kisses {child_name}''s
+    forehead without a word. ''Je t''aime quand tu te réveilles.'''
 - id: page_18
-  moment: Grand-père helps {child_name} make a bird feeder from a pine cone and peanut butter. {child_pronoun_subject} hangs
-    it on the beech tree branch. A blue tit lands on it within minutes. {child_name} claps quietly, not wanting to scare the
-    bird away.
+  moment: 'EMOTION: nature connection. Grand-père helps {child_name} make a bird feeder — a pine cone coated in peanut butter,
+    rolled in sunflower seeds. {child_name} hangs it from the beech tree branch with blue string. Within minutes, a blue tit
+    lands, pecks, and flies off. {child_name} claps silently, not to scare it. ''Je t''aime quand tu prends soin.'''
 - id: page_19
-  moment: The family takes an evening walk along the rue pavée. {child_name} holds Maman's hand on one side and Papa's on
-    the other. {child_pronoun_subject} jumps over every crack in the pavement with a giggle. The streetlamps flicker on one
-    by one.
+  moment: 'EMOTION: family adventure. The family takes an evening walk along the rue pavée (cobblestone street). {child_name}
+    walks in the middle, holding Maman''s left hand and Papa''s right. {child_pronoun_subject} jumps over every crack in the
+    pavement with a giggle. The streetlamps flicker on one by one as dusk deepens. The beech tree towers at the end of the
+    street.'
 - id: page_20
-  moment: 'Final scene: {child_name} is tucked in bed, the Delft lamp casting a soft blue glow. {child_possessive_det} stuffed
-    bunny is tucked under one arm. A family photo, a knitted scarf, and a magnifying glass sit on the nightstand — all markers
-    of love.'
+  moment: 'EMOTION: love made visible — final. {child_name} is tucked in bed, the Delft lamp casting a soft blue glow across
+    the room. The bunny is tucked under one arm. On the nightstand: the family photo, the knitted blue scarf, the magnifying
+    glass, the bird feather — all tangible evidence of love. The last line: ''Je t''aime. Je t''aime. Je t''aime.'''
 age: 1-4

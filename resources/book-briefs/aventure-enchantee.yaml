@@ -4,15 +4,14 @@ theme:
 - adventure
 - magic
 - courage
-story_subject: '{child_name} discovers a mystical map in the attic of their Belgian home and journeys through an enchanted
-  forest, crosses a rainbow bridge, meets talking animals, solves riddles at a castle, and returns home with a magical souvenir.
-
-  '
-main_emotion: wonder
-learning_message: 'Courage and kindness are the greatest magic of all. When you believe in yourself, you can overcome any
-  obstacle.
-
-  '
+story_subject: 'While exploring the dusty attic of their Brussels maison de maître, {child_name} discovers an old parchment
+  map that glows softly at the touch. Following its winding path through the Forêt de Soignes, {child_name} meets Rusé le
+  Renard, solves riddles of kindness, crosses a rainbow bridge over a crystalline stream, and reaches a castle where Maître
+  Hibou poses the final question. The answer unlocks a dazzling crystal chamber that fills with rainbow light — and reveals
+  the true magic: the courage to be kind.'
+main_emotion: wonderment
+learning_message: Courage and kindness are the greatest magic of all. The most powerful spells are the promises we keep, the
+  friends we help, and the love we carry home. True magic is believing in yourself — and in others.
 languages:
 - fr
 - en
@@ -26,90 +25,129 @@ constraints:
 - Each page must feature {child_name} prominently
 - Text should be 2-4 sentences per page (FR/NL/EN)
 - Talking animals should feel gentle, never threatening
+- No generic descriptions. Every visual detail must be specific — textures, colours, lighting, camera angle.
+- Each scene's emotion must be clearly stated in a short phrase (e.g., 'wonderment', 'determination', 'joy').
+- The hero's appearance must remain consistent across all pages — same hair colour, eye colour, clothing style.
+- Avoid ambiguous phrasing that could lead to inconsistent image generation.
+- 'The story arc must be unbroken: setup → rising action → climax → resolution with clear emotional progression.'
+- No scary elements or dark imagery — the forest is luminous and inviting at every stage.
+- '{child_name} wears a mustard-yellow sweater and blue trousers throughout — consistent hero styling.'
+- The map glows with a soft golden light — this glow effect appears consistently whenever magic is near.
+- 'Colour arc: warm attic browns → forest greens/golds → bridge pastels → castle stone blues → crystal rainbow.'
+- 'Each riddle must be followed by a visual reaction: ground trembling, light pulsing, or doors opening.'
 arc_type: hero's journey (call to adventure → trials → return)
 climax_page: page_15
 setting: Belgian attic, Forêt de Soignes-inspired enchanted forest, rainbow bridge, castle, clearing
-cultural_context: 'The story begins in a typical Belgian maison de maître attic in Brussels. The enchanted forest is inspired
-  by the Forêt de Soignes (Zoniënwoud). The child drinks water from a traditional Belgian gobelet and eats speculoos biscuits
-  along the way.
-
-  '
-parent_emotion_goal: Pride — the parent sees their child as a brave adventurer
+cultural_context: The story begins in a typical Belgian maison de maître attic in Brussels — exposed beams, a dormer window,
+  dusty trunks. The enchanted forest is inspired by the Forêt de Soignes (Zoniënwoud) with its majestic beech trees, bluebell
+  carpets, and winding paths. {child_name} drinks water from a traditional Belgian gobelet in the attic. The castle draws
+  inspiration from the castles of the Ardennes (like Bouillon or Lavaux-Sainte-Anne).
+parent_emotion_goal: Pride mixed with tender nostalgia — the parent sees their child as a brave adventurer and remembers their
+  own childhood fantasies. The fox farewell and acorn-planting scene will make parents emotional about the preciousness of
+  their child's imagination and growth.
 secondary_characters:
 - Rusé le Renard — Friendly fox guide who accompanies {child_name}
 - Maître Hibou — Wise owl who gives the final clue at the castle
 scenes:
 - id: page_1
-  moment: '{child_name} plays in a sunlit living room of a typical Belgian house. A dust-covered, rolled-up map falls from
-    a high shelf. Speculoos biscuits are on a plate nearby.'
+  moment: 'EMOTION: curious discovery. {child_name} plays in a sunlit Belgian living room — a speculoos biscuit half-eaten
+    on a plate. A tall bookshelf catches {child_name}''s eye. A rolled-up parchment is wedged between heavy books. {child_name}
+    tugs it free — dust motes explode in a beam of afternoon light. {child_pronoun_subject} unrolls it on the rug. The map
+    is old, hand-drawn, showing a forest, a rainbow, and a castle.'
 - id: page_2
-  moment: '{child_name} unrolls the map on the floor. It glows faintly. The map shows a winding path through a green forest
-    leading to a rainbow and a castle. Sunlight pours through a tall window.'
+  moment: 'EMOTION: awe. {child_name} unrolls the map fully on the wooden floor. It GLOWS — a soft, golden pulse, like a heartbeat.
+    The drawn path shimmers: a winding route through a green forest leading to a rainbow and a castle with three towers. Sunlight
+    pours through the tall window, illuminating the floating dust. {child_name} touches the map — it warms under {child_possessive_det}
+    fingers.'
 - id: page_3
-  moment: '{child_name} steps through the attic door and finds {child_possessive_det}self at the edge of a vast, luminous
-    forest. Tall beech and oak trees arch overhead. A small fox with bright eyes peeks from behind a tree.'
+  moment: 'EMOTION: breathless wonder. {child_name} climbs the creaky attic stairs, pushes through a cobweb, and steps through
+    an old door... into a VAST LUMINOUS FOREST. Tall beech and oak trees arch overhead like a green cathedral. Bluebells carpet
+    the ground. A fox with bright amber eyes peeks from behind a mossy trunk, head tilted, curious.'
 - id: page_4
-  moment: Rusé le Renard introduces himself with a bow. He tells {child_name} the forest is full of wonders. Bluebells cover
-    the ground like a carpet — just like the Forêt de Soignes in spring.
+  moment: 'EMOTION: delighted connection. Rusé le Renard steps forward with a theatrical bow — one paw on his chest. ''Bienvenue,
+    {child_name}!'' he says. ''The forest has been expecting you.'' His voice is warm and smooth. Bluebells stretch in every
+    direction, the air is golden with dappled light. Rusé''s tail flicks playfully.'
 - id: page_5
-  moment: '{child_name} and the fox walk along a winding path. Mushrooms glow softly, lighting the way. {child_pronoun_subject}
-    watches a squirrel wave from a branch. The air is golden with dappled sunlight.'
+  moment: 'EMOTION: enchanted calm. {child_name} and Rusé walk along a winding path. Glowing mushrooms — soft blue and lilac
+    — light their way. A squirrel waves from a branch. A deer watches from between the trees, unafraid. The air smells of
+    damp earth and wild garlic. Rusé points out a heart-shaped leaf with his nose.'
 - id: page_6
-  moment: 'They arrive at a clearing with a giant puzzle: three stone pillars with animal carvings. {child_name} must choose
-    the right path. Rusé gives a riddle about kindness.'
+  moment: 'EMOTION: focused determination. They reach a clearing with three stone pillars, each carved with an animal — a
+    hare, a bear, a dove. A riddle is etched into the mossy base: ''What is the thing that, when given, multiplies in the
+    giving?'' Rusé sits beside {child_name}, waiting. The path splits into three. Only one is correct.'
 - id: page_7
-  moment: '{child_name} solves the riddle by answering with compassion. The ground trembles, and a hidden bridge emerges from
-    the moss. Rusé beams with pride.'
+  moment: 'EMOTION: triumphant breakthrough. {child_name} thinks — then says, ''Kindness!'' The moment the word is spoken,
+    the ground trembles gently. The pillars glow. From the earth before them, a hidden stone bridge rises, covered in moss
+    and tiny white flowers. Rusé beams with pride. ''Brilliant, {child_name}!'''
 - id: page_8
-  moment: They cross a shimmering rainbow bridge that arches over a crystal-clear stream. The water sparkles. Fish leap joyfully
-    below. The sky is cotton-candy pink.
+  moment: 'EMOTION: floating joy. They cross a shimmering rainbow bridge that arches over a crystal-clear stream. The water
+    reflects every colour of the bridge — a living prism. Fish with golden scales leap joyfully below. The sky beyond is cotton-candy
+    pink with soft lavender clouds. The bridge hums faintly with music.'
 - id: page_9
-  moment: On the other side, a meadow full of giant sunflowers. Each sunflower turns to face {child_name} as they walk past.
-    A gentle breeze carries the scent of honey.
+  moment: 'EMOTION: gentle amazement. On the other side, a meadow of giant sunflowers — each one taller than {child_name}.
+    As they walk, every sunflower slowly turns its head to face them, following like a crowd of golden admirers. A gentle
+    breeze carries the scent of honey. Rusé plucks a petal and it tastes sweet.'
 - id: page_10
-  moment: They meet a badger who is crying because he lost his grandmother's locket. {child_name} kneels down and comforts
-    the badger, promising to help.
+  moment: 'EMOTION: empathy. They find a badger sitting by a tree stump, sobbing — great, heaving sobs that shake his striped
+    shoulders. He lost his grandmother''s locket — the only thing he had of hers. {child_name} kneels beside him, places a
+    hand on his furry arm. ''I''ll help you find it,'' {child_pronoun_subject} promises.'
 - id: page_11
-  moment: '{child_name} spots the locket glinting under a toadstool. They return it to the grateful badger, who gives them
-    a golden feather as thanks.'
+  moment: 'EMOTION: satisfaction in kindness. {child_name} spots a glint of gold under a giant red-capped toadstool. The locket!
+    {child_pronoun_subject} returns it to the overjoyed badger, who hugs {child_name} so tight {child_possessive_det} feet
+    leave the ground. In thanks, he gives {child_name} a single golden feather that shimmers with rainbow iridescence.'
 - id: page_12
-  moment: The forest opens onto a hilltop with a view of a magnificent castle in the distance. Towers rise above the trees,
-    banners flutter. Rusé says the final trial awaits.
+  moment: 'EMOTION: awe + anticipation. The forest opens onto a hilltop. Below, a magnificent castle rises from the mist —
+    three stone towers with blue pennants fluttering. A moat surrounds it, reflecting the sky. Rusé says quietly, ''The final
+    trial awaits. Are you ready?'' {child_name} nods, heart pounding.'
 - id: page_13
-  moment: 'At the castle gate, Maître Hibou perches on an iron ring. He asks: ''What is the one thing you can give away and
-    still keep?'' {child_name} thinks deeply.'
+  moment: 'EMOTION: deep thought. At the castle gate — a massive iron-bound door — Maître Hibou perches on a ring handle.
+    The wise old owl blinks slowly. ''What is the one thing you can give away and still keep?'' His voice is deep, like distant
+    thunder. {child_name} furrows {child_possessive_det} brow. The answer hovers just out of reach.'
 - id: page_14
-  moment: 'The camera focuses on {child_name}''s thoughtful face. {child_pronoun_subject} whispers the answer: ''A promise.''
-    The owl hoots approvingly. The castle gates creak open.'
+  moment: 'EMOTION: dawning certainty. Close-up on {child_name}''s face as realisation spreads. {child_pronoun_subject} whispers:
+    ''A promise.'' The owl''s eyes widen — then he hoots — a long, approving sound. The castle gates groan and swing open,
+    revealing a corridor of golden light. Rusé touches {child_name}''s shoulder proudly.'
 - id: page_15
-  moment: CLIMAX — Inside the castle hall, a dazzling crystal floats above a pedestal. {child_name} reaches out and the crystal
-    glows warmly, filling the room with rainbow light. Rusé and Maître Hibou bow.
+  moment: 'EMOTION: pure wonder — CLIMAX. Inside the castle hall — vast, cathedral-like — a crystal the size of a melon floats
+    above a stone pedestal, rotating slowly, filled with swirling rainbow light. {child_name} steps forward, reaches out trembling
+    fingers. The moment {child_name} touches it — BOOM — the crystal erupts with blinding rainbow light that fills every corner
+    of the hall. Prisms dance on the walls. Rusé and Maître Hibou bow low. The light washes over {child_name} like a warm
+    embrace. {child_pronoun_subject} is not afraid — {child_pronoun_subject} is HOME.'
 - id: page_16
-  moment: '{child_name} holds the warm crystal. It shows them images of their family back home. A wave of love and longing
-    washes over them. Rusé nods gently — it''s time to return.'
+  moment: 'EMOTION: bittersweet realisation. {child_name} holds the warm crystal in both hands. Inside it, images form — Maman
+    setting the table, Papa reading the newspaper, the family cat by the fire. Home. A wave of love and longing washes over
+    them. Rusé nods gently. ''The forest will always be here. But home is calling.'''
 - id: page_17
-  moment: The journey back is swift and joyful. They glide over the rainbow bridge, through the sunflower meadow, past the
-    glowing mushrooms. The forest seems to wave goodbye.
+  moment: 'EMOTION: joyful return. The journey back is swift and luminous. They glide over the rainbow bridge (reflections
+    swirling below), through the sunflower meadow (the flowers bow farewell), past the glowing mushrooms (they dim as they
+    pass). The forest seems to hum a goodbye song.'
 - id: page_18
-  moment: At the forest edge, Rusé and {child_name} hug. The fox says the forest will always welcome them. He gives {child_name}
-    a small acorn as a keepsake. 'Plant it,' he says.
+  moment: 'EMOTION: tender farewell. At the forest edge, Rusé and {child_name} embrace. The fox''s fur is warm and soft. ''Plant
+    this,'' he says, pressing a small acorn into {child_name}''s palm. ''And whenever you see the oak, remember: you are braver
+    than you know, kinder than you think, and loved more than you can imagine.'' {child_name} hugs him one last time.'
 - id: page_19
-  moment: '{child_name} steps back through the attic door into their bedroom. The map is now blank. But the crystal and acorn
-    are real in their hands. Warm light fills the room.'
+  moment: 'EMOTION: wonder + proof. {child_name} steps back through the attic door. The map on the floor is now completely
+    blank — as if the journey never happened. But in {child_possessive_det} hands: the crystal glows softly, and the acorn
+    is solid and real. Warm afternoon light fills the bedroom. It was real.'
 - id: page_20
-  moment: 'Final scene: {child_name} plants the acorn in a pot by the window. The crystal sits on the nightstand. Through
-    the window, a fox silhouette is visible at the edge of the garden, smiling.'
+  moment: 'EMOTION: hopeful continuation. {child_name} plants the acorn in a terracotta pot by the window, patting the soil
+    gently. The crystal sits on the nightstand, pulsing faintly. Through the window, at the edge of the garden, a fox silhouette
+    sits watching, tail curled around its paws. It smiles — or is that a trick of the light?'
 - id: page_21
-  moment: After dinner, {child_name} shows the glowing crystal to {child_possessive_det} parents at the table. {child_pronoun_subject}
-    tells them about Rusé and the castle. The crystal pulses softly, as if remembering the magic too.
+  moment: 'EMOTION: sharing wonder. After dinner, {child_name} shows the glowing crystal to Maman and Papa at the kitchen
+    table. {child_pronoun_subject} tells them everything — Rusé, the badger, the castle, the owl. The crystal pulses in time
+    with {child_possessive_det} words. Papa leans in, mesmerized. Maman brushes a tear away.'
 - id: page_22
-  moment: That night, {child_name} dreams of flying over the Forêt de Soignes with the fox. {child_pronoun_subject} sees the
-    rainbow bridge and the sunflower meadow from above. Maître Hibou hoots in the dream — a soft, reassuring sound.
+  moment: 'EMOTION: dreamy peace. That night, {child_name} dreams of flying over the Forêt de Soignes with Rusé bounding beside
+    them through the air. They see the rainbow bridge from above — a perfect arc of colour. The castle glows in the distance.
+    Maître Hibou''s hoot echoes through the dream — soft, reassuring.'
 - id: page_23
-  moment: The next morning, {child_name} finds a tiny green sprout in the acorn pot. {child_pronoun_subject} waters it carefully
-    and places it where the morning sun pours through the lace curtains. A blue feather lies beside it — a gift from the forest.
+  moment: 'EMOTION: morning wonder. The next morning, {child_name} finds a tiny green sprout pushing through the soil in the
+    acorn pot. {child_pronoun_subject} waters it carefully with a tiny watering can. A blue jay feather lies beside the pot
+    — the same shade as the one the badger gave. {child_name} places it beside the crystal.'
 - id: page_24
-  moment: Months later, a young oak sapling stands tall by the window. {child_name} sits beneath it, reading a book about
-    woodland animals. At the garden's edge, a familiar fox watches. {child_pronoun_subject} waves, and the fox wags its tail
-    before disappearing into the trees.
+  moment: 'EMOTION: enduring magic — resolution. Months later, a young oak sapling stands tall by the window, leaves rustling
+    in the breeze. {child_name} sits beneath it, reading a book about woodland animals, the crystal on the windowsill catching
+    the afternoon light. At the garden''s edge, a familiar fox watches. {child_name} waves. The fox wags its tail once, then
+    melts back into the green. The adventure is always just a step away.'
 age: 3-7

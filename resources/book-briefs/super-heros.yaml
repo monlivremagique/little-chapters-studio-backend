@@ -4,16 +4,13 @@ theme:
 - heroism
 - confidence
 - courage
-story_subject: '{child_name} discovers that the greatest superpower isn''t flying or invisibility — it''s kindness and courage.
-  They spend the day helping neighbours, standing up for a friend, and making their Belgian town a better place, one small
-  heroic act at a time.
-
-  '
+story_subject: '{child_name} wakes up with a homemade cape and a heart full of purpose. Without super strength or flight,
+  {child_name} discovers that real heroism is helping Mamie Claire with her groceries, standing up for Lucas when he''s teased,
+  rescuing a frightened kitten, and holding doors for neighbours. Each small act ripples through the community — and when
+  {child_name} recounts the day at dinner, Papa''s proud tears prove that the greatest superpower of all is kindness.'
 main_emotion: empowerment
-learning_message: 'You don''t need a cape to be a hero. Courage, kindness, and helping others are the most powerful superpowers
-  of all.
-
-  '
+learning_message: You don't need a cape to be a hero. Courage, kindness, empathy, and helping others are the most powerful
+  superpowers of all — and every single person has them. A real hero makes the world better one small act at a time.
 languages:
 - fr
 - en
@@ -27,91 +24,129 @@ constraints:
 - Each page shows {child_name} actively doing something heroic
 - Urban Belgian setting with recognisable elements
 - Positive, uplifting tone throughout
+- No generic descriptions. Every visual detail must be specific — textures, colours, lighting, camera angle.
+- Each scene's emotion must be clearly stated in a short phrase (e.g., 'wonderment', 'determination', 'joy').
+- The hero's appearance must remain consistent across all pages — same hair colour, eye colour, clothing style.
+- Avoid ambiguous phrasing that could lead to inconsistent image generation.
+- 'The story arc must be unbroken: setup → rising action → climax → resolution with clear emotional progression.'
+- No fantasy elements — all heroism is realistic, relatable, and grounded in everyday life.
+- Each page must show {child_name} actively doing something heroic — even if small.
+- 'Urban Belgian setting with recognisable elements: terraced houses, lime trees, cobblestones.'
+- Positive, uplifting tone throughout — even the bullying scene resolves with empathy.
+- '{child_name} wears a red cape (homemade) and a blue jumper over a white shirt — consistent throughout.'
+- The cape is a visual anchor — it appears in every scene, even if just a glimpse.
 arc_type: transformation (ordinary child → everyday hero)
 climax_page: page_18
 setting: A typical Belgian town — terraced houses, a neighbourhood park, a corner bakery, a schoolyard
-cultural_context: 'Set in a town like Woluwe-Saint-Pierre. The bakery sells couques au chocolat. The park has a statue of
-  Manneken-Pis. The street is lined with lime trees. A friterie appears at the corner.
-
-  '
-parent_emotion_goal: Inspiration — the parent feels their child can be a hero in everyday life
+cultural_context: Set in Woluwe-Saint-Pierre, a leafy Brussels suburb. The bakery is a classic Belgian pâtisserie with couques
+  au chocolat, pains au chocolat, and speculoos in the window. The park has a statue of Manneken-Pis in a small fountain.
+  The street is lined with lime trees that turn golden in autumn. The corner friterie sells frites in paper cones with samurai
+  sauce.
+parent_emotion_goal: Inspiration mixed with emotional pride — the parent sees their own child in {child_name}'s everyday heroism
+  and feels a surge of hope. The dinner-table climax is specifically designed to make parents tear up as they imagine their
+  own child being celebrated for who they are, not what they can do. The final image of two friends in capes is pure heart.
 secondary_characters:
 - Mamie Claire — Neighbouring elderly lady who {child_name} helps
 - Lucas — Friend who is being teased and whom {child_name} defends
 scenes:
 - id: page_1
-  moment: '{child_name} wakes up in their cosy Belgian bedroom. A homemade cape — sewn by Maman — hangs on the bedpost. Sunlight
-    streams through lace curtains. {child_pronoun_subject} stretches and smiles. A framed photo of Tintin is on the wall.'
+  moment: 'EMOTION: anticipatory excitement. {child_name} wakes up in their cosy bedroom — morning light streams through lace
+    curtains. A red cape — slightly crooked stitching, clearly homemade by Maman — hangs from the bedpost. A framed Tintin
+    poster on the wall. {child_name} stretches, sees the cape, and grins. Today is a day for heroism.'
 - id: page_2
-  moment: '{child_name} puts on the cape and strikes a heroic pose in front of the mirror. They imagine themselves flying
-    over Brussels. But real heroism is waiting downstairs.'
+  moment: 'EMOTION: playful confidence. {child_name} puts on the cape and strikes a heroic pose before the bedroom mirror
+    — fists on hips, chin up. In the reflection, {child_pronoun_subject} imagines flying over Brussels rooftops, cape billowing.
+    But a voice calls from downstairs — breakfast is ready. Real heroism awaits at the kitchen table.'
 - id: page_3
-  moment: In the kitchen, {child_name} helps set the table without being asked. Petit-déjeuner with tartines, confiture, and
-    a bowl of café au lait for Papa. Maman smiles proudly.
+  moment: 'EMOTION: quiet responsibility. In the kitchen, {child_name} sets the table without being asked — plates, cups,
+    spoons. Petit-déjeuner: tartines with confiture, a bowl of café au lait for Papa. Maman watches from the stove, a proud
+    smile curling. ''Merci, mon héros.'' {child_name} feels a warm glow.'
 - id: page_4
-  moment: Outside on the tree-lined street, {child_name} sees Mamie Claire struggling with heavy grocery bags. A baguette
-    is about to fall. {child_name} rushes to help.
+  moment: 'EMOTION: alert compassion. Outside on the tree-lined street (lime trees, terraced houses), {child_name} spots Mamie
+    Claire — elderly, bent, struggling with heavy grocery bags. A baguette is slipping from the top of her bag. {child_name}
+    doesn''t hesitate — runs toward her.'
 - id: page_5
-  moment: '{child_name} carries one of the bags. Mamie Claire''s wrinkled face lights up when she sees {child_name}. She tells
-    {child_pronoun_subject} they have the heart of a true hero. She tells {child_name} they have the heart of a true hero.
-    They pass the neighbourhood friterie.'
+  moment: 'EMOTION: gentle connection. ''{child_name} takes one of the bags — it''s heavy, but {child_pronoun_subject} doesn''t
+    show it. Mamie Claire''s wrinkled face lights up with a warm smile. ''You have the heart of a true hero,'' she says. They
+    walk past the friterie at the corner. The cape flutters in the breeze.'
 - id: page_6
-  moment: At the park, children are playing near the Manneken-Pis statue. {child_name} spots Lucas sitting alone on a bench,
-    looking sad, while two kids point and laugh.
+  moment: 'EMOTION: protective alert. At the park near the Manneken-Pis statue, children play on the swings. But {child_name}
+    spots Lucas — best friend — sitting alone on a bench. Two kids point and laugh at him. Lucas''s shoulders are hunched.
+    His glasses seem to be the target.'
 - id: page_7
-  moment: '{child_name} walks over to Lucas and sits beside him. Lucas explains he''s being teased about his glasses. {child_name}
-    listens without interrupting.'
+  moment: 'EMOTION: empathetic listening. {child_name} walks over and sits beside Lucas on the bench without a word. Lucas
+    explains quietly — they''re teasing him about his new glasses. {child_name} listens without interrupting. The cape pools
+    on the bench. A pigeon coos at their feet.'
 - id: page_8
-  moment: '{child_name} stands up. With a calm, firm voice, {child_pronoun_subject} tells the bullies that Lucas is their
-    friend and teasing isn''t okay. The bullies look surprised and back away.'
+  moment: 'EMOTION: calm courage. {child_name} stands up, walks to the bullies. Voice calm, firm, not angry: ''Lucas is my
+    friend. Teasing isn''t okay. It''s not brave — it''s mean.'' The bullies look surprised. They shuffle, mumble, back away.
+    {child_name}''s cape settles. The moment hangs.'
 - id: page_9
-  moment: Lucas smiles for the first time. He and {child_name} play together on the swings. The sun is bright. Lucas says
-    {child_name} is a real superhero.
+  moment: 'EMOTION: relieved friendship. Lucas smiles — a real smile, the first one today. He and {child_name} run to the
+    swings together. The sun breaks through the clouds. Lucas says, ''You''re a real superhero, {child_name}.'' The cape billows
+    as {child_pronoun_subject} pumps {child_possessive_det} legs.'
 - id: page_10
-  moment: '{child_name} notices a stray kitten stuck in a tree near the playground. Its mew is soft and frightened. A small
-    crowd has gathered, unsure what to do.'
+  moment: 'EMOTION: focused concern. Near the playground, a small crowd has gathered under a lime tree. A soft, frightened
+    MEW drifts down. {child_name} — a tiny grey kitten is stuck on a branch, too scared to climb down. Its eyes are huge.
+    Adults murmur, unsure what to do.'
 - id: page_11
-  moment: '{child_name} climbs the tree carefully, branch by branch. Lucas spots them from below. The cape flutters. A parent
-    calls out encouragement.'
+  moment: 'EMOTION: determined courage. {child_name} steps forward. ''I can get her.'' Before anyone can argue, {child_pronoun_subject}
+    climbs the tree — branch by branch — the cape fluttering behind. Lucas spots from below. A parent calls: ''Be careful!''
+    {child_name} reaches for the kitten.'
 - id: page_12
-  moment: '{child_name} reaches the kitten and gently scoops it into their arms. The kitten purrs. The crowd below cheers
-    softly.'
+  moment: 'EMOTION: gentle triumph. ''{child_name} reaches the branch, extends a hand slowly. The kitten trembles — then sniffs
+    {child_name}''s fingers. {child_name} scoops her gently into {child_possessive_det} arms. The kitten buries her face in
+    the cape and purrs — a tiny motor. The crowd below sighs with relief.'
 - id: page_13
-  moment: '{child_name} climbs down and hands the kitten to a little girl who had been crying. She hugs the kitten tightly.
-    Her mother thanks {child_name} with tears in her eyes.'
+  moment: 'EMOTION: heartwarming return. {child_name} climbs down carefully and hands the kitten to a little girl who had
+    been crying — her face is blotchy, eyes red. She hugs the kitten tight. The mother thanks {child_name} with tears. ''You
+    saved Whiskers!'' {child_name}''s cape brushes against the girl''s arm.'
 - id: page_14
-  moment: Walking home, {child_name} passes the baker Madame Dubois. She's struggling to carry trays of couques au chocolat.
-    {child_name} holds the door open for her.
+  moment: 'EMOTION: noticing small needs. Walking home, {child_name} passes the bakery. Madame Dubois is struggling with two
+    large trays of couques au chocolat, trying to manage the door. {child_name} rushes to hold it open, pushing with both
+    hands.'
 - id: page_15
-  moment: Madame Dubois gives {child_name} a warm couque au chocolat as thanks. 'A hero needs energy,' she says with a wink.
-    The bakery smells of butter and sugar.
+  moment: 'EMOTION: sweet reward. Madame Dubois sets down the trays and hands {child_name} a warm couque au chocolat — the
+    chocolate inside is melted, perfect. ''A hero needs energy,'' she says with a wink. The bakery smells of butter, sugar,
+    and yeast. {child_name} bites into the couque — warm, gooey, earned.'
 - id: page_16
-  moment: Back in the street, {child_name} sees a younger child who has dropped their teddy bear in a puddle. {child_name}
-    picks it up, wipes it clean, and returns it with a smile.
+  moment: 'EMOTION: quick kindness. In the street, a younger child has dropped their teddy bear in a puddle. The child wails.
+    {child_name} stoops, picks up the bear, wipes it clean on {child_possessive_det} cape, and returns it with a smile. ''Teddy
+    is okay. He just needed a bath.'''
 - id: page_17
-  moment: 'As dusk falls, {child_name} walks home. Streetlamps glow. They pass all the places they made a difference today:
-    the friterie, the park, the bakery. A sense of warmth fills them.'
+  moment: 'EMOTION: reflective warmth. As dusk falls, {child_name} walks home. Streetlamps glow amber. Passing the friterie,
+    the park, the bakery — each landmark holds a memory of a good deed. The warmth of the day fills {child_possessive_det}
+    chest. The cape doesn''t feel silly anymore. It feels true.'
 - id: page_18
-  moment: 'CLIMAX — At the dinner table, the whole family listens as {child_name} recounts their day. Papa''s eyes glisten.
-    Maman hugs them and says: ''You are our superhero, every single day.'''
+  moment: 'EMOTION: overwhelming love — CLIMAX. At the dinner table, the family eats stoemp. {child_name} recounts the day
+    — Mamie Claire''s groceries, Lucas, the kitten, the bakery, the teddy bear. Papa sets down his fork. His eyes glisten.
+    Maman''s hand covers her mouth. ''You are our superhero,'' Maman says, voice breaking. ''Every single day.'' The family
+    is silent for a moment — full of feeling. The red cape hangs on {child_name}''s chair.'
 - id: page_19
-  moment: 'Evening: {child_name} carefully folds the cape and places it on the bedpost. It''s not about the cape, they realise.
-    It''s about the heart. The room glows warmly.'
+  moment: 'EMOTION: quiet realisation. Evening. {child_name} carefully folds the red cape and places it on the bedpost. {child_pronoun_subject}
+    looks at it — not with pride, but with understanding. It''s not about the cape. It''s about the heart. The room glows
+    warmly. The Tintin poster seems to nod.'
 - id: page_20
-  moment: 'Final scene: {child_name} looks out the window at the stars. Below, Lucas waves from his window across the street,
-    wearing a homemade cape of his own. Two superheroes, side by side.'
+  moment: 'EMOTION: connected hope — resolution. {child_name} looks out the bedroom window at the stars. A light flickers
+    across the street. Lucas''s window. Lucas waves — and HE''S wearing a cape too — a blue one, probably made by his mom.
+    Two superheroes, facing each other across the rue pavée. {child_name} waves back, grinning. The night is full of possibility.'
 - id: page_21
-  moment: After dinner, {child_name} and Papa wash the dishes together. {child_pronoun_subject} scrubs a plate carefully while
-    Papa dries. 'You really are a hero,' Papa says. 'Not because of the cape, but because you care.'
+  moment: 'EMOTION: simple bonding. After dinner, {child_name} and Papa wash the dishes together. {child_name} scrubs a plate
+    while Papa dries it. ''You really are a hero,'' Papa says. ''Not because of the cape. Because you care. That''s the only
+    superpower that matters.'''
 - id: page_22
-  moment: '{child_name} sits on the balcony overlooking the rue pavée. Streetlamps glow amber. {child_pronoun_subject} thinks
-    about everyone {child_pronoun_subject} helped today. A shooting star crosses the sky. {child_name} makes a wish: to help
-    someone again tomorrow.'
+  moment: 'EMOTION: hopeful reflection. {child_name} sits on the balcony overlooking the street. Amber streetlamps cast pools
+    of light on the cobblestones. {child_pronoun_subject} thinks about everyone {child_pronoun_subject} helped today — Mamie
+    Claire, Lucas, the kitten, Madame Dubois, the little girl. A shooting star crosses the sky. {child_name} makes a wish:
+    to help someone again tomorrow.'
 - id: page_23
-  moment: 'The next morning, {child_name} wakes early and leaves a hand-drawn card at Mamie Claire''s door. It reads: ''You
-    are a hero too.'' Through the window, Mamie Claire''s silhouette picks it up and smiles. {child_pronoun_subject} tiptoes
-    home happily.'
+  moment: 'EMOTION: spreading kindness. The next morning, {child_name} wakes early — still wearing pyjamas — and leaves a
+    hand-drawn card at Mamie Claire''s door. It shows two stick figures — one old, one young — holding hands under a rainbow.
+    Inside: ''You are a hero too.'' Through the window, Mamie Claire''s silhouette picks it up, reads it, presses it to her
+    heart. {child_name} tiptoes home, smiling.'
 - id: page_24
-  moment: '{child_name} and Lucas meet at the friterie. They share a paper cone of frites with mayonnaise. ''Superhero team?''
-    Lucas asks. {child_name} grins. ''Superhero team.'' {child_pronoun_subject} high-fives Lucas.'
+  moment: 'EMOTION: joyful partnership — final. {child_name} and Lucas meet at the friterie on the corner. Two paper cones
+    of frites with mayonnaise. They clink their cones like glasses. ''Superhero team?'' Lucas asks, adjusting his glasses.
+    {child_name} grins. ''Superhero team.'' They high-five. In the background, the red and blue capes flutter together in
+    the breeze. A perfect, earned ending.'
 age: 3-8

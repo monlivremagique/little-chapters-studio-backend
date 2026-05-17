@@ -4,16 +4,12 @@ theme:
 - baby
 - family
 - welcome
-story_subject: 'Told from the perspective of an older sibling or parents welcoming a new baby into the family. Soft pastels,
-  simple shapes, and warm emotions celebrate the arrival of {child_name} — tiny hands, first smiles, lullabies, and the promise
-  of a lifetime of love.
-
-  '
+story_subject: Told through the eyes of the family welcoming {child_name} home. Soft pastels, gentle rhythms, and sensory
+  moments — the first grasp of a finger, the weight of the lace blanket, the scent of speculoos, the sound of a lullaby —
+  celebrate the miracle of new life. Each page is a whispered 'Bienvenue' to the tiny person who has made the family complete.
 main_emotion: tenderness
-learning_message: 'A new baby is a gift of love. Every little moment — a yawn, a grasp, a coo — is a miracle. Welcoming someone
-  new makes a family bigger and brighter.
-
-  '
+learning_message: A new baby is a gift of love. Every little moment — a yawn, a grasp, a coo — is a miracle. Welcoming someone
+  new makes a family bigger, brighter, and softer. Love is the first language every baby understands.
 languages:
 - fr
 - en
@@ -28,79 +24,113 @@ constraints:
 - No conflict, no stress, no negative emotions
 - Soft, rounded illustrations — everything feels safe
 - Repetitive, lyrical phrasing
+- No generic descriptions. Every visual detail must be specific — textures, colours, lighting, camera angle.
+- Each scene's emotion must be clearly stated in a short phrase (e.g., 'wonderment', 'determination', 'joy').
+- The hero's appearance must remain consistent across all pages — same hair colour, eye colour, clothing style.
+- Avoid ambiguous phrasing that could lead to inconsistent image generation.
+- 'The story arc must be unbroken: setup → rising action → climax → resolution with clear emotional progression.'
+- Ultra-simple text — 5-10 words per page maximum. Every sentence must be short, rhythmic, and soothing.
+- High-contrast, simple shapes suitable for infant vision — bold outlines, soft fills.
+- No conflict, no stress, no negative emotions of any kind — only warmth and safety.
+- Soft, rounded illustrations — everything feels safe, warm, and enveloping.
+- Repetitive, lyrical phrasing throughout — 'Bienvenue, petit {child_name}' as a recurring anchor.
+- 'Colour palette: creams, soft pinks, pale blues, warm beiges — no bright primary colours.'
 arc_type: linear (waiting → arrival → bonding)
 climax_page: page_14
 setting: A warm Belgian home — nursery, living room, garden, the family bed
-cultural_context: 'The baby''s nursery has a mobile with Manneken-Pis and Atomium shapes. Grand-mère brings a traditional
-  Belgian drape de dentelle (lace blanket). The family eats tartines au spéculoos. A stroller is parked by the door.
-
-  '
-parent_emotion_goal: Overflowing love — the parent relives the arrival of their child
+cultural_context: The baby's nursery has a mobile with delicate Atomium and Manneken-Pis shapes in felt. Grand-mère arrives
+  with a traditional Belgian drape de dentelle (lace blanket) from Bruges — cream-coloured with intricate floral patterns.
+  The family eats tartines au spéculoos for breakfast. The cradle is a classic wooden bassinet passed down through generations.
+  A copper kettle whistles on the stove.
+parent_emotion_goal: Overwhelming, tearful love — the parent relives the first hours and days with their newborn. Every sensory
+  detail (the warmth of the baby, the smell of the blanket, the soft light) is designed to trigger the visceral memory of
+  holding their own child for the first time. The final family photo will make parents cry.
 secondary_characters:
 - Grand-mère — Grandmother who welcomes the baby
 scenes:
 - id: page_1
-  moment: A quiet bedroom. A cradle lined with soft white linen stands by the window. Lace curtains — dentelle de Bruges —
-    flutter gently. {child_pronoun_subject} will sleep peacefully beneath the mobile. A tiny mobile with stars and a small
-    Atomium shape hangs above.
+  moment: 'EMOTION: quiet anticipation. A quiet bedroom bathed in soft morning light. A wooden cradle lined with white linen
+    stands by the lace-curtained window — the dentelle de Bruges flutters gently, filtering the light into patterns on the
+    wall. Above the cradle, a felt mobile turns slowly: a tiny Atomium, a Manneken-Pis silhouette, a star, and a crescent
+    moon. The room is warm and still. Waiting.'
 - id: page_2
-  moment: Two hands — Maman and Papa — hold a tiny pair of baby booties. The booties are soft, pale blue with little embroidered
-    bees (the symbol of Brussels). Sunlight warms the scene.
+  moment: 'EMOTION: tender hope. Two hands — Maman''s and Papa''s — cradle a pair of impossibly tiny baby booties. The booties
+    are pale blue, hand-knitted, each with a little embroidered bee — the symbol of Brussels. Sunlight pours through the window,
+    warming the hands, the booties, the moment. A wedding ring catches the light.'
 - id: page_3
-  moment: The family gathers at the front door of their Belgian house. Grand-mère arrives, holding a lace blanket (drape de
-    dentelle). She smiles, eyes bright. The door is decorated with a small wreath.
+  moment: 'EMOTION: welcoming love. The family gathers at the front door of their classic Belgian terraced house — the door
+    painted deep blue, a brass knocker shaped like a lion. Grand-mère arrives, holding a folded lace blanket (drape de dentelle)
+    against her chest. She smiles, eyes bright with tears. A small wreath of white flowers hangs on the door.'
 - id: page_4
-  moment: A close-up of a tiny hand gripping an adult finger. The baby's fingers are small and perfect. The adult finger is
-    warm and comforting.
+  moment: 'EMOTION: awe at smallness. Extreme close-up: a tiny, perfect hand — five miniature fingers, translucent nails —
+    curls around an adult''s index finger. The contrast is breathtaking: the adult finger warm, lined, weathered; the baby''s
+    hand soft, smooth, impossibly small. This single image says everything about trust and love.'
 - id: page_5
-  moment: '{child_name} is swaddled in the lace blanket in Maman''s arms. Maman looks down with a soft smile. The room is
-    warm and golden. A rocking chair creaks gently.'
+  moment: 'EMOTION: serene bonding. {child_name} is swaddled in the lace blanket, nestled in Maman''s arms. Maman sits in
+    a rocking chair, looking down at {child_name} with a soft, private smile — the kind of smile only a mother has. The room
+    glows golden. The chair creaks gently, rhythmically. The cat curls at her feet.'
 - id: page_6
-  moment: Papa holds {child_name} against his chest, walking slowly around the nursery. The mobile twirls. A music box plays
-    a lullaby. Shadows dance on the walls.
+  moment: 'EMOTION: protective love. Papa holds {child_name} against his broad chest, walking slow circles around the nursery.
+    His hand supports the tiny head. The mobile turns lazily overhead. A music box on the dresser plays ''Bonne Nuit, Petit''
+    — soft, tinkling notes. Shadows of the mobile animals dance on the wall.'
 - id: page_7
-  moment: An older sibling (or a cousin) peeks into the cradle. Their face is full of curiosity and wonder. The older sibling
-    holds a stuffed bunny, offering it to {child_name}. {child_possessive_det} tiny fingers curl around the bunny's ear.
+  moment: 'EMOTION: curious wonder. An older sibling (or cousin) peeks over the edge of the cradle, face full of reverent
+    curiosity. They hold out a stuffed bunny — worn, well-loved — offering it to {child_name}. {child_name}''s tiny hand reaches
+    up instinctively, fingers brushing the bunny''s ear. The older sibling''s face lights up.'
 - id: page_8
-  moment: Grand-mère knits by the fire, the lace blanket on her lap. {child_name} sleeps in a bassinet beside her. The fire
-    crackles. The kettle hums. A plate of speculoos is on the table.
+  moment: 'EMOTION: cosy domesticity. Grand-mère knits by the fireplace, the lace blanket half-finished on her lap. {child_name}
+    sleeps in a wicker bassinet beside her, perfectly peaceful. The fire crackles. A copper kettle hums on the stove. A plate
+    of speculoos sits on a small table, steam rising from a cup of tea. Everything is exactly as it should be.'
 - id: page_9
-  moment: Bath time. {child_name} is held gently in warm water. Tiny splashes. A little yellow duck floats nearby. Maman's
-    hands cup the water. {child_name}'s eyes are wide.
+  moment: 'EMOTION: gentle delight. Bath time. {child_name} is supported in warm, shallow water, held by Maman''s gentle hands.
+    Tiny splashes. A little yellow rubber duck bobs nearby. {child_name}''s eyes are wide open, taking in the world. Droplets
+    of water cling to {child_possessive_det} nose like tiny jewels.'
 - id: page_10
-  moment: '{child_name} yawns — a huge, tiny yawn. The mouth opens wide. The eyes scrunch. Everyone in the family who sees
-    it smiles. A cat curls up nearby.'
+  moment: 'EMOTION: joyful tenderness. {child_name} yawns — a huge, adorable, all-consuming yawn. The mouth opens wide. The
+    eyes scrunch shut. The tiny arms stretch. Everyone who sees it — Maman, Papa, Grand-mère — melts into smiles. The cat
+    pauses mid-lick to watch.'
 - id: page_11
-  moment: A feeding moment. Maman holds {child_name} in the rocking chair by the window. The lace curtains glow with afternoon
-    light. The world is quiet and still.
+  moment: 'EMOTION: peaceful nourishment. Maman holds {child_name} in the rocking chair by the window, feeding. The lace curtains
+    glow with warm afternoon light, casting a lacy shadow across them both. The world outside is quiet — just the occasional
+    chirp of a bird. {child_name}''s tiny hand rests on Maman''s thumb.'
 - id: page_12
-  moment: Grand-père walks the garden with {child_name} in his arms. He points to a tulip. 'La première fleur que tu vois,'
-    he whispers. Beech tree leaves rustle above.
+  moment: 'EMOTION: quiet discovery. Grand-père walks the garden path with {child_name} in the crook of his arm. He stops
+    at a tulip bed — red and yellow blooms stretch toward the sun. ''La première fleur que tu vois, {child_name},'' he whispers.
+    The beech tree above them rustles. A bee drones lazily.'
 - id: page_13
-  moment: '{child_name} smiles for the first time — a gummy, sleepy smile. Maman and Papa lean in close, their faces lit with
-    joy. The family dog peeks over the cradle, tail wagging.'
+  moment: 'EMOTION: breathtaking milestone. {child_name} smiles for the first time — a gummy, sleepy, involuntary smile that
+    lights up the face. Maman and Papa lean in close, their faces inches away, eyes shining. The family dog peeks over the
+    cradle, tail wagging gently, as if understanding the significance.'
 - id: page_14
-  moment: 'CLIMAX — The whole family gathers around the cradle: Maman, Papa, Grand-mère, Grand-père, sibling/cousin. All hands
-    gently touch the cradle or rest on each other. {child_pronoun_subject} is surrounded by love, safe and adored. A warm
-    glow surrounds {child_name}.'
+  moment: 'EMOTION: overwhelming love — CLIMAX. The whole family gathers around the cradle: Maman, Papa, Grand-mère, Grand-père,
+    sibling/cousin. All hands gently touch the cradle — or rest on each other''s shoulders. They form a circle of love around
+    {child_name}. The lace blanket is spread beneath {child_name}. A warm, golden glow — like a blessing — surrounds the entire
+    scene. {child_name} is safe, adored, home.'
 - id: page_15
-  moment: Stars outside the window. {child_name} sleeps in the cradle, wrapped in the lace blanket. The mobile turns slowly.
-    The moon shines through the lace curtains. Everything is peaceful.
+  moment: 'EMOTION: deep peace. Stars twinkle through the window. {child_name} sleeps in the cradle, wrapped in the lace blanket.
+    The felt mobile turns slowly — Atomium, Manneken-Pis, star, moon. A sliver of moonlight falls across the cradle. Everything
+    is still. Everything is perfect.'
 - id: page_16
-  moment: 'Final scene: A close-up of {child_name}''s face, peaceful in sleep. A tiny smile. The lace blanket frames the face.
-    Soft light. The last words: ''Bienvenue, petit {child_name}. Nous t''aimons.'''
+  moment: 'EMOTION: eternal love — resolution. Extreme close-up of {child_name}''s sleeping face. Serene. Perfect. A tiny
+    smile flickers in sleep. The lace blanket frames the face like a portrait. Soft light. The final words appear in warm
+    script: ''Bienvenue, petit {child_name}. Nous t''aimons pour toujours.'''
 - id: page_17
-  moment: Grand-père sits in the rocking chair, {child_name} cradled in his arms. He hums an old Belgian lullaby. {child_possessive_det}
-    eyes grow heavy as sleep arrives. The lace blanket is wrapped snugly around the baby. {child_pronoun_subject} sighs contentedly.
+  moment: 'EMOTION: contented sleep. Grand-père sits in the rocking chair, {child_name} cradled in the crook of his arm, wrapped
+    snugly in the lace blanket. He hums an old Flemish lullaby — one his mother sang to him. {child_name}''s eyelids flutter,
+    then close. A tiny sigh. The fire crackles. The rocking chair creaks.'
 - id: page_18
-  moment: The older sibling creates a colourful drawing of the family and tapes it on the nursery wall. It shows stick figures
-    and {child_name} with a big smile under a rainbow. {child_pronoun_subject} sleeps in the cradle nearby, dreaming peacefully.
+  moment: 'EMOTION: creative love. The older sibling tiptoes into the nursery and tapes a drawing on the wall above the changing
+    table. It shows the whole family under a rainbow — stick figures with big smiles. ''{child_name}'' is drawn with a crown
+    of stars. {child_name} sleeps on, dreaming peacefully in the nearby cradle.'
 - id: page_19
-  moment: A sunny afternoon in the garden. {child_name} lies on a soft blanket under the beech tree. {child_possessive_det}
-    eyes follow the leaves moving in the breeze. Maman sits beside them, reading aloud. {child_pronoun_subject} coos happily
-    at the sound of her voice.
+  moment: 'EMOTION: sensory wonder. A sunny afternoon in the garden. {child_name} lies on a soft plaid blanket under the beech
+    tree. The leaves create a shifting pattern of light and shadow on {child_possessive_det} face. {child_possessive_det}
+    eyes follow the leaves moving in the breeze. Maman sits beside them, reading aloud in a soft voice. {child_name} coos
+    in response.'
 - id: page_20
-  moment: 'Final scene: The family gathers for a photo on the steps of their Belgian house. Grand-mère holds the lace blanket.
-    {child_name} is in Maman''s arms. Everyone smiles. ''Bienvenue, petit {child_name}!'' {child_pronoun_subject} looks at
-    the camera with wide, curious eyes.'
+  moment: 'EMOTION: family joy — final. The whole family gathers on the front steps of their Belgian house for a photo. Grand-mère
+    holds the lace blanket draped over her arm. {child_name} is cradled in Maman''s arms, looking at the camera with wide,
+    curious eyes. Papa''s hand rests on Maman''s shoulder. The older sibling makes bunny ears behind Grand-père''s head. Everyone
+    is smiling. The door behind them is decorated with a wreath of white flowers and a small sign that says ''BIENVENUE, {child_name}''.
+    The sun warms their faces. The last page.'
 age: 0-3

@@ -4,15 +4,13 @@ theme:
 - dinosaurs
 - adventure
 - discovery
-story_subject: '{child_name} travels back in time to the land of dinosaurs. They meet different species, befriend a baby triceratops,
-  help it find its family, and witness a spectacular meteor shower that sends them safely home.
-
-  '
-main_emotion: excitement
-learning_message: 'Even the mightiest creatures need a friend. Helping others is a timeless value, in any era. And the greatest
-  adventures end with a safe return home.
-
-  '
+story_subject: At the Muséum des Sciences Naturelles in Brussels, {child_name} touches a glowing spiral ammonite fossil and
+  is whisked to a prehistoric world. Befriending Petit Cornu — a lost baby triceratops — {child_name} crosses rivers on the
+  neck of a gentle brachiosaurus, deciphers ancient cave paintings, climbs the Great Plateau, and reunites the baby dinosaur
+  with its herd under a meteor shower that sends {child_name} safely home — clutching a blue feather as proof of the adventure.
+main_emotion: thrill
+learning_message: Even the mightiest creatures need a friend. Helping others is a timeless value that spans across ages and
+  eras. The greatest adventures begin with curiosity, are fuelled by courage, and always end with the warmth of coming home.
 languages:
 - fr
 - en
@@ -26,106 +24,147 @@ constraints:
 - No graphic violence or predator-kill-prey scenes
 - Baby dinosaur is cute, not scary
 - Meteor shower is beautiful, not frightening
+- No generic descriptions. Every visual detail must be specific — textures, colours, lighting, camera angle.
+- Each scene's emotion must be clearly stated in a short phrase (e.g., 'wonderment', 'determination', 'joy').
+- The hero's appearance must remain consistent across all pages — same hair colour, eye colour, clothing style.
+- Avoid ambiguous phrasing that could lead to inconsistent image generation.
+- 'The story arc must be unbroken: setup → rising action → climax → resolution with clear emotional progression.'
+- Dinosaurs must be scientifically recognisable species (Triceratops horridus, Brachiosaurus altithorax, Pteranodon).
+- No graphic violence or predator-kill-prey scenes — all dinosaur interactions are gentle and safe.
+- Petit Cornu the baby triceratops must look cute, expressive, and visually consistent (greenish-grey with blue eyes).
+- The meteor shower is beautiful streaks of gold and silver — not frightening or destructive.
+- '{child_name} wears a red jumper and navy blue trousers throughout — consistent hero styling.'
+- 'Colour arc: museum browns → jungle greens/amethysts → cave blacks/glowing blues → plateau golds/star-silver.'
 arc_type: portal fantasy (real world → prehistoric world → return)
 climax_page: page_22
 setting: Muséum des Sciences Naturelles (Brussels), prehistoric jungle, volcano valley, starlit plateau
-cultural_context: 'The time travel begins at the Muséum des Sciences Naturelles in Brussels, famous for its iguanodon skeletons.
-  The jungle has ferns like those in the botanical gardens of Meise. The meteor shower references the famous iron meteorites
-  found in Belgium.
-
-  '
-parent_emotion_goal: Amazement — the parent is transported by the child's grand adventure
+cultural_context: The time travel begins at the Muséum des Sciences Naturelles in Brussels, famous for its world-class iguanodon
+  skeleton collection — the largest in Europe. The prehistoric jungle draws inspiration from the tropical greenhouse at the
+  Botanical Gardens of Meise. The meteor shower references the famous iron meteorites discovered in Belgium. The ammonite
+  fossil is based on real specimens found in the Belgian quarries of the Ardennes.
+parent_emotion_goal: Amazement mixed with tenderness — the parent is transported by the scale of the prehistoric adventure
+  while simultaneously feeling the sweetness of the friendship between {child_name} and Petit Cornu. The farewell scene (page
+  22-23) is designed to make parents emotional as they imagine their own child having to say goodbye to a beloved friend.
 secondary_characters:
 - Petit Cornu — Baby triceratops who becomes {child_name}'s friend
 - Brachy — Gentle brachiosaurus who guides them
 scenes:
 - id: page_1
-  moment: '{child_name} visits the Muséum des Sciences Naturelles in Brussels with their family. {child_name} stands in front
-    of the famous iguanodon skeleton, eyes wide with wonder. {child_pronoun_subject} can barely contain {child_possessive_det}
-    excitement., eyes wide with wonder.'
+  moment: 'EMOTION: wide-eyed wonder. The Muséum des Sciences Naturelles in Brussels — a vast, cathedral-like hall with soaring
+    ceilings. {child_name} stands before the iconic iguanodon skeleton, mouth open, eyes shining. The skeleton towers above
+    — 30 feet of ancient bone, frozen in time. {child_name}''s arms stretch out as if measuring its size. {child_pronoun_subject}
+    can barely contain {child_possessive_det} excitement. Other museum visitors are distant silhouettes.'
 - id: page_2
-  moment: '{child_name} wanders into a special exhibit hall. A glowing fossil — a spiral ammonite — pulses on a pedestal.
-    Curious, {child_name} reaches out and touches it.'
+  moment: 'EMOTION: magnetic curiosity. {child_name} wanders into a dimly lit side gallery — the fossil room. On a velvet
+    pedestal rests a single glowing fossil: a spiral ammonite, pulsing with soft golden light. Drawn by an invisible force,
+    {child_name} reaches out trembling fingers toward the spiral shell. The air crackles.'
 - id: page_3
-  moment: A flash of golden light. The museum dissolves. {child_name} blinks and finds themselves standing in a dense, prehistoric
-    jungle. Giant ferns tower overhead. The air is warm and humid.
+  moment: 'EMOTION: disoriented awe. FLASH — golden light explodes. The museum dissolves. {child_name} blinks and staggers
+    — standing in a dense, steamy prehistoric jungle. Giant ferns — taller than houses — arch overhead. The air is thick,
+    warm, buzzing with insect sounds. The ground is soft moss. Through the fronds, a distant volcano smokes against a purple
+    sky.'
 - id: page_4
-  moment: '{child_name} looks around in awe. A herd of brachiosaurs grazes on treetops in the distance. Their long necks sway
-    gently. The ground trembles with each step.'
+  moment: 'EMOTION: breathtaking scale. The fern curtain parts. {child_name} gasps. A herd of brachiosaurs grazes on treetops
+    in the distance — their impossibly long necks swaying like living cranes, their bodies grey-brown, each step making the
+    ground tremble. The largest one turns its tiny head toward {child_name} and blinks slowly.'
 - id: page_5
-  moment: A small triceratops — Petit Cornu — emerges from behind a fern. He has a tiny horn and big, curious eyes. He sniffs
-    {child_name}'s hand and sneezes, making {child_name} laugh.
+  moment: 'EMOTION: instant connection. A rustle in the ferns. A small triceratoss — Petit Cornu — emerges, head tilted. He
+    has one small horn, big round blue eyes, and a frill with tiny spots. He sniffs {child_name}''s hand — his nose is warm
+    and wet — then sneezes a tiny dinosaur sneeze. {child_name} laughs. Petit Cornu wags his tail like a puppy.'
 - id: page_6
-  moment: 'Petit Cornu looks sad and lost. He makes a soft trilling sound. {child_name} understands: he''s looking for his
-    family. {child_pronoun_subject} promises to help find them. {child_name} promises to help find them.'
+  moment: 'EMOTION: empathy and determination. Petit Cornu makes a sad, soft trilling sound — a baby''s call. He looks around,
+    lost. {child_name} kneels. ''You''re looking for your family, aren''t you?'' Petit Cornu nuzzles into {child_name}''s
+    chest. {child_name} strokes his frill. ''Don''t worry. I''ll help you find them.'''
 - id: page_7
-  moment: '{child_name} climbs onto Petit Cornu''s back. They walk through the jungle together. A flock of pteranodons glides
-    overhead, casting shadows like flying umbrellas.'
+  moment: 'EMOTION: adventurous bonding. {child_name} climbs onto Petit Cornu''s back — his frill makes a perfect handhold.
+    They walk through the jungle together. A flock of pteranodons glides overhead — their wings are like flying umbrellas,
+    casting giant sliding shadows. Petit Cornu''s steps are steady and warm.'
 - id: page_8
-  moment: They come to a raging river. Stepping stones are barely visible. Brachy, the old brachiosaurus, lowers his long
-    neck to form a bridge. 'Cross safely, little ones,' he rumbles.
+  moment: 'EMOTION: trust and gratitude. They come to a raging river — water crashes over boulders. No way across. But then
+    Brachy, the old brachiosaurus, lowers his long neck from the far bank to form a living bridge. ''Cross safely, little
+    ones,'' his voice rumbles like boulders shifting. {child_name} and Petit Cornu walk across his warm neck, one step at
+    a time.'
 - id: page_9
-  moment: '{child_name} and Petit Cornu cross over Brachy''s neck. Below, water splashes. Fish with strange fins leap. On
-    the other side, a valley opens with smoking volcanoes in the distance.'
+  moment: 'EMOTION: awe of the prehistoric landscape. On the other side, a vast valley opens before them. Two smoking volcanoes
+    frame the horizon. A herd of ankylosaurs trundles below — their clubbed tails dragging. The sky is streaked pink and amber.
+    Petit Cornu honks excitedly.'
 - id: page_10
-  moment: In a clearing, they meet a group of ankylosaurs with clubbed tails. The babies are playing, rolling like armoured
-    balls. {child_name} giggles. Petit Cornu perks up.
+  moment: 'EMOTION: pure joy. In a clearing, ankylosaur babies play — rolling down a gentle slope like armoured balls, bumping
+    into each other. {child_name} giggles. Petit Cornu perks up, stamping his feet playfully. One baby ankylosaur rolls right
+    into Petit Cornu''s legs and they both topple over happily.'
 - id: page_11
-  moment: Ankylosaurus Mama offers them fruit from a cycad. {child_name} shares a speculoos biscuit from their pocket. The
-    dinosaurs sniff it curiously.
+  moment: 'EMOTION: cross-species friendship. Ankylosaurus Mama offers them fruit from a cycad — reddish, lumpy. {child_name}
+    shares a speculoos biscuit from {child_possessive_det} pocket. The dinosaurs sniff it curiously — then love it. Petit
+    Cornu licks the crumbs from {child_name}''s palm. His tongue is rough and warm.'
 - id: page_12
-  moment: The path leads to a dark cave. Strange glowing crystals line the walls. Petit Cornu is scared. {child_name} picks
-    up a glowing crystal to light the way.
+  moment: 'EMOTION: fear overcome by courage. The path leads into a dark cave. Strange glowing crystals line the walls — blue
+    and violet, like frozen lightning. Petit Cornu hesitates, trembling. {child_name} picks up a glowing crystal — it casts
+    warm light. ''I''ll light the way. Stay close to me.'''
 - id: page_13
-  moment: Inside the cave, ancient paintings on the wall show triceratops migrating toward the Great Plateau. {child_name}
-    realises this is a map. Petit Cornu's family must be there.
+  moment: 'EMOTION: discovery and hope. Inside the cave, ancient ochre paintings on the wall show a triceratops family migrating
+    toward a flat-topped mountain. A path is marked with dots. {child_name} traces the dots with a finger. ''This is a map!
+    Your family went to the Great Plateau!'' Petit Cornu''s eyes widen with understanding.'
 - id: page_14
-  moment: They emerge from the cave onto a hillside covered in cycads and magnolias. The sky is pink and orange. In the distance,
-    the Great Plateau rises like a fortress of stone.
+  moment: 'EMOTION: cinematic scale. They emerge from the cave onto a hillside covered in cycads and magnolias. The sky is
+    a symphony of pink and orange. In the distance, the Great Plateau rises like a fortress of ancient stone — flat-topped,
+    massive, draped in green. Petit Cornu trills with hope.'
 - id: page_15
-  moment: A parasaurolophus calls across the valley — a haunting, beautiful sound. Petit Cornu answers with his own soft honk.
-    They are getting closer.
+  moment: 'EMOTION: connection across the valley. A parasaurolophus calls across the valley — a long, haunting, beautiful
+    note that echoes. Petit Cornu answers with his own soft honk. {child_name} realises: they''re calling to each other. The
+    herd is near.'
 - id: page_16
-  moment: They reach the base of the plateau. The climb is steep. {child_name} encourages Petit Cornu step by step. 'You're
-    so brave,' {child_name} says. Petit Cornu huffs but keeps going.
+  moment: 'EMOTION: perseverance. The climb up the plateau is steep and rocky. Petit Cornu struggles, his little legs slipping.
+    {child_name} walks beside him, encouraging every step. ''You''re so brave, Petit Cornu. We''re almost there.'' The little
+    dinosaur huffs but keeps going, powered by {child_name}''s belief in him.'
 - id: page_17
-  moment: At the top, the plateau stretches wide and green. A herd of triceratops grazes in the distance. Petit Cornu's eyes
-    light up. He recognises the big one — his mother.
+  moment: 'EMOTION: joyful reunion. At the top, the plateau stretches wide and green. In the distance — a herd of triceratops
+    grazes. Petit Cornu''s eyes lock onto one — the largest — his mother. He freezes for a second, then SPRINTS with everything
+    he has.'
 - id: page_18
-  moment: Petit Cornu runs toward the herd. His mother turns and trots to meet him. They touch horns gently. The other triceratops
-    gather around, welcoming him home.
+  moment: 'EMOTION: deeply moving reunion. Petit Cornu runs to his mother. She turns — sees him — and TROTS to meet him. They
+    touch horns gently — a triceratops kiss. She nuzzles him, checks him for injuries, then wraps her neck around him. The
+    other triceratops gather, welcoming the lost baby home with soft grunts and horn-touches.'
 - id: page_19
-  moment: Petit Cornu leads his mother to meet {child_name}. She bows her massive head, and {child_name} pats her snout gently.
-    {child_pronoun_subject} feels brave and happy standing beside the great triceratops. The herd forms a protective circle
-    around them.
+  moment: 'EMOTION: gratitude across species. Petit Cornu leads his mother to meet {child_name}. The massive triceratops —
+    her horns long, her frill scarred — bows her head low. {child_name} reaches up and pats her snout gently. ''He''s safe
+    now.'' She makes a deep, grateful rumble. The herd forms a protective circle around them.'
 - id: page_20
-  moment: Night falls. The sky fills with more stars than {child_name} has ever seen. The triceratops family curls up together.
-    {child_name} sits beside Petit Cornu, warm and safe.
+  moment: 'EMOTION: peaceful belonging. Night falls. The sky fills with more stars than {child_name} has ever seen — a dense
+    river of silver across the blackness. The triceratops family curls up together in a warm cluster. {child_name} sits against
+    Petit Cornu''s warm side, watching the stars. The baby triceratops falls asleep against {child_name}''s shoulder.'
 - id: page_21
-  moment: Suddenly, streaks of light cross the sky — a meteor shower. Beautiful, not scary. Each streak is gold and silver.
-    {child_name} remembers the ammonite fossil. Is it time to go home?
+  moment: 'EMOTION: beautiful farewell approaching. Suddenly — streaks of light cross the sky. A meteor shower. Each streak
+    is gold and silver — painting ribbons across the stars. {child_name} feels the ammonite in {child_possessive_det} pocket
+    grow warm. Is it time? {child_pronoun_subject} looks at Petit Cornu, heart aching.'
 - id: page_22
-  moment: CLIMAX — The ammonite in {child_name}'s pocket begins to glow. The meteor shower intensifies. Petit Cornu nudges
-    {child_name} gently. A golden spiral of light surrounds {child_name}. It's time to say goodbye.
+  moment: 'EMOTION: bittersweet climax — CLIMAX. The ammonite in {child_name}''s pocket GLOWS — intensely. The meteor shower
+    intensifies into a cascade of golden light. Petit Cornu wakes and nudges {child_name} gently — he knows. A golden spiral
+    of light swirls around {child_name}, lifting {child_possessive_det} hair. Petit Cornu presses his warm forehead against
+    {child_name}''s one last time. Their eyes meet. No words needed. {child_name} wraps arms around his neck. The light spirals
+    faster.'
 - id: page_23
-  moment: '{child_name} hugs Petit Cornu''s warm neck. ''I''ll never forget you.'' The light swirls, the world blurs, and
-    {child_name} feels a gentle pull. Petit Cornu''s silhouette grows smaller against the meteor-lit sky.'
+  moment: 'EMOTION: heart-wrenching farewell. ''{child_name} hugs Petit Cornu''s warm neck tight. ''I''ll never forget you.''
+    The light whirls. The world blurs. Petit Cornu''s silhouette grows smaller against the meteor-lit sky. {child_name} feels
+    a gentle pull — and then a flash of gold.'
 - id: page_24
-  moment: 'Final scene: {child_name} blinks. They are back in the museum, hand hovering over the ammonite fossil. The iguanodon
-    skeleton looms peacefully. In their other hand, a small blue feather from Petit Cornu. They smile.'
+  moment: 'EMOTION: disoriented return — resolution. {child_name} blinks. Hand hovering over the ammonite fossil. The museum
+    is quiet. The iguanodon skeleton looms peacefully. In {child_possessive_det} other hand — a small blue feather. Real.
+    {child_pronoun_subject} smiles, heart full.'
 - id: page_25
-  moment: Back at the museum, {child_name} takes one last look at the ammonite fossil. {child_pronoun_subject} slips the blue
-    feather into {child_possessive_det} pocket. Maman calls from the next room, and {child_name} runs to join the family,
-    smiling.
+  moment: 'EMOTION: quiet joy. {child_name} takes one last look at the ammonite fossil. The spiral shell seems to wink. {child_pronoun_subject}
+    slips the blue feather into {child_possessive_det} pocket carefully, protectively. Maman calls from the next gallery.
+    {child_name} runs to join the family, one hand touching the pocket.'
 - id: page_26
-  moment: At home, {child_name} draws a picture of Petit Cornu and Brachy together on the Great Plateau. {child_pronoun_subject}
-    adds a meteor shower in gold and silver crayon. The drawing goes on the fridge for everyone to see.
+  moment: 'EMOTION: creative tribute. At home, {child_name} draws a detailed picture: Petit Cornu and Brachy standing together
+    on the Great Plateau, the meteor shower streaking gold above. {child_name} adds tiny details — the cave, the river, the
+    volcano. The drawing goes on the fridge for everyone to see. The blue feather sits on the drawing''s frame.'
 - id: page_27
-  moment: That night, {child_name} tells Papa about the dinosaurs at dinner. {child_pronoun_subject} describes the cave paintings,
-    the glowing crystals, and the ankylosaurs playing. Papa listens with wide eyes. 'You have quite an imagination,' he says
-    with a warm smile.
+  moment: 'EMOTION: sharing wonder. At dinner, {child_name} tells Papa everything: the brachiosaurs, the cave paintings, the
+    ankylosaurs playing, the climb, the reunion. Papa listens with wide eyes — not dismissing, but entering the story. ''You
+    have quite an imagination,'' he says with a warm smile. ''Maybe.'' {child_name} smiles back.'
 - id: page_28
-  moment: '{child_name} lies in bed, the blue feather under {child_possessive_det} pillow. Through the window, a shooting
-    star crosses the sky. {child_pronoun_subject} whispers: ''Goodnight, Petit Cornu.'' A distant, soft honk seems to echo
-    on the wind.'
+  moment: 'EMOTION: eternal connection — final. {child_name} lies in bed, the blue feather under {child_possessive_det} pillow.
+    The room is dark except for a sliver of moonlight. Through the window, a single shooting star crosses the sky. {child_name}
+    whispers: ''Goodnight, Petit Cornu.'' A pause. Then — carried on the wind — a distant, soft HONK. Or maybe just a night
+    bird. Maybe.'
 age: 3-7

@@ -4,16 +4,13 @@ theme:
 - animals
 - nature
 - friendship
-story_subject: '{child_name} explores a magical forest and helps animal friends prepare for the Great Forest Celebration.
-  Each animal teaches something valuable: patience from a tortoise, courage from a squirrel, kindness from a rabbit, teamwork
-  from the bees.
-
-  '
-main_emotion: joy
-learning_message: 'Every friend has something special to teach us. By helping each other, we make the whole world brighter.
-  Teamwork and kindness make any celebration magical.
-
-  '
+story_subject: '{child_name} steps into a sun-dappled Ardennes forest where every animal friend needs a helping hand. By assisting
+  Tortue Lente with patience, Timmy l''Écureuil with courage, Lapine Câline with kindness, and Zou-zou l''Abeille with teamwork,
+  {child_name} discovers that every creature has a gift to share. Together, they prepare the Great Forest Celebration — a
+  magical evening of gratitude, music, and belonging.'
+main_emotion: wonderment
+learning_message: Every friend has something special to teach us — patience, courage, kindness, teamwork. When we help each
+  other, our differences become our greatest strength. The most beautiful celebrations are built with love and community.
 languages:
 - fr
 - en
@@ -27,14 +24,26 @@ constraints:
 - Bright, friendly colours — nothing scary
 - Simple vocabulary suitable for 2-6 year olds
 - Each animal encounter teaches a gentle life lesson
+- No generic descriptions. Every visual detail must be specific — textures, colours, lighting, camera angle.
+- Each scene's emotion must be clearly stated in a short phrase (e.g., 'wonderment', 'determination', 'joy').
+- The hero's appearance must remain consistent across all pages — same hair colour, eye colour, clothing style.
+- Avoid ambiguous phrasing that could lead to inconsistent image generation.
+- 'The story arc must be unbroken: setup → rising action → climax → resolution with clear emotional progression.'
+- Each animal encounter must teach one clear emotion (patience, courage, kindness, teamwork).
+- The forest palette shifts from morning green-gold to sunset amber-purple across the arc.
+- '{child_name} wears a light blue sweater and red boots throughout the entire story.'
+- Scenes 1-5 are warm morning light; scenes 6-12 are bright afternoon; scenes 13-18 are golden sunset; scenes 19-24 are dusk
+  and moonlight.
 arc_type: quest (help friends → celebration)
 climax_page: page_18
 setting: A magical forest inspired by the Ardennes — clearings, streams, an old oak tree, a meadow
-cultural_context: 'The forest is inspired by the Ardennes belges. The celebration includes traditional Belgian elements: gaufres,
-  speculoos, and a maypole with ribbons. A stream evokes the Lesse river.
-
-  '
-parent_emotion_goal: Warmth — the parent feels the joy of community and friendship
+cultural_context: 'The forest is inspired by the Ardennes belges with its towering beech and oak trees, wild bluebells in
+  spring, and crystal-clear streams evoking the Lesse river. The celebration includes traditional Belgian elements: gaufres
+  de Liège, speculoos biscuits from a local bakery, and a maypole with red, yellow, and blue ribbons spiralling down. Lanterns
+  are fireflies in glass jars — a classic Belgian summer tradition.'
+parent_emotion_goal: Deep nostalgia and warmth — the parent feels the tender joy of seeing their child embraced by a loving
+  community. The forest becomes a metaphor for the village that raises a child, filling the parent with gratitude and a sense
+  of belonging.
 secondary_characters:
 - Tortue Lente — Teaches patience
 - Timmy l'Écureuil — Teaches courage
@@ -42,79 +51,108 @@ secondary_characters:
 - Zou-zou l'Abeille — Teaches teamwork
 scenes:
 - id: page_1
-  moment: '{child_name} puts on their boots at the edge of a lush Ardennes-style forest. Tall pines and leafy oaks stretch
-    upward. A wooden sign reads ''Forêt des Animaux''. Butterflies dance in the air. {child_pronoun_subject} steps into the
-    sunlight, excited for the day ahead.'
+  moment: 'EMOTION: eager anticipation. A low-angle shot of {child_name} at the edge of the Ardennes forest. Tall pine and
+    oak trunks rise like cathedral pillars. Sunlight pours through the canopy in golden shafts. A weathered wooden sign reads
+    ''Forêt des Animaux'' in hand-painted letters. Ferns and wild strawberries carpet the ground. {child_name} wears a light
+    blue sweater and red boots — steps forward into a beam of light, eyes wide with curiosity. Butterflies dance in the warm
+    air.'
 - id: page_2
-  moment: A winding dirt path leads {child_name} into the forest. Ferns and wild strawberries line the trail. Sunlight filters
-    through the canopy in golden beams.
+  moment: 'EMOTION: quiet wonder. A winding dirt path leads deeper into the forest. Giant ferns brush against {child_name}''s
+    shoulders. Wild strawberries gleam like rubies among the moss. Sunlight filters through the canopy in golden beams, illuminating
+    dust motes that float like tiny stars. The sound of a distant stream is almost audible in the stillness.'
 - id: page_3
-  moment: '{child_name} finds Tortue Lente struggling to carry a basket of acorns up a small hill. She is slow but determined.
-    {child_name} offers to help carry.'
+  moment: 'EMOTION: concern turning to determination. {child_name} finds Tortue Lente struggling to carry a large basket of
+    acorns up a mossy hill. Her shell glistens with morning dew. Her little legs move slowly but steadily. {child_name} kneels
+    down — eye level with Tortue — and offers to help carry the basket. Tortue''s tired eyes brighten with gratitude.'
 - id: page_4
-  moment: 'Together, they reach the top. Tortue Lente says: ''Slow and steady wins the race, dear {child_name}. Thank you
-    for your patience.'' She gives {child_name} a shiny pebble.'
+  moment: 'EMOTION: gentle pride. Together, {child_name} and Tortue reach the hilltop. A clearing opens before them carpeted
+    in bluebells. Tortue looks up at {child_name} with warm, ancient eyes. ''Slow and steady wins the race, dear {child_name}.
+    Thank you for your patience.'' She presses a smooth, iridescent pebble into {child_name}''s palm — it catches the sunlight.'
 - id: page_5
-  moment: Further in, Timmy l'Écureuil is perched on a branch, too scared to jump to the next tree. A gap separates him from
-    his family. He trembles.
+  moment: 'EMOTION: suspense mixed with empathy. Further in, Timmy l''Écureuil is frozen on a high branch, his fluffy tail
+    twitching nervously. A gap separates him from the next tree where his family chatters encouragement. His tiny paws grip
+    the bark. He trembles. {child_name} looks up, seeing his fear clearly mirrored in his wide dark eyes.'
 - id: page_6
-  moment: '{child_name} holds out their arms below and encourages Timmy. ''You can do it! I believe in you!'' {child_name}
-    calls out. {child_pronoun_subject} holds out {child_possessive_det} arms. His little paws clutch the branch.'
+  moment: 'EMOTION: encouragement. {child_name} stands beneath the branch, arms held out in a welcoming gesture. ''{child_name}
+    calls out, ''You can do it! I believe in you!'' Sunlight catches {child_name}''s upturned face. Timmy''s paw hovers —
+    he''s gathering courage. The family on the far branch falls silent. The whole forest seems to hold its breath.'
 - id: page_7
-  moment: Timmy leaps! He lands safely on the far branch. His family cheers. He chatters happily at {child_name}. 'You were
-    so brave!' {child_name} waves.
+  moment: 'EMOTION: exhilaration. Timmy leaps! His body arcs through the air, tail streaming behind him. He lands safely on
+    the far branch. His family erupts in joyful chattering. Timmy turns and chatters thank you to {child_name}, puffing his
+    chest with pride. {child_name} waves, beaming. The moment is electric with shared triumph.'
 - id: page_8
-  moment: '{child_name} reaches a sunlit clearing where Lapine Câline is gathering flowers for garlands. Her paw is caught
-    under a fallen twig. She looks sad.'
+  moment: 'EMOTION: tenderness. {child_name} reaches a sunlit clearing where Lapine Câline sits among scattered flowers. Her
+    soft grey fur is dusted with pollen. A fallen twig pins her paw gently. She''s not crying — just waiting patiently, trusting
+    someone will come. Flower garlands lie half-woven around her. The clearing smells of honey and wild mint.'
 - id: page_9
-  moment: '{child_name} gently lifts the twig and frees the rabbit''s paw. Lapine Câline nuzzles {child_name}''s hand. ''Kindness
-    always finds its way back,'' she whispers.'
+  moment: 'EMOTION: gentle compassion. {child_name} carefully lifts the twig and frees Lapine''s paw. She nuzzles {child_name}''s
+    hand — her fur is impossibly soft. ''Kindness always finds its way back,'' she whispers, her voice like a breeze. A butterfly
+    lands on {child_name}''s shoulder as if to agree.'
 - id: page_10
-  moment: Lapine Câline weaves a small flower crown and places it on {child_name}'s head. A butterfly lands on the crown.
-    She declares {child_name} the 'Roi/Reine de la Gentillesse'.
+  moment: 'EMOTION: joyful honour. Lapine Câline weaves a delicate flower crown — bluebells, daisies, and a single violet
+    — and places it on {child_name}''s head. A monarch butterfly lands on the crown. Lapine declares {child_name} ''Roi/Reine
+    de la Gentillesse'' with a formal little bow. {child_name}''s cheeks flush with happy embarrassment.'
 - id: page_11
-  moment: A loud buzz fills the air. Zou-zou l'Abeille and her fellow bees are trying to hang decorations for the Great Forest
-    Celebration, but the ribbons are tangled.
+  moment: 'EMOTION: playful frustration. A loud industrious BUZZ fills the air. Zou-zou l''Abeille and her fellow bees are
+    tangled in a giant knot of red, yellow, and blue ribbons beneath an ancient oak. The ribbons are meant to decorate the
+    Great Forest Celebration. Zou-zou does a frustrated little dance in the air. Her wings glint like stained glass.'
 - id: page_12
-  moment: '{child_name} untangles the ribbons while the bees hold the ends. Zou-zou says: ''Alone, we tangle. Together, we
-    create something beautiful!'''
+  moment: 'EMOTION: collaborative joy. {child_name} gently untangles the ribbons while the bees hold the ends with their tiny
+    legs. One by one, the ribbons slip free. Zou-zou hovers in front of {child_name}''s nose. ''Alone, we tangle. Together,
+    we create something beautiful!'' The bees form a heart shape in the air.'
 - id: page_13
-  moment: The bees lift the ribbon high into the trees. A beautiful maypole emerges with red, yellow, and blue ribbons spiralling
-    down. The forest looks festive.
+  moment: 'EMOTION: wonder. The bees lift the ribbons high into the oak branches. A magnificent maypole emerges — red, yellow,
+    and blue ribbons spiralling down from the crown of the tree. The forest clearing is transformed into a festive hall. Dappled
+    light plays across everything. Zou-zou salutes {child_name} from atop the pole.'
 - id: page_14
-  moment: 'News spreads: the Great Forest Celebration is almost ready. Animals carry berries, nuts, and flowers to the central
-    meadow. {child_name} helps carry a basket of wild strawberries.'
+  moment: 'EMOTION: busy community spirit. News travels fast in the forest. Animals stream toward the central meadow carrying
+    offerings: squirrels with hazelnuts, birds with shiny berries, a badger with wild mushrooms. {child_name} helps carry
+    a basket overflowing with wild strawberries, the red fruit gleaming like jewels. The air hums with purpose.'
 - id: page_15
-  moment: At the meadow, long tables are set under the trees. Tortue arranges acorns on a leaf platter. {child_pronoun_subject}
-    helps her count them one by one. Timmy places nuts. Lapine Câline lays flower garlands. The bees polish the berries.
+  moment: 'EMOTION: peaceful industry. Long wooden tables are set beneath the trees, covered in leaf-platters. Tortue arranges
+    acorns in a spiral pattern. Timmy places nuts in neat piles. Lapine drapes flower garlands along the table edge. The bees
+    polish each berry until it gleams. {child_name} helps Tortue count acorns one by one — ''vingt-trois, vingt-quatre…'''
 - id: page_16
-  moment: '{child_name} opens their backpack and arranges speculoos cookies on a wooden platter shaped like a leaf. The animals
-    gather, curious about the sweet treat.'
+  moment: 'EMOTION: pride and generosity. {child_name} opens their backpack and arranges speculoos cookies on a wooden platter
+    shaped like a maple leaf. The animals gather, sniffing curiously. The spicy-sweet aroma of cinnamon and speculoos spices
+    fills the air. An old badger''s eyes light up. {child_name} breaks a cookie in half and shares.'
 - id: page_17
-  moment: 'The sun begins to set. Lanterns — fireflies in glass jars — are lit around the meadow. Warm glow makes everything
-    golden. Music begins: a cricket plays a tiny violin.'
+  moment: 'EMOTION: awe before celebration. The sun sets in layers of gold, peach, and violet. Fireflies rise from the grass
+    in waves. Volunteer fireflies have filled glass jars — now lanterns line the meadow. Everything glows amber. A cricket
+    on a toadstool begins to play a tiny violin. The first notes float through the warm air.'
 - id: page_18
-  moment: CLIMAX — The Great Forest Celebration is in full swing. All the animals gather around {child_name}. Tortue, Timmy,
-    Lapine, and Zou-zou raise their paws/wings in thanks. {child_name} is lifted onto a flower-covered throne.
+  moment: 'EMOTION: overwhelming joy and belonging — CLIMAX. The Great Forest Celebration is at its peak. Every animal gathered
+    around {child_name} under the firefly-lit sky. Tortue, Timmy, Lapine, and Zou-zou stand in a semicircle before their friends.
+    They raise their paws/wings together in a gesture of thanks. Then — the animals lift {child_name} onto a flower-covered
+    throne beneath the maypole. {child_name} looks out at hundreds of glowing eyes, furry faces, feathery friends — all smiling.
+    The cricket plays a triumphant melody. {child_name}''s heart feels too full to contain. This is the moment {child_name}
+    realises: I belong here.'
 - id: page_19
-  moment: 'Everyone shares the feast: berries, nuts, gaufres, speculoos. A maypole dance begins. {child_name} holds a ribbon
-    and dances in a circle with the animals. Laughter fills the meadow.'
+  moment: 'EMOTION: communal bliss. The feast begins. Berries, nuts, gaufres, speculoos — everyone shares. The maypole dance
+    starts: {child_name} takes a ribbon and weaves in and out with the animals, laughing. Tortue does a slow, dignified shuffle.
+    Timmy bounces. Lapine twirls. Zou-zou hovers above conducting. The firefly lanterns sway.'
 - id: page_20
-  moment: 'Final scene: {child_name} says goodbye at the forest edge. Each animal friend gives a small gift — a feather, a
-    flower seed, a smooth stone. {child_name} walks home, flower crown still on their head, the forest glowing golden behind
-    them.'
+  moment: 'EMOTION: bittersweet farewell. The celebration winds down. {child_name} walks to the forest edge, flower crown
+    still on head. Each animal friend gives a small parting gift: a feather from a blue jay, a flower seed from Lapine, a
+    smooth river stone from Tortue. The forest behind them glows golden in the last light. {child_name} clutches the gifts
+    to {child_possessive_det} chest.'
 - id: page_21
-  moment: '{child_name} walks home through the forest as dusk settles. Fireflies light the path like tiny lanterns. {child_pronoun_subject}
-    holds the gifts close — a feather, a flower seed, a smooth stone — each one a memory of a new friend.'
+  moment: 'EMOTION: reflective contentment. {child_name} walks home through the darkening forest. Fireflies light the path
+    like living lanterns, guiding the way. {child_name} holds the gifts close — the blue feather, the flower seed, the smooth
+    stone — examining each one in the soft glow. Each object holds a memory: patience, courage, kindness, teamwork. The stars
+    begin to show through the canopy.'
 - id: page_22
-  moment: 'At the forest edge, {child_name} turns back one last time. The animals have gathered at the treeline: Tortue Lente,
-    Timmy, Lapine Câline, Zou-zou, and many more. They wave with leaves, paws, and wings. {child_pronoun_subject} waves back,
-    heart full.'
+  moment: 'EMOTION: love and connection. At the forest edge, {child_name} turns back one last time. The animals have gathered
+    at the treeline: Tortue Lente with her wise eyes, Timmy perched high, Lapine holding a flower, Zou-zou hovering above.
+    Many more friends stand behind them — a community. They wave with leaves, paws, wings. {child_name} waves back, {child_possessive_det}
+    heart aching with love. The forest glows behind them.'
 - id: page_23
-  moment: Home at last, {child_name} places the gifts on {child_possessive_det} bedroom shelf. {child_pronoun_subject} plants
-    the flower seed in a small pot by the window. Through the window, the forest glows faintly in the moonlight.
+  moment: 'EMOTION: gentle continuity. Home at last. {child_name} places the gifts on the bedroom shelf with care — the pebble,
+    the feather, the flower seed, the stone. {child_name} plants the flower seed in a small terracotta pot by the window and
+    waters it. Through the window, the forest glows faintly in the moonlight — a constant, comforting presence.'
 - id: page_24
-  moment: Weeks later, a beautiful violet campanula blooms in the pot — just like the flowers in the forest meadow. {child_name}
-    waters it every morning and remembers the Great Forest Celebration. {child_pronoun_subject} knows the forest will always
-    welcome {child_possessive_det} back.
+  moment: 'EMOTION: enduring wonder — resolution. Weeks later, a beautiful violet campanula blooms in the pot — identical
+    to the flowers in the forest meadow. {child_name} waters it every morning before breakfast, tracing the petals with a
+    finger. The smooth stone sits beside the pot. {child_name} smiles, knowing the forest will always welcome {child_possessive_det}
+    back. The final image: the campanula framed by the window, the forest a green promise in the distance.'
 age: 2-6
