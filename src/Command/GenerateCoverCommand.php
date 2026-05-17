@@ -58,8 +58,8 @@ final class GenerateCoverCommand extends Command
             return Command::FAILURE;
         }
 
-        $outputDir = trim((string) $input->getOption('output-dir'));
-        if ('' === $outputDir) {
+        $outputDir = rtrim(trim((string) $input->getOption('output-dir')), '/');
+        if ('' === $outputDir || $outputDir === dirname($sourcePath)) {
             $outputDir = dirname($sourcePath).'/generated-cover';
         }
 
