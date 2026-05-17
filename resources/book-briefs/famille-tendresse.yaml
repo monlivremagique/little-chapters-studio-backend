@@ -1,0 +1,108 @@
+slug: famille-tendresse
+title: '{child_name}, Notre Trésor'
+theme:
+- family
+- love
+- tenderness
+story_subject: 'A warm celebration of family love told from the perspective of parents, grandparents, and siblings. Each page
+  expresses a different way the family loves {child_name} — through cuddles, play, meals, stories, and quiet moments. Simple,
+  tender, and deeply reassuring.
+
+  '
+main_emotion: love
+learning_message: 'You are loved completely, exactly as you are. Family love is the safest place in the world — it wraps around
+  you like a warm hug, every single day.
+
+  '
+languages:
+- fr
+- en
+- nl
+visual_style: Aquarelle belge premium — ligne claire inspirée Hergé/Tintin, aquarelle chaude façon Marcel Marlier/Martine,
+  couleurs profondes et lumineuses, texture de papier aquarelle, personnages expressifs, arrière-plans détaillés type Forêt
+  de Soignes ou rue bruxelloise
+story_page_count: 20
+constraints:
+- Extremely simple text — 1-2 short sentences per page
+- Soft colour palette — creams, pinks, blues, lavenders
+- Faces must be warm and smiling
+- No conflict or tension of any kind
+- 'Repetitive structure: ''Je t''aime quand...'' pattern'
+arc_type: lyrical (episodic expressions of love)
+climax_page: page_14
+setting: A cosy Belgian home — bedrooms, kitchen, garden, living room, bath
+cultural_context: 'The family eats tartines with choco spread for breakfast. Friday night is frites night with a paper cone.
+  Grand-mère knits in a rocking chair. The living room has a Delft lamp. The garden has a swing under a beech tree.
+
+  '
+parent_emotion_goal: Love — the parent feels their love for their child reflected and amplified
+secondary_characters:
+- Maman — Mother
+- Papa — Father
+- Grand-mère — Grandmother
+- Grand-père — Grandfather
+scenes:
+- id: page_1
+  moment: Maman holds {child_name} in a rocking chair by the window. Sunlight spills through lace curtains. A sleeping cat
+    curls on the rug. Maman strokes {child_name}'s hair. {child_pronoun_subject} feels completely safe and loved.
+- id: page_2
+  moment: Papa lifts {child_name} high in the air in the living room. {child_name}'s arms are outstretched, laughing. A dog
+    jumps excitedly nearby. Toys are scattered on the floor.
+- id: page_3
+  moment: Breakfast at the kitchen table. Tartines with choco spread are laid out. {child_name}'s hands are messy. Maman wipes
+    {child_name}'s cheek with a napkin, smiling.
+- id: page_4
+  moment: Grand-mère sits in her rocking chair, knitting a blue scarf. {child_name} sits on her lap, watching the needles
+    click. A ball of yarn rolls on the floor. A fire crackles in the hearth.
+- id: page_5
+  moment: Grand-père and {child_name} in the garden. Grand-père shows {child_name} how to water the tulips with a small watering
+    can. Bees buzz lazily. The beech tree rustles.
+- id: page_6
+  moment: '{child_name} builds a tower of coloured blocks in the playroom. Papa sits nearby, adding a block on top. {child_pronoun_subject}
+    concentrates hard on placing each block just right. The tower wobbles but stands. Sunbeams illuminate dancing dust motes.'
+- id: page_7
+  moment: Bath time! Bubbles float in the air. A rubber duck bobs on the water. {child_name}'s hair is foamy. Maman kneels
+    beside the tub, laughing. Steam rises gently.
+- id: page_8
+  moment: Grand-mère reads a storybook to {child_name} on the sofa. The book is open to a page with a bunny. {child_name}'s
+    stuffed bunny sits beside them. A lamp glows warmly.
+- id: page_9
+  moment: Friday night frites! A paper cone of golden frites sits on the table. {child_name} reaches for one. {child_pronoun_subject}
+    loves the golden, crispy frites with a dollop of mayonnaise. Papa squeezes mayonnaise from a tube. Everyone is laughing.
+- id: page_10
+  moment: A rainstorm outside the window. {child_name} presses their nose to the glass. Maman wraps a blanket around both
+    their shoulders. Raindrops race down the pane.
+- id: page_11
+  moment: '{child_name} and Papa in the garden swing. Papa pushes gently. {child_name}''s hair flies back. The sun sets, painting
+    the sky peach. The beech tree''s shadow stretches long.'
+- id: page_12
+  moment: Grand-père shows {child_name} a caterpillar on a leaf. {child_name} kneels, observing with intense focus. The caterpillar
+    is tiny and green. A magnifying glass lies nearby.
+- id: page_13
+  moment: Evening. The family gathers on the sofa. {child_name} is in the middle, leaning against Maman, feet on Papa's lap.
+    Grand-mère knits. Grand-père smiles. The dog sleeps at their feet.
+- id: page_14
+  moment: CLIMAX — Bedtime. Maman and Papa both lean over {child_name}'s bed to kiss their forehead. The room is bathed in
+    soft nightlight glow. {child_name} holds the stuffed bunny. Stickers on the wall glow faintly.
+- id: page_15
+  moment: 'A dreamy spread of all the family members thinking of {child_name} as they sleep. Floating hearts connect everyone.
+    The moon shines above the house. Each heart has a tiny memory: blocks, frites, the swing.'
+- id: page_16
+  moment: 'Final scene: Close-up of {child_name} sleeping peacefully, bunny tucked under arm. A small heart-shaped pendant
+    on the nightstand. Moonlight streams through the window. The last words: ''Bonne nuit, {child_name}. Notre trésor.'''
+- id: page_17
+  moment: '{child_name} wakes from a nap, cuddled in Maman''s arms on the sofa. {child_pronoun_subject} blinks sleepily and
+    smiles up at her. Maman kisses {child_possessive_det} forehead. ''Je t''aime, mon trésor,'' she whispers warmly.'
+- id: page_18
+  moment: Grand-père helps {child_name} make a bird feeder from a pine cone and peanut butter. {child_pronoun_subject} hangs
+    it on the beech tree branch. A blue tit lands on it within minutes. {child_name} claps quietly, not wanting to scare the
+    bird away.
+- id: page_19
+  moment: The family takes an evening walk along the rue pavée. {child_name} holds Maman's hand on one side and Papa's on
+    the other. {child_pronoun_subject} jumps over every crack in the pavement with a giggle. The streetlamps flicker on one
+    by one.
+- id: page_20
+  moment: 'Final scene: {child_name} is tucked in bed, the Delft lamp casting a soft blue glow. {child_possessive_det} stuffed
+    bunny is tucked under one arm. A family photo, a knitted scarf, and a magnifying glass sit on the nightstand — all markers
+    of love.'
+age: 1-4

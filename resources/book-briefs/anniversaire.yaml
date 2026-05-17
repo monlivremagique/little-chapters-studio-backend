@@ -1,0 +1,124 @@
+slug: anniversaire
+title: Joyeux Anniversaire, {child_name}
+theme:
+- birthday
+- celebration
+- party
+story_subject: '{child_name} wakes up on their birthday to a day full of magic and surprises. Decorations fill the house,
+  friends arrive, games are played, a special cake is shared, presents are opened, and a heartfelt surprise at the end makes
+  this the best birthday ever.
+
+  '
+main_emotion: joy
+learning_message: 'Birthdays are beautiful not just for the presents and cake, but because they celebrate YOU — the wonderful
+  person you are and the joy you bring to everyone around you.
+
+  '
+languages:
+- fr
+- en
+- nl
+visual_style: Aquarelle belge premium — ligne claire inspirée Hergé/Tintin, aquarelle chaude façon Marcel Marlier/Martine,
+  couleurs profondes et lumineuses, texture de papier aquarelle, personnages expressifs, arrière-plans détaillés type Forêt
+  de Soignes ou rue bruxelloise
+story_page_count: 24
+constraints:
+- Every page should feel celebratory and bright
+- Show a mix of family and friends
+- The surprise at the end must feel earned and emotional
+- Balloons, streamers, confetti — the full party treatment
+- Belgian birthday traditions included
+arc_type: celebration (morning → party → surprise → evening)
+climax_page: page_18
+setting: A festive Belgian home — decorated living room, garden with party tent, kitchen with birthday cake
+cultural_context: 'The birthday includes Belgian traditions: a gâteau with speculoos crumble, balloons in Belgian flag colours,
+  frites at the party, a traditional stoemp lunch, and ''Lang zal hij/zij leven'' sung by guests. Presents are wrapped in
+  festive paper from a local boutique.
+
+  '
+parent_emotion_goal: Happiness — the parent relives the joy of their child's special day
+secondary_characters:
+- Maman — Mother, organises the party
+- Papa — Father, brings the surprise
+- Lucas — Best friend
+- Madame Dubois — Neighbour who bakes the cake
+scenes:
+- id: page_1
+  moment: '{child_name} stirs awake in their bedroom. Sunlight streams through the curtains. A single balloon — red with a
+    star — floats by the door. {child_pronoun_subject} can''t wait to see what surprises await. A ''JOYEUX ANNIVERSAIRE''
+    banner is hung over the window. The day has begun.'
+- id: page_2
+  moment: '{child_name} runs downstairs. The living room is transformed: colourful streamers, balloons everywhere, and a banner
+    that spells ''{child_name}'' in bright letters. Maman and Papa wait with big smiles.'
+- id: page_3
+  moment: Maman hugs {child_name} and gives them a birthday crown — gold with a red jewel. Papa puts a party blower to his
+    lips and blows. The sound makes {child_name} laugh. The dog wears a party hat too.
+- id: page_4
+  moment: 'Special birthday breakfast: gaufres de Bruxelles with whipped cream and strawberries. A single candle in a gaufre.
+    Maman and Papa sing ''Lang zal hij/zij leven.'' {child_name} blows out the candle.'
+- id: page_5
+  moment: 'Papa hands {child_name} the first present: a wrapped box with a bow. {child_name} tears the paper excitedly. {child_pronoun_subject}
+    hugs Papa tight, clutching the new colouring pencils. Inside: a new set of colouring pencils and a sketchbook. {child_name}
+    hugs Papa.'
+- id: page_6
+  moment: 'The doorbell rings. Lucas, {child_name}''s best friend, arrives holding a wrapped present and a balloon. The two
+    friends hug. Lucas presents the gift: a book about space.'
+- id: page_7
+  moment: More friends arrive. The living room fills with children and laughter. Balloons bob. Some children play with streamers.
+    Maman organises a game of musical chairs. The dog runs in circles.
+- id: page_8
+  moment: Musical chairs! {child_name} and friends circle the chairs. The music stops. Everyone scrambles. Lucas and {child_name}
+    share a chair, laughing. Papa plays the accordion.
+- id: page_9
+  moment: A piñata in the shape of a star hangs from the beech tree in the garden. {child_name} is blindfolded, spinning gently.
+    The other children cheer. Papa guides them. WHACK! Candy spills everywhere.
+- id: page_10
+  moment: Children scramble for candy on the grass. Speculoos, bonbons, and small toys scatter. {child_name} shares the best
+    pieces with Lucas. The sun shines bright over the party tent.
+- id: page_11
+  moment: Lunchtime! A big table in the garden is set with a festive cloth. Stoemp (mashed potatoes with carrots) is served
+    — a Belgian classic. The children eat hungrily. A jug of water with lemon slices sits on the table.
+- id: page_12
+  moment: 'Madame Dubois arrives from next door carrying the cake. It''s a three-tier gâteau with speculoos crumble, fresh
+    strawberries, and a drip of white chocolate. On top: a name in icing: ''{child_name}''.'
+- id: page_13
+  moment: All the children gather around the cake. Seven candles (or the child's age) are lit. Maman lights the last one.
+    Everyone sings 'Joyeux Anniversaire.' {child_name}'s face glows in the candlelight.
+- id: page_14
+  moment: '{child_name} blows out all the candles in one breath! {child_pronoun_subject} beams with joy as everyone cheers
+    and claps. Everyone cheers. The dog barks. Streamers are thrown in the air. Maman wipes a tear. Papa snaps a photo.'
+- id: page_15
+  moment: Cake is served. {child_name} gets the first slice with the most strawberries. Madame Dubois winks. The speculoos
+    crumble is crunchy. Lucas has a crumb on his nose. Everyone laughs.
+- id: page_16
+  moment: 'Present time! {child_name} opens gifts: a puzzle from Lucas, a comic book (Tintin) from Mamie Claire, a set of
+    building blocks from Grand-père. Each gift is met with genuine delight.'
+- id: page_17
+  moment: The last present is a big, flat box from Maman and Papa. {child_name} unwraps it slowly. It's a framed poster of
+    the solar system with '{child_name}'s Universe' written on it. {child_name} is speechless.
+- id: page_18
+  moment: CLIMAX — Maman says there's one more surprise. She leads everyone to the garden. Tied to the beech tree is a brand
+    new swing — custom-made with '{child_name}' painted on the seat. Papa installed it while everyone was eating.
+- id: page_19
+  moment: '{child_name} sits on the swing. Lucas pushes gently. The other children line up for a turn. Maman and Papa watch
+    from the porch, arms around each other. The garden is golden in the late afternoon sun.'
+- id: page_20
+  moment: 'Final scene: Evening. The party is over. The living room is quiet, strewn with confetti and ribbons. {child_name}
+    sits on the sofa in pyjamas, holding the space poster and the swing photo. Maman and Papa sit on either side. The candle
+    from breakfast flickers.'
+- id: page_21
+  moment: 'The evening wind-down: {child_name} sits on Maman''s lap, looking at photos Papa took during the party. {child_pronoun_subject}
+    points at a picture of the cake, the piñata, the new swing. Each photo brings a happy giggle.'
+- id: page_22
+  moment: Madame Dubois drops by with leftover speculoos cookies wrapped in a napkin. {child_name} thanks her with a warm
+    hug. {child_pronoun_subject} offers her a slice of the gâteau that was saved just for her. She pats {child_name}'s head
+    proudly.
+- id: page_23
+  moment: Bath time after the party. Bubbles float everywhere. The warm water is soothing. {child_name}'s birthday crown floats
+    in the bubbles. {child_pronoun_subject} hums 'Lang zal hij/zij leven' softly. Maman and Papa watch from the doorway, tired
+    and happy.
+- id: page_24
+  moment: '{child_name} in pyjamas, sitting between Maman and Papa on the sofa. The space poster and the swing photo are beside
+    them. The single breakfast candle flickers on the coffee table. ''This was the best birthday ever,'' {child_name} whispers.
+    {child_pronoun_subject} snuggles closer, surrounded by love.'
+age: 2-7

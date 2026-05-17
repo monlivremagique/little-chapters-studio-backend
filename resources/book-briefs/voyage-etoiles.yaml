@@ -1,0 +1,135 @@
+slug: voyage-etoiles
+title: Le Voyage de {child_name} vers les Étoiles
+theme:
+- space
+- science
+- dreams
+story_subject: '{child_name} builds a spaceship from household items and embarks on a breathtaking journey through the solar
+  system. They visit each planet, learn fascinating space facts, meet friendly aliens, discover constellations, and return
+  home with a new love for science and the stars.
+
+  '
+main_emotion: awe
+learning_message: 'The universe is vast and full of wonder, but the most amazing journey begins with imagination — and a cardboard
+  box. Curiosity is the fuel that takes you anywhere.
+
+  '
+languages:
+- fr
+- en
+- nl
+visual_style: Aquarelle belge premium — ligne claire inspirée Hergé/Tintin, aquarelle chaude façon Marcel Marlier/Martine,
+  couleurs profondes et lumineuses, texture de papier aquarelle, personnages expressifs, arrière-plans détaillés type Forêt
+  de Soignes ou rue bruxelloise
+story_page_count: 28
+constraints:
+- Scientifically accurate planets — no humanoid aliens on actual planets
+- Friendly aliens appear on a space station only
+- Space should feel wondrous, not empty or scary
+- The spaceship is clearly made of household items (cardboard, colander, etc.)
+- Each planet gets at least 2 pages
+- Include basic age-appropriate scientific facts
+arc_type: exploration (build → launch → tour → return)
+climax_page: page_22
+setting: A Belgian home, a backyard, the solar system (Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune
+  → space station → constellations)
+cultural_context: 'The spaceship is built in a Belgian backyard with a beech tree. The constellations section references the
+  Northern Hemisphere sky visible from Belgium. The alien encounter is inspired by the Atomium in Brussels — a friendly alien
+  lives in a giant atom-shaped space station.
+
+  '
+parent_emotion_goal: Wonder — the parent re-discovers the magic of the universe through their child's eyes
+secondary_characters:
+- Pepin — Robot co-pilot made from a colander and a lamp
+- Zibbie — Friendly alien from the Atomium Station
+scenes:
+- id: page_1
+  moment: '{child_name} looks up at the starry sky from their bedroom window in Belgium. A telescope points at the moon. {child_pronoun_subject}
+    dreams of visiting every planet in the solar system. Books about planets are on the desk. A poster of the solar system
+    is on the wall.'
+- id: page_2
+  moment: '{child_name} gathers household items in the living room: a large cardboard box, a colander, a lampshade, tin foil,
+    string, a bicycle helmet. The family dog watches, head tilted.'
+- id: page_3
+  moment: In the backyard under the beech tree, {child_name} assembles the spaceship. The colander becomes the control panel.
+    The lampshade is the dome. Tin foil covers the 'hull'. Pepin the robot is assembled from a lamp and a box.
+- id: page_4
+  moment: '{child_name} and Pepin climb into the cardboard cockpit. Pepin''s lamp-head flickers. {child_name} puts on the
+    bicycle helmet. ''3… 2… 1… Décollage!'' {child_pronoun_subject} presses a button on the colander control panel. ''3… 2…
+    1… Décollage!'''
+- id: page_5
+  moment: The backyard blurs. The spaceship rockets upward. The house grows small. The beech tree becomes a green dot. The
+    sky darkens from blue to indigo. Stars begin to appear.
+- id: page_6
+  moment: 'MERCURY — The first stop. A grey, cratered planet. The sun blazes huge in the black sky. Pepin beeps a fact: ''Mercury
+    is the smallest planet!'' {child_name} waves at a crater shaped like a heart.'
+- id: page_7
+  moment: 'VENUS — The spaceship passes through swirling yellow clouds. It''s hot and mysterious. Pepin beeps: ''Venus spins
+    backwards!'' {child_name} sees lightning crackling in the clouds far below.'
+- id: page_8
+  moment: 'EARTH — From space, Earth is a blue and green marble. {child_name} spots Belgium — a tiny patch of green. Pepin
+    beeps: ''C''est la plus belle planète!'' {child_name} feels a pang of home.'
+- id: page_9
+  moment: MARS — The red planet fills the window. Giant volcanoes and canyons stretch below. {child_name} imagines tiny rovers
+    driving on the surface. Pepin's lamp-head glows red in the Martian light.
+- id: page_10
+  moment: THE ASTEROID BELT — Rocks of all sizes float past the window. An asteroid shaped like a potato tumbles by. Pepin
+    dodges them playfully, beeping. {child_name} steers with the colander wheel.
+- id: page_11
+  moment: 'JUPITER — The giant planet looms, with its swirling red spot. Cloud bands in orange and cream stretch across its
+    face. Pepin beeps: ''Jupiter is so big, 1,000 Earths could fit inside!'''
+- id: page_12
+  moment: 'JUPITER''S MOONS — Four small moons orbit: Io, Europa, Ganymede, Callisto. {child_name} waves at Europa, which
+    is covered in ice. ''Maybe there are fish under there!'' {child_name} says.'
+- id: page_13
+  moment: SATURN — The most magnificent sight. Rings of ice and rock shimmer in gold and silver. {child_name}'s mouth drops
+    open. Pepin beeps softly in awe. The rings seem close enough to touch.
+- id: page_14
+  moment: The spaceship flies UNDER Saturn's rings. Tiny particles glitter like diamonds. {child_name} reaches a hand toward
+    the window. A moon, Titan, glows orange in the distance.
+- id: page_15
+  moment: 'URANUS — A pale blue world, tilted on its side. It rolls through space like a sleepy ball. Pepin beeps: ''Uranus
+    rotates on its side!'' {child_name} giggles at its tilted crown.'
+- id: page_16
+  moment: NEPTUNE — Deep blue and wild. Winds whip white clouds across its surface. The farthest planet from the sun. Pepin's
+    lamp flickers — it's cold here. {child_name} shivers and wraps up.
+- id: page_17
+  moment: BEYOND NEPTUNE — The edge of the solar system. Stars grow denser. A faint glow of the Milky Way stretches across
+    the sky. 'The solar system ends here… but space goes on forever!' beeps Pepin.
+- id: page_18
+  moment: ATOMIUM STATION — A giant metal structure shaped like an atom gleams in the void. Inspired by the Atomium in Brussels.
+    Lights pulse along its spheres. A docking bay opens to welcome them.
+- id: page_19
+  moment: Zibbie, a small glowing alien with large eyes and antennae, floats out of the station. Zibbie makes musical beeps.
+    Pepin translates with his own beeps. They become friends instantly.
+- id: page_20
+  moment: 'Inside the Atomium Station, Zibbie shows {child_name} the viewing dome. The entire solar system is visible through
+    crystal panels. Zibbie points out constellations: the Big Dipper, Orion, Cassiopeia.'
+- id: page_21
+  moment: Zibbie gives {child_name} a star map as a gift. It glows with tiny lights marking every planet they visited. Zibbie's
+    antennae sparkle. {child_name} and Zibbie share a silent moment of friendship above the stars. {child_pronoun_subject}
+    thanks Zibbie with a warm hug.
+- id: page_22
+  moment: 'CLIMAX — Zibbie points to a distant spiral galaxy. ''Someday,'' the alien seems to say. {child_name} understands:
+    this is not the end. The journey of discovery never ends. Earth glows blue in the far distance.'
+- id: page_23
+  moment: The journey home. {child_name} and Pepin fly past the planets in reverse. Each one waves goodbye. Mars, Earth (closer
+    now), Venus, Mercury. The cardboard spaceship hums happily. Home is calling.
+- id: page_24
+  moment: 'Final scene: The cardboard spaceship sits in the backyard. The beech tree casts evening shade. {child_name} holds
+    the star map Zibbie gave them. It glows faintly. The real stars blink overhead. Pepin the lamp-robot stands guard. The
+    adventure is just beginning.'
+- id: page_25
+  moment: '{child_name} brings the star map to school the next day. {child_pronoun_subject} shows it to the class during show-and-tell.
+    The teacher, Madame Laurent, is amazed. ''Did you really visit all these planets?'' she asks, smiling. {child_name} nods
+    proudly.'
+- id: page_26
+  moment: 'At recess, {child_name} and friends build a cardboard rocket in the schoolyard. {child_pronoun_subject} directs
+    the construction: ''The colander goes here — that''s the control panel!'' The other children cheer when it''s finished.'
+- id: page_27
+  moment: That evening, {child_name} and Papa stargaze in the backyard under the beech tree. Papa points out the Big Dipper
+    and Orion. {child_name} shows Papa the star map from Zibbie. It glows softly, a small reminder of the incredible journey.
+- id: page_28
+  moment: '{child_name} in bed, the star map glowing on the nightstand. The cardboard spaceship stands in the backyard under
+    the real stars. Pepin the lamp-robot stands guard by the window. {child_pronoun_subject} dreams of galaxies beyond.'
+age: 4-8

@@ -1,0 +1,120 @@
+slug: animaux-foret
+title: '{child_name} et la Forêt des Animaux'
+theme:
+- animals
+- nature
+- friendship
+story_subject: '{child_name} explores a magical forest and helps animal friends prepare for the Great Forest Celebration.
+  Each animal teaches something valuable: patience from a tortoise, courage from a squirrel, kindness from a rabbit, teamwork
+  from the bees.
+
+  '
+main_emotion: joy
+learning_message: 'Every friend has something special to teach us. By helping each other, we make the whole world brighter.
+  Teamwork and kindness make any celebration magical.
+
+  '
+languages:
+- fr
+- en
+- nl
+visual_style: Aquarelle belge premium — ligne claire inspirée Hergé/Tintin, aquarelle chaude façon Marcel Marlier/Martine,
+  couleurs profondes et lumineuses, texture de papier aquarelle, personnages expressifs, arrière-plans détaillés type Forêt
+  de Soignes ou rue bruxelloise
+story_page_count: 24
+constraints:
+- All animals should be recognisable European forest species
+- Bright, friendly colours — nothing scary
+- Simple vocabulary suitable for 2-6 year olds
+- Each animal encounter teaches a gentle life lesson
+arc_type: quest (help friends → celebration)
+climax_page: page_18
+setting: A magical forest inspired by the Ardennes — clearings, streams, an old oak tree, a meadow
+cultural_context: 'The forest is inspired by the Ardennes belges. The celebration includes traditional Belgian elements: gaufres,
+  speculoos, and a maypole with ribbons. A stream evokes the Lesse river.
+
+  '
+parent_emotion_goal: Warmth — the parent feels the joy of community and friendship
+secondary_characters:
+- Tortue Lente — Teaches patience
+- Timmy l'Écureuil — Teaches courage
+- Lapine Câline — Teaches kindness
+- Zou-zou l'Abeille — Teaches teamwork
+scenes:
+- id: page_1
+  moment: '{child_name} puts on their boots at the edge of a lush Ardennes-style forest. Tall pines and leafy oaks stretch
+    upward. A wooden sign reads ''Forêt des Animaux''. Butterflies dance in the air. {child_pronoun_subject} steps into the
+    sunlight, excited for the day ahead.'
+- id: page_2
+  moment: A winding dirt path leads {child_name} into the forest. Ferns and wild strawberries line the trail. Sunlight filters
+    through the canopy in golden beams.
+- id: page_3
+  moment: '{child_name} finds Tortue Lente struggling to carry a basket of acorns up a small hill. She is slow but determined.
+    {child_name} offers to help carry.'
+- id: page_4
+  moment: 'Together, they reach the top. Tortue Lente says: ''Slow and steady wins the race, dear {child_name}. Thank you
+    for your patience.'' She gives {child_name} a shiny pebble.'
+- id: page_5
+  moment: Further in, Timmy l'Écureuil is perched on a branch, too scared to jump to the next tree. A gap separates him from
+    his family. He trembles.
+- id: page_6
+  moment: '{child_name} holds out their arms below and encourages Timmy. ''You can do it! I believe in you!'' {child_name}
+    calls out. {child_pronoun_subject} holds out {child_possessive_det} arms. His little paws clutch the branch.'
+- id: page_7
+  moment: Timmy leaps! He lands safely on the far branch. His family cheers. He chatters happily at {child_name}. 'You were
+    so brave!' {child_name} waves.
+- id: page_8
+  moment: '{child_name} reaches a sunlit clearing where Lapine Câline is gathering flowers for garlands. Her paw is caught
+    under a fallen twig. She looks sad.'
+- id: page_9
+  moment: '{child_name} gently lifts the twig and frees the rabbit''s paw. Lapine Câline nuzzles {child_name}''s hand. ''Kindness
+    always finds its way back,'' she whispers.'
+- id: page_10
+  moment: Lapine Câline weaves a small flower crown and places it on {child_name}'s head. A butterfly lands on the crown.
+    She declares {child_name} the 'Roi/Reine de la Gentillesse'.
+- id: page_11
+  moment: A loud buzz fills the air. Zou-zou l'Abeille and her fellow bees are trying to hang decorations for the Great Forest
+    Celebration, but the ribbons are tangled.
+- id: page_12
+  moment: '{child_name} untangles the ribbons while the bees hold the ends. Zou-zou says: ''Alone, we tangle. Together, we
+    create something beautiful!'''
+- id: page_13
+  moment: The bees lift the ribbon high into the trees. A beautiful maypole emerges with red, yellow, and blue ribbons spiralling
+    down. The forest looks festive.
+- id: page_14
+  moment: 'News spreads: the Great Forest Celebration is almost ready. Animals carry berries, nuts, and flowers to the central
+    meadow. {child_name} helps carry a basket of wild strawberries.'
+- id: page_15
+  moment: At the meadow, long tables are set under the trees. Tortue arranges acorns on a leaf platter. {child_pronoun_subject}
+    helps her count them one by one. Timmy places nuts. Lapine Câline lays flower garlands. The bees polish the berries.
+- id: page_16
+  moment: '{child_name} opens their backpack and arranges speculoos cookies on a wooden platter shaped like a leaf. The animals
+    gather, curious about the sweet treat.'
+- id: page_17
+  moment: 'The sun begins to set. Lanterns — fireflies in glass jars — are lit around the meadow. Warm glow makes everything
+    golden. Music begins: a cricket plays a tiny violin.'
+- id: page_18
+  moment: CLIMAX — The Great Forest Celebration is in full swing. All the animals gather around {child_name}. Tortue, Timmy,
+    Lapine, and Zou-zou raise their paws/wings in thanks. {child_name} is lifted onto a flower-covered throne.
+- id: page_19
+  moment: 'Everyone shares the feast: berries, nuts, gaufres, speculoos. A maypole dance begins. {child_name} holds a ribbon
+    and dances in a circle with the animals. Laughter fills the meadow.'
+- id: page_20
+  moment: 'Final scene: {child_name} says goodbye at the forest edge. Each animal friend gives a small gift — a feather, a
+    flower seed, a smooth stone. {child_name} walks home, flower crown still on their head, the forest glowing golden behind
+    them.'
+- id: page_21
+  moment: '{child_name} walks home through the forest as dusk settles. Fireflies light the path like tiny lanterns. {child_pronoun_subject}
+    holds the gifts close — a feather, a flower seed, a smooth stone — each one a memory of a new friend.'
+- id: page_22
+  moment: 'At the forest edge, {child_name} turns back one last time. The animals have gathered at the treeline: Tortue Lente,
+    Timmy, Lapine Câline, Zou-zou, and many more. They wave with leaves, paws, and wings. {child_pronoun_subject} waves back,
+    heart full.'
+- id: page_23
+  moment: Home at last, {child_name} places the gifts on {child_possessive_det} bedroom shelf. {child_pronoun_subject} plants
+    the flower seed in a small pot by the window. Through the window, the forest glows faintly in the moonlight.
+- id: page_24
+  moment: Weeks later, a beautiful violet campanula blooms in the pot — just like the flowers in the forest meadow. {child_name}
+    waters it every morning and remembers the Great Forest Celebration. {child_pronoun_subject} knows the forest will always
+    welcome {child_possessive_det} back.
+age: 2-6

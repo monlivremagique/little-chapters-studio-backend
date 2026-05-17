@@ -1,0 +1,136 @@
+slug: cherche-trouve
+title: Où est {child_name} ?
+theme:
+- search
+- game
+- discovery
+story_subject: 'An interactive search-and-find adventure. Each page presents a richly detailed scene — the ocean, space, the
+  jungle, a circus, a castle, a bakery, a garden, and more — where {child_name}''s name is hidden in the illustration alongside
+  playful objects to find.
+
+  '
+main_emotion: delight
+learning_message: 'The world is full of hidden wonders. Looking closely, being patient, and exploring with curiosity reveal
+  treasures everywhere.
+
+  '
+languages:
+- fr
+- en
+- nl
+visual_style: Aquarelle belge premium — ligne claire inspirée Hergé/Tintin, aquarelle chaude façon Marcel Marlier/Martine,
+  couleurs profondes et lumineuses, texture de papier aquarelle, personnages expressifs, arrière-plans détaillés type Forêt
+  de Soignes ou rue bruxelloise
+story_page_count: 24
+constraints:
+- Each scene must contain hidden objects and {child_name}'s name woven into the art
+- Scenes must be visually dense but not overwhelming for young children
+- Every scene has a distinct colour palette
+- No reading required to play — purely visual search
+- A list of things to find appears on each page margin
+arc_type: episodic (page-by-page new world exploration)
+climax_page: page_18
+setting: 'Multiple worlds: ocean, space, jungle, circus, castle, bakery, garden, Arctic, toy room, city, farm, beach, forest,
+  kitchen, library, mountains'
+cultural_context: 'The bakery is clearly Belgian — gaufres, speculoos, couques au chocolat. The city scene features a Grand-Place-inspired
+  square with guildhouses. The garden has Belgian tulips. The beach references the Belgian coast (Ostende).
+
+  '
+parent_emotion_goal: Engagement — parent and child bond over searching together
+scenes:
+- id: page_1
+  moment: A whimsical map of all the worlds {child_name} will visit. A dotted path leads through ocean waves, past a rocket,
+    into jungle leaves, under a circus tent, around a castle, through a bakery, across a garden, over ice, into a toy room,
+    and to a city square. {child_name}'s face peeks from behind the title.
+- id: page_2
+  moment: 'UNDER THE OCEAN — Coral reefs in pink and orange. Colourful fish swim among anemones. A seahorse hides behind a
+    shell. An octopus peeks from a cave. {child_name}''s name is written in bubbles. Find: treasure chest, starfish, pearl,
+    tiny submarine.'
+- id: page_3
+  moment: 'IN SPACE — A rocket zooms past colourful planets. Saturn''s rings shimmer. An alien waves from a crater on the
+    moon. Stars twinkle in different shapes. {child_name}''s name is spelled in constellations. Find: floating robot, shooting
+    star, space helmet, pizza slice.'
+- id: page_4
+  moment: 'THE JUNGLE — Monkeys swing from vines. A toucan perches on a giant flower. Butterflies with patterned wings fill
+    the air. A sloth hangs upside down. {child_name}''s name is hidden in the leaves. Find: parrot feather, pineapple, hidden
+    jaguar, red frog.'
+- id: page_5
+  moment: 'THE CIRCUS — A striped tent fills the scene. A clown juggles colourful balls. A seal balances a ball on its nose.
+    Trapeze artists fly overhead. {child_pronoun_subject} cheers from the audience, waving a tiny flag. {child_name}''s name
+    is in the bunting. Find: unicycle, lion tamer''s whip, red nose, ticket stub.'
+- id: page_6
+  moment: 'THE CASTLE — Towers with pennants rise to the sky. A knight in armour stands guard. A dragon sleeps on a pile of
+    gold. A princess waves from a window. {child_name}''s name is carved in the stone wall. Find: crown, magic wand, shield
+    with star, friendly ghost.'
+- id: page_7
+  moment: 'THE BAKERY — A warm Belgian pâtisserie with golden bread in baskets. A baker in a white apron arranges gaufres.
+    Glass jars hold speculoos and couques. Steam rises from croissants. {child_name}''s name is in the cake icing. Find: rolling
+    pin, whisk, tiny mouse, star-shaped cookie.'
+- id: page_8
+  moment: 'THE GARDEN — Tulips in red, yellow, and purple stretch across the scene. A beehive buzzes. A gnome sits by a mushroom.
+    A watering can leans against a fence. {child_name}''s name is spelled with flower petals. Find: ladybug, pink butterfly,
+    hidden key, fairy door.'
+- id: page_9
+  moment: 'THE ARCTIC — Snow and ice stretch to the horizon. A polar bear fishes at a hole in the ice. Penguins slide on their
+    bellies. The northern lights ripple in green and purple. {child_name}''s name is written in frost. Find: walrus, igloo,
+    snowflake jewel, seal pup.'
+- id: page_10
+  moment: 'THE TOY ROOM — Toys are scattered everywhere. Blocks form a tower. A train circles a track. Dolls sit on a shelf.
+    A puzzle is half-finished on the rug. {child_name}''s name is on a building block. Find: spinning top, yo-yo, teddy bear,
+    jigsaw piece.'
+- id: page_11
+  moment: 'THE CITY — A Grand-Place-inspired square with guildhouses. A fountain sparkles. Street musicians play. A friterie
+    cart steams with fries. Bicycles are parked in a row. {child_name}''s name is on a shop sign. Find: Manneken-Pis statue,
+    Belgian flag, flower cart, lost mitten.'
+- id: page_12
+  moment: 'THE FARM — A red barn with a weather vane. Sheep graze in a green field. A tractor is parked by a haystack. Chickens
+    peck in the yard. {child_name}''s name is written in the straw. Find: pitchfork, cow with a bell, basket of eggs, fluffy
+    lamb.'
+- id: page_13
+  moment: 'THE BEACH — Sand dunes with beach grass. The North Sea glimmers blue-green. A sandcastle with a flag stands proudly.
+    A seagull perches on a lifeguard chair. {child_name}''s name is traced in the sand. Find: seashell, starfish, bucket,
+    tiny sailboat.'
+- id: page_14
+  moment: 'THE FOREST — A woodland path with mushrooms. Deer peek between trees. A stream flows over pebbles. {child_pronoun_subject}
+    follows the water with {child_possessive_det} gaze, searching for tiny fish. Berries grow on bushes. {child_name}''s name
+    is in the tree bark. Find: acorn, feather, rabbit hole, glowing firefly.'
+- id: page_15
+  moment: 'THE KITCHEN — A cosy kitchen with pots on the stove. A cat sleeps on a windowsill. A bowl of fruit sits on the
+    table. Recipe cards are pinned to the wall. {child_name}''s name is on the calendar. Find: whisk, apron, recipe book,
+    cookie jar.'
+- id: page_16
+  moment: 'THE LIBRARY — Bookshelves stuffed with colourful books. A reading nook with a cushion. A globe sits on a desk.
+    A lamp casts warm light. {child_name}''s name is on a book spine. Find: bookmark, pair of glasses, paper airplane, tiny
+    ladder.'
+- id: page_17
+  moment: 'THE MOUNTAINS — Snow-capped peaks against a blue sky. A cable car rises in the distance. A mountain goat perches
+    on a ledge. Pine trees line the slopes. {child_name}''s name is written in the snow. Find: hiking boot, walking stick,
+    edelweiss flower, climber''s rope.'
+- id: page_18
+  moment: 'CLIMAX — THE GRAND FINALE — A massive fold-out double-page spread. All the characters from previous pages gather,
+    waving and cheering for {child_name}. {child_pronoun_subject} waves back at every single one with a huge smile. {child_name}''s
+    name appears in a banner held by tiny helpers from every world. The words: ''Où est {child_name}? — ICI!'' celebrate the
+    discovery.'
+- id: page_19
+  moment: 'A rewards page with a certificate: ''BRAVO, {child_name} — Champion/ne du Cherche-et-Trouve!'' A border of all
+    the found objects frames the certificate. Space for a parent to write the date.'
+- id: page_20
+  moment: 'Final scene: {child_name} sits in their room surrounded by all the treasures found in the book — a star, a shell,
+    a cookie, a flower — drawn as the child''s own collection. A warm lamp glows. The child smiles, holding this very book.'
+- id: page_21
+  moment: 'BONUS PAGE: THE BELGIAN COUNTRYSIDE — Rolling green hills, a windmill, fields of rapeseed in brilliant yellow bloom.
+    A farmer''s dog chases a ball. {child_name}''s name is hidden in the wheat field. {child_pronoun_subject} peeks from behind
+    a hay bale. Find: a wooden clog, a wheel of cheese, a tiny Atomium, a Tintin comic, a farmer''s hat.'
+- id: page_22
+  moment: 'BONUS PAGE: THE SCHOOL — A colourful classroom with children at their desks. A globe sits by the window. The blackboard
+    has Belgian flags drawn in chalk. {child_name}''s name is on the attendance chart. {child_pronoun_subject} raises {child_possessive_det}
+    hand. Find: a pencil case, an apple, a hidden speculoos cookie, a ruler, a backpack.'
+- id: page_23
+  moment: 'BONUS PAGE: THE NIGHT MARKET — Stalls with warm golden lights. A gaufre stand steams. A street musician plays a
+    violin. {child_name}''s name is on a street sign. {child_pronoun_subject} peeks from behind a fruit stall, holding a strawberry.
+    Find: a star lantern, a striped umbrella, a cat on a roof, a lost mitten, a bicycle.'
+- id: page_24
+  moment: 'BONUS FINALE: A grand collage of all the hidden objects from every world. {child_name} stands in the centre, holding
+    a magnifying glass, wearing a tiny explorer hat. {child_pronoun_subject} found them all! A certificate reads: ''BRAVO,
+    {child_name} — Champion/ne du Cherche-et-Trouve!'''
+age: 2-6

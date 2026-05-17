@@ -1,0 +1,117 @@
+slug: super-heros
+title: Mon Super-Héros, c'est {child_name}
+theme:
+- heroism
+- confidence
+- courage
+story_subject: '{child_name} discovers that the greatest superpower isn''t flying or invisibility — it''s kindness and courage.
+  They spend the day helping neighbours, standing up for a friend, and making their Belgian town a better place, one small
+  heroic act at a time.
+
+  '
+main_emotion: empowerment
+learning_message: 'You don''t need a cape to be a hero. Courage, kindness, and helping others are the most powerful superpowers
+  of all.
+
+  '
+languages:
+- fr
+- en
+- nl
+visual_style: Aquarelle belge premium — ligne claire inspirée Hergé/Tintin, aquarelle chaude façon Marcel Marlier/Martine,
+  couleurs profondes et lumineuses, texture de papier aquarelle, personnages expressifs, arrière-plans détaillés type Forêt
+  de Soignes ou rue bruxelloise
+story_page_count: 24
+constraints:
+- No fantasy elements — all heroism is realistic and relatable
+- Each page shows {child_name} actively doing something heroic
+- Urban Belgian setting with recognisable elements
+- Positive, uplifting tone throughout
+arc_type: transformation (ordinary child → everyday hero)
+climax_page: page_18
+setting: A typical Belgian town — terraced houses, a neighbourhood park, a corner bakery, a schoolyard
+cultural_context: 'Set in a town like Woluwe-Saint-Pierre. The bakery sells couques au chocolat. The park has a statue of
+  Manneken-Pis. The street is lined with lime trees. A friterie appears at the corner.
+
+  '
+parent_emotion_goal: Inspiration — the parent feels their child can be a hero in everyday life
+secondary_characters:
+- Mamie Claire — Neighbouring elderly lady who {child_name} helps
+- Lucas — Friend who is being teased and whom {child_name} defends
+scenes:
+- id: page_1
+  moment: '{child_name} wakes up in their cosy Belgian bedroom. A homemade cape — sewn by Maman — hangs on the bedpost. Sunlight
+    streams through lace curtains. {child_pronoun_subject} stretches and smiles. A framed photo of Tintin is on the wall.'
+- id: page_2
+  moment: '{child_name} puts on the cape and strikes a heroic pose in front of the mirror. They imagine themselves flying
+    over Brussels. But real heroism is waiting downstairs.'
+- id: page_3
+  moment: In the kitchen, {child_name} helps set the table without being asked. Petit-déjeuner with tartines, confiture, and
+    a bowl of café au lait for Papa. Maman smiles proudly.
+- id: page_4
+  moment: Outside on the tree-lined street, {child_name} sees Mamie Claire struggling with heavy grocery bags. A baguette
+    is about to fall. {child_name} rushes to help.
+- id: page_5
+  moment: '{child_name} carries one of the bags. Mamie Claire''s wrinkled face lights up when she sees {child_name}. She tells
+    {child_pronoun_subject} they have the heart of a true hero. She tells {child_name} they have the heart of a true hero.
+    They pass the neighbourhood friterie.'
+- id: page_6
+  moment: At the park, children are playing near the Manneken-Pis statue. {child_name} spots Lucas sitting alone on a bench,
+    looking sad, while two kids point and laugh.
+- id: page_7
+  moment: '{child_name} walks over to Lucas and sits beside him. Lucas explains he''s being teased about his glasses. {child_name}
+    listens without interrupting.'
+- id: page_8
+  moment: '{child_name} stands up. With a calm, firm voice, {child_pronoun_subject} tells the bullies that Lucas is their
+    friend and teasing isn''t okay. The bullies look surprised and back away.'
+- id: page_9
+  moment: Lucas smiles for the first time. He and {child_name} play together on the swings. The sun is bright. Lucas says
+    {child_name} is a real superhero.
+- id: page_10
+  moment: '{child_name} notices a stray kitten stuck in a tree near the playground. Its mew is soft and frightened. A small
+    crowd has gathered, unsure what to do.'
+- id: page_11
+  moment: '{child_name} climbs the tree carefully, branch by branch. Lucas spots them from below. The cape flutters. A parent
+    calls out encouragement.'
+- id: page_12
+  moment: '{child_name} reaches the kitten and gently scoops it into their arms. The kitten purrs. The crowd below cheers
+    softly.'
+- id: page_13
+  moment: '{child_name} climbs down and hands the kitten to a little girl who had been crying. She hugs the kitten tightly.
+    Her mother thanks {child_name} with tears in her eyes.'
+- id: page_14
+  moment: Walking home, {child_name} passes the baker Madame Dubois. She's struggling to carry trays of couques au chocolat.
+    {child_name} holds the door open for her.
+- id: page_15
+  moment: Madame Dubois gives {child_name} a warm couque au chocolat as thanks. 'A hero needs energy,' she says with a wink.
+    The bakery smells of butter and sugar.
+- id: page_16
+  moment: Back in the street, {child_name} sees a younger child who has dropped their teddy bear in a puddle. {child_name}
+    picks it up, wipes it clean, and returns it with a smile.
+- id: page_17
+  moment: 'As dusk falls, {child_name} walks home. Streetlamps glow. They pass all the places they made a difference today:
+    the friterie, the park, the bakery. A sense of warmth fills them.'
+- id: page_18
+  moment: 'CLIMAX — At the dinner table, the whole family listens as {child_name} recounts their day. Papa''s eyes glisten.
+    Maman hugs them and says: ''You are our superhero, every single day.'''
+- id: page_19
+  moment: 'Evening: {child_name} carefully folds the cape and places it on the bedpost. It''s not about the cape, they realise.
+    It''s about the heart. The room glows warmly.'
+- id: page_20
+  moment: 'Final scene: {child_name} looks out the window at the stars. Below, Lucas waves from his window across the street,
+    wearing a homemade cape of his own. Two superheroes, side by side.'
+- id: page_21
+  moment: After dinner, {child_name} and Papa wash the dishes together. {child_pronoun_subject} scrubs a plate carefully while
+    Papa dries. 'You really are a hero,' Papa says. 'Not because of the cape, but because you care.'
+- id: page_22
+  moment: '{child_name} sits on the balcony overlooking the rue pavée. Streetlamps glow amber. {child_pronoun_subject} thinks
+    about everyone {child_pronoun_subject} helped today. A shooting star crosses the sky. {child_name} makes a wish: to help
+    someone again tomorrow.'
+- id: page_23
+  moment: 'The next morning, {child_name} wakes early and leaves a hand-drawn card at Mamie Claire''s door. It reads: ''You
+    are a hero too.'' Through the window, Mamie Claire''s silhouette picks it up and smiles. {child_pronoun_subject} tiptoes
+    home happily.'
+- id: page_24
+  moment: '{child_name} and Lucas meet at the friterie. They share a paper cone of frites with mayonnaise. ''Superhero team?''
+    Lucas asks. {child_name} grins. ''Superhero team.'' {child_pronoun_subject} high-fives Lucas.'
+age: 3-8

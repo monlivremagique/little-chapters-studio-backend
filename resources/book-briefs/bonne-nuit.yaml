@@ -1,0 +1,98 @@
+slug: bonne-nuit
+title: Bonne Nuit, {child_name}
+theme:
+- bedtime
+- dreams
+- calm
+story_subject: '{child_name} takes a gentle bedtime journey around their home and garden, saying goodnight to the moon, stars,
+  garden animals, and toys before drifting off to a peaceful sleep filled with sweet dreams.
+
+  '
+main_emotion: calm
+learning_message: 'Nighttime is a gentle friend. Saying goodnight to the world around us helps us feel safe, loved, and ready
+  for sweet dreams.
+
+  '
+languages:
+- fr
+- en
+- nl
+visual_style: Aquarelle belge premium — ligne claire inspirée Hergé/Tintin, aquarelle chaude façon Marcel Marlier/Martine,
+  couleurs profondes et lumineuses, texture de papier aquarelle, personnages expressifs, arrière-plans détaillés type Forêt
+  de Soignes ou rue bruxelloise
+story_page_count: 20
+constraints:
+- Repetitive, soothing structure for toddlers
+- Very short text — 1-2 short sentences per page
+- Soft, warm colours only — no bright or jarring imagery
+- Each page follows 'Bonne nuit, [something]' pattern in FR
+arc_type: circular (waking → bedtime routine → sleep)
+climax_page: page_14
+setting: A cosy Belgian home — a child's bedroom, kitchen, garden, the night sky
+cultural_context: 'The house has a typical Belgian pitched roof. The garden has a beech tree. The child drinks a warm nightcap
+  of lait à la camomille. A carillon plays in the distance from a nearby church.
+
+  '
+parent_emotion_goal: Serenity — the parent feels peaceful reading this at bedtime
+scenes:
+- id: page_1
+  moment: The sun sets over a quiet Belgian neighbourhood. Warm orange light fills {child_name}'s bedroom. A soft glow comes
+    through lace curtains. The day is ending gently.
+- id: page_2
+  moment: Maman helps {child_name} put on soft pyjamas — a light blue onesie with little stars. {child_pronoun_subject} yawns
+    and hugs a plush bunny. — a light blue onesie with little stars. {child_name} yawns and hugs a plush bunny.
+- id: page_3
+  moment: '{child_name} brushes teeth at a small stool in the bathroom. A nightlight shaped like a crescent moon glows on
+    the wall. The tap drips softly.'
+- id: page_4
+  moment: In the kitchen, Papa warms a small cup of lait à la camomille. Steam rises gently. The kitchen clock ticks softly.
+    The world is winding down.
+- id: page_5
+  moment: '{child_name} drinks the warm milk, holding the cup with both hands. Speculoos crumbs are on a tiny plate. Maman
+    strokes {child_name}''s hair.'
+- id: page_6
+  moment: In the living room, {child_name} says goodnight to the toys scattered on the rug. A teddy bear, a wooden train,
+    a picture book. 'Bonne nuit, mes amis.'
+- id: page_7
+  moment: '{child_name} stands at the garden door and says goodnight to the flowers. The tulips have closed their petals.
+    A ladybug sleeps on a leaf. The beech tree rustles.'
+- id: page_8
+  moment: In the garden, a hedgehog peeks from behind a bush. {child_name} waves. 'Bonne nuit, petit hérisson.' {child_pronoun_subject}
+    watches the hedgehog curl up sleepily.
+- id: page_9
+  moment: '{child_name} looks up at the sky. The first stars appear. A crescent moon hangs low and golden. ''Bonne nuit, lune.''
+    The moon seems to smile back.'
+- id: page_10
+  moment: '{child_name} counts stars on their fingers. One, two, three. Each star twinkles a little brighter. A gentle breeze
+    carries a lullaby from a nearby carillon.'
+- id: page_11
+  moment: '{child_name} climbs into bed. Maman tucks the duvet — a fluffy white one with embroidered stars — up to {child_name}''s
+    chin. {child_pronoun_subject} makes sure the bunny is tucked in too.'
+- id: page_12
+  moment: Maman sits on the edge of the bed and opens a storybook. Soft lamplight illuminates the pages. {child_name}'s eyelids
+    grow heavy.
+- id: page_13
+  moment: Maman kisses {child_name}'s forehead. 'Je t'aime, mon trésor.' Papa appears at the door and blows a kiss. {child_name}'s
+    eyes are half-closed.
+- id: page_14
+  moment: 'CLIMAX — {child_name} drifts off. The bedroom transforms into a dreamscape: soft clouds float through the walls,
+    stars circle the bed, the moon glows through the window like a nightlight.'
+- id: page_15
+  moment: In the dream, {child_name} floats on a gentle cloud over the sleeping town. Rooftops, church steeples, and trees
+    pass below. Everything is peaceful and bathed in silver light.
+- id: page_16
+  moment: 'Final scene: Close-up of {child_name} sleeping peacefully, clutching the bunny. The moon shines through the window.
+    The last line reads: ''Bonne nuit, {child_name}. Fais de beaux rêves.'''
+- id: page_17
+  moment: '{child_name} stirs gently in {child_possessive_det} sleep, a soft smile on {child_possessive_det} face. In the
+    dream, {child_pronoun_subject} floats past the carillon tower. The bells chime a gentle lullaby over the quiet neighbourhood.'
+- id: page_18
+  moment: In the dream, {child_name} visits the stars one by one. Each star says 'Bonne nuit' in a different voice. {child_pronoun_subject}
+    waves at a star shaped like a bunny. The moon glows warm and golden through the clouds.
+- id: page_19
+  moment: 'The dream softens. {child_name} is back in {child_possessive_det} own bed. Maman''s voice drifts from the hallway:
+    ''Je t''aime, mon ange.'' {child_pronoun_subject} snuggles deeper under the duvet, clutching the bunny close.'
+- id: page_20
+  moment: The moon casts a silver beam through the lace curtains onto {child_name}'s sleeping face. A gentle breeze rustles
+    the beech tree outside. The carillon plays one final, soft note. Bonne nuit, {child_name}. Fais de beaux rêves.
+age: 1-4
