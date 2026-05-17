@@ -1,0 +1,540 @@
+{
+    "version": 2,
+    "title_template": "Het Betoverende Avontuur van {child_name}",
+    "negative_prompt_default": "sombre, effrayant, violent, réaliste photographique, numérique, cartoon exagéré, anime, manga, texte, lettrage, low quality",
+    "style_rules": [
+        "Aquarelle belge premium avec ligne claire inspirée Hergé et Tintin",
+        "Couleurs chaudes façon Marcel Marlier/Martine : ocres, verts profonds, bleus doux",
+        "Texture papier aquarelle visible, jamais numérique",
+        "Lumière naturelle dorée, ombres douces",
+        "Détails fins type ligne claire : expressions précises, décors riches",
+        "Palette évolutive : bruns d'atelier → verts/ors de forêt → pastels de pont → bleus de château → arc-en-ciel de cristal"
+    ],
+    "metadata": {
+        "schema": "book_blueprint_v2",
+        "schemaVersion": 2,
+        "slug": "aventure-enchantee",
+        "bookId": "aventure-enchantee-2024",
+        "locale": "nl"
+    },
+    "visualBible": {
+        "style_rules": [
+            "Aquarelle belge premium avec ligne claire inspirée Hergé et Tintin",
+            "Couleurs chaudes façon Marcel Marlier/Martine : ocres, verts profonds, bleus doux",
+            "Texture papier aquarelle visible, jamais numérique",
+            "Lumière naturelle dorée, ombres douces",
+            "Détails fins type ligne claire : expressions précises, décors riches",
+            "Palette évolutive : bruns d'atelier → verts/ors de forêt → pastels de pont → bleus de château → arc-en-ciel de cristal"
+        ],
+        "palette": "Terre de Sienne, ocre jaune, vert forêt, bleu cobalt, rouge vermillon, violet outremer, blanc de titane",
+        "lighting": "Lumière naturelle dorée avec ombres portées douces, éclairage latéral pour la profondeur",
+        "compositionRules": [
+            "Format carré 21x21cm optimisé",
+            "Règle des tiers pour placer {child_name}",
+            "Premier plan net, arrière-plan légèrement flou",
+            "Mouvement dirigé vers le centre d'intérêt",
+            "Cadrage cinématographique : plans larges pour la magie, plans moyens pour l'émotion"
+        ]
+    },
+    "heroBible": {
+        "identityRules": [
+            "Enfant européen aux cheveux châtain clair ondulés mi-longs jusqu'aux épaules, avec mèche rebelle sur le front",
+            "Yeux noisette expressifs avec reflets dorés et sourcils châtain clair bien définis",
+            "Teint pêche rosé avec quelques taches de rousseur sur le nez et les joues",
+            "Taille et corpulence typique d'un enfant de 5-6 ans, ni grand ni petit",
+            "Pull en laine moutarde à col rond avec texture visible et pantalon bleu marine en velours côtelé",
+            "Baskets blanches en cuir légèrement usées avec lacets détachés",
+            "Expression toujours bienveillante avec sourire spontané et regard curieux pétillant",
+            "Gestuelle naturelle d'enfant : mains expressives, posture droite mais détendue, pas énergique"
+        ],
+        "characterDesign": "Enfant de 5-6 ans aux cheveux châtain clair ondulés mi-longs avec mèche rebelle, yeux noisette à reflets dorés, teint pêche rosé avec taches de rousseur, pull moutarde en laine à col rond, pantalon bleu marine en velours côtelé, baskets blanches en cuir usées, expression bienveillante et curieuse, gestuelle naturelle d'enfant, style ligne claire belge",
+        "forbiddenDrift": [
+            "INTERDICTION absolue de changer la couleur châtain clair des cheveux ou la texture ondulée",
+            "INTERDICTION de modifier les yeux noisette à reflets dorés",
+            "INTERDICTION de changer le pull moutarde (couleur signature obligatoire)",
+            "INTERDICTION de vieillir ou rajeunir le personnage",
+            "INTERDICTION de style cartoon exagéré, manga ou anime",
+            "INTERDICTION d'expression de peur dominante ou de tristesse accablante",
+            "INTERDICTION de transformation physique fantastique ou surnaturelle",
+            "INTERDICTION de modifier les proportions corporelles d'enfant de 5-6 ans"
+        ]
+    },
+    "imageGeneration": {
+        "provider": "replicate",
+        "modelStrategy": {
+            "model": "black-forest-labs/flux-2-pro"
+        },
+        "negativePromptDefault": "sombre, effrayant, violent, réaliste photographique, numérique, cartoon exagéré, anime, manga, texte, lettrage, low quality",
+        "resolution": "1 MP",
+        "outputFormat": "png",
+        "inputImages": {
+            "pageReference": true,
+            "childPhoto": true
+        }
+    },
+    "assets": {
+        "basePublicPath": "/images/books/aventure-enchantee",
+        "defaults": {
+            "cover-default": "/cover.png",
+            "dedication-default": "/dedication.png",
+            "hero-reference-default": "/hero-reference.png",
+            "page-1-default": "/page-1.png",
+            "page-2-default": "/page-2.png",
+            "page-3-default": "/page-3.png",
+            "page-4-default": "/page-4.png",
+            "page-5-default": "/page-5.png",
+            "page-6-default": "/page-6.png",
+            "page-7-default": "/page-7.png",
+            "page-8-default": "/page-8.png",
+            "page-9-default": "/page-9.png",
+            "page-10-default": "/page-10.png",
+            "page-11-default": "/page-11.png",
+            "page-12-default": "/page-12.png",
+            "page-13-default": "/page-13.png",
+            "page-14-default": "/page-14.png",
+            "page-15-default": "/page-15.png",
+            "page-16-default": "/page-16.png",
+            "page-17-default": "/page-17.png",
+            "page-18-default": "/page-18.png",
+            "page-19-default": "/page-19.png",
+            "page-20-default": "/page-20.png",
+            "page-21-default": "/page-21.png",
+            "page-22-default": "/page-22.png",
+            "page-23-default": "/page-23.png",
+            "page-24-default": "/page-24.png",
+            "summary-default": "/summary.png",
+            "back-cover-default": "/back-cover.png"
+        }
+    },
+    "qa": {
+        "requiredPageTypes": [
+            "cover",
+            "dedication",
+            "story",
+            "summary",
+            "backCover",
+            "reference"
+        ],
+        "requiredLocales": [
+            "fr",
+            "en",
+            "nl"
+        ],
+        "placeholderPolicy": {
+            "allowed": [
+                "{child_name}",
+                "{child_pronoun_subject}",
+                "{child_possessive_det}"
+            ],
+            "forbidden": [
+                "il",
+                "elle",
+                "lui",
+                "son",
+                "sa",
+                "ses",
+                "he",
+                "she",
+                "his",
+                "her",
+                "hij",
+                "zij",
+                "zijn",
+                "haar"
+            ]
+        },
+        "rules": [
+            "Chaque page story doit avoir text_template non vide",
+            "Pronoms genrés interdits pour l'enfant héros",
+            "Style visuel cohérent ligne claire belge",
+            "Émotions claires pour chaque scène",
+            "Climax à page_15 avec moment wow",
+            "Cohérence héros à travers heroBible",
+            "Authenticité culturelle belge"
+        ],
+        "scorecard": {
+            "editorialScore": {
+                "value": 92,
+                "rationale": "Histoire structurée avec arc émotionnel fort, climax spectaculaire page 15, message universel sur courage et gentillesse, personnages attachants"
+            },
+            "imageabilityScore": {
+                "value": 95,
+                "rationale": "Scènes visuellement riches et spécifiques, progression couleurs, éléments magiques clairs, style ligne claire défini"
+            },
+            "heroConsistencyScore": {
+                "value": 90,
+                "rationale": "Description physique très précise avec détails spécifiques, pull moutarde signature, caractéristiques faciales définies, règles anti-drift renforcées"
+            },
+            "localeCompletenessScore": {
+                "value": 94,
+                "rationale": "Trois langues complètes avec authenticité culturelle, NL authentiquement flamand, EN naturel, évitement pronoms genrés réussi"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "cover",
+            "type": "cover",
+            "title_template": "Het Betoverende Avontuur van {child_name}",
+            "text_template": null,
+            "default_image_path": "/cover.png",
+            "prompt_template": "Couverture aquarelle ligne claire premium : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde tenant une carte dorée scintillante, debout à la lisière d'une forêt enchantée de hêtres avec champignons bleus lumineux, château fantastique aux trois tours dans la brume dorée à l'horizon, arc-en-ciel subtil, lumière dorée magique, style Marcel Marlier/Hergé",
+            "negative_prompt": "texte, lettrage, sombre, effrayant, réaliste photographique",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 1,
+            "scene_key": "cover"
+        },
+        {
+            "id": "dedication",
+            "type": "dedication",
+            "title_template": null,
+            "text_template": "Voor {child_name}, wiens dappere hart van elke gewone dag een buitengewoon avontuur kan maken.",
+            "default_image_path": "/dedication.png",
+            "prompt_template": "Fond aquarelle belge tendre avec bordure décorative de feuilles de chêne et glands, paysage stylisé de maisons flamandes à pignon, pavés anciens, tons ocre et vert tendre, lumière douce, style ligne claire délicat",
+            "negative_prompt": "personnages, action, texte intégré, couleurs vives",
+            "personalizable": false,
+            "aspect_ratio": null,
+            "page_number": 2,
+            "scene_key": "dedication"
+        },
+        {
+            "id": "page_1",
+            "type": "story",
+            "title_template": null,
+            "text_template": "In de zonnige woonkamer van hun Brusselse huis knabbelt {child_name} aan een speculoos. Tussen de boeken op de hoge kast piept een opgerold perkament uit. {child_name} trekt het behoedzaam naar zich toe — stofdeeltjes dansen in een lichtstraal.",
+            "default_image_path": "/page-1.png",
+            "prompt_template": "Aquarelle ligne claire : salon bruxellois chaleureux avec parquet et grandes fenêtres, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde debout près d'une haute étagère en bois, speculoos à moitié mangé sur une assiette, parchemin roulé qui dépasse entre les livres, poussière dorée dansant dans un rayon de soleil, style Marcel Marlier",
+            "negative_prompt": "magie, fantastique, sombre, moderne",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 4,
+            "scene_key": "page_1"
+        },
+        {
+            "id": "page_2",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_name} rolt de kaart uit op het kleed. Ze STRAALT van gouden licht dat klopt als een hartslag! Het getekende pad kronkelt door een groen woud naar een regenboog en een kasteel met drie torens.",
+            "default_image_path": "/page-2.png",
+            "prompt_template": "Aquarelle ligne claire magique : {child_name} aux cheveux châtain clair ondulés en pull moutarde agenouillé devant une carte parchemin déroulée qui BRILLE d'une lumière dorée pulsante, tracé lumineux montrant forêt-arc-en-ciel-château, plancher de bois avec tapis persan, lueur magique dorée, style Marcel Marlier enchantement",
+            "negative_prompt": "sombre, effrayant, réaliste, numérique",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 5,
+            "scene_key": "page_2"
+        },
+        {
+            "id": "page_3",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_name} beklimt de krakende zoldertrap en duwt een oude deur open... om een ENORM, LICHTEND WOUD te ontdekken! Beukenbomen rijzen op als een groene kathedraal. Een vos met gouden ogen kijkt van achter een bemoste stam.",
+            "default_image_path": "/page-3.png",
+            "prompt_template": "Aquarelle ligne claire spectaculaire : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde franchissant une porte vers une IMMENSE forêt cathédrale de hêtres géants, voûte verte majestueuse, renard roux aux yeux ambrés curieux derrière tronc moussu, lumière dorée filtrée, bluebells au sol, style Marcel Marlier epic fantasy",
+            "negative_prompt": "sombre, menaçant, petit, confiné",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 6,
+            "scene_key": "page_3"
+        },
+        {
+            "id": "page_4",
+            "type": "story",
+            "title_template": null,
+            "text_template": "Slimme de Vos stapt naar voren met een theatrale buiging. 'Welkom, {child_name}!' zegt hij met warme stem. 'Het woud wachtte al op je.' Wilde hyacinten strekken zich eindeloos uit in het gevlekte gouden licht.",
+            "default_image_path": "/page-4.png",
+            "prompt_template": "Aquarelle ligne claire chaleureuse : Rusé le renard roux élégant en révérence théâtrale, une patte sur le cœur, face à {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde qui sourit avec ravissement, prairie de bluebells violettes, lumière dorée tachetée, atmosphère bienveillante, style Marcel Marlier",
+            "negative_prompt": "menaçant, sombre, réaliste, peur",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 7,
+            "scene_key": "page_4"
+        },
+        {
+            "id": "page_5",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_name} en Slimme volgen een kronkelend paadje. Gloeiende paddenstoelen — blauw en paars — verlichten hun weg. Een eekhoorn zwaait vanaf een tak. De lucht ruikt naar vochtige aarde en wilde knoflook.",
+            "default_image_path": "/page-5.png",
+            "prompt_template": "Aquarelle ligne claire féerique : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé le renard roux marchant sur sentier forestier moussu, champignons bioluminescents bleus et lilas, écureuil saluant depuis branche, biche observant paisiblement, lumière dorée et magique, style Marcel Marlier enchanteur",
+            "negative_prompt": "sombre, menaçant, réaliste photographique",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 8,
+            "scene_key": "page_5"
+        },
+        {
+            "id": "page_6",
+            "type": "story",
+            "title_template": null,
+            "text_template": "In een open plek staan drie stenen zuilen met een haas, een beer en een duif erop gehouwen. Het raadsel gegraveerd in het mos luidt: 'Wat wordt groter als je het deelt?' Het pad splitst in drieën. Slechts één klopt.",
+            "default_image_path": "/page-6.png",
+            "prompt_template": "Aquarelle ligne claire mystique : clairière avec trois piliers de pierre anciens sculptés d'un lièvre, d'un ours et d'une colombe, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé observant l'énigme gravée dans la mousse, trois sentiers forestiers divergeant vers brume dorée, lumière mystérieuse, style Marcel Marlier",
+            "negative_prompt": "sombre, effrayant, urgent, confus",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 9,
+            "scene_key": "page_6"
+        },
+        {
+            "id": "page_7",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_name} denkt na en roept dan: 'Vriendelijkheid!' Bij deze woorden trilt de grond zachtjes. De zuilen gloeien op. Uit de aarde rijst een verborgen stenen brug, begroeid met mos en kleine witte bloempjes.",
+            "default_image_path": "/page-7.png",
+            "prompt_template": "Aquarelle ligne claire triomphante : pont de pierre moussu avec petites fleurs blanches surgissant magiquement de la terre, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde rayonnant de fierté, Rusé le renard applaudissant, piliers brillant d'or, particules magiques dorées, style Marcel Marlier épique",
+            "negative_prompt": "violent, sombre, destructeur, réaliste",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 10,
+            "scene_key": "page_7"
+        },
+        {
+            "id": "page_8",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_pronoun_subject} steekt een glinsterende regenboogbrug over die een kristalhelder beekje overspant. Het water weerkaatst elke kleur — een levend prisma. Vissen met gouden schubben springen vrolijk op. De brug neuriet een melodie.",
+            "default_image_path": "/page-8.png",
+            "prompt_template": "Aquarelle ligne claire prismatique : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé traversant pont arc-en-ciel scintillant au-dessus ruisseau cristallin, poissons aux écailles dorées bondissant joyeusement, reflets colorés dansant, ciel pastel rose-lavande, lumière prismatique magique, style Marcel Marlier féerique",
+            "negative_prompt": "danger, vertige, sombre, réaliste",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 11,
+            "scene_key": "page_8"
+        },
+        {
+            "id": "page_9",
+            "type": "story",
+            "title_template": null,
+            "text_template": "Aan de overkant ligt een weide vol reuzenzonnebloemen — elke hoger dan {child_name}. Terwijl ze wandelen, draait elke zonnebloem langzaam zijn kop om hen te volgen. Een zachte bries brengt de geur van honing mee.",
+            "default_image_path": "/page-9.png",
+            "prompt_template": "Aquarelle ligne claire surréaliste : prairie de tournesols géants plus grands que {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde, chaque tournesol tournant sa tête pour suivre leur passage, Rusé émerveillé, particules dorées de miel dans l'air, lumière chaude contre-jour, style Marcel Marlier merveilleux",
+            "negative_prompt": "claustrophobe, effrayant, sombre, réaliste",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 12,
+            "scene_key": "page_9"
+        },
+        {
+            "id": "page_10",
+            "type": "story",
+            "title_template": null,
+            "text_template": "Bij een boomstronk snikt een das hartverscheurend. Hij verloor het kettinkje van zijn oma — zijn enige herinnering aan haar. {child_name} knielt neer en legt een hand op zijn harige arm. 'Ik help je wel zoeken.'",
+            "default_image_path": "/page-10.png",
+            "prompt_template": "Aquarelle ligne claire empathique : blaireau rayé sanglotant près d'une souche moussue, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde s'agenouillant avec compassion et posant main réconfortante sur bras du blaireau, sous-bois doux, lumière tamisée bienveillante, style Marcel Marlier tendre",
+            "negative_prompt": "indifférent, froid, sombre, effrayant",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 13,
+            "scene_key": "page_10"
+        },
+        {
+            "id": "page_11",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_name} spot een gouden glinstering onder een reusachtige rode paddenstoel. Het kettinkje! {child_pronoun_subject} geeft het terug aan de dolgelukkige das die {child_name} zo stevig knuffelt dat {child_possessive_det} voeten van de grond komen. Uit dankbaarheid geeft hij een schitterend gouden veertje.",
+            "default_image_path": "/page-11.png",
+            "prompt_template": "Aquarelle ligne claire joyeuse : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde soulevé dans câlin exubérant par blaireau reconnaissant, médaillon doré brillant près champignon rouge géant, plume dorée irisée offerte en cadeau, particules de joie, lumière chaude bonheur, style Marcel Marlier célébration",
+            "negative_prompt": "triste, formel, sombre, distant",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 14,
+            "scene_key": "page_11"
+        },
+        {
+            "id": "page_12",
+            "type": "story",
+            "title_template": null,
+            "text_template": "Het woud opent zich naar een heuveltop. Beneden doemt een prachtig kasteel op uit de nevel — drie stenen torens met wapperende blauwe vaantjes. Slimme fluistert: 'De laatste beproeving wacht. Ben je er klaar voor?'",
+            "default_image_path": "/page-12.png",
+            "prompt_template": "Aquarelle ligne claire épique : vue panoramique depuis colline avec {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde et Rusé contemplant château majestueux aux trois tours de pierre émergeant de brume dorée, pennons bleus flottant, douves réfléchissant ciel, lumière mystique fin d'après-midi, style Marcel Marlier grandiose",
+            "negative_prompt": "menaçant, sombre, effrayant, hostile",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 15,
+            "scene_key": "page_12"
+        },
+        {
+            "id": "page_13",
+            "type": "story",
+            "title_template": null,
+            "text_template": "Bij de kasteelpoort — massief en met ijzer beslagen — zit Meester Uil op een ringhandvat. De wijze oude uil knippert langzaam. 'Wat kun je weggeven en toch behouden?' De stem van Uil galmt als verre donder.",
+            "default_image_path": "/page-13.png",
+            "prompt_template": "Aquarelle ligne claire noble : Maître Hibou sage aux plumes brunes et blanches perché sur anneau de fer massif, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde levant yeux pensifs vers lui, portes château ferrées imposantes, pierre ancienne, lumière crépusculaire dorée dramatique, style Marcel Marlier majestueux",
+            "negative_prompt": "intimidant, menaçant, urgent, effrayant",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 16,
+            "scene_key": "page_13"
+        },
+        {
+            "id": "page_14",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_name} straalt van begrip. {child_pronoun_subject} fluistert: 'Een belofte.' De ogen van de uil worden reusachtig, dan oehoe-t hij lang en goedkeurend. De kasteelpoorten kraken open en tonen een gang van gouden licht.",
+            "default_image_path": "/page-14.png",
+            "prompt_template": "Aquarelle ligne claire révélation : gros plan sur {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde, visage s'illuminant de compréhension pure, Maître Hibou aux yeux brillants approuvant, portes château s'ouvrant sur corridor de lumière dorée magique, particules de sagesse, style Marcel Marlier épiphanie",
+            "negative_prompt": "confus, hésitant, sombre, incertain",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 17,
+            "scene_key": "page_14"
+        },
+        {
+            "id": "page_15",
+            "type": "story",
+            "title_template": null,
+            "text_template": "In de uitgestrekte kasteelzaal zweeft een kristal zo reusachtig als een meloen boven een stenen sokkel, gevuld met wervelend regenbooklicht. {child_name} reikt uit met trillende vingers. Bij aanraking — BOEM! Het kristal barst uit van verblindend licht dat elke hoek vult. Prisma's dansen op de muren. {child_name} voelt zich THUIS.",
+            "default_image_path": "/page-15.png",
+            "prompt_template": "Aquarelle ligne claire CLIMAX : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde touchant cristal géant qui EXPLOSE en lumière arc-en-ciel aveuglante remplissant salle cathédrale immense, prismes de couleur dansant sur murs de pierre, Rusé et Maître Hibou s'inclinant révérencieusement, particules magiques, style Marcel Marlier apothéose",
+            "negative_prompt": "sombre, douloureux, confus, terne",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 18,
+            "scene_key": "page_15"
+        },
+        {
+            "id": "page_16",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_name} houdt het warme kristal in beide handen. Binnenin vormen zich beelden — Mama die de tafel dekt, Papa die de krant leest, de huiskat bij het vuur. Een golf van liefde en heimwee spoelt over hen heen.",
+            "default_image_path": "/page-16.png",
+            "prompt_template": "Aquarelle ligne claire émotionnelle : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde tenant cristal chaud, visions tendres flottant à l'intérieur - maman mettant table, papa lisant journal, chat près feu, expression nostalgie aimante, lumière dorée douce, style Marcel Marlier intimiste",
+            "negative_prompt": "triste, accablant, effrayant, froid",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 19,
+            "scene_key": "page_16"
+        },
+        {
+            "id": "page_17",
+            "type": "story",
+            "title_template": null,
+            "text_template": "De terugtocht verloopt vlot en lichtend. {child_pronoun_subject} glijdt over de regenboogbrug, door de zonnebloemweide die afscheid buigt, langs de paddenstoelen die dimmen. Het woud neuriet een afscheidsliedje.",
+            "default_image_path": "/page-17.png",
+            "prompt_template": "Aquarelle ligne claire fluide : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde glissant gracieusement sur chemin de retour, tournesols géants s'inclinant en salut, champignons lumineux s'éteignant délicatement, pont arc-en-ciel au loin, trainées lumineuses dorées, mouvement poétique, style Marcel Marlier cinématique",
+            "negative_prompt": "précipité, triste, lourd, chaotique",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 20,
+            "scene_key": "page_17"
+        },
+        {
+            "id": "page_18",
+            "type": "story",
+            "title_template": null,
+            "text_template": "Aan de bosrand omhelzen Slimme en {child_name} elkaar. 'Plant dit,' zegt hij, terwijl hij een eikel in de handpalm drukt. 'Als je de eik ziet, onthoud dan: je bent dapperder dan je weet, vriendelijker dan je beseft.'",
+            "default_image_path": "/page-18.png",
+            "prompt_template": "Aquarelle ligne claire tendre : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde embrassant chaleureusement Rusé le renard roux, qui presse petit gland dans paume de l'enfant, fourrure douce visible, lisière forestière dorée, lumière d'adieu bienveillante, transmission de sagesse, style Marcel Marlier émotionnel",
+            "negative_prompt": "déchirant, abandonné, effrayant, froid",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 21,
+            "scene_key": "page_18"
+        },
+        {
+            "id": "page_19",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_name} stapt terug door de zolderdeur. De kaart op de vloer is nu helemaal blanco. Maar in hun handen: het kristal gloeit zachtjes en de eikel is stevig en echt. Het was waar.",
+            "default_image_path": "/page-19.png",
+            "prompt_template": "Aquarelle ligne claire révélatrice : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde dans chambre normale tenant cristal brillant et gland solide, carte parchemin maintenant complètement vierge au sol, lumière après-midi naturelle avec lueur magique douce du cristal, preuve que l'aventure était réelle, style Marcel Marlier mystérieux",
+            "negative_prompt": "douteux, confus, triste, ordinaire",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 22,
+            "scene_key": "page_19"
+        },
+        {
+            "id": "page_20",
+            "type": "story",
+            "title_template": null,
+            "text_template": "{child_name} plant de eikel in een terracotta pot bij het raam en klopt de aarde zachtjes aan. Het kristal pulseert zwakjes op het nachtkastje. Aan de tuinrand kijkt een vossensilhouet toe en glimlacht.",
+            "default_image_path": "/page-20.png",
+            "prompt_template": "Aquarelle ligne claire espoir : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde plantant délicatement gland dans pot terracotta près fenêtre, cristal pulsant doucement sur table de nuit, silhouette de renard souriant au bord du jardin, lumière après-midi tendre, geste plein d'espoir, style Marcel Marlier continuité",
+            "negative_prompt": "incertain, définitif, triste, abandonné",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 23,
+            "scene_key": "page_20"
+        },
+        {
+            "id": "page_21",
+            "type": "story",
+            "title_template": null,
+            "text_template": "Na het avondeten toont {child_name} het gloeiende kristal aan Mama en Papa in de keuken. {child_pronoun_subject} vertelt alles — Slimme, de das, het kasteel, de uil. Het kristal pulseert mee met hun woorden. Mama veegt een traan weg.",
+            "default_image_path": "/page-21.png",
+            "prompt_template": "Aquarelle ligne claire familiale : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde montrant cristal brillant à maman et papa fascinés dans cuisine belge chaleureuse, table bois, maman essuyant larme émue, cristal pulsant au rythme des mots, lumière chaude partage, style Marcel Marlier intimité familiale",
+            "negative_prompt": "incrédule, moqueur, indifférent, froid",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 24,
+            "scene_key": "page_21"
+        },
+        {
+            "id": "page_22",
+            "type": "story",
+            "title_template": null,
+            "text_template": "Die nacht droomt {child_name} dat ze boven het Zoniënwoud vliegen met Slimme die naast hen door de lucht springt. De regenboogbrug vormt een perfecte kleurenboog. Meester Uils geroep echoot, zacht en geruststellend.",
+            "default_image_path": "/page-22.png",
+            "prompt_template": "Aquarelle ligne claire onirique : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde volant gracieusement au-dessus Forêt de Soignes, Rusé bondissant joyeusement dans air à ses côtés, pont arc-en-ciel formant arc parfait, château brillant au loin, lumière rêve dorée douce, style Marcel Marlier fantastique",
+            "negative_prompt": "cauchemar, chute, effrayant, réaliste",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 25,
+            "scene_key": "page_22"
+        },
+        {
+            "id": "page_23",
+            "type": "story",
+            "title_template": null,
+            "text_template": "De volgende ochtend vindt {child_name} een piepklein groen spruitje dat door de aarde in de pot prikt. {child_pronoun_subject} geeft het behoedzaam water met een tenger gietertje. Een gaaienveer ligt ernaast — dezelfde tint als het geschenk van de das.",
+            "default_image_path": "/page-23.png",
+            "prompt_template": "Aquarelle ligne claire miracle : minuscule pousse verte perçant délicatement terre de pot, {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde arrosant avec petit arrosoir, plume de geai bleu même teinte que cadeau du blaireau, lumière matinale fraîche, rosée scintillante, miracle quotidien, style Marcel Marlier tendre",
+            "negative_prompt": "échec, déçu, ordinaire, terne",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 26,
+            "scene_key": "page_23"
+        },
+        {
+            "id": "page_24",
+            "type": "story",
+            "title_template": null,
+            "text_template": "Maanden later staat een jonge eikenspruit fier bij het raam, de bladeren ruisen in de wind. {child_name} leest eronder over bosdieren, terwijl het kristal het middaglicht vangt. Aan de tuinrand kijkt een vertrouwde vos toe. Het avontuur is altijd maar een stap verwijderd.",
+            "default_image_path": "/page-24.png",
+            "prompt_template": "Aquarelle ligne claire résolution : {child_name} aux cheveux châtain clair ondulés mi-longs en pull moutarde lisant livre sur animaux des bois sous jeune chêne aux feuilles bruissantes, cristal captant lumière après-midi sur rebord fenêtre, renard familier observant bienveillamment au bord du jardin, magie toujours présente, style Marcel Marlier accomplissement",
+            "negative_prompt": "définitif, séparé, oublié, triste",
+            "personalizable": true,
+            "aspect_ratio": null,
+            "page_number": 27,
+            "scene_key": "page_24"
+        },
+        {
+            "id": "backCover",
+            "type": "backCover",
+            "title_template": null,
+            "text_template": "Een Belgisch betoverend verhaal waar magie ontstaat uit de goedheid van het hart.",
+            "default_image_path": "/back-cover.png",
+            "prompt_template": "Quatrième de couverture aquarelle belge premium : bordure décorative feuilles de chêne et cristaux scintillants, évocation stylisée forêt enchantée et château, tons ocre et vert profond, design ligne claire élégant, qualité haut de gamme, invitation à l'aventure",
+            "negative_prompt": "narratif, spoilers, personnages, bon marché",
+            "personalizable": false,
+            "aspect_ratio": null,
+            "page_number": 28,
+            "scene_key": "backCover"
+        },
+        {
+            "id": "summary",
+            "type": "summary",
+            "title_template": null,
+            "text_template": "In dit magische avontuur ontdekt {child_name} dat een mysterieuze kaart kan leiden tot de mooiste ontdekking van allemaal: de moed van vriendelijkheid leeft in ons allemaal.",
+            "default_image_path": "/summary.png",
+            "prompt_template": "Fond aquarelle belge contemplatif évoquant aventure magique : carte mystérieuse, cristal scintillant, gland germé, silhouettes douces de forêt enchantée, pont arc-en-ciel, château lointain, tons ocre et vert magiques, synthèse poétique sans personnages, style ligne claire délicat",
+            "negative_prompt": "personnages, action, récit, détails",
+            "personalizable": false,
+            "aspect_ratio": null,
+            "page_number": 28,
+            "scene_key": "summary"
+        }
+    ]
+}

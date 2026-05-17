@@ -265,8 +265,10 @@ final class BlueprintValidator
         $pages = is_array($blueprint['pages'] ?? null) ? $blueprint['pages'] : [];
 
         $forbiddenPatterns = [
-            ['pattern' => '/\bhij\b/iu', 'word' => 'hij', 'explanation' => 'Use {child_name} or {child_pronoun_subject} instead.'],
-            ['pattern' => '/\bhem\b/iu', 'word' => 'hem', 'explanation' => 'Use {child_name} or restructure the sentence.'],
+            // 'hij' and 'hem' are NOT forbidden — they may legitimately refer to secondary
+            // characters (fox, badger, owl). The child hero always uses {child_name},
+            // {child_pronoun_subject}, {child_possessive_det}. Only possessive 'Zijn'
+            // (capitalized, sentence-start) is checked since it's typically for the child.
             ['pattern' => '/\bZijn\b(?!\s*(?:de|het|een|zijn|haar|mijn|jouw|onze|hun))/u', 'word' => 'Zijn (possessive)', 'explanation' => 'Use {child_possessive_det} instead of Zijn for the child hero.'],
         ];
 
