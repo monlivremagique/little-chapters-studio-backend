@@ -2,9 +2,9 @@
     "schema": "book_blueprint_v2",
     "schemaVersion": 2,
     "metadata": {
-        "bookId": "espace-robot",
-        "slug": "espace-robot",
-        "productCode": "BOOK_ESPACE-ROBOT",
+        "bookId": "famille-amour",
+        "slug": "famille-amour",
+        "productCode": "BOOK_FAMILLE-AMOUR",
         "version": 2,
         "status": "published",
         "sourceLocale": "fr",
@@ -17,22 +17,22 @@
         "generationPageCount": 8,
         "ageRange": "8-10",
         "theme": [
-            "adventure",
-            "fantasy",
-            "discovery"
+            "family",
+            "love",
+            "tenderness"
         ],
-        "promise": "Plonge dans un monde enchanté où chaque page révèle une nouvelle merveille et une amitié qui change tout.",
-        "editorialPositioning": "Album premium belge alliant magie, découverte et émotion, dans la tradition des grands contes d'aventure."
+        "promise": "Un voyage tendre au coeur de la famille, où {child_name} redécouvre tous ces petits moments qui font les grands bonheurs.",
+        "editorialPositioning": "Album premium belge célébrant les liens familiaux, la transmission et la tendresse au quotidien."
     },
     "locales": {
         "fr": {
             "book": {
-                "title_template": "L'Aventure Enchantée de {child_name}"
+                "title_template": "Ma Famille, Mon Trésor - {child_name}"
             },
             "pages": {
                 "cover": {
-                    "title_template": "L'Aventure Enchantée de {child_name}",
-                    "text_template": "Une aventure magique et enchantée"
+                    "title_template": "Ma Famille, Mon Trésor - {child_name}",
+                    "text_template": "Les plus beaux moments en famille"
                 },
                 "dedication": {
                     "title_template": "Dédicace",
@@ -74,12 +74,12 @@
         },
         "en": {
             "book": {
-                "title_template": "{child_name}'s Enchanted Adventure"
+                "title_template": "My Family, My Treasure - {child_name}"
             },
             "pages": {
                 "cover": {
-                    "title_template": "{child_name}'s Enchanted Adventure",
-                    "text_template": "A magical enchanted adventure"
+                    "title_template": "My Family, My Treasure - {child_name}",
+                    "text_template": "The most beautiful family moments"
                 },
                 "dedication": {
                     "title_template": "Dedication",
@@ -121,12 +121,12 @@
         },
         "nl": {
             "book": {
-                "title_template": "Het Betoverde Avontuur van {child_name}"
+                "title_template": "Mijn Familie, Mijn Schat - {child_name}"
             },
             "pages": {
                 "cover": {
-                    "title_template": "Het Betoverde Avontuur van {child_name}",
-                    "text_template": "Een magisch betoverd avontuur"
+                    "title_template": "Mijn Familie, Mijn Schat - {child_name}",
+                    "text_template": "De mooiste familiemomenten"
                 },
                 "dedication": {
                     "title_template": "Opdracht",
@@ -470,18 +470,18 @@
         }
     ],
     "assets": {
-        "basePublicPath": "\/uploads\/books\/espace-robot\/",
+        "basePublicPath": "\/uploads\/books\/famille-amour\/",
         "defaults": {
-            "cover-default": "\/uploads\/books\/espace-robot\/cover-default.png",
-            "dedication-default": "\/uploads\/books\/espace-robot\/dedication-default.png",
-            "page-1-default": "\/uploads\/books\/espace-robot\/page-1-default.png",
-            "page-2-default": "\/uploads\/books\/espace-robot\/page-2-default.png",
-            "page-3-default": "\/uploads\/books\/espace-robot\/page-3-default.png",
-            "page-4-default": "\/uploads\/books\/espace-robot\/page-4-default.png",
-            "page-5-default": "\/uploads\/books\/espace-robot\/page-5-default.png",
-            "page-6-default": "\/uploads\/books\/espace-robot\/page-6-default.png",
-            "summary-default": "\/uploads\/books\/espace-robot\/summary-default.png",
-            "back-cover-default": "\/uploads\/books\/espace-robot\/back-cover-default.png"
+            "cover-default": "\/uploads\/books\/famille-amour\/cover-default.png",
+            "dedication-default": "\/uploads\/books\/famille-amour\/dedication-default.png",
+            "page-1-default": "\/uploads\/books\/famille-amour\/page-1-default.png",
+            "page-2-default": "\/uploads\/books\/famille-amour\/page-2-default.png",
+            "page-3-default": "\/uploads\/books\/famille-amour\/page-3-default.png",
+            "page-4-default": "\/uploads\/books\/famille-amour\/page-4-default.png",
+            "page-5-default": "\/uploads\/books\/famille-amour\/page-5-default.png",
+            "page-6-default": "\/uploads\/books\/famille-amour\/page-6-default.png",
+            "summary-default": "\/uploads\/books\/famille-amour\/summary-default.png",
+            "back-cover-default": "\/uploads\/books\/famille-amour\/back-cover-default.png"
         }
     },
     "imageGeneration": {

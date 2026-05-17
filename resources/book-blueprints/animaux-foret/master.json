@@ -2,9 +2,9 @@
     "schema": "book_blueprint_v2",
     "schemaVersion": 2,
     "metadata": {
-        "bookId": "espace-robot",
-        "slug": "espace-robot",
-        "productCode": "BOOK_ESPACE-ROBOT",
+        "bookId": "animaux-foret",
+        "slug": "animaux-foret",
+        "productCode": "BOOK_ANIMAUX-FORET",
         "version": 2,
         "status": "published",
         "sourceLocale": "fr",
@@ -17,22 +17,22 @@
         "generationPageCount": 8,
         "ageRange": "8-10",
         "theme": [
-            "adventure",
-            "fantasy",
-            "discovery"
+            "animals",
+            "nature",
+            "friendship"
         ],
-        "promise": "Plonge dans un monde enchanté où chaque page révèle une nouvelle merveille et une amitié qui change tout.",
-        "editorialPositioning": "Album premium belge alliant magie, découverte et émotion, dans la tradition des grands contes d'aventure."
+        "promise": "Dans une forêt magique, {child_name} se lie d'amitié avec des animaux extraordinaires qui révèlent les secrets de la nature.",
+        "editorialPositioning": "Album premium belge célébrant l'amitié avec les animaux et la beauté de la nature, dans la tradition des grands albums forestiers."
     },
     "locales": {
         "fr": {
             "book": {
-                "title_template": "L'Aventure Enchantée de {child_name}"
+                "title_template": "{child_name} et la Forêt des Animaux"
             },
             "pages": {
                 "cover": {
-                    "title_template": "L'Aventure Enchantée de {child_name}",
-                    "text_template": "Une aventure magique et enchantée"
+                    "title_template": "{child_name} et la Forêt des Animaux",
+                    "text_template": "Une aventure enchantée dans la forêt"
                 },
                 "dedication": {
                     "title_template": "Dédicace",
@@ -74,12 +74,12 @@
         },
         "en": {
             "book": {
-                "title_template": "{child_name}'s Enchanted Adventure"
+                "title_template": "{child_name} and the Animal Forest"
             },
             "pages": {
                 "cover": {
-                    "title_template": "{child_name}'s Enchanted Adventure",
-                    "text_template": "A magical enchanted adventure"
+                    "title_template": "{child_name} and the Animal Forest",
+                    "text_template": "An enchanted adventure in the forest"
                 },
                 "dedication": {
                     "title_template": "Dedication",
@@ -121,12 +121,12 @@
         },
         "nl": {
             "book": {
-                "title_template": "Het Betoverde Avontuur van {child_name}"
+                "title_template": "{child_name} en het Dierenbos"
             },
             "pages": {
                 "cover": {
-                    "title_template": "Het Betoverde Avontuur van {child_name}",
-                    "text_template": "Een magisch betoverd avontuur"
+                    "title_template": "{child_name} en het Dierenbos",
+                    "text_template": "Een betoverd avontuur in het bos"
                 },
                 "dedication": {
                     "title_template": "Opdracht",
@@ -470,18 +470,18 @@
         }
     ],
     "assets": {
-        "basePublicPath": "\/uploads\/books\/espace-robot\/",
+        "basePublicPath": "\/uploads\/books\/animaux-foret\/",
         "defaults": {
-            "cover-default": "\/uploads\/books\/espace-robot\/cover-default.png",
-            "dedication-default": "\/uploads\/books\/espace-robot\/dedication-default.png",
-            "page-1-default": "\/uploads\/books\/espace-robot\/page-1-default.png",
-            "page-2-default": "\/uploads\/books\/espace-robot\/page-2-default.png",
-            "page-3-default": "\/uploads\/books\/espace-robot\/page-3-default.png",
-            "page-4-default": "\/uploads\/books\/espace-robot\/page-4-default.png",
-            "page-5-default": "\/uploads\/books\/espace-robot\/page-5-default.png",
-            "page-6-default": "\/uploads\/books\/espace-robot\/page-6-default.png",
-            "summary-default": "\/uploads\/books\/espace-robot\/summary-default.png",
-            "back-cover-default": "\/uploads\/books\/espace-robot\/back-cover-default.png"
+            "cover-default": "\/uploads\/books\/animaux-foret\/cover-default.png",
+            "dedication-default": "\/uploads\/books\/animaux-foret\/dedication-default.png",
+            "page-1-default": "\/uploads\/books\/animaux-foret\/page-1-default.png",
+            "page-2-default": "\/uploads\/books\/animaux-foret\/page-2-default.png",
+            "page-3-default": "\/uploads\/books\/animaux-foret\/page-3-default.png",
+            "page-4-default": "\/uploads\/books\/animaux-foret\/page-4-default.png",
+            "page-5-default": "\/uploads\/books\/animaux-foret\/page-5-default.png",
+            "page-6-default": "\/uploads\/books\/animaux-foret\/page-6-default.png",
+            "summary-default": "\/uploads\/books\/animaux-foret\/summary-default.png",
+            "back-cover-default": "\/uploads\/books\/animaux-foret\/back-cover-default.png"
         }
     },
     "imageGeneration": {

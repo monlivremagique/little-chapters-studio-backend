@@ -2,9 +2,9 @@
     "schema": "book_blueprint_v2",
     "schemaVersion": 2,
     "metadata": {
-        "bookId": "espace-robot",
-        "slug": "espace-robot",
-        "productCode": "BOOK_ESPACE-ROBOT",
+        "bookId": "voyage-etoiles",
+        "slug": "voyage-etoiles",
+        "productCode": "BOOK_VOYAGE-ETOILES",
         "version": 2,
         "status": "published",
         "sourceLocale": "fr",
@@ -17,22 +17,22 @@
         "generationPageCount": 8,
         "ageRange": "8-10",
         "theme": [
-            "adventure",
-            "fantasy",
-            "discovery"
+            "space",
+            "science",
+            "exploration"
         ],
-        "promise": "Plonge dans un monde enchanté où chaque page révèle une nouvelle merveille et une amitié qui change tout.",
-        "editorialPositioning": "Album premium belge alliant magie, découverte et émotion, dans la tradition des grands contes d'aventure."
+        "promise": "Pars pour un voyage interstellaire où {child_name} explore les mystères de l'univers et découvre que les étoiles brillent pour chacun de nous.",
+        "editorialPositioning": "Album premium belge éveillant la curiosité scientifique et l'émerveillement cosmique, dans la tradition de l'exploration spatiale."
     },
     "locales": {
         "fr": {
             "book": {
-                "title_template": "L'Aventure Enchantée de {child_name}"
+                "title_template": "Le Voyage des Étoiles de {child_name}"
             },
             "pages": {
                 "cover": {
-                    "title_template": "L'Aventure Enchantée de {child_name}",
-                    "text_template": "Une aventure magique et enchantée"
+                    "title_template": "Le Voyage des Étoiles de {child_name}",
+                    "text_template": "Voyage vers les étoiles"
                 },
                 "dedication": {
                     "title_template": "Dédicace",
@@ -74,12 +74,12 @@
         },
         "en": {
             "book": {
-                "title_template": "{child_name}'s Enchanted Adventure"
+                "title_template": "{child_name}'s Star Journey"
             },
             "pages": {
                 "cover": {
-                    "title_template": "{child_name}'s Enchanted Adventure",
-                    "text_template": "A magical enchanted adventure"
+                    "title_template": "{child_name}'s Star Journey",
+                    "text_template": "Journey to the stars"
                 },
                 "dedication": {
                     "title_template": "Dedication",
@@ -121,12 +121,12 @@
         },
         "nl": {
             "book": {
-                "title_template": "Het Betoverde Avontuur van {child_name}"
+                "title_template": "De Sterrenreis van {child_name}"
             },
             "pages": {
                 "cover": {
-                    "title_template": "Het Betoverde Avontuur van {child_name}",
-                    "text_template": "Een magisch betoverd avontuur"
+                    "title_template": "De Sterrenreis van {child_name}",
+                    "text_template": "Reis naar de sterren"
                 },
                 "dedication": {
                     "title_template": "Opdracht",
@@ -470,18 +470,18 @@
         }
     ],
     "assets": {
-        "basePublicPath": "\/uploads\/books\/espace-robot\/",
+        "basePublicPath": "\/uploads\/books\/voyage-etoiles\/",
         "defaults": {
-            "cover-default": "\/uploads\/books\/espace-robot\/cover-default.png",
-            "dedication-default": "\/uploads\/books\/espace-robot\/dedication-default.png",
-            "page-1-default": "\/uploads\/books\/espace-robot\/page-1-default.png",
-            "page-2-default": "\/uploads\/books\/espace-robot\/page-2-default.png",
-            "page-3-default": "\/uploads\/books\/espace-robot\/page-3-default.png",
-            "page-4-default": "\/uploads\/books\/espace-robot\/page-4-default.png",
-            "page-5-default": "\/uploads\/books\/espace-robot\/page-5-default.png",
-            "page-6-default": "\/uploads\/books\/espace-robot\/page-6-default.png",
-            "summary-default": "\/uploads\/books\/espace-robot\/summary-default.png",
-            "back-cover-default": "\/uploads\/books\/espace-robot\/back-cover-default.png"
+            "cover-default": "\/uploads\/books\/voyage-etoiles\/cover-default.png",
+            "dedication-default": "\/uploads\/books\/voyage-etoiles\/dedication-default.png",
+            "page-1-default": "\/uploads\/books\/voyage-etoiles\/page-1-default.png",
+            "page-2-default": "\/uploads\/books\/voyage-etoiles\/page-2-default.png",
+            "page-3-default": "\/uploads\/books\/voyage-etoiles\/page-3-default.png",
+            "page-4-default": "\/uploads\/books\/voyage-etoiles\/page-4-default.png",
+            "page-5-default": "\/uploads\/books\/voyage-etoiles\/page-5-default.png",
+            "page-6-default": "\/uploads\/books\/voyage-etoiles\/page-6-default.png",
+            "summary-default": "\/uploads\/books\/voyage-etoiles\/summary-default.png",
+            "back-cover-default": "\/uploads\/books\/voyage-etoiles\/back-cover-default.png"
         }
     },
     "imageGeneration": {

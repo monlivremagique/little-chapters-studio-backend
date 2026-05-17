@@ -2,9 +2,9 @@
     "schema": "book_blueprint_v2",
     "schemaVersion": 2,
     "metadata": {
-        "bookId": "espace-robot",
-        "slug": "espace-robot",
-        "productCode": "BOOK_ESPACE-ROBOT",
+        "bookId": "anniversaire",
+        "slug": "anniversaire",
+        "productCode": "BOOK_ANNIVERSAIRE",
         "version": 2,
         "status": "published",
         "sourceLocale": "fr",
@@ -17,22 +17,22 @@
         "generationPageCount": 8,
         "ageRange": "8-10",
         "theme": [
-            "adventure",
-            "fantasy",
-            "discovery"
+            "birthday",
+            "celebration",
+            "magic"
         ],
-        "promise": "Plonge dans un monde enchanté où chaque page révèle une nouvelle merveille et une amitié qui change tout.",
-        "editorialPositioning": "Album premium belge alliant magie, découverte et émotion, dans la tradition des grands contes d'aventure."
+        "promise": "Le plus merveilleux des anniversaires commence quand {child_name} souffle ses bougies et que la magie opère.",
+        "editorialPositioning": "Album anniversaire premium belge, festif et personnalisé, pour célébrer le jour le plus spécial de l'année."
     },
     "locales": {
         "fr": {
             "book": {
-                "title_template": "L'Aventure Enchantée de {child_name}"
+                "title_template": "Mon Anniversaire Magique - {child_name}"
             },
             "pages": {
                 "cover": {
-                    "title_template": "L'Aventure Enchantée de {child_name}",
-                    "text_template": "Une aventure magique et enchantée"
+                    "title_template": "Mon Anniversaire Magique - {child_name}",
+                    "text_template": "Le plus beau des anniversaires"
                 },
                 "dedication": {
                     "title_template": "Dédicace",
@@ -74,12 +74,12 @@
         },
         "en": {
             "book": {
-                "title_template": "{child_name}'s Enchanted Adventure"
+                "title_template": "My Magical Birthday - {child_name}"
             },
             "pages": {
                 "cover": {
-                    "title_template": "{child_name}'s Enchanted Adventure",
-                    "text_template": "A magical enchanted adventure"
+                    "title_template": "My Magical Birthday - {child_name}",
+                    "text_template": "The most beautiful birthday"
                 },
                 "dedication": {
                     "title_template": "Dedication",
@@ -121,12 +121,12 @@
         },
         "nl": {
             "book": {
-                "title_template": "Het Betoverde Avontuur van {child_name}"
+                "title_template": "Mijn Magische Verjaardag - {child_name}"
             },
             "pages": {
                 "cover": {
-                    "title_template": "Het Betoverde Avontuur van {child_name}",
-                    "text_template": "Een magisch betoverd avontuur"
+                    "title_template": "Mijn Magische Verjaardag - {child_name}",
+                    "text_template": "De mooiste verjaardag"
                 },
                 "dedication": {
                     "title_template": "Opdracht",
@@ -470,18 +470,18 @@
         }
     ],
     "assets": {
-        "basePublicPath": "\/uploads\/books\/espace-robot\/",
+        "basePublicPath": "\/uploads\/books\/anniversaire\/",
         "defaults": {
-            "cover-default": "\/uploads\/books\/espace-robot\/cover-default.png",
-            "dedication-default": "\/uploads\/books\/espace-robot\/dedication-default.png",
-            "page-1-default": "\/uploads\/books\/espace-robot\/page-1-default.png",
-            "page-2-default": "\/uploads\/books\/espace-robot\/page-2-default.png",
-            "page-3-default": "\/uploads\/books\/espace-robot\/page-3-default.png",
-            "page-4-default": "\/uploads\/books\/espace-robot\/page-4-default.png",
-            "page-5-default": "\/uploads\/books\/espace-robot\/page-5-default.png",
-            "page-6-default": "\/uploads\/books\/espace-robot\/page-6-default.png",
-            "summary-default": "\/uploads\/books\/espace-robot\/summary-default.png",
-            "back-cover-default": "\/uploads\/books\/espace-robot\/back-cover-default.png"
+            "cover-default": "\/uploads\/books\/anniversaire\/cover-default.png",
+            "dedication-default": "\/uploads\/books\/anniversaire\/dedication-default.png",
+            "page-1-default": "\/uploads\/books\/anniversaire\/page-1-default.png",
+            "page-2-default": "\/uploads\/books\/anniversaire\/page-2-default.png",
+            "page-3-default": "\/uploads\/books\/anniversaire\/page-3-default.png",
+            "page-4-default": "\/uploads\/books\/anniversaire\/page-4-default.png",
+            "page-5-default": "\/uploads\/books\/anniversaire\/page-5-default.png",
+            "page-6-default": "\/uploads\/books\/anniversaire\/page-6-default.png",
+            "summary-default": "\/uploads\/books\/anniversaire\/summary-default.png",
+            "back-cover-default": "\/uploads\/books\/anniversaire\/back-cover-default.png"
         }
     },
     "imageGeneration": {
