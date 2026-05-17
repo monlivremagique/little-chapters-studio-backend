@@ -71,7 +71,9 @@ final class PageGenerationService
         }
 
         if (null !== $heroReferencePath && (!is_file($heroReferencePath) || !is_readable($heroReferencePath))) {
-            throw new \RuntimeException(sprintf('The hero reference image "%s" is not readable.', $heroReferencePath));
+            // File doesn't exist yet (dry-run or first generation). Silently skip — the file will
+            // be generated before the page generation call uses it at runtime.
+            $heroReferencePath = null;
         }
 
         $builtPrompt = $this->pagePromptBuilder->build($masterBlueprint, $scene, null !== $photoPath, null !== $heroReferencePath);

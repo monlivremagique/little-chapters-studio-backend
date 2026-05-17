@@ -86,12 +86,15 @@ final class GenerateHeroReferenceCommand extends Command
         $io->writeln(sprintf('Dry-run: %s', $dryRun ? 'yes' : 'no'));
         $io->writeln(sprintf('Force: %s', $force ? 'yes' : 'no'));
 
+        $heroRefPath = sprintf('%s/hero-reference.png', $outputDir);
         $pageArguments = [
             '--source' => $sourcePath,
             '--output-dir' => $outputDir,
             '--page' => 'page_1',
-            '--write-hero-reference' => true,
         ];
+        if (is_file($heroRefPath) && is_readable($heroRefPath)) {
+            $pageArguments['--hero-reference'] = $heroRefPath;
+        }
 
         if ('' !== $photoPath) {
             $pageArguments['--photo'] = $photoPath;
