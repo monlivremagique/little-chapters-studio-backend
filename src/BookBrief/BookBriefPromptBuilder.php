@@ -195,7 +195,7 @@ final class BookBriefPromptBuilder
             'prompt' => $prompt,
             'input' => [
                 'prompt' => $prompt,
-                'max_tokens' => 24000,
+                'max_tokens' => 32000,
                 'temperature' => 0.7,
             ],
             'debug' => [
