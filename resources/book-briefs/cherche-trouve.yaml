@@ -36,7 +36,7 @@ constraints:
 - Purely visual search — no reading required to play. Text is minimal (scene title + object names).
 - '{child_name} appears in every scene as a tiny character: mustard-yellow sweater, blue trousers, red boots.'
 - The hidden objects list appears in a small box in the corner of each page.
-arc_type: episodic (page-by-page new world exploration)
+arc_type: ordinary-to-extraordinary
 climax_page: page_18
 setting: 'Multiple worlds: ocean, space, jungle, circus, castle, bakery, garden, Arctic, toy room, city, farm, beach, forest,
   kitchen, library, mountains'

@@ -34,7 +34,7 @@ constraints:
 - '{child_name} wears a light blue sweater and red boots throughout the entire story.'
 - Scenes 1-5 are warm morning light; scenes 6-12 are bright afternoon; scenes 13-18 are golden sunset; scenes 19-24 are dusk
   and moonlight.
-arc_type: quest (help friends → celebration)
+arc_type: friendship-forged
 climax_page: page_18
 setting: A magical forest inspired by the Ardennes — clearings, streams, an old oak tree, a meadow
 cultural_context: 'The forest is inspired by the Ardennes belges with its towering beech and oak trees, wild bluebells in

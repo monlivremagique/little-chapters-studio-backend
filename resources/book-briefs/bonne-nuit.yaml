@@ -35,7 +35,7 @@ constraints:
 - 'The colour palette darkens page by page: golden sunset → soft twilight → deep night → dreamy silver.'
 - '{child_name} wears soft blue pyjamas with stars throughout.'
 - The bunny plush is a consistent companion in every scene.
-arc_type: circular (waking → bedtime routine → sleep)
+arc_type: comfort-to-courage
 climax_page: page_14
 setting: A cosy Belgian home — a child's bedroom, kitchen, garden, the night sky
 cultural_context: The house is a classic Belgian maison with a pitched slate roof and white shutters. The garden has a beech

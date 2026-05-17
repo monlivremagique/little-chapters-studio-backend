@@ -37,7 +37,7 @@ constraints:
 - 'The colour palette shifts: morning soft blues → afternoon bright yellows → evening warm golds.'
 - 'Belgian birthday traditions must be visually clear: gaufres, speculoos, stoemp, Lang zal hij/zij leven.'
 - The climax (new swing) must feel like a gasp-worthy, heart-melting surprise.
-arc_type: celebration (morning → party → surprise → evening)
+arc_type: ordinary-to-extraordinary
 climax_page: page_18
 setting: A festive Belgian home — decorated living room, garden with party tent, kitchen with birthday cake
 cultural_context: 'The birthday includes Belgian traditions: a gâteau with speculoos crumble, balloons in Belgian flag colours,

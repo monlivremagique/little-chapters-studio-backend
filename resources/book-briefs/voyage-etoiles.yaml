@@ -39,7 +39,7 @@ constraints:
 - Each planet gets 1-2 pages with at least one scientifically interesting fact integrated.
 - '{child_name} wears a bicycle helmet (silver) and a red scarf throughout the space journey.'
 - Pepin the lamp-robot has a single eye (the bulb) and a box body — consistent design every page.
-arc_type: exploration (build → launch → tour → return)
+arc_type: quest-with-revelation
 climax_page: page_22
 setting: A Belgian home, a backyard, the solar system (Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune
   → space station → constellations)
